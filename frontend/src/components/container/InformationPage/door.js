@@ -2,7 +2,7 @@
 import React, { useState } from "react"
 import image from "./image.png"
 import "./door.scss" // 상대 경로를 명시하고 .scss 확장자를 붙이지 않음
-import Header from "../../common/Header"
+import HeaderContainer from "../common/HeaderContainer"
 
 const Door = () => {
   const [selectedTags, setSelectedTags] = useState([])
@@ -22,7 +22,7 @@ const Door = () => {
 
   return (
     <>
-      <Header />
+      <HeaderContainer />
       <div>
         <div className="image-size">
           <img
