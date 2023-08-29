@@ -35,6 +35,9 @@ const Menu = ({isOpen, setIsOpen ,onClick}) => {
                     {items.map(item => 
                         <div key={item.id} className='Modal_item'>{item.text}</div>)}
                 </div>
+                <div>
+                    
+                </div>
             </div>
         </div>
     );
