@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CreatorPage = () => {
+const Menu = () => {
     return (
         <div>
-            creatorPage
+            
         </div>
     );
 };
 
-export default CreatorPage;
+export default Menu;
