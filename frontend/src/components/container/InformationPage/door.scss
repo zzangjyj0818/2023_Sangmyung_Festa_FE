@@ -1,46 +1,104 @@
 // door.scss
 $primaryColor: #5eb6f6;
-$secondaryColor: #f0f0f0;
-
-// Rest of the variables...
-
-.page-container {
-  height: calc(100vh - 90px);
-  overflow: hidden;
-}
-
-.filter-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
-  justify-content: center;
-}
 
 .tag-button {
-  background-color: $secondaryColor;
-  color: #000;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 999px;
+  border: 0.7px solid #dfdfdf;
+  background: #fff;
+  color: #bababa;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px 10px;
+
   cursor: pointer;
 
   &.active {
-    background-color: $primaryColor;
+    background: #c4c4c4;
     color: #fff;
   }
-}
-
-.group-button {
-  background-color: $primaryColor;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
 }
 
 .image-size {
   width: 363px;
   height: 175px;
+}
+
+.navigation-line {
+  background: #e4e4e4;
+  border: none;
+  height: 1px;
+  width: 100%;
+  z-index: 0;
+}
+
+.navigation-line.active {
+  position: fixed;
+  width: 85px;
+  height: 0px;
+  flex-shrink: 0;
+}
+
+.navigation-line.active .selected {
+  position: absolute;
+  left: 210px;
+  width: 100%;
+  height: 2px;
+  stroke-width: 2px;
+  stroke: #afafaf;
+  background-color: #afafaf;
+}
+
+.navigation-cp-container {
+  padding: 20px;
+}
+
+.navigation-cp {
+  color: #929292;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.navigation-cp.active {
+  stroke-width: 2px;
+  stroke: #afafaf;
+}
+
+.navigation-cp-space {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+}
+
+.filter-title {
+  color: #929292;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-left: 16px; /* Add left margin */
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px; /* Add left margin */
+}
+
+.filter-tags {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
