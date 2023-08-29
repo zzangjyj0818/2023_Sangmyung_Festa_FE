@@ -1,52 +1,74 @@
 // src/components/container/InformationPage/door.js
 import React, { useState } from "react"
 import image from "./image.png"
-import "./door.scss" // 상대 경로를 명시하고 .scss 확장자를 붙이지 않음
-import HeaderContainer from "../common/HeaderContainer"
+import "./door.scss"
+import Header from "../../common/Header"
+import tags from "./tags.json"
 
 const Door = () => {
-  const [selectedTags, setSelectedTags] = useState([])
-  const tags = ["인터스트리디자인", "소프트웨어", "수학", "과학"] // 하드코딩한 태그 리스트
+  const [selectedTag, setSelectedTag] = useState("")
+  const [activeNavButton, setActiveNavButton] = useState(null)
 
   const onClickTag = (tag) => {
-    setSelectedTags((prevTags) => {
+    setSelectedTag((prevTags) => {
       if (prevTags.includes(tag)) {
         return prevTags.filter((t) => t !== tag)
-      } else if (prevTags.length < 3) {
-        return [...prevTags, tag]
       } else {
-        return [tag, ...prevTags.slice(0, 2)]
+        return [tag]
       }
     })
   }
 
+  const onClickSelButton = (buttonName) => {
+    setActiveNavButton((prev) => (prev === buttonName ? null : buttonName))
+  }
+
   return (
     <>
-      <HeaderContainer />
-      <div>
+      <Header />
+      <div className="navigation-cp-container">
+        <div className="navigation-cp-space">
+          <button
+            className={`navigation-cp ${
+              activeNavButton === "design" ? "active" : ""
+            }`}
+            onClick={() => onClickSelButton("design")}
+          >
+            디자인대학
+          </button>
+          <button
+            className={`navigation-cp ${
+              activeNavButton === "gate" ? "active" : ""
+            }`}
+            onClick={() => onClickSelButton("gate")}
+          >
+            정문
+          </button>
+        </div>
+      </div>
+
+      <div className="navigation-line" />
+
+      <div className="body-container">
         <div className="image-size">
-          <img
-            src={image}
-            alt="이미지"
-            style={{
-              width: "363px",
-              height: "175px",
-            }}
-          />
+          <img src={image} alt="이미지" />
         </div>
 
-        <div className="filter-tags">
-          {tags.map((tag) => (
-            <button
-              key={tag}
-              className={`tag-button ${
-                selectedTags.includes(tag) ? "active" : ""
-              }`}
-              onClick={() => onClickTag(tag)}
-            >
-              #{tag}
-            </button>
-          ))}
+        <div className="filter-container">
+          <h2 className="filter-title">동아리/학과 부스</h2>
+          <div className="filter-tags">
+            {tags.map((tag) => (
+              <button
+                key={tag}
+                className={`tag-button ${
+                  selectedTag.includes(tag) ? "active" : ""
+                }`}
+                onClick={() => onClickTag(tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </>
