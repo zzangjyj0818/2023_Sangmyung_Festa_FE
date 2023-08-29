@@ -39,8 +39,34 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
                     {items.map(item => 
                         <div key={item.id} className='Modal_item' onClick={()=>navigate(item.url)}>{item.text}</div>)}
                 </div>
-                <div>
-
+                <div className='Modal_Bottom_Wrapper'>
+                    <div>
+                        <div>축제 문의</div>
+                        <div>
+                            <div></div>
+                            <div>
+                                <div>총학생회</div>
+                                <div>인스타그램</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div></div>
+                            <div>
+                                <div>총학생회</div>
+                                <div>카카오톡 오픈채팅</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>사이트 문의</div>
+                        <div>
+                            <div></div>
+                            <div>
+                                <div>멋쟁이 사자처럼</div>
+                                <div>인스타그램</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

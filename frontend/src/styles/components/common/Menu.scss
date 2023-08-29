@@ -22,26 +22,24 @@
    
   /* modal창 */
   .modalBody {
-    width: 250px;
+    width: 300px;
     height: 100vh;
-    text-align: center;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
   }
    
   #modalCloseBtn {
-    position: absolute;
-    
     width: 36px;
     height: 36px;
-
-    top: 12px;
-    right: 200px;
     border: none;
     color: rgba(0, 0, 0, 0.7);
+
     background-color: transparent;
     font-size: 30px;
+
+    margin-top : 32px;
+    margin-left : 14px;
   }
    
   #modalCloseBtn:hover {
@@ -49,7 +47,6 @@
   }
 
   .Modal_Text {
-    position: absolute;
     display: flex;
 
     flex-direction: column;
@@ -58,8 +55,8 @@
     color: #212121;
     font-family: Noto Sans KR;
 
-    top : 55px;
-    left : 25px;
+    margin-top : 9px;
+    margin-left : 25px;
     .Modal_Text1{
         font-size: 16px;
         font-weight: 900;
@@ -71,16 +68,14 @@
   }
 
   .Modal_Horizon {
-    position: absolute;
-    top : 180px;
-    left : 10px;
-    width: 235px;
+    width: 270px;
     height: 1px;
     background: #ACACAC;
+    margin-top : 58px;
+    margin-left : 15px;
   }
 
   .Modal_items {
-    position: absolute;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -90,10 +85,19 @@
     font-size: 16px;
     font-weight: 500;
 
-    top : 180px;
-    left : 25px;
+    margin-top : 31px;
+    margin-left : 25px;
 
     .Modal_item {
-        margin-top : 31px;
-    }
+        margin-bottom : 31px;
+    } 
+    margin-bottom: 40vh;
+  }
+
+  .Modal_Bottom_Wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 204px;
+
+    margin: -10vh auto 25px auto;
   }
