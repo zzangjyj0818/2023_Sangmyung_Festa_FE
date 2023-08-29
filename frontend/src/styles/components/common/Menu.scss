@@ -26,14 +26,44 @@
    
   #modalCloseBtn {
     position: absolute;
-    top: 72px;
-    right: 180px;
+    
+    width: 36px;
+    height: 36px;
+
+    top: 62px;
+    right: 330px;
     border: none;
     color: rgba(0, 0, 0, 0.7);
     background-color: transparent;
-    font-size: 20px;
+    font-size: 30px;
   }
    
   #modalCloseBtn:hover {
     cursor: pointer;
+  }
+
+  .Modal_Text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    top : 110px;
+    left : 25px;
+    .Modal_Text1{
+        color: #212121;
+        font-family: Noto Sans KR;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 125% */
+    }
+    .Modal_Text2{
+        color: #212121;
+        font-family: Noto Sans KR;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+    }
   }
