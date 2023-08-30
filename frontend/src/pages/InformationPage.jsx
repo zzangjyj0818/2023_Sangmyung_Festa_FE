@@ -6,7 +6,7 @@ import Footer from "../components/common/Footer";
 const InformationPage = () => {
   return (
     <>
-      <HeaderContainer name = {undefined} type = {2}/>
+      <HeaderContainer name = {undefined} type = {1}/>
       <Door/>
       <Footer/>
     </>
