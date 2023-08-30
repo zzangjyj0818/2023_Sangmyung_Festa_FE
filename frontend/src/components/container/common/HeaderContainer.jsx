@@ -13,7 +13,9 @@ const HeaderContainer = ({name, type}) => {
         setIsOpen(!isOpen);
     }
     return (
-        <Header 
+        <Header
+            name = {name}
+            type = {type}
             isOpen = {isOpen} 
             setIsOpen = {setIsOpen} 
             onClick = {onClick}

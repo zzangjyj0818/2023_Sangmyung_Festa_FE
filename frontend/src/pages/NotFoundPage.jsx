@@ -6,7 +6,7 @@ import '../styles/pages/NotFoundPage.scss';
 const NotFoundPage = () => {
     return (
         <>
-            <HeaderContainer />
+            <HeaderContainer name = {undefined} type = {1}/>
             <div className='NotFoundPage_Container'>
                 <div className='NotFoundPage_Wrapper'>
                     <div className='NotFoundPage_Text'>
