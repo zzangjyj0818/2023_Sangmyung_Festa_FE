@@ -1,6 +1,9 @@
 // door.scss
 $primaryColor: #5eb6f6;
 
+.informaion-container {
+  z-index: 500;
+}
 .body-container {
   display: flex;
   flex-direction: column;
@@ -8,12 +11,165 @@ $primaryColor: #5eb6f6;
 }
 
 .image-size {
+  position: relative; // 추가된 부분
   display: flex;
   justify-content: center;
   width: 100%;
   // width: 363px;
   height: 175px;
   margin-top: 0.7rem;
+  .overlay-div-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); // 반투명 배경으로 확인 용이하게 함.
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 여기서부터 내부 텍스트 스타일 */
+    .tag-div1 {
+      position: absolute;
+      top: 111px;
+      left: 39px;
+      background-color: #fdf3d1;
+      width: 21px;
+      height: 34px;
+      &.active {
+        background-color: red;
+      }
+    }
+    .tag-div2 {
+      position: absolute;
+      top: 72px;
+      left: 39px;
+      background-color: #fdf3d1;
+      width: 21px;
+      height: 34px;
+      &.active {
+        background-color: red;
+      }
+    }
+    .tag-div3 {
+      position: absolute;
+      top: 48px;
+      left: 60px;
+      background-color: #fdf3d1;
+      width: 34px;
+      height: 21px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div4 {
+      position: absolute;
+      top: 48px;
+      left: 99px;
+      background-color: #fdf3d1;
+      width: 34px;
+      height: 21px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div5 {
+      position: absolute;
+      top: 48px;
+      left: 137px;
+      background-color: #fdf3d1;
+      width: 34px;
+      height: 21px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div6 {
+      position: absolute;
+      top: 48px;
+      left: 175px;
+      background-color: #fdf3d1;
+      width: 34px;
+      height: 21px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div7 {
+      position: absolute;
+      top: 48px;
+      left: 214px;
+      background-color: #fdf3d1;
+      width: 34px;
+      height: 21px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div8 {
+      position: absolute;
+      top: 72px;
+      left: 243px;
+      background-color: #fdf3d1;
+      width: 21px;
+      height: 34px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div9 {
+      position: absolute;
+      top: 111px;
+      left: 243px;
+      background-color: #fdf3d1;
+      width: 21px;
+      height: 34px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div10 {
+      position: absolute;
+      top: 140px;
+      left: 280px;
+      background-color: #fdf3d1;
+      width: 34px;
+      height: 21px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+
+    .tag-div11 {
+      position: absolute;
+      top: 140px;
+      left: 320px;
+      background-color: #fdf3d1;
+      width: 34px;
+      height: 21px;
+
+      &.active {
+        background-color: red;
+      }
+    }
+  }
 }
 
 .navigation-line {
@@ -27,7 +183,7 @@ $primaryColor: #5eb6f6;
 .navigation-cp-container {
   .navigation-cp-space {
     display: flex;
-    justify-content: center; // 수정된 부분
+    justify-content: center;
     gap: 55px;
 
     .navigation-cp {
@@ -35,15 +191,15 @@ $primaryColor: #5eb6f6;
       border: none;
       color: #929292;
       min-width: 50px; // 최소 너비 설정
-      box-sizing: border-box; // 추가된 부분
+      box-sizing: border-box;
       padding: 10px 10px;
       font-size: 16px; // 폰트 크기 고정
       width: 95px; // 기본 너비 지정
-      border-bottom: 3px solid transparent; // 추가
+      border-bottom: 3px solid transparent;
 
       &.active {
         color: $primaryColor; // 활성화 시 색상 변경
-        border-bottom-color: #afafaf; // 수정
+        border-bottom-color: #afafaf;
 
         &:after {
           position: absolute; // position 속성 추가
@@ -58,6 +214,13 @@ $primaryColor: #5eb6f6;
   }
 }
 
+.filter-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
 .filter-title {
   color: #929292;
   font-family: Pretendard;
@@ -66,13 +229,6 @@ $primaryColor: #5eb6f6;
   font-weight: 700;
   line-height: normal;
   padding-left: 16px;
-}
-
-.filter-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 16px;
 }
 
 .filter-tags {
@@ -111,4 +267,79 @@ $primaryColor: #5eb6f6;
 .button-container {
   display: flex;
   justify-content: space-between; // 수정된 부분
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  padding-top: 3px;
+}
+
+.timeline-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 19px;
+}
+
+.timeline-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.timeline-icon-font {
+  margin: 0;
+  margin-left: 5px;
+  margin-right: 10px;
+  color: #727272;
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.timeline-time {
+  margin: 0;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.timeline-component {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-body {
+  width: 343px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #e8e8e8;
+}
+
+.timeline-cp-title {
+  color: #979797;
+  text-align: start;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.timeline-cp-cost {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
