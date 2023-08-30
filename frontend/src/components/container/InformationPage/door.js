@@ -25,7 +25,6 @@ const Door = () => {
 
   return (
     <>
-      <Header />
       <div className="navigation-cp-container">
         <div className="navigation-cp-space">
           <button
