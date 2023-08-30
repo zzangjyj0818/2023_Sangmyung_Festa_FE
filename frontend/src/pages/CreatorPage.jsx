@@ -7,7 +7,7 @@ import Footer from '../components/common/Footer';
 const CreatorPage = () => {
     return (
         <>
-            <HeaderContainer />
+            <HeaderContainer name = {'만든이들'} type = {1}/>
             <CreatorList />
             <Footer/>
         </>
