@@ -8,7 +8,7 @@ const Header = ({isOpen, setIsOpen, onClick, navigate}) => {
     return (
         <div className='Header_Container'>
             <div className='Header_Wrapper'>
-                <div className='Header_Img'>
+                <div className='Header_Img' onClick = {()=>navigate('/')}>
                     <img src = {Logo} alt='' style={{width: '67px', height : '48px'}}/>
                 </div>
                 <div className='Header_MenuIcon' onClick={onClick}>

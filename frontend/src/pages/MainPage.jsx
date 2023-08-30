@@ -8,7 +8,7 @@ const MainPage = () => {
         <>
             <HeaderContainer />
             <MainView/>
-            <Footer/>
+            <Footer />
         </>
     );
 };
