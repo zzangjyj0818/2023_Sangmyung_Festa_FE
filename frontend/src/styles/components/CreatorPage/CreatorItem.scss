@@ -1,6 +1,7 @@
 // CreatorItem.scss
 .CreatorItemBlock {
     display: flex;
+    flex-direction: row;
     align-items: center;
     
     & > .thumbnail {
