@@ -2,6 +2,7 @@ import React from 'react';
 import HeaderContainer from '../components/container/common/HeaderContainer';
 import MainView from '../components/presentation/MainPage/MainView';
 import EventView from '../components/presentation/MainPage/EventView';
+import TimelineView from '../components/presentation/MainPage/TimelineView';
 import Footer from '../components/common/Footer';
 import '../styles/pages/MainPage.scss';
 
@@ -12,6 +13,7 @@ const MainPage = () => {
             <MainView/>
             <div>
                 <EventView/>
+                <TimelineView />
             </div> 
             <Footer /> 
         </>
