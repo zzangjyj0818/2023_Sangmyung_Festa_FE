@@ -21,7 +21,6 @@ import syj2 from '../../../assets/creator/syj.png';
 import ylh from'../../../assets/creator/ylh.png';
 
 
-
 const sampleCreators1 = [ //기획
     {
         image: ldw, 
