@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../components/container/common/HeaderContainer';
+import Footer from '../components/common/Footer';
 import '../styles/pages/NotFoundPage.scss';
 
 const NotFoundPage = () => {
@@ -13,6 +14,7 @@ const NotFoundPage = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

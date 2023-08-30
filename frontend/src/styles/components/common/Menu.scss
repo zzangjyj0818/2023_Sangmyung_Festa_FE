@@ -12,12 +12,13 @@
 
     height: 100%;
     flex: 1 0 auto;
-    z-index: 1200;
 
     position: fixed;
     top: 0px;
     outline: 0px;
     right: 0px;
+
+    overflow: auto;
   }
    
   /* modal창 */
@@ -91,13 +92,17 @@
     .Modal_item {
         margin-bottom : 31px;
     } 
-    margin-bottom: 40vh;
   }
 
   .Modal_Bottom_Wrapper{
     display: flex;
     flex-direction: row;
-    height: 204px;
 
-    margin: -10vh auto 25px auto;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    position : fixed;
+    bottom : 0;
   }
