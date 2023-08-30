@@ -12,7 +12,6 @@ const App = () => {
     <BrowserRouter>
       <Suspense fallback={<div>Loading</div>}>
         <Routes>
-          {/* <Route path = "/" element = {<designUniv/>}/>  */}
           <Route path="/" element={<MainPage />} />
           <Route path="/creator" element={<CreatorPage />} />
           <Route path="/timeline" element={<TimelinePage />} />

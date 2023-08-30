@@ -1,14 +1,16 @@
 // src/components/container/InformationPage/door.js
-import React, { useState } from "react"
+import React, { useState, Fragment } from "react"
 import image from "./image.png"
 import "./door.scss"
 import tags from "./tags.json"
+import booth from "./booth.json"
 import timeicon from "./carbon_time.png"
 import infoicon from "./Vector.png"
 
 const Door = () => {
   const [selectedTag, setSelectedTag] = useState("")
-  const [activeNavButton, setActiveNavButton] = useState(null)
+  const [activeNavButton, setActiveNavButton] = useState("design")
+  const [boothInfo, setBoothInfo] = useState("")
 
   const onClickTag = (tag) => {
     setSelectedTag((prevTags) => {
@@ -18,10 +20,14 @@ const Door = () => {
         return [tag]
       }
     })
+
+    setBoothInfo(tag) // 선택된 태그에 해당하는 부스 정보 설정
   }
 
   const onClickSelButton = (buttonName) => {
-    setActiveNavButton((prev) => (prev === buttonName ? null : buttonName))
+    setActiveNavButton((prev) => (prev === buttonName ? "design" : buttonName))
+    setSelectedTag("") // 버튼을 누를 때마다 선택된 태그 초기화
+    setBoothInfo("") // 버튼을 누를 때마다 선택된 태그와 부스 정보 초기화
   }
 
   return (
@@ -50,89 +56,35 @@ const Door = () => {
       <div className="navigation-line" />
 
       <div className="body-container">
-        <div className="image-size">
-          <img src={image} alt="이미지" />
-          <div className="overlay-div-container">
-            <div
-              className={`tag-div1 ${
-                selectedTag.includes("인터스트리디자인") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div2 ${
-                selectedTag.includes("소프트웨어") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div3 ${
-                selectedTag.includes("팜므") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div4 ${
-                selectedTag.includes("스페이스디자인") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div5 ${
-                selectedTag.includes("마음건강연구회") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div6 ${
-                selectedTag.includes("그린스마트시티") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div7 ${
-                selectedTag.includes("시스템반도체") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div8 ${
-                selectedTag.includes("단과대") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div9 ${
-                selectedTag.includes("무대미술") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div10 ${
-                selectedTag.includes("식물식품공학") ? "active" : ""
-              }`}
-            />
-
-            <div
-              className={`tag-div11 ${
-                selectedTag.includes("세라믹디자인") ? "active" : ""
-              }`}
-            />
+        {activeNavButton === "gate" && (
+          <div className="image-size">
+            <img src={image} alt="이미지" />
+            <div className="overlay-div-container">
+              {/* 태그별로 활성화 여부 확인 후 클래스 적용 */}
+              {tags.map((tag) => (
+                <div
+                  key={tag.id}
+                  className={`tag-div${tag.id} ${
+                    selectedTag.includes(tag.Department) ? "active" : ""
+                  }`}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="filter-container">
           <h2 className="filter-title">동아리/학과 부스</h2>
           <div className="filter-tags">
             {tags.map((tag) => (
               <button
-                key={tag}
+                key={tag.id}
                 className={`tag-button ${
-                  selectedTag.includes(tag) ? "active" : ""
+                  selectedTag.includes(tag.Department) ? "active" : ""
                 }`}
-                onClick={() => onClickTag(tag)}
+                onClick={() => onClickTag(tag.Department)}
               >
-                {tag}
+                {tag.Department}
               </button>
             ))}
           </div>
@@ -140,20 +92,32 @@ const Door = () => {
 
         <div className="timeline-container">
           <div className="timeline-title">
-            <div className="timeline-icon">
+            <div className="timeline-timeicon">
               <img src={timeicon} alt="시계 아이콘" />
             </div>
             <h2 className="timeline-icon-font">시간</h2>
             <h2 className="timeline-time">10:00 ~ 20:00</h2>
           </div>
-          <div className="timeline-component">
-            <div className="timeline-body" />
-            <div className="timeline-icon">
-              <img src={timeicon} alt="시계 아이콘" />
+          {boothInfo && (
+            <div className="timeline-component">
+              {booth.map(
+                (item) =>
+                  item.Department === boothInfo && (
+                    <React.Fragment key={item.id}>
+                      <div className="timeline-body" />
+                      <div className="timeline-info-title">
+                        <div className="timeline-infoicon">
+                          <img src={infoicon} alt="정보 아이콘" />
+                        </div>
+                        <div className="timeline-info-text">정보</div>
+                        <h2 className="timeline-info-content">{item.name}</h2>
+                      </div>
+                      <h2 className="timeline-cp-cost">{item.cost}</h2>
+                    </React.Fragment>
+                  )
+              )}
             </div>
-            <h2 className="timeline-cp-title">게임 및 사진촬영</h2>
-            <h2 className="timeline-cp-cost">1,000원 / 10발</h2>
-          </div>
+          )}
         </div>
       </div>
     </div>

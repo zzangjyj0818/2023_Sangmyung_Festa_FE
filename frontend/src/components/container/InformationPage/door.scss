@@ -233,7 +233,7 @@ $primaryColor: #5eb6f6;
 
 .filter-tags {
   display: flex;
-  justify-content: space-between; // 수정된 부분
+  justify-content: flex-start; // 수정된 부분
   align-items: center;
   flex-wrap: wrap;
 
@@ -264,11 +264,6 @@ $primaryColor: #5eb6f6;
   }
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between; // 수정된 부분
-}
-
 .timeline-container {
   display: flex;
   justify-content: center;
@@ -284,7 +279,7 @@ $primaryColor: #5eb6f6;
   margin-bottom: 19px;
 }
 
-.timeline-icon {
+.timeline-timeicon {
   width: 14px;
   height: 14px;
 }
@@ -325,7 +320,25 @@ $primaryColor: #5eb6f6;
   background: #e8e8e8;
 }
 
-.timeline-cp-title {
+.timeline-info-title {
+  // 컴포넌트 밑에 회색 아이콘과 글씨를 묶기 위한 css
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.timeline-info-text {
+  color: #727272;
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 3px;
+  margin-right: 5px;
+}
+
+.timeline-info-content {
   color: #979797;
   text-align: start;
   font-family: Pretendard;
@@ -336,10 +349,18 @@ $primaryColor: #5eb6f6;
 }
 
 .timeline-cp-cost {
+  margin: 0;
   color: #000;
   font-family: Pretendard;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.timeline-infoicon {
+  width: 14px;
+  height: 14px;
 }
