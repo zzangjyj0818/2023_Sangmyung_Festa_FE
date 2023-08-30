@@ -2,15 +2,32 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height : 90vh;
+    height : 100vh;
     background-image: url('../../../assets/MainBackground1.png');
     background-size: cover;
 }
 
 .MainView_TextBox {
     color: #FFF;
-    font-family: Black Han Sans;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 22.075px; /* 50.172% */
+    font-family: 'Black Han Sans';
+
+    margin-left : 48px;
+
+    .MainView_Text1 {
+        font-size: 20px;
+        margin-top : 230px;
+        font-weight: 700;
+    }
+    .MainView_Text2 {
+        font-size: 44px;
+        font-style: bold;
+        font-weight: 900;
+        letter-spacing: -2px;
+        margin-top : 12px;
+    }
+    .MainView_Text3 {
+        font-size: 36px;
+        color: #FFF;
+        font-weight: 900;
+    }
 }

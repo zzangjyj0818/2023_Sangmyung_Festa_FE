@@ -14,7 +14,7 @@ const Header = ({name, type, opacity, isOpen, setIsOpen, onClick, navigate}) => 
                 </div>
                 {name !== undefined && <div className='Header_Props'>{name}</div>}
                 <div className='Header_MenuIcon' onClick={onClick}>
-                    <AiOutlineMenu size={20}/>
+                    <AiOutlineMenu size={20} color={type === 1 ? 'black' : 'white'}/>
                     {isOpen && <Menu isOpen = {isOpen} setIsOpen = {setIsOpen} onClick={onClick} navigate={navigate}/>}
                 </div>
             </div>
