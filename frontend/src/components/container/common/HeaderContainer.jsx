@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import Header from '../../common/Header';
 
 
-const HeaderContainer = ({name, type}) => {
+const HeaderContainer = ({name, type, opacity}) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
@@ -13,7 +13,10 @@ const HeaderContainer = ({name, type}) => {
         setIsOpen(!isOpen);
     }
     return (
-        <Header 
+        <Header
+            name = {name}
+            type = {type}
+            opacity = {opacity}
             isOpen = {isOpen} 
             setIsOpen = {setIsOpen} 
             onClick = {onClick}

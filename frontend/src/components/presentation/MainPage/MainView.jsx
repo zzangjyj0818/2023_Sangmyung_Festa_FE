@@ -1,17 +1,13 @@
 import React from 'react';
-import TextBox from '../../../assets/TextBox.png';
 import '../../../styles/components/MainPage/MainView.scss';
 
 const MainView = () => {
     return (
         <div className='MainView_Container'>
-            <div>
-                <img src={TextBox} alt='' />
-            </div>
-            <div>
-                <div>2023.9/25-26</div>
-                <div>DEAR FOR YOU</div>
-                <div>: 비상</div>
+            <div className='MainView_TextBox'>
+                <div className='MainView_Text1'>2023.9/25-26</div>
+                <div className='MainView_Text2'>DEAR FOR YOU</div>
+                <div className='MainView_Text3'>: 비상</div>
             </div>
         </div>
     );
