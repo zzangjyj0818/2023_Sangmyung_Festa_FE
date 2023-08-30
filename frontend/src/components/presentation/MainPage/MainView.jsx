@@ -6,9 +6,6 @@ const MainView = () => {
     return (
         <div className='MainView_Container'>
             <div>
-                <img src={TextBox} alt='' />
-            </div>
-            <div>
                 <div>2023.9/25-26</div>
                 <div>DEAR FOR YOU</div>
                 <div>: 비상</div>
