@@ -1,20 +1,20 @@
 // CreatorList.jsx
 import React, { useState } from 'react'; 
 import CreatorItem from './CreatorItem';
-import Logo from '../../../assets/Logo.png';
+import Logo1 from '../../../assets/Logo1.png';
 import '../../../styles/components/CreatorPage/CreatorList.scss';
 
 
 const sampleCreators1 = [ //총학
     {
-        image: Logo, 
+        image: Logo1, 
         name: '이도원', 
         department: '기획 팀장', 
         major: '소프트웨어학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '손예진', 
         department: '기획팀', 
         major: '소프트웨어학과', 
@@ -24,70 +24,70 @@ const sampleCreators1 = [ //총학
 
 const sampleCreators2 = [ //멋사
     {
-        image: Logo, 
+        image: Logo1, 
         name: '정연재', 
         department: '프론트앤드 팀장', 
         major: '소프트웨어학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '김승찬', 
         department: '프론트앤드 팀', 
         major: '소프트웨어학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '임형준', 
         department: '프론트앤드 팀', 
         major: '소프트웨어학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '김지민', 
         department: '프론트앤드 팀', 
         major: '휴먼지능로봇공학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '이현제', 
         department: '백앤드 팀장', 
         major: '소프트웨어학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '곽상진', 
         department: '백앤드 팀', 
         major: '소프트웨어학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '이용우', 
         department: '백엔드 팀', 
         major: '전자공학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '김민석', 
         department: '백앤드 팀', 
         major: '스마트정보통신공학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '김형섭', 
         department: '백앤드 팀', 
         major: '소프트웨어학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '한다희', 
         department: '디자인 팀', 
         major: '휴먼지능로봇공학과', 
@@ -97,28 +97,28 @@ const sampleCreators2 = [ //멋사
 
 const sampleCreators3 = [ //커디
     {
-        image: Logo, 
+        image: Logo1, 
         name: '이주헌', 
         department: '디자인 팀장', 
         major: '시각디자인학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '유이현', 
         department: '디자인 팀', 
         major: '시각디자인학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '이지우', 
         department: '디자인 팀', 
         major: '커뮤니케이션디자인학과', 
         studentId: '202021349'
     },
     {
-        image: Logo, 
+        image: Logo1, 
         name: '서유진', 
         department: '디자인 팀', 
         major: '커뮤니케이션디자인학과', 

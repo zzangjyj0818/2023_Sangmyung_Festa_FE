@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import Header from '../../common/Header';
 
 
-const HeaderContainer = () => {
+const HeaderContainer = ({name, type}) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
