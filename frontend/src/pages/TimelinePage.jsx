@@ -1,10 +1,11 @@
 import React from 'react';
+import HeaderContainer from '../components/container/common/HeaderContainer';
 
 const TimelinePage = () => {
     return (
-        <div>
-            TimelinePage
-        </div>
+        <>
+            <HeaderContainer></HeaderContainer>
+        </>
     );
 };
 

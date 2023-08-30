@@ -91,7 +91,6 @@
     .Modal_item {
         margin-bottom : 31px;
     } 
-    margin-bottom: 40vh;
   }
 
   .Modal_Bottom_Wrapper{
@@ -99,5 +98,8 @@
     flex-direction: row;
     height: 204px;
 
-    margin: -10vh auto 25px auto;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
   }
