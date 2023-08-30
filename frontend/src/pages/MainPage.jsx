@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import MainView from '../components/presentation/MainPage/MainView';
+import HeaderContainer from '../components/container/common/HeaderContainer';
 
 const MainPage = () => {
     return (
         <div>
-            <Header />
-            <MainView />
+            <HeaderContainer />
         </div>
     );
 };
