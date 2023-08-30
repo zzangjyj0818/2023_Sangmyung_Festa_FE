@@ -11,7 +11,7 @@ const CreatorBox = ({ title }) => (
 
 const CreatorView = () => {
     return (
-        <div>
+        <div className='CreatorView_Container'>
             <div className="Creator_Text">
                 <p>🤷 누가 만들었나요?</p>
             </div>
