@@ -1,5 +1,11 @@
 // CreatorList.scss
-
+.CreatorList_Container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height : 100vh;
+    margin: 0 0 auto 0;
+}
 
 .category-selector {
     display: flex;
@@ -46,8 +52,9 @@
     text-align: center;
     
     color: #000000;
+    margin-bottom: -2.5px;
     
-    border-bottom: 2px solid rgb(73, 187, 232);
+    border-bottom: 4px solid #424242;;
   }
   
   
@@ -68,7 +75,8 @@
     width: 375px;
     height: 100px;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 30%;
 }
 
 

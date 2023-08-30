@@ -143,7 +143,7 @@ const categoryDescriptions = {
     const [currentCategory, setCurrentCategory] = useState(categories[0]);
   
     return (
-        <div>
+        <div className='CreatorList_Container'>
             <div className="category-selector">
                 {categories.map((category) => (
                     <button className={`category-button ${currentCategory.name === category.name ? "selected" : ""}`}
