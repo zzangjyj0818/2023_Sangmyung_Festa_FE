@@ -6,7 +6,7 @@ import Footer from '../components/common/Footer';
 const MainPage = () => {
     return (
         <>
-            <HeaderContainer />
+            <HeaderContainer name = {undefined} type = {2} opacity={true}/>
             <MainView/>
             <Footer />
         </>

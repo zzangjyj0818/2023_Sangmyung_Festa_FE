@@ -5,9 +5,9 @@ import Logo2 from '../../assets/Logo2.png';
 import '../../styles/components/common/Header.scss';
 import { AiOutlineMenu } from "react-icons/ai";
 
-const Header = ({name, type, isOpen, setIsOpen, onClick, navigate}) => {
+const Header = ({name, type, opacity, isOpen, setIsOpen, onClick, navigate}) => {
     return (
-        <div className='Header_Container'>
+        <div className={opacity === false ? 'Header_Container1' : 'Header_Container2'}>
             <div className='Header_Wrapper'>
                 <div className='Header_Img' onClick = {()=>navigate('/')}>
                     <img src = {type === 1 ? Logo2 : Logo1} alt='' style={{width: '67px', height : '48px'}}/>
