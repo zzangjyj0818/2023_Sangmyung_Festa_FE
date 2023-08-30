@@ -6,11 +6,11 @@ import Footer from '../components/common/Footer';
 
 const CreatorPage = () => {
     return (
-        <div>
+        <>
             <HeaderContainer />
             <CreatorList />
             <Footer/>
-        </div>
+        </>
     );
 };
 
