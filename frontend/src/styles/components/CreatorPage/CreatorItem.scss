@@ -15,7 +15,7 @@
             object-fit: cover;
             border-radius: 50%;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02));
-            border: 0.5px solid #ECECEE;
+            border: 0.5px solid #b9b9b9;
             margin-left:25%;
 
         }
@@ -32,7 +32,7 @@
           font-style: normal;
           font-weight: 700;
           font-size: 20px;
-          line-height: 25px; // identical to box height
+          line-height: 25px; 
           letter-spacing :0.01em;
 
           color : #212121;  
@@ -40,6 +40,7 @@
 
         & > .department {
             display:flex;
+            width:150px;
             margin-left:10%;
             font-family: 'Spoqa Han Sans Neo';
             font-style: normal;
