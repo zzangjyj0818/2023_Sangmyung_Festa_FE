@@ -1,0 +1,74 @@
+// CreatorList.scss
+
+
+.category-selector {
+    display: flex;
+    //justify-content: 10px; // 버튼 사이에 공간 배분
+    border-bottom: 2px solid #D8DCE0;
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+
+}
+
+.category-button {
+
+    margin-left: 16%;
+    border: none; 
+    background: transparent; 
+    outline: none; 
+
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+
+    color: #D8DCE0;
+
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px; 
+}
+
+.category-button.selected {
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    
+    color: #000000;
+    
+    border-bottom: 2px solid rgb(73, 187, 232);
+  }
+  
+  
+
+.Descriptions {
+    margin: 30px 20px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #454545;
+}
+
+.CreatorListBlock {
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+    width: 375px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+
