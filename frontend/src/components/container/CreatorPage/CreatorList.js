@@ -3,140 +3,157 @@ import React, { useState } from 'react';
 import CreatorItem from './CreatorItem';
 import Logo1 from '../../../assets/Logo1.png';
 import '../../../styles/components/CreatorPage/CreatorList.scss';
+import hdh from '../../../assets/creator/hdh.jpeg';
+import jyj from '../../../assets/creator/jyj.jpeg';
+import khs from'../../../assets/creator/khs.jpeg';
+import kjm from '../../../assets/creator/kjm.jpeg';
+import kms from '../../../assets/creator/kms.jpeg';
+import ksc from '../../../assets/creator/ksc.jpeg';
+import ksj from '../../../assets/creator/ksj.jpeg';
+import ldw from '../../../assets/creator/ldw.png';
+import lhj from '../../../assets/creator/lhj.png';
+import lhjun from '../../../assets/creator/lhjun.png';
+import ljhyeon from'../../../assets/creator/ljhyeon.png';
+import ljw from '../../../assets/creator/ljw.jpeg';
+import lyw from '../../../assets/creator/lyw.png';
+import syj from '../../../assets/creator/syj.jpeg';
+import syj2 from '../../../assets/creator/syj.png';
+import ylh from'../../../assets/creator/ylh.png';
 
 
-const sampleCreators1 = [ //총학
+
+const sampleCreators1 = [ //기획
     {
-        image: Logo1, 
+        image: ldw, 
         name: '이도원', 
-        department: '기획 팀장', 
-        major: '소프트웨어학과', 
-        studentId: '202021349'
+        department: '기획 총괄', 
+        major: '글로벌금융경영학부', 
+        studentId: '20'
     },
     {
-        image: Logo1, 
+        image: syj, 
         name: '손예진', 
-        department: '기획팀', 
+        department: '기획 부총괄', 
+        major: '식물식품공학과', 
+        studentId: '21'
+    },
+    {
+        image: lhj, 
+        name: '이현제', 
+        department: '프로젝트 총괄', 
         major: '소프트웨어학과', 
-        studentId: '202021349'
-    }
+        studentId: '18'
+    },
+    {
+        image: hdh, 
+        name: '한다희', 
+        department: '프로젝트 부총괄', 
+        major: '식물식품공학과', 
+        studentId: '21'
+    },
 ];
 
-const sampleCreators2 = [ //멋사
+const sampleCreators2 = [ //개발
     {
-        image: Logo1, 
-        name: '정연재', 
-        department: '프론트앤드 팀장', 
-        major: '소프트웨어학과', 
-        studentId: '202021349'
-    },
-    {
-        image: Logo1, 
-        name: '김승찬', 
-        department: '프론트앤드 팀', 
-        major: '소프트웨어학과', 
-        studentId: '202021349'
-    },
-    {
-        image: Logo1, 
-        name: '임형준', 
-        department: '프론트앤드 팀', 
-        major: '소프트웨어학과', 
-        studentId: '202021349'
-    },
-    {
-        image: Logo1, 
-        name: '김지민', 
-        department: '프론트앤드 팀', 
-        major: '휴먼지능로봇공학과', 
-        studentId: '202021349'
-    },
-    {
-        image: Logo1, 
-        name: '이현제', 
-        department: '백앤드 팀장', 
-        major: '소프트웨어학과', 
-        studentId: '202021349'
-    },
-    {
-        image: Logo1, 
+        image: ksj, 
         name: '곽상진', 
-        department: '백앤드 팀', 
+        department: '개발 총괄', 
         major: '소프트웨어학과', 
-        studentId: '202021349'
+        studentId: '20'
     },
     {
-        image: Logo1, 
-        name: '이용우', 
-        department: '백엔드 팀', 
-        major: '전자공학과', 
-        studentId: '202021349'
-    },
-    {
-        image: Logo1, 
-        name: '김민석', 
-        department: '백앤드 팀', 
-        major: '스마트정보통신공학과', 
-        studentId: '202021349'
-    },
-    {
-        image: Logo1, 
-        name: '김형섭', 
-        department: '백앤드 팀', 
+        image: jyj, 
+        name: '정연재', 
+        department: 'FE 팀장', 
         major: '소프트웨어학과', 
-        studentId: '202021349'
+        studentId: '20'
     },
     {
-        image: Logo1, 
-        name: '한다희', 
-        department: '디자인 팀', 
+        image: ksc, 
+        name: '김승찬', 
+        department: 'FE 팀원', 
+        major: '소프트웨어학과', 
+        studentId: '19'
+    },
+    {
+        image: lhjun, 
+        name: '임형준', 
+        department: 'FE 팀원', 
+        major: '소프트웨어학과', 
+        studentId: '19'
+    },
+    {
+        image: kjm, 
+        name: '김지민', 
+        department: 'FE 팀원', 
         major: '휴먼지능로봇공학과', 
-        studentId: '202021349'
+        studentId: '20'
+    },
+    {
+        image: lyw, 
+        name: '이용우', 
+        department: 'BE 팀장', 
+        major: '전자공학과', 
+        studentId: '18'
+    },
+    {
+        image: kms, 
+        name: '김민석', 
+        department: 'BE 팀원', 
+        major: '스마트정보통신학과', 
+        studentId: '19'
     },
 ];
 
 const sampleCreators3 = [ //커디
     {
-        image: Logo1, 
+        image: khs, 
+        name: '김형섭', 
+        department: '디자인 총괄', 
+        major: '소프트웨어학과', 
+        studentId: '18'
+    },
+    {
+        image: ljhyeon, 
         name: '이주헌', 
         department: '디자인 팀장', 
-        major: '시각디자인학과', 
-        studentId: '202021349'
+        major: '커뮤니케이션디자인전공', 
+        studentId: '18'
     },
     {
-        image: Logo1, 
+        image: ylh, 
         name: '유이현', 
-        department: '디자인 팀', 
-        major: '시각디자인학과', 
-        studentId: '202021349'
+        department: '디자인 팀원', 
+        major: '커뮤니케이션디자인전공', 
+        studentId: '18'
     },
     {
-        image: Logo1, 
+        image: ljw, 
         name: '이지우', 
-        department: '디자인 팀', 
-        major: '커뮤니케이션디자인학과', 
-        studentId: '202021349'
+        department: '디자인 팀원', 
+        major: '커뮤니케이션디자인전공', 
+        studentId: '20'
     },
     {
-        image: Logo1, 
+        image: syj2, 
         name: '서유진', 
         department: '디자인 팀', 
-        major: '커뮤니케이션디자인학과', 
-        studentId: '202021349'
+        major: '커뮤니케이션디자인전공', 
+        studentId: '21'
     }
 ];
 
 const categories = [
-    { name: '총학', creators: sampleCreators1 },
-    { name: '멋사', creators: sampleCreators2 },
-    { name: '커디', creators: sampleCreators3 },
+    { name: '기획', creators: sampleCreators1 },
+    { name: '개발', creators: sampleCreators2 },
+    { name: '디자인', creators: sampleCreators3 },
 ];
 
 
 const categoryDescriptions = {
-    '총학': '상명대학교 Switch 총학생회',
-    '멋사': '상명대학교 멋쟁이사자처럼 11기',
-    '커디': '커뮤니케이션 디자인 전공'
+    '기획': '상명대학교 Switch 총학생회',
+    '개발': '상명대학교 멋쟁이사자처럼 11기',
+    '디자인': '커뮤니케이션 디자인 전공'
 };  
 
   const CreatorList = () => {
