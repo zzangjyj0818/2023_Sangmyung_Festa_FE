@@ -9,16 +9,19 @@
 
 .MainView_TextBox {
     color: #FFF;
-    font-family: 'Black Han Sans';
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     margin-left : 20px;
 
     .MainView_Text1 {
+        font-family: Roboto;
+        font-style: bold;
         font-size: 20px;
         margin-top : 230px;
         font-weight: 700;
     }
     .MainView_Text2 {
+        font-family: 'Black Han Sans';
         font-size: 44px;
         font-style: bold;
         font-weight: 900;
@@ -26,6 +29,7 @@
         margin-top : 12px;
     }
     .MainView_Text3 {
+        font-family: 'Black Han Sans';
         font-size: 36px;
         color: #FFF;
         font-weight: 900;
