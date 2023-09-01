@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { tagData, infoData, tagData_food, infoData_food } from './data'; // 데이터를 임포트하세요
+import { tagData, infoData, tagData_food, infoData_food } from './data';
 import time1 from './carbon_time.png'
 import '../../../styles/pages/designUniv.scss';
 import Union from '../../container/InformationPage/designicon/Union.png';
@@ -63,12 +63,12 @@ function DesignUniv() {
 
   const handleTouchStart = (e) => {
     e.preventDefault();
-    // 다른 초기화 논리를 추가하세요
+    
   };
   
   const handleTouchMove = (e) => {
     e.preventDefault();
-    // 드래그 이벤트 처리 로직을 추가하세요
+    
   };
   
   const selectedInfo = selectedTagId
