@@ -72,4 +72,5 @@ const EventView = () => {
     );
 };
 
+
 export default EventView;
