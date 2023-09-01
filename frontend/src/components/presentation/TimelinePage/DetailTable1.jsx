@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../../styles/components/TimelinePage/DetailTable1.scss';
+import '../../../styles/components/TimelinePage/DetailTable2.scss';
 
 
 const times = ['10:00','12:00','14:00','16:00','18:00', '20:00','22:00'];
 
-const DetailTable1 = () => {
+const DetailTable2 = () => {
 
     return (
         <div className='DetailTable1_Container'>
@@ -28,14 +28,26 @@ const DetailTable1 = () => {
                     <div>{/* Information Icon */}</div>
                     <div>이벤트</div>
                 </div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div className='Box_Collection'>
+                    <div className='InformationBox1'>
+
+                    </div>
+                    <div className='InformationBox2'>
+
+                    </div>
+                    <div className='InformationBox3'>
+
+                    </div>
+                    <div className='InformationBox4'>
+
+                    </div>
+                    <div className='InformationBox5'>
+
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
 
-export default DetailTable1;
+export default DetailTable2;

@@ -1,4 +1,4 @@
-.DetailTable1_Container {
+.DetailTable2_Container {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -6,7 +6,7 @@
 
 }
 
-.DetailTable1_TimeList {
+.DetailTable2_TimeList {
     display: flex;
     flex-direction: column;
 
@@ -14,7 +14,7 @@
     margin-left : 16px;
 }
 
-.TimeList_Title {
+.TimeList2_Title {
     display: flex;
     flex-direction: row;
     color: #727272;
@@ -25,7 +25,7 @@
     line-height: normal;
 }
 
-.TimeList_items {
+.TimeList2_items {
     display: flex;
     flex-direction: column;
     color: #727272;
@@ -35,20 +35,20 @@
     margin-top : 12.5px;
 }
 
-.items_wrapper {
+.items_wrapper2 {
     display: flex;
     flex-direction: row;
     width : auto;
 }
 
-.TimeList_item {
+.TimeList_item2 {
     width : 32px;
     height : 15px;
     margin-bottom : 104px;
     margin-right : 35px;
 }
 
-.item_circle {
+.item_circle2 {
     width: 11px;
     height : 11px;
     border : none;
@@ -56,7 +56,7 @@
     background-color: lightgray;
 }
 
-.DetailTable1_HorizonBar {
+.DetailTable2_HorizonBar {
     position: absolute;
     margin-top : 141px;
     display: flex;
@@ -66,7 +66,7 @@
     margin-left : 87.5px;
 }
 
-.DetailTable1_InformationList{
+.DetailTable2_InformationList{
     display: flex;
     flex-direction: column;
 
@@ -75,7 +75,7 @@
     margin-right : 14px;
 }
 
-.InformationList_Title {
+.InformationList_Title2 {
     display: flex;
     flex-direction: row;
     color: #727272;
@@ -86,7 +86,11 @@
     line-height: normal;
 }
 
-.InformationBox1 {
+.Box_Collection2 {
+    display: flex;
+    flex-direction: column;
+}
+.Information2Box1 {
     width: 255px;
     height: 337px;
     border-radius: 12px;
@@ -96,7 +100,7 @@
     margin-top : 14.5px;
 }
 
-.InformationBox2 {
+.Information2Box2 {
     width: 255px;
     height: 180px;
     flex-shrink: 0;
@@ -106,7 +110,7 @@
     margin-top : 12px;
 }
 
-.InformationBox3 {
+.Information2Box3 {
     width: 255px;
     height: 58px;
     border-radius: 12px;
@@ -115,18 +119,9 @@
     margin-top : 12px;
 }
 
-.InformationBox4 {
+.Information2Box4 {
     width: 255px;
-    height: 51px;
-    border-radius: 12px;
-    background: var(--light-gray, #EEE);
-    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
-    margin-top : 12px;
-}
-
-.InformationBox5 {
-    width: 255px;
-    height: 51px;
+    height: 114px;
     border-radius: 12px;
     background: var(--light-gray, #EEE);
     box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
