@@ -65,3 +65,19 @@
     border: 1px solid lightgray;
     margin-left : 87.5px;
 }
+
+.DetailTable1_InformationList{
+    display: flex;
+    flex-direction: column;
+}
+
+.InformationList_Title {
+    display: flex;
+    flex-direction: row;
+    color: #727272;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

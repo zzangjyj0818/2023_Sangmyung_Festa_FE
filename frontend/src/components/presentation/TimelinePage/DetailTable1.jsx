@@ -23,8 +23,16 @@ const DetailTable1 = () => {
                 </div>
             </div>
                 <div className='DetailTable1_HorizonBar'></div>
-            <div>
-                
+            <div className='DetailTable1_InformationList'>
+                <div className='InformationList_Title'>
+                    <div>{/* Information Icon */}</div>
+                    <div>시간</div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     );
