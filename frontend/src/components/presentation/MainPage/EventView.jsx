@@ -34,7 +34,7 @@ const detailInformations = [
 
 const EventBox = ({detail}) => (
     <div className="event_box">
-        <img src={detail.url} alt=''/>
+        <img src={detail.url} alt='' style={{width : '287px', height : '195px'}}/>
     </div>
 );
 
