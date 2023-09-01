@@ -5,14 +5,28 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding:10px;
+    padding: 10px;
+}
+
+.DesignUnivFavorite {
+    color: #A3A2A2;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .DesignUnivImage {
-    padding:10px;
+    padding: 10px;
     width: 14px;
     height: 14px;
-    
+
+}
+
+.DesignUnivArrow {
+    display: flex;
+    align-items: center;
 }
 
 .DesignUnivContainer {
@@ -21,13 +35,13 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    flex-wrap:wrap ;
+    flex-wrap: wrap;
 }
 
 .tagsWrapper {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .tagDesignUniv {
@@ -35,20 +49,111 @@
     justify-content: center;
     align-items: center;
     border-radius: 999px;
+    border: 0.7px solid #dfdfdf;
     padding: 5px 10px;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
-    background: #C4C4C4;
-    color: #505050;
+    background: #fff;
+    color: #a3a2a2;
     text-align: center;
     font-family: Pretendard;
     font-size: 10px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}   
+}
 
 .tagDesignUniv:hover {
     background: #505050;
     color: white;
 }
+
+
+
+.navigation-line {
+    position: absolute;
+    background: #e4e4e4;
+    border: none;
+    height: 1px;
+    width: 100%;
+}
+
+.navigation-cp-container {
+    .navigation-cp-space {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        .navigation-cp {
+            background: #fff;
+            border: none;
+            color: #929292;
+            min-width: 50px; // 최소 너비 설정
+            box-sizing: border-box;
+            padding: 5px 5px;
+            font-size: 16px; // 폰트 크기 고정
+            width: 85px; // 기본 너비 지정
+
+            &.active {
+                color: var(--main, #4f75ff);
+                text-decoration: none;
+            }
+        }
+
+        .border-bottom {
+            color: var(--main, #4f75ff);
+            height: 2px;
+            background-color: #4f75ff;
+            display: none;
+
+            &.active {
+                display: block;
+                border-radius: 10px; // 원하는 radius 값 입력.
+            }
+        }
+    }
+}
+
+/* 작은 창 스타일 */
+.mini-window-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0); /* 초기 상태에서 아래에 위치 */
+    max-height: 100vh; /* 초기 높이를 최대 높이로 설정 (전체 화면 높이) */
+    overflow: hidden; /* 넘치는 내용 숨김 */
+    transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 999;
+    
+  }
+  
+  .mini-window-container.opened {
+    transform: translateY(-100%); /* 열릴 때 위로 올라감 */
+    max-height: 0; /* 열릴 때 높이를 0으로 줄임 */
+    transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out; /* 추가: 애니메이션 효과 설정 */
+  }
+  
+  /* 작은 창 내용 스타일 */
+  .mini-window-content {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* 작은 창 열기/닫기 버튼 스타일 */
+  .mini-window-toggle {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+  }
+  
+  .mini-window-toggle:hover {
+    background-color: #0056b3;
+  }
+  
