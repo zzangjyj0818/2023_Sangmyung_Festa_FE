@@ -1,11 +1,40 @@
 import React from 'react';
+import AirplaneSeat from '../../../assets/MainPage/AirplaneSeat.png';
+import EventGift from '../../../assets/MainPage/EventGift.png';
+import DressCode from '../../../assets/MainPage/DressCode.png';
 import '../../../styles/components/MainPage/EventView.scss';
-import ScrollContainer from 'react-indiana-drag-scroll';
 
-const EventBox = ({ title }) => (
+const detailInformations = [
+    {
+        url : undefined,
+        boolDirection: false,
+    },
+    {
+        title : '🛩️ 스위치 비행기 좌석 추첨',
+        first : '탑승권을 구매하고 다양한 경품을',
+        second : '받아가보세요! 이곳은 최대 두 줄입니다',
+        boolDirection : true,
+        url : AirplaneSeat
+    },
+    {
+        title : '🎁 Switch의 선물을 unlock!',
+        first : '상명대에 숨겨진 암호쪽지를 찾고',
+        second : '보물을 차지하세요!',
+        boolDirection : true,
+        url : EventGift
+    },
+    {
+        title : '👕 드레스코드',
+        first : '드레스코드를 맞춰 입고',
+        second : '경품도 받아가세요!',
+        boolDirection : true,
+        url : DressCode
+    },
+]
+
+const EventBox = ({detail}) => (
     <div className="event_box">
-        <p>{title}</p>
-        {/* 여기에 컨텐츠 추가하면될ㄷ듯 */}
+        <img src={detail.url} alt=''/>
     </div>
 );
 
@@ -17,12 +46,12 @@ const EventView = () => {
             </div>
             <div className='EventView_Wrapper'>
                 <div className='EventView_Slide'>
-                    <ScrollContainer className="scroll-container" horizontal={true} vertical={false}>
-                        <EventBox title="축제 메인 영상" />
-                        <EventBox title="라인업 영상" />
-                        <EventBox title="이벤트1(보물찾기)" />
-                        <EventBox title="이벤트2(티켓추첨)" />
-                    </ScrollContainer>
+                    <div className="scroll-container">
+                        <EventBox detail = {detailInformations[0]}/>
+                        <EventBox detail = {detailInformations[1]}/>
+                        <EventBox detail = {detailInformations[2]}/>
+                        <EventBox detail = {detailInformations[3]}/>
+                    </div>
                 </div>
             </div>
         </div>

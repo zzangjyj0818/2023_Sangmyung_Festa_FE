@@ -1,0 +1,54 @@
+.DesignUniv {
+    color: #505050;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding:10px;
+}
+
+.DesignUnivImage {
+    padding:10px;
+    width: 14px;
+    height: 14px;
+    
+}
+
+.DesignUnivContainer {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap:wrap ;
+}
+
+.tagsWrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.tagDesignUniv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    background: #C4C4C4;
+    color: #505050;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}   
+
+.tagDesignUniv:hover {
+    background: #505050;
+    color: white;
+}

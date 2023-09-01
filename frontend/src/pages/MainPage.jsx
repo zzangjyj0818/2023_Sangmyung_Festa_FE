@@ -5,6 +5,7 @@ import EventView from '../components/presentation/MainPage/EventView';
 import CreatorView from '../components/presentation/MainPage/CreatorView';
 import TimelineView from '../components/presentation/MainPage/TimelineView';
 import CreatorView from '../components/presentation/MainPage/CreatorView';
+import BoothView from '../components/presentation/MainPage/BoothView'
 import Footer from '../components/common/Footer';
 import '../styles/pages/MainPage.scss';
 
@@ -18,6 +19,7 @@ const MainPage = () => {
                 <TimelineView />
             </div>
             <div style={{height:'100vh'}}>
+                <BoothView />
                 <CreatorView />
             </div>
             <Footer /> 
