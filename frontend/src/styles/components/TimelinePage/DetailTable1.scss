@@ -86,6 +86,11 @@
     line-height: normal;
 }
 
+.Box_Collection {
+    display: flex;
+    flex-direction: column;
+    font-family: Spoqa Han Sans Neo;
+}
 .InformationBox1 {
     width: 255px;
     height: 337px;
@@ -131,4 +136,9 @@
     background: var(--light-gray, #EEE);
     box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
     margin-top : 12px;
+}
+
+.Information_TextBox {
+    display: flex;
+    flex-direction: column;
 }

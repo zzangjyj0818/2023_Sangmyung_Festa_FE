@@ -30,19 +30,91 @@ const DetailTable2 = () => {
                 </div>
                 <div className='Box_Collection'>
                     <div className='InformationBox1'>
-
+                        <div className='Information_TextBox'>
+                            <div>푸드트럭 & 부스운영</div>
+                            <div>
+                                <div>
+                                    <div></div>
+                                    <div>10:00-22:00</div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                    <div>학생회관 앞</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='InformationBox2'>
-
+                        <div>
+                            <div>동아리 공연</div>
+                            <div>
+                                <div>
+                                    <div></div>
+                                    <div>16:00-19:30</div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                    <div>노천극장</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>개막식 & 총학생회 발대식</div>
+                            <div>
+                                <div>
+                                    <div></div>
+                                    <div>19:30-19:37</div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                    <div>노천극장</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='InformationBox3'>
-
+                        <div>
+                            <div>학생회 이벤트 (무비 인 더 캠핑)</div>
+                            <div>
+                                <div>
+                                    <div></div>
+                                    <div>19:40-20:25</div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                    <div>노천극장</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='InformationBox4'>
-
+                        <div>
+                            <div>동아리 공연</div>
+                            <div>
+                                <div>
+                                    <div></div>
+                                    <div>20:25-21:00</div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                    <div>노천극장</div>                                    </div>
+                            </div>
+                        </div>
                     </div>
                     <div className='InformationBox5'>
-
+                        <div>
+                            <div>연예인 초청 공연</div>
+                            <div>
+                                <div>
+                                    <div></div>
+                                    <div>21:00-22:00</div>
+                                </div>
+                                <div>
+                                    <div></div>
+                                    <div>노천극장</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
