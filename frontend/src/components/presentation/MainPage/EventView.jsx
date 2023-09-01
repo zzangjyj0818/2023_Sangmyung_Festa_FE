@@ -11,14 +11,20 @@ const EventBox = ({ title }) => (
 
 const EventView = () => {
     return (
-        <div className="Event_Text">
-            <p>📢 이벤트</p>
-            <ScrollContainer className="scroll-container" horizontal={true} vertical={false}>
-                <EventBox title="축제 메인 영상" />
-                <EventBox title="라인업 영상" />
-                <EventBox title="이벤트1(보물찾기)" />
-                <EventBox title="이벤트2(티켓추첨)" />
-            </ScrollContainer>
+        <div className='EventView_Container'>
+            <div className="Event_Text">
+                <p>📢 이벤트</p>
+            </div>
+            <div className='EventView_Wrapper'>
+                <div className='EventView_Slide'>
+                    <ScrollContainer className="scroll-container" horizontal={true} vertical={false}>
+                        <EventBox title="축제 메인 영상" />
+                        <EventBox title="라인업 영상" />
+                        <EventBox title="이벤트1(보물찾기)" />
+                        <EventBox title="이벤트2(티켓추첨)" />
+                    </ScrollContainer>
+                </div>
+            </div>
         </div>
     );
 };
