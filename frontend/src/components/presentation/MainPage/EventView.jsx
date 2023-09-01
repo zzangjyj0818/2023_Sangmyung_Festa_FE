@@ -64,7 +64,7 @@ const EventView = () => {
             <div className='EventView_Wrapper'>
                 <div className='EventView_Slide'>
                     <div className="scroll-container">
-                        {detailInformations.map((detail) => <EventBox detail={detail} key = {detail.id}/>)}
+                    {detailInformations.map((detail) => <EventBox detail={detail} key = {detail.id}/>)}
                     </div>
                 </div>
             </div>
