@@ -1,6 +1,5 @@
 // src/components/container/InformationPage/Designfcn.jsx
 import React from "react"
-import image from "./image.png"
 import tags from "./tags.json"
 import "./informationfcn.scss"
 import "./Designfcn.scss"
@@ -23,6 +22,35 @@ const Designfcn = ({ selectedTag, onClickTag }) => {
           <img src={Smoke} alt="흡연장" />
           <span className="building-name">흡연장</span>
         </div>
+
+        <div className="image4">
+          {"푸드트럭A".split("").map((char, index) => (
+            <span key={index} className="building-name">
+              {char}
+            </span>
+          ))}
+        </div>
+
+        <div className="image5">
+          <span className="building-name">FREE ZONE</span>
+        </div>
+
+        <div className="image6">
+          {"푸드트럭B".split("").map((char, index) => (
+            <span key={index} className="building-name">
+              {char}
+            </span>
+          ))}
+        </div>
+
+        <div className="image7">
+          <span className="building-name">운동장</span>
+        </div>
+
+        {Array.from({ length: 13 }, (_, i) => (
+          <div key={i} className={`booth booth${i + 1}`} />
+        ))}
+
         <div className="overlay-div-container design">
           {tags.map((tag) => (
             <div
