@@ -71,5 +71,4 @@ const EventView = () => {
         </div>
     );
 };
-
 export default EventView;
