@@ -198,7 +198,7 @@ $primaryColor: #5eb6f6;
   .navigation-cp-space {
     display: flex;
     justify-content: center;
-    gap: 55px;
+    gap: 30px;
 
     .navigation-cp {
       background: #fff;
@@ -206,23 +206,24 @@ $primaryColor: #5eb6f6;
       color: #929292;
       min-width: 50px; // 최소 너비 설정
       box-sizing: border-box;
-      padding: 10px 10px;
+      padding: 5px 5px;
       font-size: 16px; // 폰트 크기 고정
-      width: 95px; // 기본 너비 지정
-      border-bottom: 3px solid transparent;
+      width: 85px; // 기본 너비 지정
 
       &.active {
-        color: $primaryColor; // 활성화 시 색상 변경
-        border-bottom-color: #afafaf;
+        color: var(--main, #4f75ff);
+      }
+    }
 
-        &:after {
-          position: absolute; // position 속성 추가
-          left: 0; // left 속성 추가
-          width: 100%; // width 속성 추가
-          bottom: 0;
-          padding-top: 3px;
-          background-color: #afafaf;
-        }
+    .border-bottom {
+      color: var(--main, #4f75ff);
+      height: 2px;
+      background-color: #4f75ff;
+      display: none;
+
+      &.active {
+        display: block;
+        border-radius: 10px; // 원하는 radius 값 입력.
       }
     }
   }

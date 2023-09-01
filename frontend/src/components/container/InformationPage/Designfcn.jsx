@@ -51,7 +51,7 @@ const Designfcn = ({ selectedTag, onClickTag }) => {
           <div key={i} className={`booth booth${i + 1}`} />
         ))}
 
-        <div className="overlay-div-container design">
+        {/* <div className="overlay-div-container design">
           {tags.map((tag) => (
             <div
               key={tag.id}
@@ -61,7 +61,7 @@ const Designfcn = ({ selectedTag, onClickTag }) => {
               onClick={() => onClickTag(tag.Department)}
             />
           ))}
-        </div>
+        </div> */}
       </div>
 
       <div className="filter-container">

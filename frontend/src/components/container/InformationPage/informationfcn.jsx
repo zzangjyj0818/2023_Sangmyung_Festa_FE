@@ -34,22 +34,37 @@ const Informationfcn = () => {
     <div className="informaion-container">
       <div className="navigation-cp-container">
         <div className="navigation-cp-space">
-          <button
-            className={`navigation-cp ${
-              activeNavButton === "design" ? "active" : ""
-            }`}
-            onClick={() => onClickSelButton("design")}
-          >
-            디자인대학
-          </button>
-          <button
-            className={`navigation-cp ${
-              activeNavButton === "gate" ? "active" : ""
-            }`}
-            onClick={() => onClickSelButton("gate")}
-          >
-            정문
-          </button>
+          <div className="navigation-button">
+            <button
+              className={`navigation-cp ${
+                activeNavButton === "design" ? "active" : ""
+              }`}
+              onClick={() => onClickSelButton("design")}
+            >
+              디자인대학
+            </button>
+            <div
+              className={`border-bottom ${
+                activeNavButton === "design" ? "active" : ""
+              }`}
+            ></div>
+          </div>
+
+          <div className="navigation-button">
+            <button
+              className={`navigation-cp ${
+                activeNavButton === "gate" ? "active" : ""
+              }`}
+              onClick={() => onClickSelButton("gate")}
+            >
+              정문
+            </button>
+            <div
+              className={`border-bottom ${
+                activeNavButton === "gate" ? "active" : ""
+              }`}
+            ></div>
+          </div>
         </div>
       </div>
 
