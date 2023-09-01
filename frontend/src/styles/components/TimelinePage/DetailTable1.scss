@@ -1,0 +1,67 @@
+.DetailTable1_Container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.DetailTable1_TimeList {
+    display: flex;
+    flex-direction: column;
+
+    margin-top : 103px;
+    margin-left : 16px;
+}
+
+.TimeList_Title {
+    display: flex;
+    flex-direction: row;
+    color: #727272;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.TimeList_items {
+    display: flex;
+    flex-direction: column;
+    color: #727272;
+    font-family: 'Spoqa Han Sans Neo';
+    font-size: 12px;
+    font-weight: 400;
+    margin-top : 12.5px;
+}
+
+.items_wrapper {
+    display: flex;
+    flex-direction: row;
+    width : auto;
+}
+
+.TimeList_item {
+    width : 32px;
+    height : 15px;
+    margin-bottom : 104px;
+    margin-right : 35px;
+}
+
+.item_circle {
+    width: 11px;
+    height : 11px;
+    border : none;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.DetailTable1_HorizonBar {
+    position: absolute;
+    margin-top : 141px;
+    display: flex;
+    width: 0;
+    height : 701px;
+    border: 1px solid lightgray;
+    margin-left : 87.5px;
+}
