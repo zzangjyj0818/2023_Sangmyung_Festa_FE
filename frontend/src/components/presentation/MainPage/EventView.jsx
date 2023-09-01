@@ -3,8 +3,6 @@ import AirplaneSeat from '../../../assets/MainPage/AirplaneSeat.png';
 import EventGift from '../../../assets/MainPage/EventGift.png';
 import DressCode from '../../../assets/MainPage/DressCode.png';
 import '../../../styles/components/MainPage/EventView.scss';
-import ScrollContainer from 'react-indiana-drag-scroll';
-
 
 const detailInformations = [
     {
