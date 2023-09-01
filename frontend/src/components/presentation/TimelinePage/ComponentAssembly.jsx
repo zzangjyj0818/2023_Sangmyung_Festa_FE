@@ -4,7 +4,9 @@ import '../../../styles/components/TimelinePage/ComponentAssembly.scss'
 const ComponentAssembly = () => {
     return (
         <div className='ComponentAssembly_Container'>
-            
+            <div className='ComponentAssembly_Wrapper'>
+                
+            </div>
         </div>
     );
 };
