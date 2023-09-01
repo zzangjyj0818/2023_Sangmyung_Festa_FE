@@ -42,14 +42,74 @@
 
     scroll-snap-type: x mandatory;
     scroll-padding-left: 50px;
-    scroll-padding-right: 40px;
+    scroll-padding-right: 50px;
 }
 
 .event_box {
-    width: 287px; // Adjust this to your needs
-    height: 195px; // Adjust this to your needs
+    width: 287px; 
+    height: 195px; 
     background-color: #D9D9D9;
     border-radius: 12px;
     margin-right : 17px;
     scroll-snap-align: start;
+}
+
+.event_box img {
+    width : 287px;
+    height : 195px;
+}
+
+.text_detail {
+    margin-top: -186px;
+    margin-left:20px;
+}
+
+.title_detail {
+    /* title */
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.first_detail {
+    /* first */
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #000000;
+
+    margin-top:-15px;
+}
+
+.second_detail {
+    /* second */
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #000000;
+
+    margin-top:-13px;
+}
+
+.arrow_detail {
+    /* 화살표 */
+    margin-left: 230px;
+    margin-top: 25px;
+
+    color: #000;
+    font-family: Noto Sans KR;
+    font-size: 70px;
+    font-style: normal;
+    font-weight:100;
+    line-height: normal;
 }
