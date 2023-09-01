@@ -1,3 +1,4 @@
+/*EventView.jsx*/
 import React from 'react';
 import AirplaneSeat from '../../../assets/MainPage/AirplaneSeat.png';
 import EventGift from '../../../assets/MainPage/EventGift.png';
@@ -69,5 +70,4 @@ const EventView = () => {
        </div>
    );
 };
-
 export default EventView;
