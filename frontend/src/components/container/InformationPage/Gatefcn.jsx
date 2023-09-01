@@ -12,12 +12,15 @@ const GateFcn = ({ selectedTag, onClickTag }) => {
         <div className="gate-image1">
           <span className="building-name">충전소</span>
         </div>
+
         <div className="gate-image2">
           <span className="building-name">계단</span>
         </div>
+
         <div className="gate-image3">
           <span className="building-name">도서관</span>
         </div>
+
         <div className="gate-image4">
           <span className="building-name">FREE ZONE</span>
         </div>
@@ -25,6 +28,15 @@ const GateFcn = ({ selectedTag, onClickTag }) => {
         <div className="gate-image5">
           <span className="building-name">분수</span>
         </div>
+
+        <div className="gate-booth booth1">
+          <span className="building-name">푸드트럭</span>
+        </div>
+
+        {Array.from({ length: 6 }, (_, i) => (
+          <div key={(i = 1)} className={`gate-booth booth${i + 1}`} />
+        ))}
+
         {/* <div className="overlay-div-container gate">
           {tags.map((tag) => (
             <div key={tag.id} onClick={() => onClickTag(tag.Department)} />
