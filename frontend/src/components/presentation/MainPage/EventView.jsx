@@ -6,7 +6,7 @@ import '../../../styles/components/MainPage/EventView.scss';
 
 const detailInformations = [
     {
-        url : undefined,
+        url : 'https://www.youtube.com/watch?v=jOTfBlKSQYY',
         boolDirection: false,
     },
     {
@@ -27,36 +27,47 @@ const detailInformations = [
         title : '👕 드레스코드',
         first : '드레스코드를 맞춰 입고',
         second : '경품도 받아가세요!',
-        boolDirection : true,
-        url : DressCode
-    },
+        boolDirection: true,
+       url: DressCode
+   }
 ]
 
-const EventBox = ({detail}) => (
-    <div className="event_box">
-        <img src={detail.url} alt='' style={{width : '287px', height : '195px'}}/>
-        <div></div>
-    </div>
-);
-
-const EventView = () => {
+const EventBox = ({detail}) => {
+    const isYoutubeLink = detail.url && detail.url.includes('youtube.com/watch?v=');
+    const thumbnailUrl = isYoutubeLink 
+        ? `https://img.youtube.com/vi/${detail.url.split('v=')[1]}/0.jpg`
+        : detail.url;
+ 
     return (
-        <div className='EventView_Container'>
-            <div className="Event_Text">
-                <p>📢 이벤트</p>
+        <div className="event_box">
+            <a href={detail.url} target="_blank" rel="noopener noreferrer">
+                <img src={thumbnailUrl} alt=''/>
+            </a>
+            <div className="text_detail">
+                {detail.title && <p className="title_detail">{detail.title}</p>}
+                {detail.first && <p className="first_detail">{detail.first}</p>}
+                {detail.second && <p className="second_detail">{detail.second}</p>}
             </div>
-            <div className='EventView_Wrapper'>
-                <div className='EventView_Slide'>
-                    <div className="scroll-container">
-                        <EventBox detail = {detailInformations[0]}/>
-                        <EventBox detail = {detailInformations[1]}/>
-                        <EventBox detail = {detailInformations[2]}/>
-                        <EventBox detail = {detailInformations[3]}/>
-                    </div>
-                </div>
-            </div>
+            {detail.boolDirection && <div className="arrow_detail">{`>`}</div>}
         </div>
     );
+};
+
+const EventView = () => {
+   return (
+       <div className='EventView_Container'>
+           <div className="Event_Text">
+               <p>📢 이벤트</p>
+           </div>
+           <div className='EventView_Wrapper'>
+               <div className='EventView_Slide'>
+                   <div className="scroll-container">
+                       {detailInformations.map((detail, index) => (<EventBox key={index} detail={detail} />))}
+                   </div>
+               </div>
+           </div>
+       </div>
+   );
 };
 
 export default EventView;
