@@ -36,6 +36,7 @@
 .scroll-container {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     align-items: center;
     margin-left : 17px;
 
