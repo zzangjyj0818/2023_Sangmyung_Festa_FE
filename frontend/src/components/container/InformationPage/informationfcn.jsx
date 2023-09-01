@@ -1,15 +1,15 @@
-// src/components/container/InformationPage/door.js
-import React, { useState, Fragment } from "react"
-import image from "./image.png"
-import "./door.scss"
-import tags from "./tags.json"
+// src/components/container/InformationPage/informationfcn.jsx
+import React, { useState } from "react"
+import "./informationfcn.scss"
 import booth from "./booth.json"
-import timeicon from "./carbon_time.png"
-import infoicon from "./Vector.png"
+import timeicon from "./designicon//carbon_time.png"
+import infoicon from "./designicon//Vector.png"
+import Designfcn from "./Designfcn"
+import Gatefcn from "./Gatefcn"
 
-const Door = () => {
+const Informationfcn = () => {
   const [selectedTag, setSelectedTag] = useState("")
-  const [activeNavButton, setActiveNavButton] = useState("design")
+  const [activeNavButton, setActiveNavButton] = useState("design") // 페이지 접속 시 선택된 기본 버튼
   const [boothInfo, setBoothInfo] = useState("")
 
   const onClickTag = (tag) => {
@@ -34,62 +34,54 @@ const Door = () => {
     <div className="informaion-container">
       <div className="navigation-cp-container">
         <div className="navigation-cp-space">
-          <button
-            className={`navigation-cp ${
-              activeNavButton === "design" ? "active" : ""
-            }`}
-            onClick={() => onClickSelButton("design")}
-          >
-            디자인대학
-          </button>
-          <button
-            className={`navigation-cp ${
-              activeNavButton === "gate" ? "active" : ""
-            }`}
-            onClick={() => onClickSelButton("gate")}
-          >
-            정문
-          </button>
+          <div className="navigation-button">
+            <button
+              className={`navigation-cp ${
+                activeNavButton === "design" ? "active" : ""
+              }`}
+              onClick={() => onClickSelButton("design")}
+            >
+              디자인대학
+            </button>
+            <div
+              className={`border-bottom ${
+                activeNavButton === "design" ? "active" : ""
+              }`}
+            ></div>
+          </div>
+
+          <div className="navigation-button">
+            <button
+              className={`navigation-cp ${
+                activeNavButton === "gate" ? "active" : ""
+              }`}
+              onClick={() => onClickSelButton("gate")}
+            >
+              정문
+            </button>
+            <div
+              className={`border-bottom ${
+                activeNavButton === "gate" ? "active" : ""
+              }`}
+            ></div>
+          </div>
         </div>
       </div>
 
+      {/* 네비게이션 라인 */}
       <div className="navigation-line" />
 
       <div className="body-container">
-        {activeNavButton === "gate" && (
-          <div className="image-size">
-            <img src={image} alt="이미지" />
-            <div className="overlay-div-container">
-              {/* 태그별로 활성화 여부 확인 후 클래스 적용 */}
-              {tags.map((tag) => (
-                <div
-                  key={tag.id}
-                  className={`tag-div${tag.id} ${
-                    selectedTag.includes(tag.Department) ? "active" : ""
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
+        {/* 디자인대학 / 정문 이미지 렌더링 부분 */}
+        {activeNavButton === "design" && (
+          <Designfcn selectedTag={selectedTag} onClickTag={onClickTag} />
         )}
 
-        <div className="filter-container">
-          <h2 className="filter-title">동아리/학과 부스</h2>
-          <div className="filter-tags">
-            {tags.map((tag) => (
-              <button
-                key={tag.id}
-                className={`tag-button ${
-                  selectedTag.includes(tag.Department) ? "active" : ""
-                }`}
-                onClick={() => onClickTag(tag.Department)}
-              >
-                {tag.Department}
-              </button>
-            ))}
-          </div>
-        </div>
+        {activeNavButton === "gate" && (
+          <Gatefcn selectedTag={selectedTag} onClickTag={onClickTag} />
+        )}
 
+        {/* 타임라인 컴포넌트 수정예정 */}
         <div className="timeline-container">
           <div className="timeline-title">
             <div className="timeline-timeicon">
@@ -124,4 +116,4 @@ const Door = () => {
   )
 }
 
-export default Door
+export default Informationfcn
