@@ -1,24 +1,23 @@
 // CreatorList.jsx
 import React, { useState } from 'react'; 
 import CreatorItem from './CreatorItem';
-import Logo1 from '../../../assets/Logo1.png';
 import '../../../styles/components/CreatorPage/CreatorList.scss';
-import hdh from '../../../assets/creator/hdh.jpeg';
-import jyj from '../../../assets/creator/jyj.jpeg';
-import khs from'../../../assets/creator/khs.jpeg';
-import kjm from '../../../assets/creator/kjm.jpeg';
-import kms from '../../../assets/creator/kms.jpeg';
-import ksc from '../../../assets/creator/ksc.jpeg';
-import ksj from '../../../assets/creator/ksj.jpeg';
-import ldw from '../../../assets/creator/ldw.png';
-import lhj from '../../../assets/creator/lhj.png';
-import lhjun from '../../../assets/creator/lhjun.png';
-import ljhyeon from'../../../assets/creator/ljhyeon.png';
-import ljw from '../../../assets/creator/ljw.jpeg';
-import lyw from '../../../assets/creator/lyw.png';
-import syj from '../../../assets/creator/syj.jpeg';
-import syj2 from '../../../assets/creator/syj.png';
-import ylh from'../../../assets/creator/ylh.png';
+import hdh from '../../../assets/CreatorPage/hdh.jpeg';
+import jyj from '../../../assets/CreatorPage/jyj.jpeg';
+import khs from'../../../assets/CreatorPage/khs.jpeg';
+import kjm from '../../../assets/CreatorPage/kjm.jpeg';
+import kms from '../../../assets/CreatorPage/kms.jpeg';
+import ksc from '../../../assets/CreatorPage/ksc.jpeg';
+import ksj from '../../../assets/CreatorPage/ksj.jpeg';
+import ldw from '../../../assets/CreatorPage/ldw.png';
+import lhj from '../../../assets/CreatorPage/lhj.png';
+import lhjun from '../../../assets/CreatorPage/lhjun.png';
+import ljhyeon from'../../../assets/CreatorPage/ljhyeon.png';
+import ljw from '../../../assets/CreatorPage/ljw.jpeg';
+import lyw from '../../../assets/CreatorPage/lyw.png';
+import syj from '../../../assets/CreatorPage/syj.jpeg';
+import syj2 from '../../../assets/CreatorPage/syj.png';
+import ylh from'../../../assets/CreatorPage/ylh.png';
 
 
 
