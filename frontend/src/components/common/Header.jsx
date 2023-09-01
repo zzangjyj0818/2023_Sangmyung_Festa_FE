@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
-import Logo1 from '../../assets/Logo1.png';
-import Logo2 from '../../assets/Logo2.png';
+import Logo1 from '../../assets/common/Logo1.png';
+import Logo2 from '../../assets/common/Logo2.png';
 import '../../styles/components/common/Header.scss';
 import { AiOutlineMenu } from "react-icons/ai";
 
