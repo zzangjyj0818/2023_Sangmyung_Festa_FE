@@ -121,18 +121,20 @@
 
 .gate-booth {
     position: absolute;
-    width: 29px;
-    height: 71px;
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid #2757ff;
     background: #f2f5ff;
 
     &.booth1 {
-        width: 29px;
-        height: 71px;
+        position: absolute;
+        left: 15px;
+        top: 62px;
+        width: 70px;
+        height: 30px;
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-shrink: 0;
 
         .building-name {
@@ -147,8 +149,50 @@
     }
 
     &.booth2 {
-        left: 89px;
-        top: 74px;
-        background: #f2f5ff;
+        position: absolute;
+        left: 110px;
+        top: 62px;
+        width: 47px;
+        height: 30px;
+    }
+
+    &.booth2 {
+        position: absolute;
+        left: 110px;
+        top: 62px;
+        width: 47px;
+        height: 30px;
+    }
+
+    &.booth3 {
+        position: absolute;
+        left: 168px;
+        top: 62px;
+        width: 47px;
+        height: 30px;
+    }
+
+    &.booth4 {
+        position: absolute;
+        left: 225px;
+        top: 62px;
+        width: 47px;
+        height: 30px;
+    }
+
+    &.booth5 {
+        position: absolute;
+        left: 285px;
+        top: 100px;
+        width: 30px;
+        height: 47px;
+    }
+
+    &.booth6 {
+        position: absolute;
+        left: 285px;
+        top: 155px;
+        width: 30px;
+        height: 47px;
     }
 }

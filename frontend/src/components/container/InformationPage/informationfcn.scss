@@ -255,26 +255,27 @@ $primaryColor: #5eb6f6;
   .tag-button {
     margin-right: 7px;
     margin-bottom: 7px;
-    // margin: 5px 7px;
 
-    color: #fff;
     border: none;
     border-radius: 999px;
     border: 0.7px solid #dfdfdf;
     background: #fff;
-    color: #bababa;
-    font-family: Pretendard;
+    color: #a3a2a2;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
+    line-height: normal;
     padding: 10px 10px;
     margin-right: 8px;
     margin-top: 5px;
     cursor: pointer;
 
     &.active {
-      background: #c4c4c4;
-      color: #fff;
+      color: var(--main, #4f75ff);
+      border: 0.7px solid var(--main, #4f75ff);
+      background: #fff;
     }
   }
 }
