@@ -1,0 +1,24 @@
+.TableType_Container {
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.type_buttons {
+    margin-left: 20px;
+    margin-top: 20px; /* 원하는 픽셀값으로 변경 가능 */
+}
+
+.type_buttons button {
+    border: none; /* 테두리 삭제 */
+    background: none; /* 배경색 삭제 */
+    color: #B0B0B0;
+    cursor: pointer;
+    margin-right: 20px; /* 오른쪽 마진 추가 */
+
+    font-family: Spoqa Han Sans Neo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
