@@ -1,9 +1,34 @@
 .gate-image1 {
     position: absolute;
     left: 15px;
-    top: 40px;
+    top: 10px;
     width: 70px;
-    height: 42px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #ccdae3;
+    background: #f0f4f7;
+    display: flex;
+    justify-content: center; // 세로축 중앙정렬
+    align-items: center; // 가로축 중앙정렬
+    .building-name {
+        display: flex;
+        color: #7e7e7e;
+        text-align: center;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.gate-image2 {
+    position: absolute;
+    left: 110px;
+    top: 10px;
+    width: 161px;
+    height: 43px;
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid #ccdae3;
@@ -13,36 +38,44 @@
     justify-content: center; // 세로축 중앙정렬
     align-items: center; // 가로축 중앙정렬
     .building-name {
-        display: flex;
-        flex-direction: column; // 세로 방향으로 배열
-        color: #fff;
+        color: #7e7e7e;
+        text-align: center;
         font-family: Spoqa Han Sans Neo;
-        font-size: 11.592px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-
-        span {
-            margin: auto; // 자식 요소들을 가운데 정렬
-        }
     }
 }
 
-.gate-image2 {
+.gate-image3 {
     position: absolute;
-    left: 100px;
+    left: 285px;
     top: 10px;
-    width: 158px;
+    width: 70px;
     height: 43px;
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid #ccdae3;
     background: #f0f4f7;
+    display: flex;
+    flex-direction: column; // 세로 방향으로 배열
+    justify-content: center; // 세로축 중앙정렬
+    align-items: center; // 가로축 중앙정렬
+    .building-name {
+        color: #7e7e7e;
+        text-align: center;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
 
 .gate-image4 {
     position: absolute;
-    left: 100px;
+    left: 110px;
     top: 100px;
     width: 161px;
     height: 103px;
@@ -54,11 +87,68 @@
     justify-content: center;
     align-items: center;
     .building-name {
-        color: #fff;
+        color: #7e7e7e;
         font-family: Spoqa Han Sans Neo;
-        font-size: 11.592px;
+        font-size: 12px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         line-height: normal;
+    }
+}
+
+.gate-image5 {
+    position: absolute;
+    left: 320px;
+    top: 100px;
+    width: 35px;
+    height: 103px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #ccdae3;
+    background: rgba(204, 218, 227, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .building-name {
+        color: #7e7e7e;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+.gate-booth {
+    position: absolute;
+    width: 29px;
+    height: 71px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #2757ff;
+    background: #f2f5ff;
+
+    &.booth1 {
+        width: 29px;
+        height: 71px;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+
+        .building-name {
+            color: var(--main, #4f75ff);
+            text-align: center;
+            font-family: Spoqa Han Sans Neo;
+            font-size: 11.592px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 13px; /* 112.149% */
+        }
+    }
+
+    &.booth2 {
+        left: 89px;
+        top: 74px;
+        background: #f2f5ff;
     }
 }
