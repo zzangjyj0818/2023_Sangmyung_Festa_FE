@@ -22,3 +22,22 @@
     font-weight: 400;
     line-height: normal;
 }
+
+.Dropdown_Container {
+    width:80px;
+    margin-top:-25px;
+    margin-left:270px;
+}
+
+.Dropwdown_Container button {
+    // height: 40px;
+    // padding: 8px 12px;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 10px;
+
+    border-radius: 20px;
+    border: 1px solid var(--main, #4F75FF);
+    background: rgba(79, 117, 255, 0.70);
+}

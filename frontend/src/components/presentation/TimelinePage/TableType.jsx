@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import DetailTable1 from './DetailTable1.jsx';
 import DetailPerformance1 from './DetailPerformance1.jsx'; 
+
 import '../../../styles/components/TimelinePage/TableType.scss';
 
 const TableType = () => {
     const [selectedType, setSelectedType] = useState('festival'); // 기본값으로 'festival' 설정
 
+
     const handleOnClick = (type) => {
         setSelectedType(type);
     }
-
 
     return (
         <div className='TableType_Container'>
