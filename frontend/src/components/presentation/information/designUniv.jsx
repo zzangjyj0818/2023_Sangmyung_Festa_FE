@@ -1,14 +1,14 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { tagData, infoData, tagData_food, infoData_food } from './data';
-import time1 from './carbon_time.png'
-import '../../../styles/pages/designUniv.scss';
-import Union from '../../container/InformationPage/designicon/Union.png';
-import Smoke from '../../container/InformationPage/designicon/Smoke.png'
-import { Link } from 'react-router-dom';
-import ArrowUp from './arrowup.png'
-import ArrowDown from './arrowdown.png'
-import DragInfo from './drag';
-import './drag.scss';
+import React, { useState, useRef, useEffect } from "react"
+import { tagData, infoData, tagData_food, infoData_food } from "./data"
+import time1 from "./carbon_time.png"
+import "../../../styles/pages/designUniv.scss"
+import Union from "../../container/InformationPage/designicon/Union.png"
+import Smoke from "../../container/InformationPage/designicon/Smoke.png"
+import { Link } from "react-router-dom"
+import ArrowUp from "./arrowup.png"
+import ArrowDown from "./arrowdown.png"
+import DragInfo from "./drag"
+import "./drag.scss"
 const TagList = ({ tags, onTagClick }) => {
   return (
     <div className="DesignUnivContainer">
@@ -22,24 +22,22 @@ const TagList = ({ tags, onTagClick }) => {
         </button>
       ))}
     </div>
-  );
-};
+  )
+}
 const InfoDisplay = ({ info }) => {
   return (
     <div>
       <p>{info}</p>
     </div>
-  );
-};
+  )
+}
 
 function DesignUniv() {
-  const [selectedTagId, setSelectedTagId] = useState(null);
-  const [selectedTagId_food, setSelectedTagId_food] = useState(null);
+  const [selectedTagId, setSelectedTagId] = useState(null)
+  const [selectedTagId_food, setSelectedTagId_food] = useState(null)
   const [activeNavButton, setActiveNavButton] = useState("design") // 페이지 접속 시 선택된 기본 버튼
   const [boothInfo, setBoothInfo] = useState("")
-  const [showMajorTags, setShowMajorTags] = useState(false);
-
-
+  const [showMajorTags, setShowMajorTags] = useState(false)
 
   //
   const onClickSelButton = (buttonName) => {
@@ -48,37 +46,35 @@ function DesignUniv() {
     setBoothInfo("") // 버튼을 누를 때마다 선택된 태그와 부스 정보 초기화
   }
   const handleTagClick = (tagId) => {
-    setSelectedTagId(tagId);
-    setSelectedTagId_food(null); // 다른 태그 선택 시 해당 태그 초기화
-  };
-  
+    setSelectedTagId(tagId)
+    setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
+  }
+
   const handleTagFood = (tagId) => {
-    setSelectedTagId_food(tagId);
-    setSelectedTagId(null); // 다른 태그 선택 시 해당 태그 초기화
-  };
-  
+    setSelectedTagId_food(tagId)
+    setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+  }
+
   const handleToggleTags = () => {
-    setShowMajorTags((prevShowMajorTags) => !prevShowMajorTags);
-  };
+    setShowMajorTags((prevShowMajorTags) => !prevShowMajorTags)
+  }
 
   const handleTouchStart = (e) => {
-    e.preventDefault();
-    
-  };
-  
+    e.preventDefault()
+  }
+
   const handleTouchMove = (e) => {
-    e.preventDefault();
-    
-  };
-  
+    e.preventDefault()
+  }
+
   const selectedInfo = selectedTagId
     ? infoData.find((info) => info.tagId === selectedTagId).content
-    : '';
+    : ""
   const selectedInfo_food = selectedTagId_food
-    ? infoData_food.find((info) => info.tagId === selectedTagId_food).content : '';
+    ? infoData_food.find((info) => info.tagId === selectedTagId_food).content
+    : ""
   return (
     <div className="App">
-
       <div className="image-size">
         {/* <img src={image} alt="이미지" /> */}
         <div className="image1">
@@ -133,13 +129,13 @@ function DesignUniv() {
           ))}
         </div> */}
       </div>
-      <div className='DesignUnivArrow'>
-        <h1 className='DesignUniv'>즐겨찾는 부스</h1>
-        <p className='DesignUnivFavorite'>하트를 눌러 추가해주세요</p>
+      <div className="DesignUnivArrow">
+        <h1 className="DesignUniv">즐겨찾는 부스</h1>
+        <p className="DesignUnivFavorite">하트를 눌러 추가해주세요</p>
       </div>
 
-      <div className='DesignUnivArrow'>
-        <h1 className='DesignUniv'>동아리 / 학과 부스</h1>
+      <div className="DesignUnivArrow">
+        <h1 className="DesignUniv">동아리 / 학과 부스</h1>
         <img
           src={showMajorTags ? ArrowDown : ArrowUp}
           alt="이미지"
@@ -147,30 +143,26 @@ function DesignUniv() {
         />
       </div>
 
-
       {showMajorTags ? (
         <TagList tags={tagData} onTagClick={handleTagClick} />
       ) : (
         <TagList tags={tagData.slice(0, 8)} onTagClick={handleTagClick} />
       )}
 
-      <h1 className='DesignUniv'>외부부스</h1>
+      <h1 className="DesignUniv">외부부스</h1>
       <TagList tags={tagData_food} onTagClick={handleTagFood} />
 
-      <h1 className='DesignUniv'>푸드트럭</h1>
+      <h1 className="DesignUniv">푸드트럭</h1>
       <TagList tags={tagData_food} onTagClick={handleTagFood} />
 
-
-
-
-      
-      <DragInfo selectedTagId={selectedTagId} selectedTagId_food={selectedTagId_food}  onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}/>
-
-      
-
-
+      <DragInfo
+        selectedTagId={selectedTagId}
+        selectedTagId_food={selectedTagId_food}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      />
     </div>
-  );
+  )
 }
 
-export default DesignUniv;
+export default DesignUniv
