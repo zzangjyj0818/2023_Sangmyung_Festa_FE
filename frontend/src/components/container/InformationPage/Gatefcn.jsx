@@ -1,10 +1,23 @@
 // src/components/container/InformationPage/Gatefcn.jsx
-import React from "react"
-import tags from "./tags.json"
+import React, { useState } from "react"
+import gatetags from "./gatetags.json"
+import foodtrucks from "./foodtruck.json"
 import "./informationfcn.scss"
 import "./Gatefcn.scss"
 
 const GateFcn = ({ selectedTag, onClickTag }) => {
+  const [activeBooth, setActiveBooth] = useState(null)
+
+  // const handleClickTag = (tagDepartment, boothNumber) => {
+  //   onClickTag(tagDepartment)
+  //   setActiveBooth(boothNumber)
+  // }
+
+  const handleClick = (name, id) => {
+    onClickTag(name)
+    setActiveBooth(id)
+  }
+
   return (
     <>
       <div className="image-size">
@@ -29,33 +42,51 @@ const GateFcn = ({ selectedTag, onClickTag }) => {
           <span className="building-name">분수</span>
         </div>
 
-        <div className="gate-booth booth1">
+        <div className="gate-booth foodbooth">
           <span className="building-name">푸드트럭</span>
         </div>
 
-        {Array.from({ length: 6 }, (_, i) => (
-          <div key={(i = 1)} className={`gate-booth booth${i + 1}`} />
+        {gatetags.map((tag) => (
+          <div
+            key={tag.id}
+            className={`gate-booth booth${tag.id} ${
+              activeBooth === tag.id ? "active" : ""
+            }`}
+          />
         ))}
-
-        {/* <div className="overlay-div-container gate">
-          {tags.map((tag) => (
-            <div key={tag.id} onClick={() => onClickTag(tag.Department)} />
-          ))}
-        </div> */}
       </div>
 
       <div className="filter-container">
         <h2 className="filter-title">동아리/학과 부스</h2>
+
         <div className="filter-tags">
-          {tags.map((tag) => (
+          {gatetags.map((tag) => (
             <button
               key={tag.id}
               className={`tag-button ${
                 selectedTag.includes(tag.Department) ? "active" : ""
               }`}
-              onClick={() => onClickTag(tag.Department)}
+              onClick={() => handleClick(tag.Department, tag.id)}
             >
               {tag.Department}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="filter-container">
+        <h2 className="filter-title">푸트트럭</h2>
+
+        <div className="filter-tags">
+          {foodtrucks.map((truck) => (
+            <button
+              key={truck.id}
+              className={`tag-button ${
+                selectedTag.includes(truck.name) ? "active" : ""
+              }`}
+              onClick={() => handleClick(truck.name, truck.id)}
+            >
+              {truck.name}
             </button>
           ))}
         </div>

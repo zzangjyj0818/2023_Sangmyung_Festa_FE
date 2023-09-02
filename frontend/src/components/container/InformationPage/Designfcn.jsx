@@ -1,6 +1,6 @@
 // src/components/container/InformationPage/Designfcn.jsx
 import React from "react"
-import tags from "./tags.json"
+import tags from "./disgintags.json"
 import "./informationfcn.scss"
 import "./Designfcn.scss"
 import Union from "./designicon/Union.png"
@@ -65,7 +65,11 @@ const Designfcn = ({ selectedTag, onClickTag }) => {
       </div>
 
       <div className="filter-container">
-        <h2 className="filter-title">동아리/학과 부스</h2>
+        <div className="filter-title-container">
+          <h2 className="filter-title">동아리/학과 부스</h2>
+          <h2 className="filter-expand">&#62;</h2>
+        </div>
+
         <div className="filter-tags">
           {tags.map((tag) => (
             <button

@@ -236,6 +236,12 @@ $primaryColor: #5eb6f6;
   padding: 16px;
 }
 
+.filter-title-container {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
 .filter-title {
   color: #505050;
   font-family: Spoqa Han Sans Neo;
@@ -243,7 +249,21 @@ $primaryColor: #5eb6f6;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  // padding-left: 16px;
+}
+
+.filter-expand {
+  position: absolute;
+  left: 126px;
+  top: 352px;
+  width: 16px;
+  height: 16px;
+  transform: rotate(90deg);
+  color: #505050;
+  font-family: Spoqa Han Sans Neo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .filter-tags {
