@@ -1,16 +1,24 @@
 import React, { useState, useRef } from 'react';
 import './drag.scss';
 import { tagData, infoData, tagData_food, infoData_food } from './data'; // 데이터를 임포트하세요
+import Time from './carbon_time.png';
+import EmptyHeart from './Heart.png';
+import FilledHeart from './Heart2.png';
+import Line from './Line 5.png'
+import LinkImage from './Link_2.png'
 function DragInfo({ selectedTagId, selectedTagId_food }) {
   const [miniWindowOpen, setMiniWindowOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffsetY, setDragOffsetY] = useState(0);
   const miniWindowRef = useRef(null);
+  const [heart,setHeart] = useState(true);
 
-  const toggleMiniWindow = () => {
-    setMiniWindowOpen(!miniWindowOpen);
+
+  const handleHeart = () => {
+    
+    setHeart(!heart);
+    
   };
-
   const handleMouseDown = (e) => {
     setIsDragging(true);
     const rect = miniWindowRef.current.getBoundingClientRect();
@@ -55,10 +63,12 @@ function DragInfo({ selectedTagId, selectedTagId_food }) {
     ? tagData_food.find((tag) => tag.id === selectedTagId_food)?.name
     : '';
 
-    const selectedTagInfo = selectedTagId
+  const selectedTagInfo = selectedTagId
     ? infoData.find((tag) => tag.id === selectedTagId)?.content
     : '';
-
+  const selectedTagGame = selectedTagId
+    ? infoData.find((tag) => tag.id === selectedTagId)?.Game
+    : '';
   const selectedTagFoodInfo = selectedTagId_food
     ? infoData_food.find((tag) => tag.id === selectedTagId_food)?.content
     : '';
@@ -80,24 +90,61 @@ function DragInfo({ selectedTagId, selectedTagId_food }) {
         <div className="mini-window-content">
           {selectedTagContent && (
             <div>
+              <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+                <img src={Line} alt='Line' />
+              </div>
 
-              <div>{selectedTagContent}</div>
-              <div>{selectedTagInfo}</div>
-              <div>학과부스설명</div>
-              <div>학과부스설명</div>
-              <hr/>
+              <div style={{ display: 'flex', alignItems: 'center',justifyContent: 'space-between' }}>
+                <div className='mini-window-Title'>{selectedTagContent}</div>
+                <img src={heart? EmptyHeart:FilledHeart} alt='emptyheart' onClick={handleHeart} />
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src={Time} alt='time' style={{ width: '14px', height: '14px', marginRight: '8px' }} />
+                <div className='mini-window-Time'> 시간 </div>
+                <div className='mini-window-TimeInfo' >{selectedTagInfo}</div>
+              </div>
+
+              <div className='mini-window-TimeInfo'>학과부스설명</div>
+              <div className='mini-window-TimeInfo'>학과부스설명</div>
+              <img src={LinkImage} alt='Link' />
+
+              <hr />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className='mini-window-GameImage'> 게임사진 및 촬영 </div>
+                <div style={{ flex: 1, textAlign: 'right' }}>{selectedTagGame} </div>
+              </div>
+              <hr />
             </div>
           )}
 
           {selectedTagFoodContent && (
             <div >
-              <div >{selectedTagFoodContent}</div>
-              <div>{selectedTagFoodInfo}</div>
-              <div>학과부스설명</div>
-              <div>학과부스설명</div>
-              <hr/>
-              <div>게임 및 사진촬영</div>
-              <hr/>
+              <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+                <img src={Line} alt='Line' />
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center',justifyContent: 'space-between' }}>
+                <div className='mini-window-Title'>{selectedTagFoodContent}</div>
+                <img src={heart? EmptyHeart:FilledHeart} alt='emptyheart' onClick={handleHeart}/>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src={Time} alt='time' style={{ width: '14px', height: '14px', marginRight: '8px' }} />
+                <div className='mini-window-Time'> 시간 </div>
+                <div className='mini-window-TimeInfo' >{selectedTagFoodInfo}</div>
+              </div>
+
+              <div className='mini-window-TimeInfo'>학과부스설명</div>
+              <div className='mini-window-TimeInfo'>학과부스설명</div>
+              <img src={LinkImage} alt='Link' />
+
+              <hr />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className='mini-window-GameImage'> 게임사진 및 촬영 </div>
+                <div style={{ flex: 1, textAlign: 'right' }}>{selectedTagGame} </div>
+              </div>
+              <hr />
             </div>
           )}
         </div>
