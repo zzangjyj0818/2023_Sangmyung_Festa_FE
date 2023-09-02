@@ -126,7 +126,7 @@
     border: 1px solid #2757ff;
     background: #f2f5ff;
 
-    &.booth1 {
+    &.foodbooth {
         position: absolute;
         left: 15px;
         top: 62px;
@@ -146,53 +146,70 @@
             font-weight: 500;
             line-height: 13px; /* 112.149% */
         }
+
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
     }
 
-    &.booth2 {
+    &.booth1 {
         position: absolute;
         left: 110px;
         top: 62px;
         width: 47px;
         height: 30px;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
     }
 
     &.booth2 {
-        position: absolute;
-        left: 110px;
-        top: 62px;
-        width: 47px;
-        height: 30px;
-    }
-
-    &.booth3 {
         position: absolute;
         left: 168px;
         top: 62px;
         width: 47px;
         height: 30px;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
     }
 
-    &.booth4 {
+    &.booth3 {
         position: absolute;
         left: 225px;
         top: 62px;
         width: 47px;
         height: 30px;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
     }
 
-    &.booth5 {
+    &.booth4 {
         position: absolute;
         left: 285px;
         top: 100px;
         width: 30px;
         height: 47px;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
     }
 
-    &.booth6 {
+    &.booth5 {
         position: absolute;
         left: 285px;
         top: 155px;
         width: 30px;
         height: 47px;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
     }
 }
