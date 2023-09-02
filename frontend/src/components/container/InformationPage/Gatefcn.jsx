@@ -2,26 +2,24 @@
 import React, { useState } from "react"
 import gatetags from "./gatetags.json"
 import foodtrucks from "./foodtruck.json"
+import DragInfo from "./drag" // DragInfo import
+// scss 임포트
 import "./informationfcn.scss"
 import "./Gatefcn.scss"
 
 const GateFcn = ({ selectedTag, onClickTag }) => {
   const [activeBooth, setActiveBooth] = useState(null)
-
-  // const handleClickTag = (tagDepartment, boothNumber) => {
-  //   onClickTag(tagDepartment)
-  //   setActiveBooth(boothNumber)
-  // }
+  const [selectedTagId, setSelectedTagId] = useState(null) // selectedTagId 추가
 
   const handleClick = (name, id) => {
     onClickTag(name)
     setActiveBooth(id)
+    setSelectedTagId(id)
   }
 
   return (
     <>
       <div className="image-size">
-        {/* <img src={image} alt="이미지" /> */}
         <div className="gate-image1">
           <span className="building-name">충전소</span>
         </div>
@@ -73,6 +71,7 @@ const GateFcn = ({ selectedTag, onClickTag }) => {
           ))}
         </div>
       </div>
+      <DragInfo selectedTagId={selectedTagId} />
 
       <div className="filter-container">
         <h2 className="filter-title">푸트트럭</h2>
