@@ -212,6 +212,7 @@ $primaryColor: #5eb6f6;
 
       &.active {
         color: var(--main, #4f75ff);
+        text-decoration: none;
       }
     }
 

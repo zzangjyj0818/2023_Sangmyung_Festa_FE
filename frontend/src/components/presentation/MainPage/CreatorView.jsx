@@ -11,8 +11,10 @@ const CreatorBox = ({ title }) => (
 
 const CreatorView = () => {
     return (
-        <div className="Creator_Text">
-            <p>🤷 누가 만들었나요?</p>
+        <div className='CreatorView_Container'>
+            <div className="Creator_Text">
+                <p>🤷 누가 만들었나요?</p>
+            </div>
             <div className="creator_box_container" >
                 <CreatorBox title="기획" />
                 <CreatorBox title="개발" />

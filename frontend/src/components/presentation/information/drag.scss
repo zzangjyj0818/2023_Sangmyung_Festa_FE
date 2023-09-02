@@ -1,0 +1,105 @@
+/* dragInfo 컴포넌트 스타일 */
+.mini-window-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 24px 24px 0px 0px;
+  background: #FFF;
+  box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  /* 초기 상태에서 아래에 위치 */
+  max-height: 100vh;
+  /* 초기 높이를 최대 높이로 설정 (전체 화면 높이) */
+  overflow: hidden;
+  /* 넘치는 내용 숨김 */
+  transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 999;
+  touch-action: none;
+  cursor: grab;
+  /* 드래그 커서 설정 */
+}
+
+.mini-window-container.dragging {
+  cursor: grabbing;
+  /* 드래그 중일 때 커서 모양 변경 */
+}
+
+/* 작은 창 내용 스타일 */
+.mini-window-content {
+  padding: 10px;
+  color: #505050;
+  font-family: Spoqa Han Sans Neo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+/* 작은 창 열기/닫기 버튼 스타일 */
+.mini-window-toggle {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.mini-window-toggle:hover {
+  background-color: #0056b3;
+}
+
+
+.scrollable-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.mini-window-Title {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 134.523%
+}
+
+.mini-window-Time {
+  color: #4F75FF;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  /* 16.143px */
+  letter-spacing: -0.54px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.mini-window-TimeInfo {
+  color: #505050;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  /* 16.143px */
+  letter-spacing: -0.54px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.mini-window-GameImage {
+  color: #797979;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 50px;
+}

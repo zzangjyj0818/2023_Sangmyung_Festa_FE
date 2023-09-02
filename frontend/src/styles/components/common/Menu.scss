@@ -57,27 +57,48 @@
   flex-direction: column;
   text-align: left;
 
-  color: #212121;
-  font-family: Noto Sans KR;
+  color: var(--main, #4F75FF);
+  font-family: Spoqa Han Sans Neo;
 
-  margin-top: 9px;
+  margin-top: 12px;
   margin-left: 25px;
   .Modal_Text1 {
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px; /* 125% */
   }
   .Modal_Text2 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px; /* 125% */
   }
-}
+  .Modal_Text3 {
+    display: flex;
+    flex-direction: row;
+    color: #868686;
+    font-family: Spoqa Han Sans Neo;
+    font-weight: 500;
 
-.Modal_Horizon {
-  width: 270px;
-  height: 1px;
-  background: #acacac;
-  margin-top: 58px;
-  margin-left: 15px;
+    margin-top : 10px;
+
+    .Modal_Text3_detail1{
+      font-size: 16px;
+      line-height: 30px; /* 187.5% */
+      margin-right : 8px;
+    }
+    .Modal_Text3_detail2{
+      width: 100px;
+      height: 0px;
+      stroke-width: 1px;
+      stroke: rgba(79, 117, 255, 0.40);
+      margin-top : 3px;
+    }
+    .Modal_Text3_detail3{
+      font-size: 16px;
+      line-height: 30px; /* 187.5% */
+      margin-left : 8px;
+    }
+  }
 }
 
 .Modal_items {
@@ -94,7 +115,13 @@
   margin-left: 25px;
 
   .Modal_item {
+    display: flex;
+    flex-direction: row;
+    width : 256px;
     margin-bottom: 31px;
+    .Modal_item_direction {
+      margin-left : auto;
+    }
   }
 }
 
