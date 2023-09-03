@@ -31,7 +31,7 @@ const DetailTable2 = () => {
                 <div className='Box_Collection'>
                     <div className='InformationBox1'>
                         <div className='Information_TextBox'>
-                            <div className='Information_MainTitle' style={{marginTop : '7px'}}>푸드트럭 & 부스운영</div>
+                            <div className='Information_MainTitle' style={{marginTop : '14px'}}>푸드트럭 & 부스운영</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
                                     <div></div>
@@ -46,7 +46,7 @@ const DetailTable2 = () => {
                     </div>
                     <div className='InformationBox2'>
                         <div className='Information_TextBox'>
-                            <div className='Information_MainTitle' style={{marginTop : '7px'}}>동아리 공연</div>
+                            <div className='Information_MainTitle' style={{marginTop : '14px'}}>동아리 공연</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
                                     <div></div>
@@ -59,7 +59,7 @@ const DetailTable2 = () => {
                             </div>
                         </div>
                         <div className='Information_TextBox'>
-                            <div className='Information_MainTitle' style={{marginTop : '77.5px'}}>개막식 & 총학생회 발대식</div>
+                            <div className='Information_MainTitle' style={{marginTop : '76px'}}>개막식 & 총학생회 발대식</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
                                     <div></div>
@@ -74,7 +74,7 @@ const DetailTable2 = () => {
                     </div>
                     <div className='InformationBox3'>
                         <div className='Information_TextBox'>
-                            <div className='Information_MainTitle' style={{marginTop : '14px'}}>학생회 이벤트 (무비 인 더 캠핑)</div>
+                            <div className='Information_MainTitle' style={{marginTop : '10px'}}>학생회 이벤트 (무비 인 더 캠핑)</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
                                     <div></div>
@@ -89,7 +89,7 @@ const DetailTable2 = () => {
                     </div>
                     <div className='InformationBox4'>
                         <div className='Information_TextBox'>
-                            <div className='Information_MainTitle' style={{marginTop : '14px'}}>동아리 공연</div>
+                            <div className='Information_MainTitle' style={{marginTop : '7px'}}>동아리 공연</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
                                     <div></div>
@@ -103,7 +103,7 @@ const DetailTable2 = () => {
                     </div>
                     <div className='InformationBox5'>
                         <div className='Information_TextBox'>
-                            <div className='Information_MainTitle' style={{marginTop : '14px'}}>연예인 초청 공연</div>
+                            <div className='Information_MainTitle' style={{marginTop : '7px'}}>연예인 초청 공연</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
                                     <div></div>
