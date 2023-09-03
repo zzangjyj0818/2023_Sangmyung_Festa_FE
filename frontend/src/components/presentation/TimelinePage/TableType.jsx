@@ -2,14 +2,21 @@ import React, { useState } from 'react';
 import DetailTable1 from './DetailTable1.jsx';
 import DetailPerformance1 from './DetailPerformance1.jsx'; 
 import '../../../styles/components/TimelinePage/TableType.scss';
+import { BsChevronUp, BsChevronDown } from "react-icons/bs"; 
 
 const TableType = () => {
-    const [selectedType, setSelectedType] = useState('festival'); // 기본값으로 'festival' 설정
+    const [selectedType, setSelectedType] = useState('festival'); 
+    const [selectedDate, setSelectedDate] = useState('9.25 (월)'); 
+    const [showDropdown, setShowDropdown] = useState(false); // 드롭다운 메뉴 표시 여부
 
     const handleOnClick = (type) => {
         setSelectedType(type);
     }
 
+    const handleOnSelectChange = (date) => {
+        setSelectedDate(date);
+        setShowDropdown(false); // 항목선택햇을때 드롭다운숨김
+    }
 
     return (
         <div className='TableType_Container'>
@@ -17,8 +24,33 @@ const TableType = () => {
                 <button style={{color: selectedType === 'festival' ? '#4F75FF' : '', borderBottom: selectedType === 'festival' ? '2px solid #4F75FF' : ''}} onClick={() => handleOnClick('festival')}>축제</button>
                 <button style={{color: selectedType === 'performance' ? '#4F75FF' : '', borderBottom: selectedType === 'performance' ? '2px solid #4F75FF' : ''}} onClick={() => handleOnClick('performance')}>공연</button>
             </div>
-            {selectedType === 'festival' && <DetailTable1 />}
-            {selectedType === 'performance' && <DetailPerformance1 />}
+            <div className="dropdown">
+
+                    <button 
+                        onClick={() => setShowDropdown(!showDropdown)}
+                        style={{
+                            backgroundColor: showDropdown ? 'rgba(79, 117, 255, 0.70)' : '#FFF', // 드롭다운 메뉴가 열릴 경우 배경색 변경
+                            color: showDropdown ? '#FFF' : 'black', // 드롭다운 메뉴가 열릴 경우 글자 색 뱐걍 아님 black
+                        }}
+                        >
+                        <div>
+                            {selectedDate} {showDropdown ? <BsChevronUp size={17}/> : <BsChevronDown size={17}/>}
+                        </div>
+                    </button>
+
+
+                    {showDropdown && (
+                        <div className="dropdown-content">
+                            <div style={{backgroundColor: selectedDate==="9.25 (월)" ? 'rgba(79, 117, 255, 0.70)' : 'rgba(255, 255, 255, 0.5)', color: selectedDate === "9.25 (월)" ? '#FFF' : 'black'}} onClick={() => handleOnSelectChange("9.25 (월)")}>9.25 (월)</div>
+                            <div style={{backgroundColor: selectedDate==="9.26 (화)" ? 'rgba(79, 117, 255, 0.70)' : 'rgba(255, 255, 255, 0.5)', color: selectedDate === "9.26 (화)" ? '#FFF' : 'black'}} onClick={() => handleOnSelectChange("9.26 (화)")}>9.26 (화)</div>
+                        </div>   
+                    )}
+            </div>
+
+            {selectedDate === "9.25 (월)" && selectedType === "festival" &&<DetailTable1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "festival" &&<DetailTable1 />}
+            {selectedDate === "9.25 (월)" && selectedType === "performance" &&<DetailPerformance1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "performance" &&<DetailPerformance1 />} 
         </div>
     );
     
