@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DetailTable1 from './DetailTable1.jsx';
+import DetailTable2 from './DetailTable2.jsx';
 import DetailPerformance1 from './DetailPerformance1.jsx'; 
 import '../../../styles/components/TimelinePage/TableType.scss';
 import { BsChevronUp, BsChevronDown } from "react-icons/bs"; 
@@ -25,7 +26,6 @@ const TableType = () => {
                 <button style={{color: selectedType === 'performance' ? '#4F75FF' : '', borderBottom: selectedType === 'performance' ? '2px solid #4F75FF' : ''}} onClick={() => handleOnClick('performance')}>공연</button>
             </div>
             <div className="dropdown">
-
                     <button 
                         onClick={() => setShowDropdown(!showDropdown)}
                         style={{
@@ -48,7 +48,7 @@ const TableType = () => {
             </div>
 
             {selectedDate === "9.25 (월)" && selectedType === "festival" &&<DetailTable1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "festival" &&<DetailTable1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "festival" &&<DetailTable2 />}
             {selectedDate === "9.25 (월)" && selectedType === "performance" &&<DetailPerformance1 />}
             {selectedDate === "9.26 (화)" && selectedType === "performance" &&<DetailPerformance1 />} 
         </div>
