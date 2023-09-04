@@ -1,0 +1,129 @@
+.DetailTable2_Container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.DetailTable2_TimeList {
+    display: flex;
+    flex-direction: column;
+
+    margin-top : 35px;
+    margin-left : 16px;
+}
+
+.TimeList2_Title {
+    display: flex;
+    flex-direction: row;
+    color: #727272;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.TimeList2_items {
+    display: flex;
+    flex-direction: column;
+    color: #727272;
+    font-family: 'Spoqa Han Sans Neo';
+    font-size: 12px;
+    font-weight: 400;
+    margin-top : 12.5px;
+}
+
+.items_wrapper2 {
+    display: flex;
+    flex-direction: row;
+    width : auto;
+}
+
+.TimeList_item2 {
+    width : 32px;
+    height : 15px;
+    margin-bottom : 104px;
+    margin-right : 35px;
+}
+
+.item_circle2 {
+    width: 11px;
+    height : 11px;
+    border : none;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.DetailTable2_HorizonBar {
+    position: absolute;
+    margin-top : 72.5px;
+    display: flex;
+    width: 0;
+    height : 701px;
+    border: 1px solid lightgray;
+    margin-left : 87.5px;
+}
+
+.DetailTable2_InformationList{
+    display: flex;
+    flex-direction: column;
+
+    margin-top : 35px;
+    margin-left : auto;
+    margin-right : 14px;
+}
+
+.InformationList_Title2 {
+    display: flex;
+    flex-direction: row;
+    color: #727272;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.Box_Collection2 {
+    display: flex;
+    flex-direction: column;
+}
+.Information2Box1 {
+    width: 255px;
+    height: 337px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%);
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
+
+    margin-top : 14.5px;
+}
+
+.Information2Box2 {
+    width: 255px;
+    height: 180px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--light-gray, #EEE);
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
+    margin-top : 12px;
+}
+
+.Information2Box3 {
+    width: 255px;
+    height: 58px;
+    border-radius: 12px;
+    background: var(--light-gray, #EEE);
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
+    margin-top : 12px;
+}
+
+.Information2Box4 {
+    width: 255px;
+    height: 114px;
+    border-radius: 12px;
+    background: var(--light-gray, #EEE);
+    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
+    margin-top : 12px;
+}

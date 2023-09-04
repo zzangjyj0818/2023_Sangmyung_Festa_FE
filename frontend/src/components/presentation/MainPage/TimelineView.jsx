@@ -1,4 +1,5 @@
 import React from 'react';
+import Time from '../../../assets/MainPage/time.png'
 import '../../../styles/components/MainPage/TimelineView.scss';
 
 const TimelineView = () => {
@@ -10,7 +11,11 @@ const TimelineView = () => {
                     <div className='TimelineView_Text' style={{marginRight: '14px', marginLeft: 'auto'}}>{`>`}</div>
                 </div>
                 <div className='TimelineView_Box'>
-                    타임테이블
+                    <div className='TimelineView_BoxText'>
+                        <div>축제 및 공연</div>
+                        <div>일정표</div>
+                    </div>
+                    <div className='TimelineView_BoxImg'><img src={Time} alt='' /></div>
                 </div>
             </div>
         </div>
