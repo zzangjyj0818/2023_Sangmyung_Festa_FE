@@ -1,20 +1,26 @@
 // src/components/container/InformationPage/Gatefcn.jsx
 import React, { useState } from "react"
-import gatetags from "./gatetags.json"
-import foodtrucks from "./foodtruck.json"
 import DragInfo from "./drag" // DragInfo import
+import { tagData_food, tagData2 } from "./data"
 // scss 임포트
 import "./informationfcn.scss"
 import "./Gatefcn.scss"
 
-const GateFcn = ({ selectedTag, onClickTag }) => {
-  const [activeBooth, setActiveBooth] = useState(null)
-  const [selectedTagId, setSelectedTagId] = useState(null) // selectedTagId 추가
+const GateFcn = ({ onClickTag }) => {
+  const [selectedTagId, setSelectedTagId] = useState(null)
+  const [selectedFoodTruckId, setSelectedFoodTruckId] = useState(null) // 추가
 
   const handleClick = (name, id) => {
     onClickTag(name)
-    setActiveBooth(id)
+
     setSelectedTagId(id)
+    setSelectedFoodTruckId(null) // 다른 태그 선택 시 해당 태그 초기화
+  }
+
+  const handleFoodTruckClick = (name, id) => {
+    onClickTag(name)
+    setSelectedFoodTruckId(id)
+    setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
   }
 
   return (
@@ -40,15 +46,19 @@ const GateFcn = ({ selectedTag, onClickTag }) => {
           <span className="building-name">분수</span>
         </div>
 
-        <div className="gate-booth foodbooth">
+        <div
+          className={`gate-booth foodbooth ${
+            selectedFoodTruckId ? "active" : ""
+          }`}
+        >
           <span className="building-name">푸드트럭</span>
         </div>
 
-        {gatetags.map((tag) => (
+        {tagData2.map((tag) => (
           <div
             key={tag.id}
             className={`gate-booth booth${tag.id} ${
-              activeBooth === tag.id ? "active" : ""
+              selectedTagId === tag.id ? "active" : ""
             }`}
           />
         ))}
@@ -58,38 +68,42 @@ const GateFcn = ({ selectedTag, onClickTag }) => {
         <h2 className="filter-title">동아리/학과 부스</h2>
 
         <div className="filter-tags">
-          {gatetags.map((tag) => (
+          {tagData2.map((tag) => (
             <button
               key={tag.id}
               className={`tag-button ${
-                selectedTag.includes(tag.Department) ? "active" : ""
+                selectedTagId === tag.id ? "active" : ""
               }`}
-              onClick={() => handleClick(tag.Department, tag.id)}
+              onClick={() => handleClick(tag.name, tag.id)}
             >
-              {tag.Department}
+              {tag.name}
             </button>
           ))}
         </div>
       </div>
-      <DragInfo selectedTagId={selectedTagId} />
 
       <div className="filter-container">
         <h2 className="filter-title">푸트트럭</h2>
 
         <div className="filter-tags">
-          {foodtrucks.map((truck) => (
+          {tagData_food.map((truck) => (
             <button
               key={truck.id}
               className={`tag-button ${
-                selectedTag.includes(truck.name) ? "active" : ""
+                selectedFoodTruckId === truck.id ? "active" : ""
               }`}
-              onClick={() => handleClick(truck.name, truck.id)}
+              onClick={() => handleFoodTruckClick(truck.name, truck.id)}
             >
               {truck.name}
             </button>
           ))}
         </div>
       </div>
+
+      <DragInfo
+        selectedTagId2={selectedTagId}
+        selectedTagId_food={selectedFoodTruckId}
+      />
     </>
   )
 }
