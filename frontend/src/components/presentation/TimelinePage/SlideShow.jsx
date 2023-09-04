@@ -44,9 +44,9 @@ const SlideShow = () => {
   }, [sliderRef.current]);
      
   return (
-   <div>
+   <div className='slider_Container'>
      <div className="slider" ref={sliderRef}>
-       <div className="slide active">
+       <div className="slide active" style={{marginLeft : '57px'}}>
          <img src={AirPlane} alt="Image 1"/>
        </div>
        <div className="slide blur"> 
