@@ -1,27 +1,30 @@
 .slider {
     display: flex;
     flex-direction: row;
-
     overflow-x: scroll;
-    margin-left : 20px;
+    margin-left : 56px;
+    margin-right : 56px;
+    gap : 15px;
+    z-index: 1;
 }
 
 .slide {
-    margin-right : 40px;
   
      /* 모든 슬라이드에 대해 blur 효과 적용 */
      filter: none;
      transition: filter 1s ease-in-out;
      img {
-        height : 185px;
+         width: 262px;
+         height : 331px;
      }
 }
 
 .slide.blur {
      /* 이전 및 다음으로 보여질 슬라이드 아이템 (클래스 blur가 있는 요소) 에 대해 blur 효과 적용 */
-     filter: blur(2px);
+     filter: blur(4px);
      transition: filter 3s ease-in-out;
      img {
-        height : 150px;
+         height : 280px;
+         border-radius: 20px;
      }
 }
