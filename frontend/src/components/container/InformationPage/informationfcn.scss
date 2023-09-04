@@ -1,5 +1,4 @@
 // src/components/container/InformationPage/informationfcn.scss
-
 .informaion-container {
   z-index: 500;
 }
@@ -16,8 +15,9 @@
   justify-content: center;
   width: 100%;
 
-  height: 200px;
+  height: 220px;
   margin-top: 0.7rem;
+  margin-bottom: 1rem;
   .overlay-div-container {
     position: absolute;
     top: 0;
@@ -32,7 +32,7 @@
 }
 
 .navigation-line {
-  position: absolute;
+  position: relative;
   background: #e4e4e4;
   border: none;
   height: 1px;
@@ -80,6 +80,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 16px;
+  padding-top: 0;
 }
 
 .filter-title-container {
@@ -95,6 +96,8 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .filter-expand {
@@ -129,11 +132,39 @@
     color: #a3a2a2;
     text-align: center;
     font-family: Spoqa Han Sans Neo;
-    font-size: 12px;
+    font-size: 10px; // 태그 폰트 크기
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 10px 10px;
+    padding: 5px 10px; // 태그 사이즈 크기
+    margin-right: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+
+    &.active {
+      color: #fff;
+      border-radius: 999px;
+      border: 0.7px solid #fff;
+      background: var(--main, #4f75ff);
+    }
+  }
+
+  .favorite-tag-button {
+    margin-right: 7px;
+    margin-bottom: 7px;
+
+    border: none;
+    border-radius: 999px;
+    border: 0.7px solid #dfdfdf;
+    background: #fff;
+    color: #a3a2a2;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 10px; // 태그 폰트 크기
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 5px 10px; // 태그 사이즈 크기
     margin-right: 8px;
     margin-top: 5px;
     cursor: pointer;

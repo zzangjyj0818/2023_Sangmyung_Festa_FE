@@ -137,19 +137,24 @@
         align-items: center;
         flex-shrink: 0;
 
+        text-align: center;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 13px;
+
         .building-name {
             color: var(--main, #4f75ff);
-            text-align: center;
-            font-family: Spoqa Han Sans Neo;
-            font-size: 11.592px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 13px; /* 112.149% */
         }
 
         &.active {
             border: 1px solid #2757ff;
             background: var(--main, #4f75ff);
+
+            .building-name {
+                color: #fff; /* 폰트 색상 변경 */
+            }
         }
     }
 
