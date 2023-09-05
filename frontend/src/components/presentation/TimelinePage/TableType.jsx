@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DetailTable1 from './DetailTable1.jsx';
+import DetailTable2 from './DetailTable2.jsx';
 import DetailPerformance1 from './DetailPerformance1.jsx'; 
 import '../../../styles/components/TimelinePage/TableType.scss';
 import { BsChevronUp, BsChevronDown } from "react-icons/bs"; 
@@ -48,7 +49,7 @@ const TableType = () => {
             </div>
 
             {selectedDate === "9.25 (월)" && selectedType === "festival" &&<DetailTable1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "festival" &&<DetailTable1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "festival" &&<DetailTable2 />}
             {selectedDate === "9.25 (월)" && selectedType === "performance" &&<DetailPerformance1 />}
             {selectedDate === "9.26 (화)" && selectedType === "performance" &&<DetailPerformance1 />} 
         </div>
