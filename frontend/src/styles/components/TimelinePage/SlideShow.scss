@@ -1,52 +1,15 @@
-.slider_Container {
+.slideshow {
     display: flex;
-    width: 100%;
-
-}
-.slider {
-    width: 344px;
-    height : 331px;
-
-    margin-top : 68px;
-    margin-right : 15px;
-    margin-left : 15px;
-
-    display: flex;
-
-//    /* Change the following line */
-    justify-content: flex-start;
-
-   /* Change the following line */
-   align-items: center; 
-
-   overflow: hidden;
-
-   z-index: 1;
-}
-
-.slide {
-    width: 262px;
-     filter:none; 
-     transition : filter 1s ease-in-out; 
-
-     margin-right :15px;
-     
-     img{
-         width :262px; 
-         height :331px; 
+    justify-content: space-between;
+    width: calc(344px + (2 * (26px)));
+    
+    img {
+    width: calc(100% - (2 * (26px)));
     }
-}
-
-.slide.blur { 
-      height:280px; 
-      transition :filter 3s ease-in-out; 
-
-      img{
-          filter :blur(4); 
-          border-radius :20px; 
-
-          /* Change the following lines */
-          width :262px ; 
-          height:280px ;  
-       }
-}
+    
+    .blur {
+    filter: blur(8px);
+    width: calc(100% /4);
+    }
+    }
+    
