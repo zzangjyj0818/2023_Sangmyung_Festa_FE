@@ -1,0 +1,36 @@
+.slider_Container {
+    display: flex;
+    width: 100%;
+    height : 50vh;
+}
+.slider {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    overflow-x: scroll;
+    gap : 15px;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.slide {
+     /* 모든 슬라이드에 대해 blur 효과 적용 */
+     filter: none;
+     transition: filter 1s ease-in-out;
+     img {
+         width: 262px;
+         height : 331px;
+     }
+}
+
+.slide.blur {
+     /* 이전 및 다음으로 보여질 슬라이드 아이템 (클래스 blur가 있는 요소) 에 대해 blur 효과 적용 */
+     filter: blur(4px);
+     transition: filter 3s ease-in-out;
+     img {
+         height : 280px;
+         border-radius: 20px;
+     }
+}

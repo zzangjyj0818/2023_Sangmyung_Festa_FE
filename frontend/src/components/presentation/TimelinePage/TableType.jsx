@@ -26,7 +26,6 @@ const TableType = () => {
                 <button style={{color: selectedType === 'performance' ? '#4F75FF' : '', borderBottom: selectedType === 'performance' ? '2px solid #4F75FF' : ''}} onClick={() => handleOnClick('performance')}>공연</button>
             </div>
             <div className="dropdown">
-
                     <button 
                         onClick={() => setShowDropdown(!showDropdown)}
                         style={{

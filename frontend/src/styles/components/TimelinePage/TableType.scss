@@ -1,8 +1,8 @@
 .TableType_Container {
     width: 100%; 
     display: flex; 
-    flex-direction: column; 
-    padding-right: 30px;
+    flex-direction: column;
+    margin-top : 28px;
 
     .type_buttons {
         margin-left: 20px;
@@ -28,6 +28,7 @@
         margin-left: auto;
         margin-right: 20px;
         margin-top:-35px;
+        z-index: 2;
 
       
       button {
