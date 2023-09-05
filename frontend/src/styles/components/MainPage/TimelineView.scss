@@ -33,6 +33,7 @@
 }
 
 .TimelineView_Box {
+    display:flex;
     width: 93vw;
     max-width: 420px;
     height: 175px;
@@ -54,8 +55,21 @@
         margin-top : 29px;
         margin-left : 16px;
     }
+
+
+    .TimeLineView_BoxText1 {
+        width:90px;
+    }
+
+    .TimeLineView_BoxText2 {
+        width:50px;
+        margin-top:25px;
+        margin-left: -90px;
+    }
+
     .TimelineView_BoxImg {
-        position: absolute;
-        margin-left : 48vw;
+        //position: absolute;
+        //margin-left : 48vw;
+        margin-left:103px;
     }
 }
