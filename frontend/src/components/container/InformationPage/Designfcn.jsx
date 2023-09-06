@@ -1,5 +1,5 @@
 // src/components/container/InformationPage/Designfcn.jsx
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { tagData, tagData_food } from "./data"
 import "../../../styles/pages/designUniv.scss"
 import Union from "../../container/InformationPage/designicon/Union.png"
@@ -35,6 +35,7 @@ function Designfcn() {
   // const [activeNavButton, setActiveNavButton] = useState("design") // 페이지 접속 시 선택된 기본 버튼
   // const [boothInfo, setBoothInfo] = useState("")
   const [showMajorTags, setShowMajorTags] = useState(false)
+  const [favorites, setFavorites] = useState([]) // favorites state 추가
 
   const handleTagClick = (tagId) => {
     setSelectedTagId(tagId)
@@ -57,6 +58,30 @@ function Designfcn() {
   const handleTouchMove = (e) => {
     e.preventDefault()
   }
+
+  //localstorage 값 불러오기 // 임형준
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
+    setFavorites(storedFavorites)
+  }, [favorites])
+
+  // useEffect(() => {
+  //   const storedSelectedTagId = localStorage.getItem("selectedTagId")
+  //   const storedSelectedTagId_food = localStorage.getItem("selectedTagId_food")
+  //   const storedHeart = JSON.parse(localStorage.getItem("heart"))
+
+  //   if (storedSelectedTagId) {
+  //     setSelectedTagId(Number(storedSelectedTagId)) // Assuming the expected type is number
+  //   }
+
+  //   if (storedSelectedTagId_food) {
+  //     setSelectedFoodID(Number(storedSelectedTagId_food)) // Assuming the expected type is number
+  //   }
+
+  //   if (typeof storedHeart === "boolean") {
+  //     setHeart(storedHeart)
+  //   }
+  // }, [])
 
   return (
     <div className="App">
@@ -103,9 +128,22 @@ function Designfcn() {
         ))}
       </div>
 
-      <div className="filter-container">
+      <div
+        className="filter-container"
+        style={{ overflowX: "scroll", flexWrap: "nowrap" }}
+      >
         <h2 className="filter-title">즐겨찾는 부스</h2>
-        <p className="DesignUnivFavorite">하트를 눌러 추가해주세요</p>
+        <div className="filter-favorite-tags">
+          {favorites.length > 0 ? (
+            favorites.map((favorite) => (
+              <button className="favorite-tag-button" key={favorite}>
+                {favorite}
+              </button>
+            ))
+          ) : (
+            <p className="DesignUnivFavorite">하트를 눌러 추가해주세요</p>
+          )}
+        </div>
       </div>
 
       <div className="filter-container">
