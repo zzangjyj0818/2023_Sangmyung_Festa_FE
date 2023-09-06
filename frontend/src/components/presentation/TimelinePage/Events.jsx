@@ -21,7 +21,7 @@ const Events = () => {
                     <p className="box1_time">19:40-20:25</p>
 
                     <p className="box1_icon3"><HiOutlineLocationMarker size={12} /></p>
-                    <p className="box1_location">녹천극장</p>
+                    <p className="box1_location">노천극장</p>
 
                     <img src={Cinema} alt="Cinema" className="box-image"/>
                 </div>
@@ -34,7 +34,7 @@ const Events = () => {
                     <p className="box1_time">19:40-20:25</p>
                     
                     <p className="box1_icon3"><HiOutlineLocationMarker size={12} /></p>
-                    <p className="box1_location">녹천극장</p>
+                    <p className="box1_location">노천극장</p>
 
                     <img src={Airport} alt="Airport" className="box-image"/>
                 </div>

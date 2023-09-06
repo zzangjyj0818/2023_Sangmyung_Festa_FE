@@ -33,6 +33,7 @@
 }
 
 .TimelineView_Box {
+    display:flex;
     width: 93vw;
     max-width: 420px;
     height: 175px;
@@ -43,6 +44,7 @@
     margin-left: 14px;
 
     .TimelineView_BoxText {
+        display: flex;
         color: #000;
         font-family: Spoqa Han Sans Neo;
         font-size: 18px;
@@ -53,4 +55,18 @@
         margin-top : 29px;
         margin-left : 16px;
     }
+
+
+    .TimeLineView_BoxText1 {
+        width:90px;
+    }
+
+    .TimeLineView_BoxText2 {
+        width:70px;
+        margin-top:25px;
+        margin-left: -90px;
+    }
+}
+.TimelineView_BoxImg {
+    margin-left: auto;
 }
