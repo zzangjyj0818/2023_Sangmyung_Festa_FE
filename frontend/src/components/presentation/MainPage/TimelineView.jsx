@@ -14,8 +14,8 @@ const TimelineView = () => {
                     <div className='TimelineView_BoxText'>
                         <div className="TimeLineView_BoxText1">축제 및 공연</div>
                         <div className="TimeLineView_BoxText2">일정표</div>
-                        <div className='TimelineView_BoxImg'><img src={Time} alt='' /></div>
                     </div>
+                    <div className='TimelineView_BoxImg'><img src={Time} alt='' /></div>
                 </div>
             </div>
         </div>
