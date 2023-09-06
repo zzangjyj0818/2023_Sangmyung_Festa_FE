@@ -3,10 +3,10 @@ import HeaderContainer from '../components/container/common/HeaderContainer';
 import MainView from '../components/presentation/MainPage/MainView';
 import EventView from '../components/presentation/MainPage/EventView';
 import CreatorView from '../components/presentation/MainPage/CreatorView';
-import TimelineView from '../components/presentation/MainPage/TimelineView';
-import BoothView from '../components/presentation/MainPage/BoothView'
+import BoothViewContainer from '../components/container/MainPage/BoothViewContainer';
 import Footer from '../components/common/Footer';
 import '../styles/pages/MainPage.scss';
+import TimelineViewContainer from '../components/container/MainPage/TimelineViewContainer';
 
 const MainPage = () => {
     return (
@@ -15,10 +15,10 @@ const MainPage = () => {
             <MainView/>
             <div style={{height:'100vh'}}>
                 <EventView/>
-                <TimelineView />
+                <TimelineViewContainer />
             </div>
             <div style={{height:'100vh'}}>
-                <BoothView />
+                <BoothViewContainer />
                 <CreatorView />
             </div>
             <Footer /> 
