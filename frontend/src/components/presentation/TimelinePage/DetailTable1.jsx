@@ -21,14 +21,17 @@ const DetailTable2 = () => {
     };
 
     useEffect(() => {
-        setActiveTimeIndex(getCurrentTimeIndex());
-
-        const intervalId = setInterval(() => {
+        if (new Date().getMonth() === 8 && new Date().getDate() === 7) {
             setActiveTimeIndex(getCurrentTimeIndex());
-        }, 60 * 1000); 
 
-        return () => clearInterval(intervalId); 
+            const intervalId = setInterval(() => {
+                setActiveTimeIndex(getCurrentTimeIndex());
+            }, 60 * 1000); 
+
+            return () => clearInterval(intervalId); 
+        }
     }, []);
+
 
     return (
         <div className='DetailTable1_Container'>
@@ -45,8 +48,9 @@ const DetailTable2 = () => {
                                 className='item_circle' 
                                 style={{
                                     backgroundColor:
-                                        activeTimeIndex === index ? '#4F75FF' :
-                                        activeTimeIndex >= index ? '#C7E7FF' : 'lightgray'
+                                        new Date().getMonth() === 8 && new Date().getDate() === 7 ?
+                                        (activeTimeIndex === index ? '#4F75FF' :
+                                        activeTimeIndex >= index ? '#C7E7FF' : 'lightgray') : 'lightgray'
                                 }}
                             />
                         </div>
