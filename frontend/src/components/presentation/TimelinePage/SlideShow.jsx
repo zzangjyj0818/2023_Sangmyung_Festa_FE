@@ -55,8 +55,23 @@ const SlideShow = () => {
               <div class="front">
                 <img src={datas[index].url} alt='' style={{width: '262px', height : '331px'}}/>
               </div>
-              <div class="back">
-
+              <div className="back">
+                <div className='back_time'>
+                  {datas[index].time}
+                </div>
+                <div className='back_name'>
+                  <div className='kor'>{datas[index].kor}</div>
+                  <div className='eng'>{datas[index].eng}</div>
+                </div>
+                <div className='back_contents'>
+                  <div className='content1'>{datas[index].content1}</div>
+                  <div className='title'>✏️ 알고 있나요?</div>
+                  <div className='content2'>{datas[index].content2}</div>
+                </div>
+                <div className='back_logo'>
+                  <div>상명대학교 천안캠퍼스</div>
+                  <div>Like Lion X SMCD</div>
+                </div>
               </div>
           </div>
           { index < 3 &&
