@@ -37,7 +37,7 @@ const DetailTable2 = () => {
         <div className='DetailTable1_Container'>
             <div className='DetailTable1_TimeList'>
                 <div className='TimeList_Title'>
-                    <div>{<img src={Time}/>}</div>
+                    <div>{<img src={Time} alt=''/>}</div>
                     <div className="Time_text"> 시간</div>
                 </div>
                 <div className='TimeList_items'>

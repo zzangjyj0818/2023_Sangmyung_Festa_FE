@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Newjeans from '../../../assets/TimelinePage/Newjeans.png';
 import Blackpink from '../../../assets/TimelinePage/Blackpink.png';
 import '../../../styles/components/TimelinePage/SlideShow.scss';
+import Time from '../../../assets/TimelinePage/carbon_time.svg';
 
 
 const datas = [
@@ -57,6 +58,7 @@ const SlideShow = () => {
               </div>
               <div className="back">
                 <div className='back_time'>
+                  <img src={Time} alt =''  style={{width: '10px', height: '10px'}}/> &nbsp;
                   {datas[index].time}
                 </div>
                 <div className='back_name'>
