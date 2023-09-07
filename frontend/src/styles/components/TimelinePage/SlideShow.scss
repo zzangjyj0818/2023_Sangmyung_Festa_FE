@@ -53,9 +53,13 @@
 
 .front, .back {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     width: 262px; 
     height: 331px; 
+    border-radius: 20px;
     backface-visibility: hidden;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
   }
 
 .back { 
@@ -64,4 +68,100 @@
 
 .img_current:hover  {
     transform: rotateY(180deg);
+}
+
+.back_time {
+    display: flex;
+    border-radius: 20px;
+    background: #FFD7F4;
+    width : 98px;
+    height : 15px;
+
+    color: var(--black, #212121);
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;    
+    font-weight: 400;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top : 20px;
+    margin-left : 14px;
+}
+
+.back_name {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin-top : 12px;
+    .kor {
+        margin-left : 14px;
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .eng {
+        margin-left : 4px;
+        color: var(--gray-4, #1B1B1F);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.back_contents {
+    display: flex;
+    flex-direction: column;
+    margin-left : 14px;
+    width : 234px;
+
+
+    .content1{
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top : 8px;
+    }
+    .title {
+        color: var(--main, var(--main, #4F75FF));
+        font-family: Spoqa Han Sans Neo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top : 28px;
+    }
+    .content2 {
+        color: var(--gray-2, #919094);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-top : 8px;
+    }
+}
+
+.back_logo {
+    display: flex;
+    flex-direction: column;
+    color: rgba(79, 117, 255, 0.40);
+    font-family: Spoqa Han Sans Neo;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    text-align: center;
+
+    margin-top : 47px;
 }
