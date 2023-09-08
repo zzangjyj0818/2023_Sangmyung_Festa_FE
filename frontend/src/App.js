@@ -7,6 +7,7 @@ const TimelinePage = lazy(() => import("./pages/TimelinePage"))
 const InformationPage = lazy(() => import("./pages/InformationPage"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"))
 
+
 const App = () => {
   return (
     <BrowserRouter>

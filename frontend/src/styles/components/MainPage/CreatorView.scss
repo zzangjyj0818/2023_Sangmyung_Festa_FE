@@ -19,13 +19,18 @@
 }
 
 .creator_box {
+    position: relative;
     display: flex;
+    flex-direction: column;  /* 박스 내부 요소들을 세로로 배치 */
+    align-items: center;  /* 박스 내부 요소들을 가운데 정렬 */
+    //justify-content: space-around;  /* 박스 내부 요소들 사이에 공간 분배 */
 
     width: 30vw; 
+    max-width : 130px;
     height: 175px; 
 
-    margin-left : auto;
-    margin-right : auto;
+    margin-left : 4.5px;
+    margin-right : 4.5px;
 
     border-radius: 12px;
     border: 1px solid #EBEAEA;
@@ -34,5 +39,36 @@
 
 .creator_box_container {
     display: flex;
+    margin : 0 auto;
 
+}
+
+.box_title {
+    width:70px;
+    color : #fff;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15.986px; /* 133.216% */
+
+    margin-top:130px;
+    margin-left:-20px;
+}
+
+.arrow_position {
+    width: 24px;
+    height: 24px;
+
+    font-size:35px;
+    font-weight:100;
+    color : #fff;
+
+    margin-top:-50px;
+    margin-left:80px;
+}
+
+.image_position {
+    position: absolute;
+    margin-top : 44px;
 }
