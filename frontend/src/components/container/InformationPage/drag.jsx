@@ -179,7 +179,7 @@ function DragInfo({
       {/* 작은 창 */}
       <div
         ref={miniWindowRef}
-        className={`mini-window-container ${miniWindowOpen ? "opened" : ""}`}
+        className={"mini-window-container"}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
         onMouseMove={handleMouseMove}
