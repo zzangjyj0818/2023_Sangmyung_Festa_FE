@@ -1,54 +1,114 @@
-.DesignUniv {
-    color: #505050;
-    font-family: Pretendard;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding:10px;
-}
+// .DesignUniv {
+//     color: #505050;
+//     font-family: Pretendard;
+//     font-size: 16px;
+//     font-style: normal;
+//     font-weight: 700;
+//     line-height: normal;
+//     padding: 10px;
+// }
 
-.DesignUnivImage {
-    padding:10px;
-    width: 14px;
-    height: 14px;
-    
-}
+// .DesignUnivFavorite {
+//     color: #a3a2a2;
+//     font-family: Spoqa Han Sans Neo;
+//     font-size: 12px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: normal;
+// }
 
-.DesignUnivContainer {
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap:wrap ;
-}
+// .DesignUnivImage {
+//     padding: 10px;
+//     width: 14px;
+//     height: 14px;
+// }
 
-.tagsWrapper {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap; 
-}
+// .DesignUnivArrow {
+//     display: flex;
+//     align-items: center;
+// }
 
-.tagDesignUniv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 999px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-    background: #C4C4C4;
-    color: #505050;
-    text-align: center;
-    font-family: Pretendard;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}   
+// .DesignUnivContainer {
+//     display: flex;
+//     padding: 10px;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 10px;
+//     flex-wrap: wrap;
+// }
 
-.tagDesignUniv:hover {
-    background: #505050;
-    color: white;
-}
+// .tagsWrapper {
+//     display: flex;
+//     gap: 10px;
+//     flex-wrap: wrap;
+// }
+
+// .tagDesignUniv {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 999px;
+//     border: 0.7px solid #dfdfdf;
+//     padding: 5px 10px;
+//     cursor: pointer;
+//     transition:
+//         background 0.3s ease,
+//         color 0.3s ease;
+//     background: #fff;
+//     color: #a3a2a2;
+//     text-align: center;
+//     font-family: Pretendard;
+//     font-size: 10px;
+//     font-style: normal;
+//     font-weight: 600;
+//     line-height: normal;
+// }
+
+// .tagDesignUniv:hover {
+//     background: #505050;
+//     color: white;
+// }
+
+// .navigation-line {
+//     position: absolute;
+//     background: #e4e4e4;
+//     border: none;
+//     height: 1px;
+//     width: 100%;
+// }
+
+// .navigation-cp-container {
+//     .navigation-cp-space {
+//         display: flex;
+//         justify-content: center;
+//         gap: 30px;
+
+//         .navigation-cp {
+//             background: #fff;
+//             border: none;
+//             color: #929292;
+//             min-width: 50px; // 최소 너비 설정
+//             box-sizing: border-box;
+//             padding: 5px 5px;
+//             font-size: 16px; // 폰트 크기 고정
+//             width: 85px; // 기본 너비 지정
+
+//             &.active {
+//                 color: var(--main, #4f75ff);
+//                 text-decoration: none;
+//             }
+//         }
+
+//         .border-bottom {
+//             color: var(--main, #4f75ff);
+//             height: 2px;
+//             background-color: #4f75ff;
+//             display: none;
+
+//             &.active {
+//                 display: block;
+//                 border-radius: 10px; // 원하는 radius 값 입력.
+//             }
+//         }
+//     }
+// }

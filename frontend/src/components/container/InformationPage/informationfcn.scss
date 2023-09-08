@@ -1,6 +1,4 @@
 // src/components/container/InformationPage/informationfcn.scss
-$primaryColor: #5eb6f6;
-
 .informaion-container {
   z-index: 500;
 }
@@ -12,182 +10,29 @@ $primaryColor: #5eb6f6;
 }
 
 .image-size {
-  position: relative; // 추가된 부분
+  position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
-  // width: 363px;
-  height: 200px;
+
+  height: 220px;
   margin-top: 0.7rem;
+  margin-bottom: 1rem;
   .overlay-div-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: rgba(255, 255, 255, 0.5); // 반투명 배경으로 확인 용이하게 함.
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* 여기서부터 내부 텍스트 스타일 */
-
-    &.design {
-      // design 버튼이 active일 때만 적용되는 스타일
-      .tag-div1 {
-        // 디자인대학에 해당하는 tag-div 스타일
-      }
-
-      .tag-div2 {
-        // 디자인대학에 해당하는 tag-div 스타일
-      }
-    }
-    &.gate {
-      .tag-div1 {
-        position: absolute;
-        top: 111px;
-        left: 39px;
-        background-color: #fdf3d1;
-        width: 21px;
-        height: 34px;
-        &.active {
-          background-color: red;
-        }
-      }
-      .tag-div2 {
-        position: absolute;
-        top: 72px;
-        left: 39px;
-        background-color: #fdf3d1;
-        width: 21px;
-        height: 34px;
-        &.active {
-          background-color: red;
-        }
-      }
-      .tag-div3 {
-        position: absolute;
-        top: 48px;
-        left: 60px;
-        background-color: #fdf3d1;
-        width: 34px;
-        height: 21px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div4 {
-        position: absolute;
-        top: 48px;
-        left: 99px;
-        background-color: #fdf3d1;
-        width: 34px;
-        height: 21px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div5 {
-        position: absolute;
-        top: 48px;
-        left: 137px;
-        background-color: #fdf3d1;
-        width: 34px;
-        height: 21px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div6 {
-        position: absolute;
-        top: 48px;
-        left: 175px;
-        background-color: #fdf3d1;
-        width: 34px;
-        height: 21px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div7 {
-        position: absolute;
-        top: 48px;
-        left: 214px;
-        background-color: #fdf3d1;
-        width: 34px;
-        height: 21px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div8 {
-        position: absolute;
-        top: 72px;
-        left: 243px;
-        background-color: #fdf3d1;
-        width: 21px;
-        height: 34px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div9 {
-        position: absolute;
-        top: 111px;
-        left: 243px;
-        background-color: #fdf3d1;
-        width: 21px;
-        height: 34px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div10 {
-        position: absolute;
-        top: 140px;
-        left: 280px;
-        background-color: #fdf3d1;
-        width: 34px;
-        height: 21px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-
-      .tag-div11 {
-        position: absolute;
-        top: 140px;
-        left: 320px;
-        background-color: #fdf3d1;
-        width: 34px;
-        height: 21px;
-
-        &.active {
-          background-color: red;
-        }
-      }
-    }
   }
 }
 
 .navigation-line {
-  position: absolute;
+  position: relative;
   background: #e4e4e4;
   border: none;
   height: 1px;
@@ -212,6 +57,7 @@ $primaryColor: #5eb6f6;
 
       &.active {
         color: var(--main, #4f75ff);
+        text-decoration: none;
       }
     }
 
@@ -230,10 +76,18 @@ $primaryColor: #5eb6f6;
 }
 
 .filter-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 16px;
+  padding-top: 0;
+}
+
+.filter-title-container {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
 }
 
 .filter-title {
@@ -243,7 +97,23 @@ $primaryColor: #5eb6f6;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  // padding-left: 16px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.filter-expand {
+  position: absolute;
+  left: 126px;
+  top: 352px;
+  width: 16px;
+  height: 16px;
+  transform: rotate(90deg);
+  color: #505050;
+  font-family: Spoqa Han Sans Neo;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .filter-tags {
@@ -255,27 +125,57 @@ $primaryColor: #5eb6f6;
   .tag-button {
     margin-right: 7px;
     margin-bottom: 7px;
-    // margin: 5px 7px;
 
-    color: #fff;
     border: none;
     border-radius: 999px;
     border: 0.7px solid #dfdfdf;
     background: #fff;
-    color: #bababa;
-    font-family: Pretendard;
-    font-size: 12px;
+    color: #a3a2a2;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 10px; // 태그 폰트 크기
     font-style: normal;
     font-weight: 700;
-    padding: 10px 10px;
+    line-height: normal;
+    padding: 5px 10px; // 태그 사이즈 크기
     margin-right: 8px;
     margin-top: 5px;
     cursor: pointer;
 
     &.active {
-      background: #c4c4c4;
       color: #fff;
+      border-radius: 999px;
+      border: 0.7px solid #fff;
+      background: var(--main, #4f75ff);
     }
+  }
+}
+
+.filter-favorite-tags {
+  display: flex;
+  overflow-x: auto; // 추가된 부분
+  align-items: center;
+  white-space: nowrap; // 추가된 부분
+
+  .favorite-tag-button {
+    display: inline-flex;
+    margin-right: 7px;
+    margin-bottom: 7px;
+
+    border-radius: 999px;
+    border: 0.7px solid var(--main, #4f75ff);
+    background: #fff;
+    color: var(--main, #4f75ff);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 5px 10px; // 태그 사이즈 크기
+    margin-right: 8px;
+    margin-top: 5px;
+    cursor: pointer;
   }
 }
 
