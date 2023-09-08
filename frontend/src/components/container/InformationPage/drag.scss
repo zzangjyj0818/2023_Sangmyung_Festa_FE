@@ -21,7 +21,7 @@
   cursor: grab;
   /* 드래그 커서 설정 */
 
-  .mini-window-container.opened {
+  &.opened {
     transform: translateY(0);
   }
 }

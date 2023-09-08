@@ -68,7 +68,8 @@ const Informationfcn = () => {
         </div>
       </div>
       <div className="navigation-line" />
-      {menuInfo ? <Designfcn /> : <Gatefcn onClickTag={onClickTag} />}
+      {/* {menuInfo ? <Designfcn /> : <Gatefcn onClickTag={onClickTag} />} */}
+      {menuInfo ? <Designfcn /> : <Gatefcn />}
     </div>
   )
 }

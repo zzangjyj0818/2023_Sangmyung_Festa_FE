@@ -24,7 +24,36 @@ function DragInfo({
   const [dragOffsetY, setDragOffsetY] = useState(0)
   const miniWindowRef = useRef(null)
   const [favorites, setFavorites] = useState([])
-  const [isOpened, setIsOpened] = useState(false)
+  const [favorites2, setFavorites2] = useState([])
+  // const [isOpened, setIsOpened] = useState(false)
+
+  // const handleHeart = () => {
+  //   const selectedTagName =
+  //     tagData.find((tag) => tag.id === selectedTagId)?.name || ""
+
+  //   if (selectedTagName) {
+  //     let updatedFavorites
+  //     if (favorites.includes(selectedTagName)) {
+  //       updatedFavorites = favorites.filter(
+  //         (favorite) => favorite !== selectedTagName
+  //       )
+  //     } else {
+  //       updatedFavorites = [...favorites, selectedTagName]
+  //     }
+
+  //     setFavorites(updatedFavorites)
+
+  //     // 즐겨찾기를 로컬 스토리지에 저장
+  //     localStorage.setItem("favorites", JSON.stringify(updatedFavorites))
+
+  //     onFavoriteChange(selectedTagName)
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
+  //   setFavorites(storedFavorites)
+  // }, [])
 
   const handleHeart = () => {
     const selectedTagName =
@@ -49,9 +78,36 @@ function DragInfo({
     }
   }
 
+  const handleHeart2 = () => {
+    const selectedTagName =
+      tagData2.find((tag) => tag.id === selectedTagId2)?.name || ""
+
+    if (selectedTagName) {
+      let updatedFavorites
+      if (favorites2.includes(selectedTagName)) {
+        updatedFavorites = favorites2.filter(
+          (favorite) => favorite !== selectedTagName
+        )
+      } else {
+        updatedFavorites = [...favorites2, selectedTagName]
+      }
+
+      setFavorites2(updatedFavorites)
+
+      // 즐겨찾기를 로컬 스토리지에 저장
+      localStorage.setItem("favorites2", JSON.stringify(updatedFavorites))
+
+      onFavoriteChange(selectedTagName)
+    }
+  }
+
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
+    const storedFavorites2 =
+      JSON.parse(localStorage.getItem("favorites2")) || []
+
     setFavorites(storedFavorites)
+    setFavorites2(storedFavorites2)
   }, [])
 
   const handleMouseDown = (e) => {
@@ -258,12 +314,12 @@ function DragInfo({
                 <div className="mini-window-Title">{selectedTagContent2}</div>
                 <img
                   src={
-                    favorites.includes(selectedTagFoodContent)
+                    favorites2.includes(selectedTagContent2)
                       ? FilledHeart
                       : EmptyHeart
                   }
                   alt="emptyheart"
-                  onClick={() => handleHeart(selectedTagFoodContent)}
+                  onClick={() => handleHeart2(selectedTagContent2)}
                 />
               </div>
 
@@ -285,7 +341,7 @@ function DragInfo({
               <div style={{ display: "flex", alignItems: "center" }}>
                 <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
                 <div style={{ flex: 1, textAlign: "right" }}>
-                  {selectedTagGame}{" "}
+                  {selectedTagGame}
                 </div>
               </div>
               <hr />
