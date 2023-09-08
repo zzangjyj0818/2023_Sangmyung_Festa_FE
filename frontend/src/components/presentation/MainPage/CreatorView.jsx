@@ -1,14 +1,29 @@
 import React from 'react';
 import '../../../styles/components/MainPage/CreatorView.scss';
 import likelionImage from '../../../assets/MainPage/likelion.png';
-import DesignImage from '../../../assets/MainPage/Design.png';
+import DesignImage from '../../../assets/MainPage/design.png';
 import SchoolImage from '../../../assets/MainPage/School.png';
+import { useNavigate } from 'react-router-dom';
 
 
 const CreatorBox = ({ title, description, image }) => {
+    const Navigate = useNavigate();
     const splitTitle = title.split(' ');
+
+    const handleClick = () => {
+        if (title === "Switch 총학생회") {
+            Navigate('/creator/총학');
+            window.scrollTo(0, 0);
+        } else if (title === "멋쟁이 사자처럼") {
+            Navigate('/creator/멋사');
+            window.scrollTo(0, 0);
+        } else if (title === "커뮤니케이션 디자인전공") {
+            Navigate('/creator/커디');
+            window.scrollTo(0, 0);
+        }
+    };
     return (
-        <div className="creator_box">
+        <div className="creator_box" onClick={handleClick}>
             <p className="box_title">
                 {splitTitle.map((word, index) => (
                     <div key={index} style={{width : '70px'}}>

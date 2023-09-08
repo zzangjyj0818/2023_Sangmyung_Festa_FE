@@ -1,5 +1,6 @@
 // CreatorList.jsx
 import React, { useState } from 'react'; 
+import { useParams } from 'react-router-dom';
 import CreatorItem from './CreatorItem';
 import '../../../styles/components/CreatorPage/CreatorList.scss';
 import hdh from '../../../assets/CreatorPage/hdh.jpeg';
@@ -18,6 +19,7 @@ import lyw from '../../../assets/CreatorPage/lyw.png';
 import syj from '../../../assets/CreatorPage/syj.jpeg';
 import syj2 from '../../../assets/CreatorPage/syj.png';
 import ylh from'../../../assets/CreatorPage/ylh.svg';
+
 
 
 const sampleCreators1 = [ //총학
@@ -155,7 +157,12 @@ const categoryDescriptions = {
 };  
 
   const CreatorList = () => {
-    const [currentCategory, setCurrentCategory] = useState(categories[0]);
+    const { category } = useParams();
+    let initialCategoryIndex = categories.findIndex(cat => cat.name === category);
+    if (initialCategoryIndex === -1) initialCategoryIndex = 0;
+
+    const [currentCategory, setCurrentCategory] = useState(categories[initialCategoryIndex]);
+
   
     return (
         <div className='Creator'>
