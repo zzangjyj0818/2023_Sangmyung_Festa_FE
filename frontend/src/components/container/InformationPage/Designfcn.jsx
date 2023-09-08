@@ -32,14 +32,22 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
 function Designfcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
   const [selectedTagId_food, setSelectedTagId_food] = useState(null)
-  // const [activeNavButton, setActiveNavButton] = useState("design") // 페이지 접속 시 선택된 기본 버튼
-  // const [boothInfo, setBoothInfo] = useState("")
   const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
 
   const handleTagClick = (tagId) => {
     setSelectedTagId(tagId)
     setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
+  }
+
+  const handleFavorite = (selectedTagContent) => {
+    if (favorites.includes(selectedTagContent)) {
+      setFavorites((prevFavorites) =>
+        prevFavorites.filter((favorite) => favorite !== selectedTagContent)
+      )
+    } else {
+      setFavorites((prevFavorites) => [...prevFavorites, selectedTagContent])
+    }
   }
 
   const handleTagFood = (tagId) => {
@@ -59,32 +67,27 @@ function Designfcn() {
     e.preventDefault()
   }
 
-  //localstorage 값 불러오기 // 임형준
-  // useEffect(() => {
-  //   const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
-  //   setFavorites(storedFavorites)
-  // }, [])
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (e.key === "favorites") {
+        setFavorites(JSON.parse(e.newValue))
+      }
+    }
 
-  // useEffect(() => {
-  //   const handleStorageChange = (e) => {
-  //     if (e.key === "favorites") {
-  //       setFavorites(JSON.parse(e.newValue))
-  //     }
-  //   }
+    window.addEventListener("storage", handleStorageChange)
 
-  //   window.addEventListener("storage", handleStorageChange)
-
-  //   return () => {
-  //     window.removeEventListener("storage", handleStorageChange)
-  //   }
-  // }, [])
+    return () => {
+      window.removeEventListener("storage", handleStorageChange)
+    }
+  }, [])
 
   useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites))
-  }, [favorites])
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
+    setFavorites(storedFavorites)
+  }, [])
 
   return (
-    <div className="App">
+    <>
       <div className="image-size">
         {/* <img src={image} alt="이미지" /> */}
         <div className="image1">
@@ -136,7 +139,29 @@ function Designfcn() {
         <div className="filter-favorite-tags">
           {favorites.length > 0 ? (
             favorites.map((favorite) => (
-              <button className="favorite-tag-button" key={favorite}>
+              <button
+                className="favorite-tag-button"
+                key={favorite}
+                onClick={() => {
+                  // 일치하는 tagData 아이템 찾기
+                  const matchingTag = tagData.find(
+                    (tag) => tag.name === favorite
+                  )
+                  if (matchingTag) {
+                    setSelectedTagId(matchingTag.id)
+                    setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
+                  } else {
+                    // 일치하는 tagData_food 아이템 찾기
+                    const matchingFoodTag = tagData_food.find(
+                      (tag) => tag.name === favorite
+                    )
+                    if (matchingFoodTag) {
+                      setSelectedTagId_food(matchingFoodTag.id)
+                      setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+                    }
+                  }
+                }}
+              >
                 {favorite}
               </button>
             ))
@@ -193,8 +218,9 @@ function Designfcn() {
         selectedTagId_food={selectedTagId_food}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
+        onFavoriteChange={handleFavorite}
       />
-    </div>
+    </>
   )
 }
 

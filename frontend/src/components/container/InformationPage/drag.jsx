@@ -13,33 +13,46 @@ import FilledHeart from "./designicon/Heart2.png"
 import Line from "./designicon/Line 5.png"
 import LinkImage from "./designicon/Link_2.png"
 
-function DragInfo({ selectedTagId, selectedTagId2, selectedTagId_food }) {
+function DragInfo({
+  selectedTagId,
+  selectedTagId2,
+  selectedTagId_food,
+  onFavoriteChange,
+}) {
   const [miniWindowOpen, setMiniWindowOpen] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
   const [dragOffsetY, setDragOffsetY] = useState(0)
   const miniWindowRef = useRef(null)
-  const [heart, setHeart] = useState(true)
   const [favorites, setFavorites] = useState([])
+  const [isOpened, setIsOpened] = useState(false)
 
   const handleHeart = () => {
-    const selectedTagContent = selectedTagId
-      ? tagData.find((tag) => tag.id === selectedTagId)?.name
-      : ""
+    const selectedTagName =
+      tagData.find((tag) => tag.id === selectedTagId)?.name || ""
 
-    setHeart(!heart)
-
-    if (!heart) {
-      if (selectedTagContent && !favorites.includes(selectedTagContent)) {
-        setFavorites((prevFavorites) => [...prevFavorites, selectedTagContent])
+    if (selectedTagName) {
+      let updatedFavorites
+      if (favorites.includes(selectedTagName)) {
+        updatedFavorites = favorites.filter(
+          (favorite) => favorite !== selectedTagName
+        )
+      } else {
+        updatedFavorites = [...favorites, selectedTagName]
       }
-    } else {
-      setFavorites((prevFavorites) =>
-        prevFavorites.filter((favorite) => favorite !== selectedTagContent)
-      )
-    }
 
-    localStorage.setItem("favorites", JSON.stringify(favorites))
+      setFavorites(updatedFavorites)
+
+      // 즐겨찾기를 로컬 스토리지에 저장
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites))
+
+      onFavoriteChange(selectedTagName)
+    }
   }
+
+  useEffect(() => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
+    setFavorites(storedFavorites)
+  }, [])
 
   const handleMouseDown = (e) => {
     setIsDragging(true)
@@ -134,10 +147,19 @@ function DragInfo({ selectedTagId, selectedTagId2, selectedTagId_food }) {
                 }}
               >
                 <div className="mini-window-Title">{selectedTagContent}</div>
-                <img
+                {/* <img
                   src={heart ? FilledHeart : EmptyHeart}
                   alt="emptyheart"
                   onClick={handleHeart}
+                /> */}
+                <img
+                  src={
+                    favorites.includes(selectedTagContent)
+                      ? FilledHeart
+                      : EmptyHeart
+                  }
+                  alt="emptyheart"
+                  onClick={() => handleHeart(selectedTagContent)}
                 />
               </div>
 
@@ -183,9 +205,13 @@ function DragInfo({ selectedTagId, selectedTagId2, selectedTagId_food }) {
                   {selectedTagFoodContent}
                 </div>
                 <img
-                  src={heart ? EmptyHeart : FilledHeart}
+                  src={
+                    favorites.includes(selectedTagFoodContent)
+                      ? FilledHeart
+                      : EmptyHeart
+                  }
                   alt="emptyheart"
-                  onClick={handleHeart}
+                  onClick={() => handleHeart(selectedTagFoodContent)}
                 />
               </div>
 
@@ -231,9 +257,13 @@ function DragInfo({ selectedTagId, selectedTagId2, selectedTagId_food }) {
               >
                 <div className="mini-window-Title">{selectedTagContent2}</div>
                 <img
-                  src={heart ? EmptyHeart : FilledHeart}
+                  src={
+                    favorites.includes(selectedTagFoodContent)
+                      ? FilledHeart
+                      : EmptyHeart
+                  }
                   alt="emptyheart"
-                  onClick={handleHeart}
+                  onClick={() => handleHeart(selectedTagFoodContent)}
                 />
               </div>
 
