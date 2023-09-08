@@ -1,7 +1,7 @@
 import React from "react"
 import "../../../styles/components/MainPage/CreatorView.scss"
 import likelionImage from "../../../assets/MainPage/likelion.png"
-import DesignImage from "../../../assets/MainPage/Design.png"
+import DesignImage from "../../../assets/MainPage/design.png"
 import SchoolImage from "../../../assets/MainPage/School.png"
 import { useNavigate } from 'react-router-dom';
 
