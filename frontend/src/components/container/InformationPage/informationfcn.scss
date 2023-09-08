@@ -1,6 +1,7 @@
 // src/components/container/InformationPage/informationfcn.scss
 .informaion-container {
   z-index: 500;
+  overflow-x: hidden;
 }
 
 .body-container {
@@ -82,6 +83,7 @@
   flex-direction: column;
   padding: 16px;
   padding-top: 0;
+  padding-right: 0;
 }
 
 .filter-title-container {
@@ -117,6 +119,7 @@
 }
 
 .filter-tags {
+  width: 100%;
   display: flex;
   justify-content: flex-start; // 수정된 부분
   align-items: center;
