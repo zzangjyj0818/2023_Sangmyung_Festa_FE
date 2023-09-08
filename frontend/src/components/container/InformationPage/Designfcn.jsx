@@ -60,28 +60,28 @@ function Designfcn() {
   }
 
   //localstorage 값 불러오기 // 임형준
-  useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
-    setFavorites(storedFavorites)
-  }, [favorites])
+  // useEffect(() => {
+  //   const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
+  //   setFavorites(storedFavorites)
+  // }, [])
 
   // useEffect(() => {
-  //   const storedSelectedTagId = localStorage.getItem("selectedTagId")
-  //   const storedSelectedTagId_food = localStorage.getItem("selectedTagId_food")
-  //   const storedHeart = JSON.parse(localStorage.getItem("heart"))
-
-  //   if (storedSelectedTagId) {
-  //     setSelectedTagId(Number(storedSelectedTagId)) // Assuming the expected type is number
+  //   const handleStorageChange = (e) => {
+  //     if (e.key === "favorites") {
+  //       setFavorites(JSON.parse(e.newValue))
+  //     }
   //   }
 
-  //   if (storedSelectedTagId_food) {
-  //     setSelectedFoodID(Number(storedSelectedTagId_food)) // Assuming the expected type is number
-  //   }
+  //   window.addEventListener("storage", handleStorageChange)
 
-  //   if (typeof storedHeart === "boolean") {
-  //     setHeart(storedHeart)
+  //   return () => {
+  //     window.removeEventListener("storage", handleStorageChange)
   //   }
   // }, [])
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites))
+  }, [favorites])
 
   return (
     <div className="App">

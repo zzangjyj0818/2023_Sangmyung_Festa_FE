@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import "./drag.scss"
 import {
   tagData,
@@ -22,26 +22,23 @@ function DragInfo({ selectedTagId, selectedTagId2, selectedTagId_food }) {
   const [favorites, setFavorites] = useState([])
 
   const handleHeart = () => {
-    // 임형준
+    const selectedTagContent = selectedTagId
+      ? tagData.find((tag) => tag.id === selectedTagId)?.name
+      : ""
+
     setHeart(!heart)
+
     if (!heart) {
-      // heart가 false일 때 (즉, 빈 하트일 때 클릭되었으므로 즐겨찾기에 추가)
-      const newFavorite = tagData.find((tag) => tag.id === selectedTagId)?.name // 선택된 태그 이름 찾기
-      if (newFavorite && !favorites.includes(newFavorite)) {
-        // 새로운 즐겨찾기가 이미 리스트에 없는 경우만 추가
-        const updatedFavorites = [...favorites, newFavorite]
-        setFavorites(updatedFavorites)
-        localStorage.setItem("favorites", JSON.stringify(updatedFavorites)) // 업데이트된 즐겨찾기 목록을 로컬 스토리지에 저장
+      if (selectedTagContent && !favorites.includes(selectedTagContent)) {
+        setFavorites((prevFavorites) => [...prevFavorites, selectedTagContent])
       }
     } else {
-      // heart가 true일 때 (즉, 채워진 하트일 때 클릭되었으므로 즐겨찾기에서 제거)
-      const updatedFavorites = favorites.filter(
-        (favorite) =>
-          favorite !== tagData.find((tag) => tag.id === selectedTagId)?.name
+      setFavorites((prevFavorites) =>
+        prevFavorites.filter((favorite) => favorite !== selectedTagContent)
       )
-      setFavorites(updatedFavorites)
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites)) // 업데이트된 즐겨찾기 목록을 로컬 스토리지에 저장
     }
+
+    localStorage.setItem("favorites", JSON.stringify(favorites))
   }
 
   const handleMouseDown = (e) => {
