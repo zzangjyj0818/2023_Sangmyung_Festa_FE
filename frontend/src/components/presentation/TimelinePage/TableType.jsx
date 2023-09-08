@@ -8,7 +8,7 @@ import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 const TableType = () => {
     const [selectedType, setSelectedType] = useState('festival'); 
     const [selectedDate, setSelectedDate] = useState('9.25 (월)'); 
-    const [showDropdown, setShowDropdown] = useState(false); // 드롭다운 메뉴 표시 여부
+    const [showDropdown, setShowDropdown] = useState(false); // Dropdown
 
     const handleOnClick = (type) => {
         setSelectedType(type);
@@ -16,7 +16,7 @@ const TableType = () => {
 
     const handleOnSelectChange = (date) => {
         setSelectedDate(date);
-        setShowDropdown(false); // 항목선택햇을때 드롭다운숨김
+        setShowDropdown(false); // When We select the date, Off the DropDown Menu.
     }
 
     return (
@@ -30,7 +30,7 @@ const TableType = () => {
                         onClick={() => setShowDropdown(!showDropdown)}
                         style={{
                             backgroundColor: showDropdown ? 'rgba(79, 117, 255, 0.70)' : '#FFF', // 드롭다운 메뉴가 열릴 경우 배경색 변경
-                            color: showDropdown ? '#FFF' : 'black', // 드롭다운 메뉴가 열릴 경우 글자 색 뱐걍 아님 black
+                            color: showDropdown ? '#FFF' : 'black', // 드롭다운 메뉴가 열릴 경우 글자 색 변경 아님 black
                         }}
                         >
                         <div>

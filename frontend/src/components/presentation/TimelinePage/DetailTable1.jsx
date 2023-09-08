@@ -21,7 +21,7 @@ const DetailTable2 = () => {
     };
 
     useEffect(() => {
-        if (new Date().getMonth() === 8 && new Date().getDate() === 7) {
+        if (new Date().getMonth() === 8 && new Date().getDate() === 8) {
             setActiveTimeIndex(getCurrentTimeIndex());
 
             const intervalId = setInterval(() => {
