@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 
 const MainPage = lazy(() => import("./pages/MainPage"))
 const CreatorPage = lazy(() => import("./pages/CreatorPage"))
@@ -9,7 +9,7 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage"))
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Suspense fallback={<div>Loading</div>}>
         <Routes>
           <Route path="/" element={<MainPage />} />
@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
