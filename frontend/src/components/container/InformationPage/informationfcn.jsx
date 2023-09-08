@@ -3,6 +3,9 @@ import React, { useState } from "react"
 import "./informationfcn.scss"
 import Designfcn from "./Designfcn"
 import Gatefcn from "./Gatefcn"
+import { Link, Route, Switch } from "react-router-dom";
+import DesignUniv from "../../presentation/information/designUniv"
+import GateFcn from "./Gatefcn"
 
 const Informationfcn = () => {
   const [selectedTag, setSelectedTag] = useState([])
@@ -30,8 +33,96 @@ const Informationfcn = () => {
   }
 
   return (
-    <div className="informaion-container">
-      <div className="navigation-cp-container">
+
+    
+    // <div className="informaion-container">
+    //   <div className="navigation-cp-container">
+    //     <div className="navigation-cp-space">
+    //       <div className="navigation-button">
+    //       <Link
+    //           to="/design"
+    //           className={`navigation-cp ${
+    //             activeNavButton === "design" ? "active" : ""
+    //           }`}
+    //           onClick={() => onClickSelButton("design")}
+    //         >
+    //           디자인대학
+    //         </Link>
+    //         <div
+    //           className={`border-bottom ${
+    //             activeNavButton === "design" ? "active" : ""
+    //           }`}
+    //         ></div>
+    //       </div>
+
+    //       <div className="navigation-button">
+    //         <button
+    //           className={`navigation-cp ${
+    //             activeNavButton === "gate" ? "active" : ""
+    //           }`}
+    //           onClick={() => onClickSelButton("gate")}
+    //         >
+    //           정문
+    //         </button>
+    //         <div
+    //           className={`border-bottom ${
+    //             activeNavButton === "gate" ? "active" : ""
+    //           }`}
+    //         ></div>
+    //       </div>
+    //     </div>
+    //   </div>
+
+    //   {/* 네비게이션 라인 */}
+    //   <div className="navigation-line" />
+
+    //   <div className="body-container">
+    //     {/* 디자인대학 / 정문 이미지 렌더링 부분 */}
+    //     {activeNavButton === "design" && (
+    //       <Designfcn selectedTag={selectedTag} onClickTag={onClickTag} />
+    //     )}
+
+    //     {activeNavButton === "gate" && (
+    //       <Gatefcn selectedTag={selectedTag} onClickTag={onClickTag} />
+    //     )}
+
+    //     {/* 타임라인 컴포넌트 수정예정 */}
+    //     <div className="timeline-container">
+    //       <div className="timeline-title">
+    //         <div className="timeline-timeicon">
+    //           <img src={timeicon} alt="시계 아이콘" />
+    //         </div>
+    //         <h2 className="timeline-icon-font">시간</h2>
+    //         <h2 className="timeline-time">10:00 ~ 20:00</h2>
+    //       </div>
+    //       {boothInfo && (
+    //         <div className="timeline-component">
+    //           {booth.map(
+    //             (item) =>
+    //               item.Department === boothInfo && (
+    //                 <React.Fragment key={item.id}>
+    //                   <div className="timeline-body" />
+    //                   <div className="timeline-info-title">
+    //                     <div className="timeline-infoicon">
+    //                       <img src={infoicon} alt="정보 아이콘" />
+    //                     </div>
+    //                     <div className="timeline-info-text">정보</div>
+    //                     <h2 className="timeline-info-content">{item.name}</h2>
+    //                   </div>
+    //                   <h2 className="timeline-cp-cost">{item.cost}</h2>
+    //                 </React.Fragment>
+    //               )
+    //           )}
+    //         </div>
+    //       )}
+    //     </div>
+    //   </div>
+    // </div>
+
+    
+    
+    <div className="informaion-container"> 
+    <div className="navigation-cp-container">
         <div className="navigation-cp-space">
           <div className="navigation-button">
             <button

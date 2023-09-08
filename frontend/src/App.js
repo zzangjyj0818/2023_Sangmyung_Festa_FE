@@ -6,7 +6,7 @@ const CreatorPage = lazy(() => import("./pages/CreatorPage"))
 const TimelinePage = lazy(() => import("./pages/TimelinePage"))
 const InformationPage = lazy(() => import("./pages/InformationPage"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"))
-
+const DesignUniv = lazy(() => import("./pages/DesignInfoPage"))
 const App = () => {
   return (
     <HashRouter>
@@ -17,6 +17,7 @@ const App = () => {
           <Route path="/timeline" element={<TimelinePage />} />
           <Route path="/information" element={<InformationPage />} />
           <Route path="/*" element={<NotFoundPage />} />
+         
         </Routes>
       </Suspense>
     </HashRouter>
