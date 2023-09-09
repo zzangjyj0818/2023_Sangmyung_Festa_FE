@@ -5,6 +5,7 @@ const MainPage = lazy(() => import("./pages/MainPage"))
 const CreatorPage = lazy(() => import("./pages/CreatorPage"))
 const TimelinePage = lazy(() => import("./pages/TimelinePage"))
 const InformationPage = lazy(() => import("./pages/InformationPage"))
+const EventPage = lazy(() => import("./pages/EventPage"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"))
 const DesignUniv = lazy(() => import("./pages/DesignInfoPage"))
 const App = () => {
@@ -13,12 +14,16 @@ const App = () => {
       <Suspense fallback={<div>Loading</div>}>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/creator" element={<CreatorPage />}>
-            <Route path=":category" component={<CreatorPage />} />
+          <Route path="/creator" element={<CreatorPage />} >
+            <Route path=":category" component={<CreatorPage/>} />
           </Route>
           <Route path="/timeline" element={<TimelinePage />} />
           <Route path="/information" element={<InformationPage />} />
+          <Route path="/event" element={<EventPage/>}>
+            <Route path=":category" component={<EventPage/>} />
+          </Route>
           <Route path="/*" element={<NotFoundPage />} />
+
         </Routes>
       </Suspense>
     </HashRouter>
