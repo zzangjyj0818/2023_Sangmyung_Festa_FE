@@ -23,7 +23,7 @@ const DetailTable2 = () => {
     };
 
     useEffect(() => {
-        if (new Date().getMonth() === 8 && new Date().getDate() === 26) {
+        if (new Date().getMonth() === 8 && new Date().getDate() === 10) {
             setActiveTimeIndex(getCurrentTimeIndex());
 
             const intervalId = setInterval(() => {
@@ -51,7 +51,7 @@ const DetailTable2 = () => {
                             className='item_circle2'
                             style={{
                                 backgroundColor:
-                                        new Date().getMonth() === 8 && new Date().getDate() === 26 ?
+                                        new Date().getMonth() === 8 && new Date().getDate() === 10 ?
                                         (activeTimeIndex === index ? '#4F75FF' :
                                         activeTimeIndex >= index ? '#C7E7FF' : 'lightgray') : 'lightgray'
                                     }}

@@ -77,7 +77,6 @@ const EventBox = ({detail}) => {
 };
 
 const EventView = () => {
-    
    return (
        <div className='EventView_Container'>
            <div className="Event_Text">
