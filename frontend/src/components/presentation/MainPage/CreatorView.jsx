@@ -10,15 +10,13 @@ const CreatorBox = ({ title, description, image }) => {
     const splitTitle = title.split(' ');
 
     const handleClick = () => {
+      window.scrollTo(0, 0);
         if (title === "Switch 총학생회") {
             Navigate('/creator/총학');
-            window.scrollTo(0, 0);
         } else if (title === "멋쟁이 사자처럼") {
             Navigate('/creator/멋사');
-            window.scrollTo(0, 0);
         } else if (title === "커뮤니케이션 디자인전공") {
             Navigate('/creator/커디');
-            window.scrollTo(0, 0);
         }
     };
     return (

@@ -10,7 +10,7 @@ const Header = ({name, type, opacity, isOpen, setIsOpen, onClick, navigate}) => 
         <div className={opacity === false ? 'Header_Container1' : 'Header_Container2'}>
             <div className='Header_Wrapper'>
                 <div className='Header_Img' onClick = {()=>navigate('/')}>
-                    <img src = {type === 1 ? Logo2 : Logo1} alt='' style={{width: '67px', height : '48px'}}/>
+                    <img src = {type === 1 ? Logo2 : Logo1} alt='' style={{width: '65px', height : '48px'}}/>
                 </div>
                 {name !== undefined && <div className='Header_Props'>{name}</div>}
                 <div className='Header_MenuIcon' onClick={onClick}>
