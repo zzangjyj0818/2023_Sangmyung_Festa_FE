@@ -13,11 +13,12 @@ const App = () => {
       <Suspense fallback={<div>Loading</div>}>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/creator/:category" element={<CreatorPage />} />
+          <Route path="/creator" element={<CreatorPage />}>
+            <Route path=":category" component={<CreatorPage />} />
+          </Route>
           <Route path="/timeline" element={<TimelinePage />} />
           <Route path="/information" element={<InformationPage />} />
           <Route path="/*" element={<NotFoundPage />} />
-         
         </Routes>
       </Suspense>
     </HashRouter>

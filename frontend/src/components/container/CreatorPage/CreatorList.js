@@ -101,7 +101,7 @@ const sampleCreators2 = [ //개발
         name: '김민석', 
         department: 'BE 팀원', 
         major: '스마트정보통신학과', 
-        studentId: '19학번'
+        studentId: '21학번'
     },
 ];
 
