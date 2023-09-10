@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../../styles/components/MainPage/NumberBox.scss';
 
 const NumberBox = ({value, index}) => {
+
+    // Enable Code Spliting !! 
     const [isVisible, setIsVisible] = useState(false); // 초기 상태는 보이지 않음
     const delay = `${index * 0.5}s`; // index에 따라 다른 딜레이 설정
 
