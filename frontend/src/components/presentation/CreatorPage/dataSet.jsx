@@ -1,7 +1,3 @@
-// CreatorList.jsx
-import React, { useState } from 'react'; 
-import CreatorItem from './CreatorItem';
-import '../../../styles/components/CreatorPage/CreatorList.scss';
 import hdh from '../../../assets/CreatorPage/hdh.jpeg';
 import jyj from '../../../assets/CreatorPage/jyj.jpeg';
 import khs from'../../../assets/CreatorPage/khs.png';
@@ -19,8 +15,7 @@ import syj from '../../../assets/CreatorPage/syj.jpeg';
 import syj2 from '../../../assets/CreatorPage/syj.png';
 import ylh from'../../../assets/CreatorPage/ylh.svg';
 
-
-const sampleCreators1 = [ //총학
+export const sampleCreators1 = [ //총학
     {
         image: ldw, 
         name: '이도원', 
@@ -37,7 +32,7 @@ const sampleCreators1 = [ //총학
     },
 ];
 
-const sampleCreators2 = [ //개발
+export const sampleCreators2 = [ //개발
     {
         image: lhj, 
         name: '이현제', 
@@ -99,11 +94,11 @@ const sampleCreators2 = [ //개발
         name: '김민석', 
         department: 'BE 팀원', 
         major: '스마트정보통신학과', 
-        studentId: '19학번'
+        studentId: '21학번'
     },
 ];
 
-const sampleCreators3 = [ //커디
+export const sampleCreators3 = [ //커디
     {
         image: khs, 
         name: '김형섭', 
@@ -141,46 +136,15 @@ const sampleCreators3 = [ //커디
     }
 ];
 
-const categories = [
+export const categories = [
     { name: '총학', creators: sampleCreators1 },
     { name: '멋사', creators: sampleCreators2 },
     { name: '커디', creators: sampleCreators3 },
 ];
 
 
-const categoryDescriptions = {
+export const categoryDescriptions = {
     '총학': '상명대학교 Switch 총학생회',
     '멋사': '상명대학교 멋쟁이사자처럼 11기',
     '커디': '디자인 SMU'
-};  
-
-  const CreatorList = () => {
-    const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  
-    return (
-        <div className='Creator'>
-            <div className="category-selector">
-                {categories.map((category) => (
-                    <button className={`category-button ${currentCategory.name === category.name ? "selected" : ""}`}
-                        key={category.name} onClick={() => setCurrentCategory(category)}>
-                        {category.name}
-                    </button>
-                ))}
-            </div>
-            
-            <div className="Descriptions">
-                <p>{categoryDescriptions[currentCategory.name]}</p>
-            </div>
-            
-            <div className="CreatorListBlock">
-                {currentCategory.creators.map((creator,index) => (
-                    <CreatorItem key={index} creator={creator}/>
-                ))}
-            </div>
-        </div>
-     );
-  }
-  
-  export default CreatorList;
-
-
+};

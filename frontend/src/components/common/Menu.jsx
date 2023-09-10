@@ -4,11 +4,12 @@ import Insta from '../../assets/common/Insta.png';
 import Kakao from '../../assets/common/Kakao.png';
 import '../../styles/components/common/Menu.scss';
 
+
 const items = [
     {
         id : 1,
         text : '🎆 주요 행사',
-        url : '/'
+        url : '/event'
     },
     {
         id : 2,
@@ -28,6 +29,7 @@ const items = [
 ]
 const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
     return (
+        
         <div className="Modal" onClick={onClick}>
             <div className="modalBody" onClick={(e) => e.stopPropagation()}>
                 <button id="modalCloseBtn" onClick={onClick}>

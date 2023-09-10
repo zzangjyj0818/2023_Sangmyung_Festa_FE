@@ -1,24 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DetailTable1 from './DetailTable1.jsx';
 import DetailTable2 from './DetailTable2.jsx';
 import DetailPerformance1 from './DetailPerformance1.jsx'; 
 import '../../../styles/components/TimelinePage/TableType.scss';
-import { BsChevronUp, BsChevronDown } from "react-icons/bs"; 
+import Up from '../../../assets/TimelinePage/icon_arrow_up.svg';
+import Down from '../../../assets/TimelinePage/icon_arrow_down.svg';
 
-const TableType = () => {
-    const [selectedType, setSelectedType] = useState('festival'); 
-    const [selectedDate, setSelectedDate] = useState('9.25 (월)'); 
-    const [showDropdown, setShowDropdown] = useState(false); // 드롭다운 메뉴 표시 여부
-
-    const handleOnClick = (type) => {
-        setSelectedType(type);
-    }
-
-    const handleOnSelectChange = (date) => {
-        setSelectedDate(date);
-        setShowDropdown(false); // 항목선택햇을때 드롭다운숨김
-    }
-
+const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, handleOnClick, handleOnSelectChange}) => {
     return (
         <div className='TableType_Container'>
             <div className='type_buttons'>
@@ -30,11 +18,11 @@ const TableType = () => {
                         onClick={() => setShowDropdown(!showDropdown)}
                         style={{
                             backgroundColor: showDropdown ? 'rgba(79, 117, 255, 0.70)' : '#FFF', // 드롭다운 메뉴가 열릴 경우 배경색 변경
-                            color: showDropdown ? '#FFF' : 'black', // 드롭다운 메뉴가 열릴 경우 글자 색 뱐걍 아님 black
+                            color: showDropdown ? '#FFF' : 'black', // 드롭다운 메뉴가 열릴 경우 글자 색 변경 아님 black
                         }}
                         >
                         <div>
-                            {selectedDate} {showDropdown ? <BsChevronUp size={17}/> : <BsChevronDown size={17}/>}
+                            {selectedDate} {showDropdown ? <img src={Down} alt='' style={{widht:'24px', height:'24px', marginTop: '-3px'}}/> : <img src={Up} alt=''  style={{widht:'24px', height:'24px', marginTop: '-3px'}}/>}
                         </div>
                     </button>
 
@@ -46,11 +34,10 @@ const TableType = () => {
                         </div>   
                     )}
             </div>
-
-            {selectedDate === "9.25 (월)" && selectedType === "festival" &&<DetailTable1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "festival" &&<DetailTable2 />}
-            {selectedDate === "9.25 (월)" && selectedType === "performance" &&<DetailPerformance1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "performance" &&<DetailPerformance1 />} 
+            {selectedDate === "9.25 (월)" && selectedType === "festival" && <DetailTable1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "festival" && <DetailTable2 />}
+            {selectedDate === "9.25 (월)" && selectedType === "performance" && <DetailPerformance1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "performance" && <DetailPerformance1 />} 
         </div>
     );
     

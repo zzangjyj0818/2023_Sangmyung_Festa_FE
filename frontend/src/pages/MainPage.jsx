@@ -1,18 +1,17 @@
 import React from 'react';
 import HeaderContainer from '../components/container/common/HeaderContainer';
-import MainView from '../components/presentation/MainPage/MainView';
 import EventView from '../components/presentation/MainPage/EventView';
 import CreatorView from '../components/presentation/MainPage/CreatorView';
 import BoothViewContainer from '../components/container/MainPage/BoothViewContainer';
 import Footer from '../components/common/Footer';
-import '../styles/pages/common.scss';
 import TimelineViewContainer from '../components/container/MainPage/TimelineViewContainer';
+import MainViewContainer from '../components/container/MainPage/MainViewContainer';
 
 const MainPage = () => {
     return (
-        <div className='slide-in'>
+        <>
             <HeaderContainer name = {undefined} type = {2} opacity={true}/>
-            <MainView/>
+            <MainViewContainer/>
             <div style={{height:'100vh'}}>
                 <EventView/>
                 <TimelineViewContainer />
@@ -22,7 +21,7 @@ const MainPage = () => {
                 <CreatorView />
             </div>
             <Footer /> 
-        </div>
+        </>
     );
 };
 

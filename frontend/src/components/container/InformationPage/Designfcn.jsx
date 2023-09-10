@@ -131,87 +131,89 @@ function Designfcn() {
         ))}
       </div>
 
-      <div
-        className="filter-container"
-        style={{ overflowX: "scroll", flexWrap: "nowrap" }}
-      >
-        <h2 className="filter-title">즐겨찾는 부스</h2>
-        <div className="filter-favorite-tags">
-          {favorites.length > 0 ? (
-            favorites.map((favorite) => (
-              <button
-                className="favorite-tag-button"
-                key={favorite}
-                onClick={() => {
-                  // 일치하는 tagData 아이템 찾기
-                  const matchingTag = tagData.find(
-                    (tag) => tag.name === favorite
-                  )
-                  if (matchingTag) {
-                    setSelectedTagId(matchingTag.id)
-                    setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
-                  } else {
-                    // 일치하는 tagData_food 아이템 찾기
-                    const matchingFoodTag = tagData_food.find(
+      <div className="filters-layout-container">
+        <div
+          className="filter-container"
+          style={{ overflowX: "scroll", flexWrap: "nowrap" }}
+        >
+          <h2 className="filter-title">즐겨찾는 부스</h2>
+          <div className="filter-favorite-tags">
+            {favorites.length > 0 ? (
+              favorites.map((favorite) => (
+                <button
+                  className="favorite-tag-button"
+                  key={favorite}
+                  onClick={() => {
+                    // 일치하는 tagData 아이템 찾기
+                    const matchingTag = tagData.find(
                       (tag) => tag.name === favorite
                     )
-                    if (matchingFoodTag) {
-                      setSelectedTagId_food(matchingFoodTag.id)
-                      setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+                    if (matchingTag) {
+                      setSelectedTagId(matchingTag.id)
+                      setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
+                    } else {
+                      // 일치하는 tagData_food 아이템 찾기
+                      const matchingFoodTag = tagData_food.find(
+                        (tag) => tag.name === favorite
+                      )
+                      if (matchingFoodTag) {
+                        setSelectedTagId_food(matchingFoodTag.id)
+                        setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+                      }
                     }
-                  }
-                }}
-              >
-                {favorite}
-              </button>
-            ))
+                  }}
+                >
+                  {favorite}
+                </button>
+              ))
+            ) : (
+              <p className="DesignUnivFavorite">하트를 눌러 추가해주세요</p>
+            )}
+          </div>
+        </div>
+
+        <div className="filter-container">
+          <div className="filter-title-container">
+            <h2 className="filter-title">동아리/학과 부스</h2>
+            <img
+              src={showMajorTags ? ArrowDown : ArrowUp}
+              alt="이미지"
+              onClick={handleToggleTags}
+              style={{ marginBottom: "12px", paddingLeft: "10px" }}
+            />
+          </div>
+          {showMajorTags ? (
+            <TagList
+              tags={tagData}
+              onTagClick={handleTagClick}
+              selectedTagId={selectedTagId}
+            />
           ) : (
-            <p className="DesignUnivFavorite">하트를 눌러 추가해주세요</p>
+            <TagList
+              tags={tagData.slice(0, 8)}
+              onTagClick={handleTagClick}
+              selectedTagId={selectedTagId}
+            />
           )}
         </div>
-      </div>
 
-      <div className="filter-container">
-        <div className="filter-title-container">
-          <h2 className="filter-title">동아리/학과 부스</h2>
-          <img
-            src={showMajorTags ? ArrowDown : ArrowUp}
-            alt="이미지"
-            onClick={handleToggleTags}
-            style={{ marginBottom: "12px", paddingLeft: "10px" }}
+        <div className="filter-container">
+          <h2 className="filter-title">외부 부스</h2>
+          <TagList
+            tags={tagData_food}
+            onTagClick={handleTagFood}
+            selectedTagId={selectedTagId_food}
           />
         </div>
-        {showMajorTags ? (
-          <TagList
-            tags={tagData}
-            onTagClick={handleTagClick}
-            selectedTagId={selectedTagId}
-          />
-        ) : (
-          <TagList
-            tags={tagData.slice(0, 8)}
-            onTagClick={handleTagClick}
-            selectedTagId={selectedTagId}
-          />
-        )}
-      </div>
 
-      <div className="filter-container">
-        <h2 className="filter-title">외부 부스</h2>
-        <TagList
-          tags={tagData_food}
-          onTagClick={handleTagFood}
-          selectedTagId={selectedTagId_food}
-        />
-      </div>
-
-      <div className="filter-container">
-        <h2 className="filter-title">푸드트럭</h2>
-        <TagList
-          tags={tagData_food}
-          onTagClick={handleTagFood}
-          selectedTagId={selectedTagId_food}
-        />
+        <div className="filter-container">
+          <h2 className="filter-title">푸드트럭</h2>
+          <TagList
+            tags={tagData_food}
+            onTagClick={handleTagFood}
+            selectedTagId={selectedTagId_food}
+          />
+        </div>
       </div>
       <DragInfo
         selectedTagId={selectedTagId}

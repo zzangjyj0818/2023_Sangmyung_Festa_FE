@@ -1,4 +1,8 @@
 .TimelinePage_Container {
-    height: 11vh;
     background: var(--main, #4F75FF);
+}
+
+.TimelinePage_Wrapper {
+    background: #fff;
+    border-radius : 40px 40px 0 0 ;
 }
