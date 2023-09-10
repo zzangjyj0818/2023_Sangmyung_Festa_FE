@@ -1,6 +1,6 @@
 import React from 'react';
-import NumberBox from './NumberBox';
 import '../../../styles/components/MainPage/MainView.scss';
+import NumberBoxContainer from '../../container/MainPage/NumberBoxContainer';
 
 const MainView = ({numbers, isNight}) => {
     return (
@@ -13,7 +13,7 @@ const MainView = ({numbers, isNight}) => {
             <div className='MainView_Count'>
                 ✈️ 누적 방문자 수
                 <div className='Count_Box'>
-                    {numbers.map((number, index) => <NumberBox key={index} value={number} index={index} />)}
+                    {numbers.map((number, index) => <NumberBoxContainer key={index} value={number} index={index} />)}
                     <div style={{paddingTop: '70px'}}>명</div>
                 </div>
             </div>
