@@ -21,7 +21,7 @@ const DetailTable2 = () => {
     };
 
     useEffect(() => {
-        if (new Date().getMonth() === 8 && new Date().getDate() === 9) {
+        if (new Date().getMonth() === 8 && new Date().getDate() === 25) {
             setActiveTimeIndex(getCurrentTimeIndex());
 
             const intervalId = setInterval(() => {
@@ -37,7 +37,7 @@ const DetailTable2 = () => {
         <div className='DetailTable1_Container'>
             <div className='DetailTable1_TimeList'>
                 <div className='TimeList_Title'>
-                    <div>{<img src={Time} alt=''/>}</div>
+                    <div>{<img src={Time} alt='' style={{width:"14px", height:"14px"}}/>}</div>
                     <div className="Time_text"> 시간</div>
                 </div>
                 <div className='TimeList_items'>
@@ -61,7 +61,7 @@ const DetailTable2 = () => {
             <div className='DetailTable1_HorizonBar'></div>
             <div className='DetailTable1_InformationList'>
                 <div className='InformationList_Title'>
-                    <div>{<img src={CheckIcon} alt=''/>}</div>
+                    <div>{<img src={CheckIcon} alt='' style={{width:"14px", height:"14px"}}/>}</div>
                     <div className="Information_text"> 이벤트</div>
                 </div>
                 <div className='Box_Collection'>
@@ -70,7 +70,7 @@ const DetailTable2 = () => {
                             <div className='Information_MainTitle' style={{marginTop : '14px'}}>푸드트럭 & 부스운영</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
-                                    <div className="Time_Icon">{<img src={ColorTime} alt = ''/>}</div>
+                                    <div className="Time_Icon">{<img src={ColorTime} alt = '' style={{width:"12px", height:"12px"}}/>}</div>
                                     <div className='Information_time '>10:00-22:00</div>
                                 </div>
                                 <div>
@@ -85,7 +85,7 @@ const DetailTable2 = () => {
                             <div className='Information_MainTitle' style={{marginTop : '14px'}}>동아리 공연</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
-                                    <div className="Time_Icon">{<img src={ColorTime} alt=''/>}</div>
+                                    <div className="Time_Icon">{<img src={ColorTime} alt='' style={{width:"12px", height:"12px"}}/>}</div>
                                     <div className='Information_time '>16:00-19:30</div>
                                 </div>
                                 <div>
@@ -98,11 +98,11 @@ const DetailTable2 = () => {
                             <div className='Information_MainTitle' style={{marginTop : '76px'}}>개막식 & 총학생회 발대식</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
-                                    <div className="Time_Icon">{<img src={ColorTime} alt=''/>}</div>
+                                    <div className="Time_Icon">{<img src={ColorTime} alt='' style={{width:"12px", height:"12px"}}/>}</div>
                                     <div className='Information_time'>19:30-19:37</div>
                                 </div>
                                 <div>
-                                    <div className="Location_Icon"><img src={Location} alt=''/></div>
+                                    <div className="Location_Icon"><img src={Location} alt='' style={{width:"12px", height:"12px"}}/></div>
                                     <div className='Information_SubTitle'>노천극장</div>
                                 </div>
                             </div>
@@ -113,11 +113,11 @@ const DetailTable2 = () => {
                             <div className='Information_MainTitle' style={{marginTop : '10px'}}>학생회 이벤트 (무비 인 더 캠핑)</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
-                                    <div className="Time_Icon">{<img src={ColorTime} alt=''/>}</div>
+                                    <div className="Time_Icon">{<img src={ColorTime} alt='' style={{width:"12px", height:"12px"}}/>}</div>
                                     <div className='Information_time'>19:40-20:25</div>
                                 </div>
                                 <div>
-                                    <div className="Location_Icon"><img src={Location} alt=''/></div>
+                                    <div className="Location_Icon"><img src={Location} alt='' style={{width:"12px", height:"12px"}}/></div>
                                     <div className='Information_SubTitle'>노천극장</div>
                                 </div>
                             </div>
@@ -128,11 +128,11 @@ const DetailTable2 = () => {
                             <div className='Information_MainTitle' style={{marginTop : '7px'}}>동아리 공연</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
-                                    <div className="Time_Icon">{<img src={ColorTime} alt=''/>}</div>
+                                    <div className="Time_Icon">{<img src={ColorTime} alt='' style={{width:"12px", height:"12px"}}/>}</div>
                                     <div className='Information_time'>20:25-21:00</div>
                                 </div>
                                 <div>
-                                    <div className="Location_Icon"><img src={Location}alt=''/></div>
+                                    <div className="Location_Icon"><img src={Location}alt='' style={{width:"12px", height:"12px"}}/></div>
                                     <div className='Information_SubTitle'>노천극장</div>
                                 </div>
                             </div>
@@ -143,11 +143,11 @@ const DetailTable2 = () => {
                             <div className='Information_MainTitle' style={{marginTop : '7px'}}>연예인 초청 공연</div>
                             <div className='Information_DisplaySet'>
                                 <div style={{marginRight : '10px'}}>
-                                    <div className="Time_Icon">{<img src={ColorTime} alt=''/>}</div>
+                                    <div className="Time_Icon">{<img src={ColorTime} alt='' style={{width:"12px", height:"12px"}}/>}</div>
                                     <div className='Information_time'>21:00-22:00</div>
                                 </div>
                                 <div>
-                                    <div className="Location_Icon"><img src={Location} alt=''/></div>
+                                    <div className="Location_Icon"><img src={Location} alt='' style={{width:"12px", height:"12px"}}/></div>
                                     <div className='Information_SubTitle'>노천극장</div>
                                 </div>
                             </div>

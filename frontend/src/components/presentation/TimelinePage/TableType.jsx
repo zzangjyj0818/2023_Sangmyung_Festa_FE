@@ -3,7 +3,8 @@ import DetailTable1 from './DetailTable1.jsx';
 import DetailTable2 from './DetailTable2.jsx';
 import DetailPerformance1 from './DetailPerformance1.jsx'; 
 import '../../../styles/components/TimelinePage/TableType.scss';
-import { BsChevronUp, BsChevronDown } from "react-icons/bs"; 
+import Up from '../../../assets/TimelinePage/icon_arrow_up.svg';
+import Down from '../../../assets/TimelinePage/icon_arrow_down.svg';
 
 const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, handleOnClick, handleOnSelectChange}) => {
     return (
@@ -21,7 +22,7 @@ const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, h
                         }}
                         >
                         <div>
-                            {selectedDate} {showDropdown ? <BsChevronUp size={17}/> : <BsChevronDown size={17}/>}
+                            {selectedDate} {showDropdown ? <img src={Down} alt='' style={{widht:'24px', height:'24px', marginTop: '-3px'}}/> : <img src={Up} alt=''  style={{widht:'24px', height:'24px', marginTop: '-3px'}}/>}
                         </div>
                     </button>
 
@@ -33,10 +34,10 @@ const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, h
                         </div>   
                     )}
             </div>
-            {selectedDate === "9.25 (월)" && selectedType === "festival" &&<DetailTable1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "festival" &&<DetailTable2 />}
-            {selectedDate === "9.25 (월)" && selectedType === "performance" &&<DetailPerformance1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "performance" &&<DetailPerformance1 />} 
+            {selectedDate === "9.25 (월)" && selectedType === "festival" && <DetailTable1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "festival" && <DetailTable2 />}
+            {selectedDate === "9.25 (월)" && selectedType === "performance" && <DetailPerformance1 />}
+            {selectedDate === "9.26 (화)" && selectedType === "performance" && <DetailPerformance1 />} 
         </div>
     );
     
