@@ -1,6 +1,6 @@
 /*EventView.jsx*/
 import React from 'react';
-import { detailInformations } from './dataSet';
+import { detailInformations } from '../../container/MainPage/dataSet';
 import EventBoxContainer from '../../container/MainPage/EventBoxContainer';
 import '../../../styles/components/MainPage/EventView.scss';
 

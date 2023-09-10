@@ -18,7 +18,7 @@ const NumberBox = ({value, index}) => {
     return (
         <div className='NumberBox_Container'>
             <div className='NumberBox_Wrapper' style={{ visibility: isVisible ? 'visible' : 'hidden' , animationDelay: delay}}>
-                {value}
+                <div style={{ animationDelay: delay}}>{value}</div>
             </div>
             <div className='Number_Box_Box'></div>
             <div className='Number_Box_Box'></div>

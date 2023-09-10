@@ -1,9 +1,8 @@
 import React from 'react';
-import { datas } from './dataSet';
 import '../../../styles/components/TimelinePage/SlideShow.scss';
 import Time from '../../../assets/TimelinePage/carbon_time.svg';
 
-const SlideShow = ({index, setIndex}) => {
+const SlideShow = ({index, setIndex, datas}) => {
   return (
     <div className='SlideShow_Container'>
       <div className='SlideShow_Wrapper'>

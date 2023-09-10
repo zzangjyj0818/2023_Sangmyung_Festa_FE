@@ -1,10 +1,9 @@
 // CreatorList.jsx
 import React from 'react'; 
-import { categories, categoryDescriptions } from './dataSet';
 import CreatorItem from './CreatorItem';
 import '../../../styles/components/CreatorPage/CreatorList.scss';
 
-const CreatorList = ({currentCategory, setCurrentCategory}) => {  
+const CreatorList = ({currentCategory, setCurrentCategory, categories, categoryDescriptions}) => {  
     return (
         <div className='Creator'>
             <div className="category-selector">
