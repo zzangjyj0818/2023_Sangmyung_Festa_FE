@@ -12,6 +12,7 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     margin-left : 20px;
+    margin-bottom: auto;
 
     .MainView_Text1 {
         font-family: Roboto;
@@ -34,4 +35,27 @@
         color: #FFF;
         font-weight: 900;
     }
+}
+
+.MainView_Count {
+    display: flex;
+    flex-direction: column;
+    
+    height: 120px;
+    color: #FFF;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 8.877px; /* 36.985% */
+    margin-top : auto;
+    margin-bottom: auto;
+    margin-left : 38px;
+}
+
+.Count_Box {
+    width: 100%;
+    height : 85px;
+    display: flex;
+    flex-direction: row;
+    margin-top : 20px;
 }
