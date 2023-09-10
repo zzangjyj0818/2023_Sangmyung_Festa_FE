@@ -1,7 +1,6 @@
 // src/components/container/InformationPage/Designfcn.jsx
 import React, { useState, useEffect } from "react"
 import { tagData, tagData_food } from "./data"
-import "../../../styles/pages/designUniv.scss"
 import Union from "../../container/InformationPage/designicon/Union.png"
 import Smoke from "../../container/InformationPage/designicon/Smoke.png"
 import ArrowUp from "./designicon/arrowup.png"

@@ -3,9 +3,6 @@ import React, { useState } from "react"
 import "./informationfcn.scss"
 import Designfcn from "./Designfcn"
 import Gatefcn from "./Gatefcn"
-import { Link, Route, Switch } from "react-router-dom";
-import DesignUniv from "../../presentation/information/designUniv"
-import GateFcn from "./Gatefcn"
 
 const Informationfcn = () => {
   const [selectedTag, setSelectedTag] = useState([])
@@ -33,8 +30,6 @@ const Informationfcn = () => {
   }
 
   return (
-
-    
     // <div className="informaion-container">
     //   <div className="navigation-cp-container">
     //     <div className="navigation-cp-space">
@@ -119,10 +114,8 @@ const Informationfcn = () => {
     //   </div>
     // </div>
 
-    
-    
-    <div className="informaion-container"> 
-    <div className="navigation-cp-container">
+    <div className="informaion-container">
+      <div className="navigation-cp-container">
         <div className="navigation-cp-space">
           <div className="navigation-button">
             <button
@@ -159,7 +152,7 @@ const Informationfcn = () => {
         </div>
       </div>
       <div className="navigation-line" />
-      {menuInfo ? <Designfcn /> : <Gatefcn onClickTag={onClickTag} />}
+      {menuInfo ? <Designfcn /> : <Gatefcn />}
     </div>
   )
 }
