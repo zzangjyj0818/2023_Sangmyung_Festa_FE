@@ -14,7 +14,7 @@ const SlideShow = ({index, setIndex, datas}) => {
             }
           <div className='img_current'>
               <div className="front">
-                <img src={datas[index].url} alt='' style={{width: '262px', height : '331px'}}/>
+                <img src={datas[index].url} alt='' style={{width: '262px', height : '331px', borderRadius: '20px'}}/>
               </div>
               <div className="back">
                 <div className='back_time'>
