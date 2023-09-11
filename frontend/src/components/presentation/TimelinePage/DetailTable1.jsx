@@ -58,7 +58,7 @@ const DetailTable1 = () => {
                                 className='item_circle' 
                                 style={{
                                     backgroundColor:
-                                        new Date().getMonth() === 8 && new Date().getDate() === 9 ?
+                                        new Date().getMonth() === 8 && new Date().getDate() === 11 ?
                                         (activeTimeIndex === index ? '#4F75FF' :
                                         activeTimeIndex >= index ? '#C7E7FF' : 'lightgray') : 'lightgray'
                                 }}
