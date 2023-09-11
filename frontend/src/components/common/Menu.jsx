@@ -27,6 +27,11 @@ const items = [
         url : '/creator'
     }
 ]
+
+const studentInsta = 'https://instagram.com/smu_switch_38th?igshid=ZDdkNTZiNTM='
+const studentKakao = 'http://pf.kakao.com/_xcWJLxj'
+const developInsta = 'https://instagram.com/likelion_smuc?igshid=MzRlODBiNWFlZA=='
+
 const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
     return (
         
@@ -61,24 +66,24 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
                     <div className='Modal_Bottom_Content'>
                         <div className='Modal_Bottom_Title '>축제 문의</div>
                         <div className='Festival'>
-                            <div className='Detail'>
+                            <a href={studentInsta} className='Detail'>
                                 <div><img src={Insta} alt='' style={{width: '24px', height: '24px'}}/></div>
                                 <div className='Modal_Bottom_Text'>
                                     <div>총학생회</div>
                                     <div>인스타그램</div>
                                 </div>
-                            </div>
-                            <div className='Detail' style={{marginLeft : '30px'}}>
+                            </a>
+                            <a  href= {studentKakao} className='Detail' style={{marginLeft : '30px'}}>
                                 <div><img src={Kakao} alt='' style={{width: '24px', height: '24px'}}/></div>
                                 <div className='Modal_Bottom_Text'>
                                     <div>총학생회</div>
                                     <div>카카오톡 오픈채팅</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div className='Modal_Bottom_Content' style={{marginTop: '37px'}}>
-                        <div className='Modal_Bottom_Title '>사이트 문의</div>
+                        <a href={developInsta} className='Modal_Bottom_Title'>사이트 문의</a>
                         <div className='Festival'>
                             <div className='Detail'>
                                 <div><img src={Insta} alt='' style={{width: '24px', height: '24px'}}/></div>
