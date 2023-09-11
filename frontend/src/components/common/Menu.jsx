@@ -83,15 +83,15 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
                         </div>
                     </div>
                     <div className='Modal_Bottom_Content' style={{marginTop: '37px'}}>
-                        <a href={developInsta} className='Modal_Bottom_Title'>사이트 문의</a>
+                        <div className='Modal_Bottom_Title'>사이트 문의</div>
                         <div className='Festival'>
-                            <div className='Detail'>
+                            <a href={developInsta} className='Detail'>
                                 <div><img src={Insta} alt='' style={{width: '24px', height: '24px'}}/></div>
                                 <div className='Modal_Bottom_Text'>
                                     <div>멋쟁이 사자처럼</div>
                                     <div>인스타그램</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
