@@ -5,9 +5,7 @@ import Designfcn from "./Designfcn"
 import Gatefcn from "./Gatefcn"
 
 const Informationfcn = () => {
-  const [selectedTag, setSelectedTag] = useState([])
   const [activeNavButton, setActiveNavButton] = useState("design") // 페이지 접속 시 선택된 기본 버튼
-  const [boothInfo, setBoothInfo] = useState("")
   const [menuInfo, setMenuInfo] = useState(true) //메뉴 상태관리 추가
 
   // const onClickTag = (tag) => {
@@ -23,9 +21,10 @@ const Informationfcn = () => {
   // }
 
   const onClickSelButton = (buttonName) => {
+    if (activeNavButton === buttonName) {
+      return
+    }
     setActiveNavButton((prev) => (prev === buttonName ? "design" : buttonName))
-    setSelectedTag("") // 버튼을 누를 때마다 선택된 태그 초기화
-    setBoothInfo("") // 버튼을 누를 때마다 선택된 태그와 부스 정보 초기화
     setMenuInfo(!menuInfo)
   }
 

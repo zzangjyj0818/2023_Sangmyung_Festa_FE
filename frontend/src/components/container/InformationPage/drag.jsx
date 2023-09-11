@@ -61,7 +61,7 @@ function DragInfo({
   const handleHeart2 = () => {
     const selectedTagName =
       tagData2.find((tag) => tag.id === selectedTagId2)?.name ||
-      tagData_food2.find((tag) => tag.id === selectedTagId_food)?.name ||
+      tagData_food2.find((tag) => tag.id === selectedTagId_food2)?.name ||
       ""
 
     if (selectedTagName) {
