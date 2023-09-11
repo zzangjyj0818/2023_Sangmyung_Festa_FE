@@ -165,24 +165,19 @@ function Designfcn() {
                     const matchingFoodTag = tagData_food.find(
                       (tag) => tag.name === favorite
                     )
+
                     if (matchingTag) {
                       setSelectedTagId(matchingTag.id)
                       setSelectedTagId_out(null)
-                      setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
+                      setSelectedTagId_food(null)
+                    } else if (matchingOutTag) {
+                      setSelectedTagId_out(matchingOutTag.id)
+                      setSelectedTagId(null)
+                      setSelectedTagId_food(null)
                     } else if (matchingFoodTag) {
-                      // 일치하는 tagData_food 아이템 찾기
-                      if (matchingOutTag) {
-                        setSelectedTagId_out(matchingOutTag.id)
-                        setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
-                        setSelectedTagId_food(null)
-                      }
-                    } else if (matchingFoodTag) {
-                      // 일치하는 tagData_food 아이템 찾기
-                      if (matchingFoodTag) {
-                        setSelectedTagId_food(matchingFoodTag.id)
-                        setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
-                        setSelectedTagId_out(null)
-                      }
+                      setSelectedTagId_food(matchingFoodTag.id)
+                      setSelectedTagId(null)
+                      setSelectedTagId_out(null)
                     }
                   }}
                 >
