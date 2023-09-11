@@ -37,6 +37,12 @@
 
 }
 
+@media (max-width: 480px) {
+    .EventCategory-button {
+        margin-left: 6%; 
+    }
+}
+
 .EventCategory-button.selected {
     font-family: 'Spoqa Han Sans Neo';
     font-style: normal;

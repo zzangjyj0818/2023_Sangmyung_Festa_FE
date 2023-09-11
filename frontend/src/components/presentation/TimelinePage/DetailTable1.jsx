@@ -13,15 +13,25 @@ const DetailTable2 = () => {
     const getCurrentTimeIndex = () => {
         const now = new Date();
         const nowInMinutes = now.getHours() * 60 + now.getMinutes();
-
-        return times.findIndex(time => {
+    
+        let index = times.findIndex(time => {
             const [hours, minutes] = time.split(':').map(Number);
             return hours * 60 + minutes > nowInMinutes;
-        }) - 1;
+        });
+    
+       
+        if (index === -1) {
+            index = times.length - 1;
+        } else if (index > 0) {
+            
+            index--;
+        }
+    
+        return index;
     };
 
     useEffect(() => {
-        if (new Date().getMonth() === 8 && new Date().getDate() === 25) {
+        if (new Date().getMonth() === 8 && new Date().getDate() === 11) {
             setActiveTimeIndex(getCurrentTimeIndex());
 
             const intervalId = setInterval(() => {

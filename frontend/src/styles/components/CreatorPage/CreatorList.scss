@@ -17,7 +17,6 @@
 }
 
 .category-button {
-
     margin-left: 16%;
     border: none; 
     background: transparent; 
@@ -39,6 +38,12 @@
     padding-bottom: 10px; 
 }
 
+@media (max-width: 480px) {
+    .category-button {
+        margin-left: 12%; 
+    }
+}
+
 .category-button.selected {
     font-family: 'Spoqa Han Sans Neo';
     font-style: normal;
@@ -54,6 +59,7 @@
     margin-bottom: -2.5px;
     
     border-bottom: 2px solid var(--main, #4F75FF);;
+    padding-bottom: 12px; 
   }
   
   
