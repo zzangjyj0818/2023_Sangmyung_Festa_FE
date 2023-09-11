@@ -9,8 +9,10 @@ import Cinema from '../../../assets/TimelinePage/cinema.svg';
 const Events = () => {
     return (
         <div className="events">
-            <p className="events_text">📢 공연 중 이벤트 한 눈에 보기</p>
-            <p className="events_smalltext">(9.25-9.26)</p>
+            <div className='events_text_box'>
+                <p className="events_text">📢 공연 중 이벤트 한 눈에 보기</p>
+                <p className="events_smalltext">(9.25-9.26)</p>
+            </div>
             <div className="event-row">
                 <div className="event-box1" >
                     <p className="box1_name">학생회 이벤트 (무비인더캠핑)</p>

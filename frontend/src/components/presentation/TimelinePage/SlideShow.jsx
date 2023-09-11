@@ -1,9 +1,8 @@
 import React from 'react';
-import { datas } from './dataSet';
 import '../../../styles/components/TimelinePage/SlideShow.scss';
 import Time from '../../../assets/TimelinePage/carbon_time.svg';
 
-const SlideShow = ({index, setIndex}) => {
+const SlideShow = ({index, setIndex, datas}) => {
   return (
     <div className='SlideShow_Container'>
       <div className='SlideShow_Wrapper'>
@@ -15,7 +14,7 @@ const SlideShow = ({index, setIndex}) => {
             }
           <div className='img_current'>
               <div className="front">
-                <img src={datas[index].url} alt='' style={{width: '262px', height : '331px'}}/>
+                <img src={datas[index].url} alt='' style={{width: '262px', height : '331px', borderRadius: '20px'}}/>
               </div>
               <div className="back">
                 <div className='back_time'>
@@ -41,8 +40,9 @@ const SlideShow = ({index, setIndex}) => {
             <div className='img_btn' style={{marginLeft : '15px'}} onClick={()=>{setIndex(index+1)}}>
               <img src={datas[index+1].url} alt='' className='img_btn_img'/>
             </div>
-            }
+          }
         </div>
+        
       </div>
     </div>
   );

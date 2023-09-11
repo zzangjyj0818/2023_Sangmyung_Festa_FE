@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { categories } from '../../presentation/CreatorPage/dataSet';
+import { categories, categoryDescriptions } from './dataSet';
 import { useParams } from 'react-router';
 import CreatorList from '../../presentation/CreatorPage/CreatorList';
 
@@ -14,6 +14,8 @@ const CreatorListContainer = () => {
         <CreatorList
             currentCategory={currentCategory}
             setCurrentCategory={setCurrentCategory}
+            categories={categories}
+            categoryDescriptions={categoryDescriptions}
         />
     );
 };

@@ -10,7 +10,7 @@ import lhj from '../../../assets/CreatorPage/lhj.png';
 import lhjun from '../../../assets/CreatorPage/lhjun.png';
 import ljhyeon from'../../../assets/CreatorPage/ljhyeon.png';
 import ljw from '../../../assets/CreatorPage/ljw.jpeg';
-import lyw from '../../../assets/CreatorPage/lyw.png';
+import lyw from '../../../assets/CreatorPage/lyw.jpeg';
 import syj from '../../../assets/CreatorPage/syj.jpeg';
 import syj2 from '../../../assets/CreatorPage/syj.png';
 import ylh from'../../../assets/CreatorPage/ylh.svg';

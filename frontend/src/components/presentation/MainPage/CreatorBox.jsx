@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const CreatorBox = ({ title, description, image, splitTitle, handleOnClick }) => {
     return (
         <div className="creator_box" onClick={handleOnClick}>

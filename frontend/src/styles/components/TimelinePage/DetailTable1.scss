@@ -11,6 +11,7 @@
     flex-direction: column;
     margin-top : 35px;
     margin-left : 16px;
+    width:90px;
 }
 
 .TimeList_Title {
@@ -22,11 +23,20 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    width:160px;
 }
 
 .Time_text {
+    width:40px;
     margin-left:2px;
     margin-top:0.5px;
+    margin-right:33px;
+}
+
+
+.Information_text {
+    width:40px;
+    margin-left:3px;
 }
 
 .TimeList_items {
@@ -51,6 +61,7 @@
     height : 15px;
     margin-bottom : 104px;
     margin-right : 35px;
+    
 }
 
 .item_circle {
@@ -59,16 +70,15 @@
     border : none;
     border-radius: 50%;
     background-color: lightgray;
-    margin-left: auto;
     z-index:1;
 }
 
 .DetailTable1_HorizonBar {
     position: absolute;
-    margin-top : 72.5px;
+    margin-top : 66px;
     display: flex;
     width: 0;
-    height : 701px;
+    height : 720px;
     border: 1px solid lightgray;
     margin-left : 87.5px;
 }
@@ -77,25 +87,11 @@
     display: flex;
     flex-direction: column;
 
-    margin-top : 35px;
+    margin-top : 63px;
     margin-left : auto;
-    margin-right : 14px;
+    margin-right : 45px;
 }
 
-.InformationList_Title {
-    display: flex;
-    flex-direction: row;
-    color: #727272;
-    font-family: Spoqa Han Sans Neo;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.Information_text {
-    margin-left:3px;
-}
 
 .Box_Collection {
     display: flex;
@@ -105,11 +101,14 @@
 .InformationBox1 {
     width: 255px;
     height: 337px;
+    align-items: center;
     border-radius: 12px;
     background: linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%);
     box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
 
-    margin-top : 14.5px;
+    //margin-bottom : 14.5px;
+    //margin-right : auto;
+    //margin-left:auto;
 }
 
 .InformationBox2 {
@@ -131,79 +130,7 @@
     margin-top : 12px;
 }
 
-.InformationBox4 {
-    width: 255px;
-    height: 51px;
-    border-radius: 12px;
-    background: var(--light-gray, #EEE);
-    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
-    margin-top : 12px;
-}
 
-.InformationBox5 {
-    width: 255px;
-    height: 51px;
-    border-radius: 12px;
-    background: var(--light-gray, #EEE);
-    box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
-    margin-top : 12px;
-}
-
-.Information_TextBox {
-    display: flex;
-    flex-direction: column;
-
-    padding-left : 14px;
-}
-
-.Information_MainTitle {
-    color: var(--black, #212121);
-    font-family: Spoqa Han Sans Neo;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.Information_SubTitle {
-    color: var(--gray-2, #919094);
-    font-family: Spoqa Han Sans Neo;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    margin-top:-10px;
-    margin-left:15px;
-}
-
-.Time_Icon {
-    width: 12px;
-    height: 12px;
-    margin-top:-2px;
-}
-
-
-.Location_Icon {
-    width: 12px;
-    height: 12px;
-    margin-top:-2px;
-}
-
-.Information_time {
-    color: #AB85A2;
-    font-family: Spoqa Han Sans Neo;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-
-    margin-top:-10px;
-    margin-left:15px;
-}
-
-.Information_DisplaySet {
-    display : flex;
-    flex-direction: row;
-    margin-top : 6px;
+.InformationBox2_Text {
+    margin-top:60px;
 }

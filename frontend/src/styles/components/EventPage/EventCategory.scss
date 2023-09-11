@@ -1,4 +1,3 @@
-// EventCategory.scss
 .EventCategory_Container{
     display: flex;
     flex-direction: column;
@@ -27,14 +26,9 @@
     font-size: 16px;
     line-height: 23px;
 
-    //display: flex;
-    //align-items: flex-end;
-    //text-align: center;
-
     color: #D8DCE0;
-
-    //border-bottom: 2px solid transparent;
-
+    margin-left : auto;
+    margin-right : auto;
 }
 
 @media (max-width: 480px) {
@@ -49,11 +43,6 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 23px;
-
-    //display: flex;
-    // align-items: flex-end;
-    // text-align: center;
-    
     color: #4F75FF;
     margin-bottom: -2px;
     

@@ -9,12 +9,12 @@
 .DetailTable2_TimeList {
     display: flex;
     flex-direction: column;
-
     margin-top : 35px;
     margin-left : 16px;
+    width:90px;
 }
 
-.TimeList2_Title {
+.TimeList_Title {
     display: flex;
     flex-direction: row;
     color: #727272;
@@ -23,14 +23,23 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    width:160px;
 }
 
-.Time_text2 {
+.Time_text {
+    width:40px;
     margin-left:2px;
     margin-top:0.5px;
+    margin-right:33px;
 }
 
-.TimeList2_items {
+
+.Information_text {
+    width:40px;
+    margin-left:3px;
+}
+
+.TimeList_items {
     display: flex;
     flex-direction: column;
     color: #727272;
@@ -40,36 +49,36 @@
     margin-top : 12.5px;
 }
 
-.items_wrapper2 {
+.items_wrapper {
     display: flex;
     flex-direction: row;
     width : auto;
     margin-right : 12px;
 }
 
-.TimeList_item2 {
+.TimeList_item {
     width : 32px;
     height : 15px;
     margin-bottom : 104px;
     margin-right : 35px;
+    
 }
 
-.item_circle2 {
+.item_circle {
     width: 11px;
     height : 11px;
     border : none;
     border-radius: 50%;
     background-color: lightgray;
-    margin-left: auto;
     z-index:1;
 }
 
 .DetailTable2_HorizonBar {
     position: absolute;
-    margin-top : 72.5px;
+    margin-top : 66px;
     display: flex;
     width: 0;
-    height : 701px;
+    height : 720px;
     border: 1px solid lightgray;
     margin-left : 87.5px;
 }
@@ -78,42 +87,31 @@
     display: flex;
     flex-direction: column;
 
-    margin-top : 35px;
+    margin-top : 63px;
     margin-left : auto;
-    margin-right : 14px;
+    margin-right : 45px;
 }
 
-.InformationList_Title2 {
-    display: flex;
-    flex-direction: row;
-    color: #727272;
-    font-family: Spoqa Han Sans Neo;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
 
-.Information_text2 {
-    margin-left:3px;
-}
-
-.Box_Collection2 {
+.Box_Collection {
     display: flex;
     flex-direction: column;
     font-family: Spoqa Han Sans Neo;
 }
-.Information2Box1 {
+.InformationBox1 {
     width: 255px;
     height: 337px;
+    align-items: center;
     border-radius: 12px;
     background: linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%);
     box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
 
-    margin-top : 14.5px;
+    //margin-bottom : 14.5px;
+    //margin-right : auto;
+    //margin-left:auto;
 }
 
-.Information2Box2 {
+.InformationBox2 {
     width: 255px;
     height: 180px;
     flex-shrink: 0;
@@ -123,7 +121,7 @@
     margin-top : 12px;
 }
 
-.Information2Box3 {
+.InformationBox3 {
     width: 255px;
     height: 58px;
     border-radius: 12px;
@@ -132,7 +130,7 @@
     margin-top : 12px;
 }
 
-.Information2Box4 {
+.InformationBox4 {
     width: 255px;
     height: 114px;
     border-radius: 12px;
@@ -142,62 +140,6 @@
 }
 
 
-
-.Information_TextBox2 {
-    display: flex;
-    flex-direction: column;
-
-    padding-left : 14px;
-}
-
-.Information_MainTitle2 {
-    color: var(--black, #212121);
-    font-family: Spoqa Han Sans Neo;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.Information_SubTitle2 {
-    color: var(--gray-2, #919094);
-    font-family: Spoqa Han Sans Neo;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-
-    margin-top:-10px;
-    margin-left:15px;
-}
-
-.Time_Icon {
-    width: 12px;
-    height: 12px;
-    margin-top:-2px;
-}
-
-
-.Location_Icon {
-    width: 12px;
-    height: 12px;
-    margin-top:-2px;
-}
-
-.Information_time2 {
-    color: #AB85A2;
-    font-family: Spoqa Han Sans Neo;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-
-    margin-top:-10px;
-    margin-left:15px;
-}
-
-.Information_DisplaySet2 {
-    display : flex;
-    flex-direction: row;
-    margin-top : 6px;
+.InformationBox2_Text {
+    margin-top:60px;
 }
