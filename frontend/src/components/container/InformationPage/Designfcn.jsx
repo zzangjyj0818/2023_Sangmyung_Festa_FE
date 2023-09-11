@@ -1,6 +1,12 @@
 // src/components/container/InformationPage/Designfcn.jsx
 import React, { useState, useEffect } from "react"
-import { tagData, tagData_food } from "./data"
+import {
+  tagData,
+  infoData,
+  tagData_food,
+  infoData_food,
+  tagData_Out,
+} from "./data"
 import Union from "../../container/InformationPage/designicon/Union.png"
 import Smoke from "../../container/InformationPage/designicon/Smoke.png"
 import ArrowUp from "./designicon/arrowup.png"
@@ -30,14 +36,10 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
 
 function Designfcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
+  const [selectedTagId_out, setSelectedTagId_out] = useState(null)
   const [selectedTagId_food, setSelectedTagId_food] = useState(null)
   const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
-
-  const handleTagClick = (tagId) => {
-    setSelectedTagId(tagId)
-    setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
-  }
 
   const handleFavorite = (selectedTagContent) => {
     if (favorites.includes(selectedTagContent)) {
@@ -49,9 +51,22 @@ function Designfcn() {
     }
   }
 
+  const handleTagClick = (tagId) => {
+    setSelectedTagId(tagId)
+    setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
+    setSelectedTagId_out(null)
+  }
+
+  const handleTagOut = (tagId) => {
+    setSelectedTagId_out(tagId)
+    setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+    setSelectedTagId_food(null)
+  }
+
   const handleTagFood = (tagId) => {
     setSelectedTagId_food(tagId)
     setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+    setSelectedTagId_out(null)
   }
 
   const handleToggleTags = () => {
@@ -88,7 +103,6 @@ function Designfcn() {
   return (
     <>
       <div className="image-size">
-        {/* <img src={image} alt="이미지" /> */}
         <div className="image1">
           <span className="building-name">소나무숲</span>
         </div>
@@ -125,7 +139,7 @@ function Designfcn() {
           <span className="building-name">운동장</span>
         </div>
 
-        {Array.from({ length: 13 }, (_, i) => (
+        {Array.from({ length: 25 }, (_, i) => (
           <div key={i} className={`booth booth${i + 1}`} />
         ))}
       </div>
@@ -147,17 +161,29 @@ function Designfcn() {
                     const matchingTag = tagData.find(
                       (tag) => tag.name === favorite
                     )
+                    const matchingOutTag = tagData_Out.find(
+                      (tag) => tag.name === favorite
+                    )
+                    const matchingFoodTag = tagData_food.find(
+                      (tag) => tag.name === favorite
+                    )
                     if (matchingTag) {
                       setSelectedTagId(matchingTag.id)
+                      setSelectedTagId_out(null)
                       setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
-                    } else {
+                    } else if (matchingFoodTag) {
                       // 일치하는 tagData_food 아이템 찾기
-                      const matchingFoodTag = tagData_food.find(
-                        (tag) => tag.name === favorite
-                      )
+                      if (matchingOutTag) {
+                        setSelectedTagId_out(matchingOutTag.id)
+                        setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+                        setSelectedTagId_food(null)
+                      }
+                    } else if (matchingFoodTag) {
+                      // 일치하는 tagData_food 아이템 찾기
                       if (matchingFoodTag) {
                         setSelectedTagId_food(matchingFoodTag.id)
                         setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+                        setSelectedTagId_out(null)
                       }
                     }
                   }}
@@ -199,9 +225,9 @@ function Designfcn() {
         <div className="filter-container">
           <h2 className="filter-title">외부 부스</h2>
           <TagList
-            tags={tagData_food}
-            onTagClick={handleTagFood}
-            selectedTagId={selectedTagId_food}
+            tags={tagData_Out}
+            onTagClick={handleTagOut}
+            selectedTagId={selectedTagId_out}
           />
         </div>
 
@@ -216,6 +242,7 @@ function Designfcn() {
       </div>
       <DragInfo
         selectedTagId={selectedTagId}
+        selectedTagId_out={selectedTagId_out}
         selectedTagId_food={selectedTagId_food}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
