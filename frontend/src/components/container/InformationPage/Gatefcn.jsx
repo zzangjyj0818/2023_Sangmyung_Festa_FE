@@ -1,19 +1,17 @@
 // src/components/container/InformationPage/Gatefcn.jsx
 import React, { useState, useEffect } from "react"
 import DragInfo from "./drag" // DragInfo import
-import { tagData_food, tagData2 } from "./data"
+import { tagData2, tagData_food2 } from "./data"
 // scss 임포트
 import "./informationfcn.scss"
 import "./Gatefcn.scss"
 
 const TagList = ({ tags, onTagClick, selectedTagId }) => {
   return (
-    // <div className="DesignUnivContainer">
     <div className="filter-tags">
       {tags.map((tag) => (
         <button
           key={tag.id}
-          // className="tagDesignUniv"
           className={`tag-button ${selectedTagId === tag.id ? "active" : ""}`}
           onClick={() => onTagClick(tag.id)}
         >
@@ -30,11 +28,6 @@ function GateFcn() {
   const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
 
-  const handleTagClick = (tagId) => {
-    setSelectedTagId(tagId)
-    setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
-  }
-
   const handleFavorite = (selectedTagContent) => {
     if (favorites.includes(selectedTagContent)) {
       setFavorites((prevFavorites) =>
@@ -45,13 +38,14 @@ function GateFcn() {
     }
   }
 
-  const handleTagFood = (tagId) => {
-    setSelectedTagId_food(tagId)
-    setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+  const handleTagClick = (tagId) => {
+    setSelectedTagId(tagId)
+    setSelectedTagId_food(null)
   }
 
-  const handleToggleTags = () => {
-    setShowMajorTags((prevShowMajorTags) => !prevShowMajorTags)
+  const handleTagFood = (tagId) => {
+    setSelectedTagId_food(tagId)
+    setSelectedTagId(null)
   }
 
   const handleTouchStart = (e) => {
@@ -144,7 +138,7 @@ function GateFcn() {
                       setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
                     } else {
                       // 일치하는 tagData_food 아이템 찾기
-                      const matchingFoodTag = tagData_food.find(
+                      const matchingFoodTag = tagData_food2.find(
                         (tag) => tag.name === favorite
                       )
                       if (matchingFoodTag) {
@@ -185,7 +179,7 @@ function GateFcn() {
         <div className="filter-container">
           <h2 className="filter-title">푸드트럭</h2>
           <TagList
-            tags={tagData_food}
+            tags={tagData_food2}
             onTagClick={handleTagFood}
             selectedTagId={selectedTagId_food}
           />
@@ -194,7 +188,7 @@ function GateFcn() {
 
       <DragInfo
         selectedTagId2={selectedTagId}
-        selectedTagId_food={selectedTagId_food}
+        selectedTagId_food2={selectedTagId_food}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onFavoriteChange={handleFavorite}

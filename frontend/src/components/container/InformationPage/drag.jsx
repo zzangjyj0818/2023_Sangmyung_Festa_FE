@@ -5,6 +5,7 @@ import {
   tagData2,
   infoData,
   tagData_food,
+  tagData_food2,
   infoData_food,
   tagData_Out,
   infoData_Out,
@@ -19,6 +20,7 @@ function DragInfo({
   selectedTagId,
   selectedTagId2,
   selectedTagId_food,
+  selectedTagId_food2,
   selectedTagId_out,
   onFavoriteChange,
 }) {
@@ -31,10 +33,14 @@ function DragInfo({
 
   const handleHeart = () => {
     const selectedTagName =
-      tagData.find((tag) => tag.id === selectedTagId)?.name || ""
+      tagData.find((tag) => tag.id === selectedTagId)?.name ||
+      tagData_Out.find((tag) => tag.id === selectedTagId_out)?.name ||
+      tagData_food.find((tag) => tag.id === selectedTagId_food)?.name ||
+      ""
 
     if (selectedTagName) {
       let updatedFavorites
+
       if (favorites.includes(selectedTagName)) {
         updatedFavorites = favorites.filter(
           (favorite) => favorite !== selectedTagName
@@ -54,7 +60,9 @@ function DragInfo({
 
   const handleHeart2 = () => {
     const selectedTagName =
-      tagData2.find((tag) => tag.id === selectedTagId2)?.name || ""
+      tagData2.find((tag) => tag.id === selectedTagId2)?.name ||
+      tagData_food2.find((tag) => tag.id === selectedTagId_food)?.name ||
+      ""
 
     if (selectedTagName) {
       let updatedFavorites
@@ -130,9 +138,14 @@ function DragInfo({
     ? tagData2.find((tag) => tag.id === selectedTagId2)?.name
     : ""
 
-  // 푸드트럭 태그
+  // 디자인 대학 푸드트럭 태그
   const selectedTagFoodContent = selectedTagId_food
     ? tagData_food.find((tag) => tag.id === selectedTagId_food)?.name
+    : ""
+
+  // 정문 푸드트럭 태그
+  const selectedTagFoodContent2 = selectedTagId_food2
+    ? tagData_food2.find((tag) => tag.id === selectedTagId_food2)?.name
     : ""
 
   // 외부 부스 태그
@@ -368,6 +381,60 @@ function DragInfo({
                 />
                 <div className="mini-window-Time"> 시간 </div>
                 <div className="mini-window-TimeInfo">{selectedTagInfo2}</div>
+              </div>
+
+              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <img src={LinkImage} alt="Link" />
+
+              <hr />
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
+                <div style={{ flex: 1, textAlign: "right" }}>
+                  {selectedTagGame}
+                </div>
+              </div>
+              <hr />
+            </div>
+          )}
+
+          {selectedTagFoodContent2 && (
+            <div>
+              <div style={{ textAlign: "center", marginBottom: "20px" }}>
+                <img src={Line} alt="Line" />
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div className="mini-window-Title">
+                  {selectedTagFoodContent2}
+                </div>
+                <img
+                  src={
+                    favorites2.includes(selectedTagFoodContent2)
+                      ? FilledHeart
+                      : EmptyHeart
+                  }
+                  alt="emptyheart"
+                  onClick={() => handleHeart2(selectedTagFoodContent2)}
+                />
+              </div>
+
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <img
+                  src={Time}
+                  alt="time"
+                  style={{ width: "14px", height: "14px", marginRight: "8px" }}
+                />
+                <div className="mini-window-Time"> 시간 </div>
+                <div className="mini-window-TimeInfo">
+                  {selectedTagFoodInfo}
+                </div>
               </div>
 
               <div className="mini-window-TimeInfo">학과부스설명</div>

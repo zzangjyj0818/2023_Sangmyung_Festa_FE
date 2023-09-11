@@ -18,12 +18,10 @@ import "./Designfcn.scss"
 
 const TagList = ({ tags, onTagClick, selectedTagId }) => {
   return (
-    // <div className="DesignUnivContainer">
     <div className="filter-tags">
       {tags.map((tag) => (
         <button
           key={tag.id}
-          // className="tagDesignUniv"
           className={`tag-button ${selectedTagId === tag.id ? "active" : ""}`}
           onClick={() => onTagClick(tag.id)}
         >
@@ -53,19 +51,19 @@ function Designfcn() {
 
   const handleTagClick = (tagId) => {
     setSelectedTagId(tagId)
-    setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
+    setSelectedTagId_food(null)
     setSelectedTagId_out(null)
   }
 
   const handleTagOut = (tagId) => {
     setSelectedTagId_out(tagId)
-    setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+    setSelectedTagId(null)
     setSelectedTagId_food(null)
   }
 
   const handleTagFood = (tagId) => {
     setSelectedTagId_food(tagId)
-    setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
+    setSelectedTagId(null)
     setSelectedTagId_out(null)
   }
 

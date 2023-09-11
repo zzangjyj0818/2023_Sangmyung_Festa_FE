@@ -98,11 +98,23 @@ const tagData2 = [
   { id: 5, name: "???" },
 ]
 
+const tagData_food2 = [
+  { id: 1, name: "정문 푸드트럭1", heart: false },
+  { id: 2, name: "정문 푸드트럭2", heart: false },
+  { id: 3, name: "정문 마싯는야끼소바", heart: false },
+  { id: 4, name: "정문 탕후루", heart: false },
+  { id: 5, name: "정문 젤라또", heart: false },
+  { id: 6, name: "정문 푸드트럭3", heart: false },
+  { id: 7, name: "정문 푸드트럭4", heart: false },
+  { id: 8, name: "정문 푸드트럭5", heart: false },
+]
+
 export {
   tagData,
   tagData2,
   infoData,
   tagData_food,
+  tagData_food2,
   infoData_food,
   tagData_Out,
   infoData_Out,
