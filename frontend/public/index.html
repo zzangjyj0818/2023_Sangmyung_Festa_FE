@@ -2,8 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, 
+      viewport-fit=cover, 
+      maximum-scale=1.0, 
+      minimum-scale=1.0, 
+      user-scalable=0" 
+    />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -25,15 +31,20 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>비상</title>
-    <link rel="stylesheet" href="odometer-theme-default.css" />
     <style>
       body {
         padding : 0;
         margin : 0 auto;
         max-width: 450px;
         max-height : 2000px;
-        touch-action: pan-y;
+        touch-action: pan-y pan-x;
         -webkit-tap-highlight-color:transparent;
+      }
+      img {
+        touch-action: pan-y pan-x;
+      }
+      div {
+        touch-action: pan-y pan-x;
       }
     </style>
   </head>

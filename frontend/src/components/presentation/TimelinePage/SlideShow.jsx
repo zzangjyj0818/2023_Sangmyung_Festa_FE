@@ -40,8 +40,9 @@ const SlideShow = ({index, setIndex, datas}) => {
             <div className='img_btn' style={{marginLeft : '15px'}} onClick={()=>{setIndex(index+1)}}>
               <img src={datas[index+1].url} alt='' className='img_btn_img'/>
             </div>
-            }
+          }
         </div>
+        
       </div>
     </div>
   );

@@ -32,8 +32,8 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
         
         <div className="Modal" onClick={onClick}>
             <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-                <button id="modalCloseBtn" onClick={onClick}>
-                    x
+                <button className="modalCloseBtn" onClick={onClick}>
+                    ✕
                 </button>
                 <div className='Modal_Text'>
                     <div className='Modal_Text1'>여러분의 탑승을</div>
@@ -57,7 +57,7 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
                         </div>
                         )}
                 </div>
-                <div className='Modal_Bottom_Wrapper'>
+                <div className='Modal_Bottom_Wrapper' style={{marginTop: 'auto', marginBottom: 'auto'}}>
                     <div className='Modal_Bottom_Content'>
                         <div className='Modal_Bottom_Title '>축제 문의</div>
                         <div className='Festival'>
@@ -77,7 +77,7 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
                             </div>
                         </div>
                     </div>
-                    <div className='Modal_Bottom_Content' style={{marginBottom: '66px'}}>
+                    <div className='Modal_Bottom_Content' style={{marginTop: '37px'}}>
                         <div className='Modal_Bottom_Title '>사이트 문의</div>
                         <div className='Festival'>
                             <div className='Detail'>
