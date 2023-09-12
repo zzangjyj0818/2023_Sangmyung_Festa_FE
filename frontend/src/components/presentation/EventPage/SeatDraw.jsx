@@ -1,4 +1,7 @@
 import React from 'react';
+import AirPlane from '../../../assets/EventPage/Avion.svg';
+import smallAirPlane from '../../../assets/EventPage/small_Airplane.svg';
+import barcode from '../../../assets/EventPage/bar.png';
 import '../../../styles/components/EventPage/SeatDraw.scss';
 
 const SeatDraw = () => {
@@ -9,8 +12,6 @@ const SeatDraw = () => {
     return (
         <div className='SeatDraw_Container'>
             <div className='SeatDraw_Wrapper'>
-                {console.log(month)}
-                {console.log(days)}
                 <div className='SeatDraw_Wrapper_MainTitle'>스위치 비행기 좌석 추첨</div>
                 <div className='SeatDraw_DateBtn'>
                     <div className='DateBtn_date' 
@@ -25,6 +26,31 @@ const SeatDraw = () => {
                             backgroundColor : (month === 9 && days === 13) ? '#2757FF' : 'lightgray',
                             color : (month === 9 && days === 13) ? '#fff' : '#77767A',
                         }}>9.26 (화)</div>
+                </div>
+                <div className='SeatDraw_Wrapper_Ticket'>
+                    <div className='LeftBox'>
+                        <div className='Box_Header'>
+                            <div><img src={AirPlane} alt=''/></div>
+                            <div style={{marginLeft : '2px'}}>SMU festival</div>
+                        </div>
+                        <div>
+                            <div className='LeftBox_Text'>남은 티켓수</div>
+                            <div className='detail_box'>
+                                SMU
+                                <img src={smallAirPlane} alt='' style={{marginLeft: '5px', marginRight : '5px', marginBottom : '3px'}}/>
+                                Festival
+                            </div>
+                        </div>
+                    </div>
+                    <div className='RightBox'>
+                        <div className='Box_Header'>Boarding Pass</div>
+                        <div>
+                            <div className='RightBox_Text'>800</div>
+                            <div className='detail_box'>
+                                <img src={barcode} alt='' style={{marginTop : '6px'}}/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div></div>
             </div>

@@ -5,11 +5,11 @@ import EventCategoryContainer from '../components/container/EventPage/EventCateg
 
 const CreatorPage = () => {
     return (
-        <div>
+        <>
             <HeaderContainer name = {undefined} type = {1} opacity={false}/>
             <EventCategoryContainer />
             <Footer/>
-        </div>
+        </>
     );
 };
 
