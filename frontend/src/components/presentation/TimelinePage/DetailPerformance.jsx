@@ -3,12 +3,12 @@ import SlideShowContainer from '../../container/TimelinePage/SlideShowContainer'
 import '../../../styles/components/TimelinePage/DetailPerformance1.scss';
 import Events from './Events';
 
-const DetailPerformance1 = () => {
+const DetailPerformance1 = ({datas}) => {
 
     return (
         <div className='DetailPerformance_Container'>
             <div className='DetailPerformance_Wrapper'>
-                <SlideShowContainer />
+                <SlideShowContainer datas={datas}/>
                 <Events/>
             </div>
         </div>
