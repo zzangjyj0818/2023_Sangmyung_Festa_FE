@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import LargeBox from './LargeBox';
+import MediumBox from './MediumBox';
+import SmallBox from './SmallBox';
 import '../../../styles/components/TimelinePage/DetailTable1.scss';
 import Time from '../../../assets/TimelinePage/carbon_time.svg';
 import CheckIcon from '../../../assets/TimelinePage/clarity_event-line.svg';
 
-import data from '../../container/TimelinePage/BoxdataSet';
-import InformationTextBox from '../../container/TimelinePage/InformationTextBox'; 
-import { getCurrentTimeIndex } from '../../container/TimelinePage/CurrentTimeIndex';
 
 
-
-const times = ['10:00','12:00','14:00','16:00','18:00', '20:00','22:00'];
-
-const DetailTable1 = () => {
-    const [activeTimeIndex, setActiveTimeIndex] = useState(0);
-
-    useEffect(() => {
-        if (new Date().getMonth() === 8 && new Date().getDate() === 12) {
-            setActiveTimeIndex(getCurrentTimeIndex());
-
-            const intervalId = setInterval(() => {
-                setActiveTimeIndex(getCurrentTimeIndex());
-            }, 60 * 1000); 
-
-            return () => clearInterval(intervalId); 
-        }
-    }, []);
-
+const DetailTable1 = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
 
     return (
         <div className='DetailTable1_Container'>
@@ -42,12 +25,17 @@ const DetailTable1 = () => {
                             <div className='TimeList_item'>{time}</div>
                             <div 
                                 className='item_circle' 
-                                style={{
+                                style={selectedDate === "9.25 (월)" ? {
                                     backgroundColor:
                                         new Date().getMonth() === 8 && new Date().getDate() === 12 ?
                                         (activeTimeIndex === index ? '#4F75FF' :
                                         activeTimeIndex >= index ? '#C7E7FF' : 'lightgray') : 'lightgray'
-                                }}
+                                } : {
+                                    backgroundColor:
+                                        new Date().getMonth() === 8 && new Date().getDate() === 13 ?
+                                        (activeTimeIndex === index ? '#4F75FF' :
+                                        activeTimeIndex >= index ? '#C7E7FF' : 'lightgray') : 'lightgray'
+                                } }
                             />
                         </div>
                     )}
@@ -56,61 +44,23 @@ const DetailTable1 = () => {
 
             <div className='DetailTable1_HorizonBar'></div>
             <div className='DetailTable1_InformationList'>
-                <div className='Box_Collection'>
-                    <div className='InformationBox1'>
-                        <InformationTextBox 
-                            key={0}
-                            title={data[0].title}
-                            time={data[0].time}
-                            location={data[0].location} 
-                        />
-                    </div>
-
-                    <div className='InformationBox2'>
-                        <InformationTextBox 
-                            key={1}
-                            title={data[1].title}
-                            time={data[1].time}
-                            location={data[1].location} 
-                        />
-                        <div className='InformationBox2_Text'>
-                            <InformationTextBox
-                                key={2}
-                                title={data[2].title}
-                                time={data[2].time}
-                                location={data[2].location} 
-                            />
-                        </div>
-                    </div>
-
-                    <div className='InformationBox3'>
-                        <InformationTextBox 
-                            key={3}
-                            title={data[3].title}
-                            time={data[3].time}
-                            location={data[3].location} 
-                        />
-                    </div>
-
-                    <div className='InformationBox3'>
-                        <InformationTextBox 
-                            key={4}
-                            title={data[4].title}
-                            time={data[4].time}
-                            location={data[4].location} 
-                        />
-                    </div>
-
-                    <div className='InformationBox3'>
-                        <InformationTextBox 
-                            key={5}
-                            title={data[5].title}
-                            time={data[5].time}
-                            location={data[5].location} 
-                        />
-                    </div>
-
-                </div>
+                    <div className='Box_Collection'>
+                        { selectedDate === "9.25 (월)" ? 
+                            <>
+                                <LargeBox tableData={tableDatas[0]}/>
+                                <MediumBox tableData={tableDatas[1]}/>
+                                <SmallBox tableData={tableDatas[2]}/>
+                                <SmallBox tableData={tableDatas[3]}/>
+                                <SmallBox tableData={tableDatas[4]}/> 
+                            </> :
+                            <>
+                                <LargeBox tableData={tableDatas[0]}/>
+                                <MediumBox tableData={tableDatas[1]}/>
+                                <SmallBox tableData={tableDatas[2]}/>
+                                <SmallBox tableData={tableDatas[3]}/> 
+                            </>
+                        } 
+                    </div> 
             </div>
         </div>
     );

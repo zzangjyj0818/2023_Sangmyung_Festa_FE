@@ -1,10 +1,10 @@
 import React from 'react';
-import DetailTable1 from './DetailTable1.jsx';
-import DetailTable2 from './DetailTable2.jsx';
-import DetailPerformance1 from './DetailPerformance1.jsx'; 
+import DetailPerformance from './DetailPerformance.jsx';
+import { datas1, datas2 } from '../../container/TimelinePage/dataSet.jsx';
 import '../../../styles/components/TimelinePage/TableType.scss';
 import Up from '../../../assets/TimelinePage/icon_arrow_up.svg';
 import Down from '../../../assets/TimelinePage/icon_arrow_down.svg';
+import DetailTableContainer from '../../container/TimelinePage/DetailTableContainer.jsx';
 
 const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, handleOnClick, handleOnSelectChange}) => {
     return (
@@ -34,10 +34,8 @@ const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, h
                         </div>   
                     )}
             </div>
-            {selectedDate === "9.25 (월)" && selectedType === "festival" && <DetailTable1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "festival" && <DetailTable2 />}
-            {selectedDate === "9.25 (월)" && selectedType === "performance" && <DetailPerformance1 />}
-            {selectedDate === "9.26 (화)" && selectedType === "performance" && <DetailPerformance1 />} 
+            {selectedType === "festival" && <DetailTableContainer selectedDate={selectedDate}/>}
+            {selectedType === "performance" && <DetailPerformance datas={selectedDate === "9.25 (월)" ? datas1 : datas2}/>} 
         </div>
     );
     

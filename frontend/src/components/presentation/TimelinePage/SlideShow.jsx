@@ -1,16 +1,18 @@
 import React from 'react';
 import '../../../styles/components/TimelinePage/SlideShow.scss';
+import ColorTime from '../../../assets/TimelinePage/color_time.svg';
 import Time from '../../../assets/TimelinePage/carbon_time.svg';
+import Location from '../../../assets/TimelinePage/carbon_location.svg';
 
 const SlideShow = ({index, setIndex, datas}) => {
   return (
     <div className='SlideShow_Container'>
       <div className='SlideShow_Wrapper'>
         <div className='SlideShow_Box'>
-          { index > 0 && 
+          { index > 0 ? 
             <div className='img_btn' style={{marginRight : '15px'}} onClick={()=>{setIndex(index-1)}}>
               <img src={datas[index-1].url} alt='' className='img_btn_img'/>
-            </div>
+            </div> : <div className='img_btn' style={{marginRight : '15px'}}></div>
             }
           <div className='img_current'>
               <div className="front">
@@ -36,13 +38,28 @@ const SlideShow = ({index, setIndex, datas}) => {
                 </div>
               </div>
           </div>
-          { index < 3 &&
+          { index < 3 ?
             <div className='img_btn' style={{marginLeft : '15px'}} onClick={()=>{setIndex(index+1)}}>
               <img src={datas[index+1].url} alt='' className='img_btn_img'/>
-            </div>
+            </div> : <div className='img_btn' style={{marginRight : '15px'}}></div>
           }
         </div>
-        
+        <div className='extra_data'>
+          <div className='circle_collection'>
+            {datas.map((data) => (
+              <div key={data.id} className='circle' style={{background : index  === data.id ? '#92AAFF' : '#C8C6CA' }}></div>
+          ))}
+          </div>
+          <div className='extra_data_big_text'>{datas[index].kor}</div>
+          <div className='extra_data_small_text'>
+              <div className=""><img src={ColorTime} alt='' style={{width: '12px', height:'12px'}}/></div>
+              <div style={{color: '#AB85A2'}}>21:00-22:00</div>
+          </div>
+          <div className='extra_data_small_text'>
+              <div className=""><img src={Location} alt='' style={{width: '12px', height:'12px'}}/></div>
+              <div style={{color: 'black'}}>노천극장</div>
+          </div>
+        </div>
       </div>
     </div>
   );
