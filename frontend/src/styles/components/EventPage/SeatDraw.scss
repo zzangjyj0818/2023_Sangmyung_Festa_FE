@@ -145,6 +145,67 @@
 
 .SeatDraw_Detail {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 300px;
+    height: 224px;
 
+    margin-top : 40px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.SeatDraw_Detail_Layout {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 224px;
+
+    margin-bottom: 16px;
+
+    .SeatDraw_Detail_Layout_Title{
+        display: flex;
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 24px;
+        font-weight: 700;
+        margin-right : auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .SeatDraw_Detail_Layout_Text{
+        display: flex;
+        color: #303034;
+        text-align: right;
+        font-family: Pretendard;
+        font-size: 18px;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.SeatDraw_BottomText1 {
+    display: flex;
+    margin-top : 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 289px;
+    height: 50px;
+    color: #303034;
+
+    font-family: Spoqa Han Sans Neo;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.SeatDraw_BottomText2 {
+    margin-left : auto;
+    margin-right : auto;
+    margin-top : 8px;
+    color: var(--gray-2, #919094);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 13px;
+    font-weight: 400;
 }

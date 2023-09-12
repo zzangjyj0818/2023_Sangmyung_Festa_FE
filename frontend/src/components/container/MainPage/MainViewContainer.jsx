@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useQuery } from 'react-query';
 import MainView from '../../presentation/MainPage/MainView';
 import { fetchCount } from '../../../api/fetchCount';
 
 const MainViewContainer = () => {
-    const [count, setCount] = useState(null);
-    
-    useEffect(() => {
-        fetchCount({setCount});
-      }, []);
+    const { data: count, refetch} = useQuery('count', fetchCount);
 
       const numbers = count ? count.toLocaleString().split('') : []; // count 값이 있을 때만 toLocaleString() 호출
       const hour = new Date().getHours(); // 현재 시간(시) 가져오기
