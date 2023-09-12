@@ -24,7 +24,7 @@ const items = [
     {
         id : 4,
         text : '🤷 누가 만들었나요?',
-        url : '/creator'
+        url : '/creator/plan'
     }
 ]
 
