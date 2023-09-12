@@ -5,6 +5,12 @@
     margin: 0 auto;
 }
 
+.DetailTable_Wrapper {
+    display: flex;
+    flex-direction: row;
+    margin : 0 auto;
+}
+
 .DetailTable_TimeList {
     display: flex;
     flex-direction: column;
@@ -42,7 +48,6 @@
     display: flex;
     flex-direction: row;
     width : auto;
-    margin-right : 12px;
 }
 
 .TimeList_item {
@@ -77,8 +82,7 @@
     flex-direction: column;
 
     margin-top : 35px;
-    margin-left : auto;
-    margin-right : auto;
+    margin-left : 12px;
 }
 
 .InformationList_Title {
