@@ -9,11 +9,11 @@ const CreatorBoxContainer = ({title, description, image}) => {
     const handleOnClick = () => {
       window.scrollTo(0, 0);
         if (title === "Switch 총학생회") {
-            navigate('/creator/총학');
+            navigate('/creator/plan');
         } else if (title === "멋쟁이 사자처럼") {
-            navigate('/creator/멋사');
+            navigate('/creator/dev');
         } else if (title === "커뮤니케이션 디자인전공") {
-            navigate('/creator/커디');
+            navigate('/creator/design');
         }
     };
     return (

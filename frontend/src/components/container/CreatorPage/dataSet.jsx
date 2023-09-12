@@ -137,9 +137,9 @@ export const sampleCreators3 = [ //커디
 ];
 
 export const categories = [
-    { name: '총학', creators: sampleCreators1 },
-    { name: '멋사', creators: sampleCreators2 },
-    { name: '커디', creators: sampleCreators3 },
+    { name: '총학', creators: sampleCreators1, url : 'plan' },
+    { name: '멋사', creators: sampleCreators2, url : 'dev' },
+    { name: '커디', creators: sampleCreators3, url : 'design' },
 ];
 
 
