@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { tableDatas1, tableDatas2, times } from './dataSet';
-import DetailTable1 from '../../presentation/TimelinePage/DetailTable1';
+import DetailTable from '../../presentation/TimelinePage/DetailTable';
 
 const DetailTableContainer = ({selectedDate}) => {
     const [activeTimeIndex, setActiveTimeIndex] = useState(0);
@@ -50,7 +50,7 @@ const DetailTableContainer = ({selectedDate}) => {
 }, []);
 
     return (
-        <DetailTable1 selectedDate={selectedDate} tableDatas={selectedDate === "9.25 (월)" ? tableDatas1 : tableDatas2} times={times} activeTimeIndex={activeTimeIndex}/>
+        <DetailTable selectedDate={selectedDate} tableDatas={selectedDate === "9.25 (월)" ? tableDatas1 : tableDatas2} times={times} activeTimeIndex={activeTimeIndex}/>
     );
 };
 

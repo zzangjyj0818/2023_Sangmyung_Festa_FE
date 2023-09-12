@@ -1,12 +1,11 @@
-.DetailTable1_Container {
+.DetailTable_Container {
     display: flex;
     flex-direction: row;
     width: 100%;
     margin: 0 auto;
-
 }
 
-.DetailTable1_TimeList {
+.DetailTable_TimeList {
     display: flex;
     flex-direction: column;
     margin-top : 35px;
@@ -63,23 +62,23 @@
     z-index:1;
 }
 
-.DetailTable1_HorizonBar {
+.DetailTable_HorizonBar {
     position: absolute;
     margin-top : 72.5px;
     display: flex;
     width: 0;
-    height : 701px;
+    height : 711px;
     border: 1px solid lightgray;
     margin-left : 87.5px;
 }
 
-.DetailTable1_InformationList{
+.DetailTable_InformationList{
     display: flex;
     flex-direction: column;
 
     margin-top : 35px;
     margin-left : auto;
-    margin-right : 14px;
+    margin-right : auto;
 }
 
 .InformationList_Title {
