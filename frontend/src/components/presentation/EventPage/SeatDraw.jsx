@@ -17,13 +17,13 @@ const SeatDraw = () => {
                     <div className='DateBtn_date' 
                         style={{
                             borderRadius : '12px 0 0 12px', 
-                            backgroundColor : (month === 9 && days === 12) ? '#2757FF' : 'lightgray',
+                            backgroundColor : (month === 9 && days === 12) ? '#2757FF' : '#EEE',
                             color : (month === 9 && days === 12) ? '#fff' : '#77767A',
                         }}>9.25 (월)</div>
                     <div className='DateBtn_date' 
                         style={{
                             borderRadius : '0 12px 12px 0', 
-                            backgroundColor : (month === 9 && days === 13) ? '#2757FF' : 'lightgray',
+                            backgroundColor : (month === 9 && days === 13) ? '#2757FF' : '#EEE',
                             color : (month === 9 && days === 13) ? '#fff' : '#77767A',
                         }}>9.26 (화)</div>
                 </div>

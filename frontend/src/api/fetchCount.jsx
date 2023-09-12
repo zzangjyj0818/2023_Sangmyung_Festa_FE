@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const fetchCount = async ({setCount}) => {
-    const url = 'https://1e79b09b-389e-486b-8d9a-ccc7885a72ce.mock.pstmn.io/';
+    const url = 'https://1e67b6b0-8dc2-4d86-913a-d9ef3c1dc77a.mock.pstmn.io/';
     try {
       setCount(null);
       const response = await axios.get(
