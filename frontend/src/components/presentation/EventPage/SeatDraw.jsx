@@ -28,6 +28,12 @@ const SeatDraw = () => {
                 </div>
                 <div></div>
             </div>
+            <div className='SeatDraw_Detail'>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     );
 };
