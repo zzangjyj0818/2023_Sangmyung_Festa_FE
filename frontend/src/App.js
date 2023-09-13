@@ -6,8 +6,10 @@ const CreatorPage = lazy(() => import("./pages/CreatorPage"))
 const TimelinePage = lazy(() => import("./pages/TimelinePage"))
 const InformationPage = lazy(() => import("./pages/InformationPage"))
 const EventPage = lazy(() => import("./pages/EventPage"))
+const AdminPage = lazy(() => import("./pages/AdminPage"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"))
 const DesignUniv = lazy(() => import("./pages/DesignInfoPage"))
+
 const App = () => {
   return (
     <HashRouter>
@@ -22,8 +24,8 @@ const App = () => {
           <Route path="/event" element={<EventPage/>}>
             <Route path=":category" component={<EventPage/>} />
           </Route>
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/*" element={<NotFoundPage />} />
-
         </Routes>
       </Suspense>
     </HashRouter>
