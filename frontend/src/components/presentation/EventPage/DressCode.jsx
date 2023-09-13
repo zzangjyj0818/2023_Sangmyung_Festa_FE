@@ -10,16 +10,14 @@ import { fetchDressCode } from '../../../api/fetchDressCode';
 const initialDatas = [
     {
         id : 1,
-        dress : 1
     },
     {
         id : 2,
-        dress : 0
     },
 ];
 
 const DressCode = () => {
-    const { data: dress, refetch } = useQuery('dress', fetchDressCode, {
+    const { data: dress, refetch } = useQuery('dressState', fetchDressCode, {
         staleTime: 1000 * 60 * 1 // 캐시된 데이터가 5분 동안 신선한 상태로 유지됩니다.
       });
     const [datas, setDatas] = useState(initialDatas);
@@ -45,14 +43,14 @@ const DressCode = () => {
                         <div className='Detail_Gift_Name' style={{marginBottom: '9px'}}>상품1</div>
                         <div className='Detail_Gift_Img'>{initialDatas[0].dress !== 0 ? <img src={stick} alt=''/> : <img src={soldoutstick} alt=''/>}</div>
                         <div className='Detail_Gift_DetailName' style={{fontSize: '18px'}}>야광봉</div>
-                        <div className='Detail_Gift_CountBox'>{initialDatas[0].dress === 1 ? '남은수량 500개' : '남은수량 0개'}</div>
+                        <div className='Detail_Gift_CountBox'>{initialDatas[0].dress !== 0 ? '남은수량 500개' : '남은수량 0개'}</div>
                     </div>
                     <div className='Detail_Gift_LayOut'>
                         <div className='Detail_Gift_LayOut'>
                             <div className='Detail_Gift_Name' style={{marginBottom: '4px'}}>상품2</div>
                             <div className='Detail_Gift_Img'>{initialDatas[1].dress !== 0 ? <img src={smung} alt=''/> : <img src={soldoutsmung} alt=''/>}</div>
                             <div className='Detail_Gift_DetailName' style={{fontSize: '16px', marginTop: '7px'}}>수뭉이 타투 스티커(10종)</div>
-                            <div className='Detail_Gift_CountBox'>{initialDatas[1].dress === 1 ? '남은수량 1000개' : '남은수량 0개'}</div>
+                            <div className='Detail_Gift_CountBox'>{initialDatas[1].dress !== 0 ? '남은수량 1000개' : '남은수량 0개'}</div>
                         </div>
                     </div>
                 </div>
