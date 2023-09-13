@@ -12,7 +12,7 @@ const SlideShow = ({index, setIndex, datas}) => {
           { index > 0 ? 
             <div className='img_btn' style={{marginRight : '15px'}} onClick={()=>{setIndex(index-1)}}>
               <img src={datas[index-1].url} alt='' className='img_btn_img'/>
-            </div> : <div className='img_btn' style={{marginRight : '15px'}}></div>
+            </div> : <div className='null_img_btn' style={{marginRight : '15px'}}></div>
             }
           <div className='img_current'>
               <div className="front">
@@ -41,7 +41,7 @@ const SlideShow = ({index, setIndex, datas}) => {
           { index < 3 ?
             <div className='img_btn' style={{marginLeft : '15px'}} onClick={()=>{setIndex(index+1)}}>
               <img src={datas[index+1].url} alt='' className='img_btn_img'/>
-            </div> : <div className='img_btn' style={{marginRight : '15px'}}></div>
+            </div> : <div className='null_img_btn' style={{marginRight : '15px'}}></div>
           }
         </div>
         <div className='extra_data'>

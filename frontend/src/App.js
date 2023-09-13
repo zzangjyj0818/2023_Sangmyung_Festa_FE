@@ -13,7 +13,11 @@ const DesignUniv = lazy(() => import("./pages/DesignInfoPage"))
 const App = () => {
   return (
     <HashRouter>
-      <Suspense fallback={<div>Loading</div>}>
+      <Suspense fallback={
+        <div>
+          Loading
+        </div>
+      }>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/creator" element={<CreatorPage />} >
