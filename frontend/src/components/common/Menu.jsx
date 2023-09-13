@@ -9,7 +9,7 @@ const items = [
     {
         id : 1,
         text : '🎆 주요 행사',
-        url : '/event'
+        url : '/event/좌석 추첨'
     },
     {
         id : 2,
@@ -24,7 +24,7 @@ const items = [
     {
         id : 4,
         text : '🤷 누가 만들었나요?',
-        url : '/creator'
+        url : '/creator/plan'
     }
 ]
 

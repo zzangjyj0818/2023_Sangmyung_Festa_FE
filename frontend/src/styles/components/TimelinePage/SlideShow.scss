@@ -28,15 +28,21 @@
         height : 280px;
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(4px);
+    }
 
+    .null_img_btn {
+        width: 26px;
+        height : 280px;
+        border: none;
     }
 
     .img_btn_img {
         width: 26px;
         height : 280px;
         border-radius: 20px;
-        filter: blur(4px);
         background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(4px);
     }
 
     .img_current {

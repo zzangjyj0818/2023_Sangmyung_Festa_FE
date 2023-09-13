@@ -14,11 +14,6 @@ const CategoryButtons = ({currentCategory, handleButtonClick, parameter, categor
                 </button>
             ))}
         </div>
-
-        <div className="EventDescriptions" >
-            <p>{currentCategory && categoryDescriptions[currentCategory]}</p>
-        </div>
-
         <div className="SelectedCategoryComponent">
             {console.log(parameter.category === currentCategory)}
             {parameter.category === currentCategory && categories.find(category => category.name === currentCategory)?.component}
