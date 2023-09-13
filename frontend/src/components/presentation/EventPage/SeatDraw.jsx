@@ -75,10 +75,13 @@ const SeatDraw = () => {
                 </div>
                 <div className='SeatDraw_Detail_Layout'>
                     <div className='SeatDraw_Detail_Layout_Title'>추첨</div>
-                    <div className='SeatDraw_Detail_Layout_Text' style={{width : '170px'}}>2023.09.26 (화) 18:50~19:20 노천극장</div>
+                    <div className='SeatDraw_Detail_Layout_Text' style={{width : '175px'}}>2023.09.26 (화) 18:50~19:20 노천극장</div>
                 </div>
             </div>
-            <div className='SeatDraw_BottomText1'>티켓 구매는 1인 1매로 제한되며 &nbsp; 수익금 100만원은 기부 예정입니다</div>
+            <div className='SeatDraw_BottomText_Collection'>
+                <div className='SeatDraw_BottomText1'>티켓 구매는 1인 1매로 제한되며</div>
+                <div className='SeatDraw_BottomText1'>수익금 100만원은 기부 예정입니다</div>
+            </div>
             <div className='SeatDraw_BottomText2'>(홀로어르신과 국가유공자어르신들  대한적십자사 대전세종지사)</div>
         </div>
     );
