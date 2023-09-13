@@ -2,17 +2,17 @@ import React from 'react';
 import LargeBox from './LargeBox';
 import MediumBox from './MediumBox';
 import SmallBox from './SmallBox';
-import '../../../styles/components/TimelinePage/DetailTable1.scss';
+import SpecialBox from './SpecialBox';
+import '../../../styles/components/TimelinePage/DetailTable.scss';
 import Time from '../../../assets/TimelinePage/carbon_time.svg';
 import CheckIcon from '../../../assets/TimelinePage/clarity_event-line.svg';
 
 
-
-const DetailTable1 = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
+const DetailTable = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
 
     return (
-        <div className='DetailTable1_Container'>
-            <div className='DetailTable1_TimeList'>
+        <div className='DetailTable_Container'>
+            <div className='DetailTable_TimeList'>
                 <div className='TimeList_Title'>
                     <div>{<img src={Time} alt='' style={{width:"14px", height:"14px"}}/>}</div>
                     <div className="Time_text"> 시간</div>
@@ -41,29 +41,32 @@ const DetailTable1 = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
                     )}
                 </div>
             </div>
-
-            <div className='DetailTable1_HorizonBar'></div>
-            <div className='DetailTable1_InformationList'>
-                    <div className='Box_Collection'>
-                        { selectedDate === "9.25 (월)" ? 
-                            <>
-                                <LargeBox tableData={tableDatas[0]}/>
-                                <MediumBox tableData={tableDatas[1]}/>
-                                <SmallBox tableData={tableDatas[2]}/>
-                                <SmallBox tableData={tableDatas[3]}/>
-                                <SmallBox tableData={tableDatas[4]}/> 
-                            </> :
-                            <>
-                                <LargeBox tableData={tableDatas[0]}/>
-                                <MediumBox tableData={tableDatas[1]}/>
-                                <SmallBox tableData={tableDatas[2]}/>
-                                <SmallBox tableData={tableDatas[3]}/> 
-                            </>
+            <div className='DetailTable_HorizonBar'></div>
+            <div className='DetailTable_InformationList'>
+                <div className='InformationList_Title'>
+                    <div>{<img src={CheckIcon} alt='' style={{width:"14px", height:"14px"}}/>}</div>
+                    <div className="Information_text"> 이벤트</div>
+                </div>
+                <div className='Box_Collection'>
+                    { selectedDate === "9.25 (월)" ? 
+                        <>
+                            <LargeBox tableData={tableDatas[0]}/>
+                            <MediumBox tableData={tableDatas[1]}/>
+                            <SmallBox tableData={tableDatas[2]}/>
+                            <SmallBox tableData={tableDatas[3]}/>
+                            <SmallBox tableData={tableDatas[4]}/> 
+                        </> :
+                        <>
+                            <LargeBox tableData={tableDatas[0]}/>
+                            <MediumBox tableData={tableDatas[1]}/>
+                            <SmallBox tableData={tableDatas[2]}/>
+                            <SpecialBox tableData={tableDatas[3]}/> 
+                        </>
                         } 
-                    </div> 
+                </div> 
             </div>
         </div>
     );
 };
 
-export default DetailTable1;
+export default DetailTable;
