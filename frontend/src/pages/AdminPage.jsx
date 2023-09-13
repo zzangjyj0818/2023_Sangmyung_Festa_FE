@@ -1,9 +1,9 @@
 import React from 'react';
 import HeaderContainer from '../components/container/common/HeaderContainer';
-import LoginModal from '../components/container/AdminPage/LoginModal';
-import TicketChange from '../components/container/AdminPage/TicketChange';
-import BoxChange from '../components/container/AdminPage/BoxChange';
-import DressCodeChange from '../components/container/AdminPage/DressCodeChange';
+import LoginModal from '../components/presentation/AdminPage/LoginModal';
+import TicketChange from '../components/presentation/AdminPage/TicketChange';
+import BoxChange from '../components/presentation/AdminPage/BoxChange';
+import DressCodeChange from '../components/presentation/AdminPage/DressCodeChange';
 import Footer from '../components/common/Footer';
 
 const AdminPage = () => {
