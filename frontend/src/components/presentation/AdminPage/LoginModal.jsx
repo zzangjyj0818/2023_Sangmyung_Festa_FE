@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { useMutation } from 'react-query';
 import { login } from '../../../api/postLogin';
 import { useNavigate } from 'react-router'
@@ -53,7 +53,7 @@ const LoginModal = ({isOpen, setIsOpen})  => {
                         />
                     </label>
                     <button type="submit" className='LoginModal_SubmitBtn'>Log in</button>
-                    
+
                 </form>
             </div>
         </div>
