@@ -1,9 +1,9 @@
 import React from "react"
 import CreatorBoxContainer from "../../container/MainPage/CreatorBoxContainer"
 import "../../../styles/components/MainPage/CreatorView.scss"
-import likelionImage from "../../../assets/MainPage/likelion.png"
-import DesignImage from "../../../assets/MainPage/design.png"
-import SchoolImage from "../../../assets/MainPage/School.png"
+import likelionImage from "../../../assets/MainPage/likelion.webp"
+import DesignImage from "../../../assets/MainPage/design.webp"
+import SchoolImage from "../../../assets/MainPage/School.webp"
 
 const CreatorView = () => {
   return (

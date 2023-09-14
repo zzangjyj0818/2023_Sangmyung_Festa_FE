@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../styles/components/TimelinePage/SmallBox.scss';
-import ColorTime from '../../../assets/TimelinePage/color_time.svg';
-import Location from '../../../assets/TimelinePage/carbon_location.svg';
+import ColorTime from '../../../assets/TimelinePage/color_time.webp';
+import Location from '../../../assets/TimelinePage/carbon_location.webp';
 
 const SmallBox = ({tableData}) => {
     const {content, time, location} = tableData;

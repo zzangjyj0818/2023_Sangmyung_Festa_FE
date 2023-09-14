@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import '../../../styles/components/EventPage/TreasureHunt.scss';
-import Open from '../../../assets/EventPage/opengift.png';
-import UnOpen from '../../../assets/EventPage/unopengift.png';
+import Open from '../../../assets/EventPage/opengift.webp';
+import UnOpen from '../../../assets/EventPage/unopengift.webp';
 import { fetchBoxState } from '../../../api/fetchBoxState';
 
 const initialDatas = [
