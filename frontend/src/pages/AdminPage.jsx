@@ -6,14 +6,20 @@ import BoxChange from '../components/presentation/AdminPage/BoxChange';
 import DressCodeChange from '../components/presentation/AdminPage/DressCodeChange';
 import Footer from '../components/common/Footer';
 
-const AdminPage = () => {
+const AdminPage = ({isOpen, setIsOpen}) => {
+    console.log(isOpen);
     return (
         <>
             <HeaderContainer name = {undefined} type = {1} opacity={false}/>
-            <LoginModal />
-            <TicketChange />
-            <BoxChange />
-            <DressCodeChange />
+            {
+                isOpen === true ? <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} /> :
+                <>
+                    <TicketChange />
+                    <BoxChange />
+                    <DressCodeChange />
+                </>
+            }
+
             <Footer />
         </>
     );
