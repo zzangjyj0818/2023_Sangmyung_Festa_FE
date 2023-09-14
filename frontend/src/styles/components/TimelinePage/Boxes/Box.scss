@@ -1,29 +1,61 @@
-.SpecialBox_Container {
+.Box1_Container,
+.Box2_Container,
+.Box3_Container,
+.Box4_Container,
+.Box5_Container,
+.Box6_Container,
+.Box7_Container {
     width: 255px;
-    height: 120px;
-    flex-shrink: 0;
     border-radius: 12px;
-    background: var(--light-gray, #EEE);
+    background: linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%);
     box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
-    margin-top : 12px;
+    margin-top : 14.5px;
 }
 
-.SpecialBox_TextBox {
+.Box1_Container {
+    height: 395px;
+}
+
+.Box2_Container {
+    height: 361px;
+}
+
+.Box3_Container {
+    height: 260.17px;
+}
+
+.Box4_Container {
+    height: 120px;
+}
+
+.Box5_Container {
+    height: 76px;
+}
+
+.Box6_Container {
+    height: 58px;
+}
+
+.Box7_Container {
+    height: 49px;
+}
+
+.Box_TextBox {
     display: flex;
     flex-direction: column;
 
     padding-left : 14px;
 }
 
-.SpecialBox_MainTitle {
+.Box_MainTitle {
     color: var(--black, #212121);
     font-family: Spoqa Han Sans Neo;
     font-size: 14px;
-    font-weight: 400;
-    margin-top : 14px;
+    font-weight: 500;
+    margin-top : 10px;
 }
 
-.SpecialBox_DisplaySet {
+.Box_DisplaySet {
     display: flex;
     flex-direction: row;
     margin-top : 6px;

@@ -69,13 +69,24 @@
 
 .DetailTable_HorizonBar {
     position: absolute;
-    margin-top : 72.5px;
+    margin-top : 70px;
     display: flex;
     width: 0;
-    height : 711px;
+    height : 590px;
+    border: 1px dashed #C7E7FF;
+    margin-left : 87.5px;
+}
+
+.DetailTable_HorizonBar2 {
+    position: absolute;
+    margin-top : 430px;
+    display: flex;
+    width: 0;
+    height : 590px;
     border: 1px solid lightgray;
     margin-left : 87.5px;
 }
+
 
 .DetailTable_InformationList{
     display: flex;
