@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../../styles/components/TimelinePage/Boxes/MediumBox.scss';
-import ColorTime from '../../../../assets/TimelinePage/color_time.svg';
-import Location from '../../../../assets/TimelinePage/carbon_location.svg';
+import ColorTime from '../../../../assets/TimelinePage/color_time.webp';
+import Location from '../../../../assets/TimelinePage/carbon_location.webp';
 
 const MediumBox = ({tableData}) => {
     const {content1, content2, time1, time2, location1, location2} = tableData;

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../styles/components/MainPage/MainView.scss';
 import NumberBoxContainer from '../../container/MainPage/NumberBoxContainer';
-import Down from '../../../assets/MainPage/keyboard_arrow_up.svg';
+import Down from '../../../assets/MainPage/keyboard_arrow_up.webp';
 
 const MainView = ({numbers, isNight}) => {
     return (

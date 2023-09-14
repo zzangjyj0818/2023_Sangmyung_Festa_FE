@@ -1,5 +1,5 @@
 import React from 'react';
-import Time from '../../../assets/MainPage/time.png'
+import Time from '../../../assets/MainPage/time.webp'
 import '../../../styles/components/MainPage/TimelineView.scss';
 
 const url = '/timeline'

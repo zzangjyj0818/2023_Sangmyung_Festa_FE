@@ -2,8 +2,8 @@ import React from 'react';
 import DetailPerformance from './DetailPerformance.jsx';
 import { datas1, datas2 } from '../../container/TimelinePage/dataSet.jsx';
 import '../../../styles/components/TimelinePage/TableType.scss';
-import Up from '../../../assets/TimelinePage/icon_arrow_up.svg';
-import Down from '../../../assets/TimelinePage/icon_arrow_down.svg';
+import Up from '../../../assets/TimelinePage/icon_arrow_up.webp';
+import Down from '../../../assets/TimelinePage/icon_arrow_down.webp';
 import DetailTableContainer from '../../container/TimelinePage/DetailTableContainer.jsx';
 
 const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, handleOnClick, handleOnSelectChange}) => {

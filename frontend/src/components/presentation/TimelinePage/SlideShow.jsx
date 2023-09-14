@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../../styles/components/TimelinePage/SlideShow.scss';
-import ColorTime from '../../../assets/TimelinePage/color_time.svg';
-import Time from '../../../assets/TimelinePage/carbon_time.svg';
-import Location from '../../../assets/TimelinePage/carbon_location.svg';
+import ColorTime from '../../../assets/TimelinePage/color_time.webp';
+import Time from '../../../assets/TimelinePage/carbon_time.webp';
+import Location from '../../../assets/TimelinePage/carbon_location.webp';
 
 const SlideShow = ({index, setIndex, datas}) => {
   return (

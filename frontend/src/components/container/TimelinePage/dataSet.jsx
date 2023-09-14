@@ -1,11 +1,11 @@
-import CM10 from '../../../assets/TimelinePage/10CM.png';
-import kimSuYoung from '../../../assets/TimelinePage/kimSuYoung.png';
-import leeSeungYoon from '../../../assets/TimelinePage/leeSeungYoon.png';
-import sosoobin from '../../../assets/TimelinePage/sosoobin.png';
-import ADYA from '../../../assets/TimelinePage/ADYA.png';
-import Kassy from '../../../assets/TimelinePage/Kassy.png';
-import cheeze from '../../../assets/TimelinePage/cheeze.png';
-import BewhY from '../../../assets/TimelinePage/BewhY.png';
+import CM10 from '../../../assets/TimelinePage/10CM.webp';
+import kimSuYoung from '../../../assets/TimelinePage/kimSuYoung.webp';
+import leeSeungYoon from '../../../assets/TimelinePage/leeSeungYoon.webp';
+import sosoobin from '../../../assets/TimelinePage/sosoobin.webp';
+import ADYA from '../../../assets/TimelinePage/ADYA.webp';
+import Kassy from '../../../assets/TimelinePage/Kassy.webp';
+import cheeze from '../../../assets/TimelinePage/cheeze.webp';
+import BewhY from '../../../assets/TimelinePage/BewhY.webp';
 
 export const datas1 = [
     {

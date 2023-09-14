@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../../styles/components/TimelinePage/Events.scss';
-import Calendar from '../../../assets/TimelinePage/carbon_calendar.svg';
-import ColorTime from '../../../assets/TimelinePage/carbon_time.svg';
-import Location from '../../../assets/TimelinePage/carbon_location.svg';
-import Airport from '../../../assets/TimelinePage/airport.svg';
-import Cinema from '../../../assets/TimelinePage/cinema.svg';
+import Calendar from '../../../assets/TimelinePage/carbon_calendar.webp';
+import ColorTime from '../../../assets/TimelinePage/carbon_time.webp';
+import Location from '../../../assets/TimelinePage/carbon_location.webp';
+import Airport from '../../../assets/TimelinePage/airport.webp';
+import Cinema from '../../../assets/TimelinePage/cinema.webp';
 
 const Events = () => {
     return (

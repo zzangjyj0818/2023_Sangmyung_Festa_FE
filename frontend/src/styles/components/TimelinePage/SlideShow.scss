@@ -28,7 +28,9 @@
         height : 280px;
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.10);
-        backdrop-filter: blur(4px);
+        filter: blur(4px);
+        
+
     }
 
     .null_img_btn {
@@ -42,7 +44,7 @@
         height : 280px;
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.10);
-        backdrop-filter: blur(4px);
+        box-shadow: 5px 5px 10px -5px black;
     }
 
     .img_current {

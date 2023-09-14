@@ -1,19 +1,19 @@
-import hdh from '../../../assets/CreatorPage/hdh.jpeg';
-import jyj from '../../../assets/CreatorPage/jyj.jpeg';
-import khs from'../../../assets/CreatorPage/khs.png';
-import kjm from '../../../assets/CreatorPage/kjm.jpeg';
-import kms from '../../../assets/CreatorPage/kms.jpeg';
-import ksc from '../../../assets/CreatorPage/ksc.jpeg';
-import ksj from '../../../assets/CreatorPage/ksj.jpeg';
-import ldw from '../../../assets/CreatorPage/ldw.png';
-import lhj from '../../../assets/CreatorPage/lhj.png';
-import lhjun from '../../../assets/CreatorPage/lhjun.png';
-import ljhyeon from'../../../assets/CreatorPage/ljhyeon.png';
-import ljw from '../../../assets/CreatorPage/ljw.jpeg';
-import lyw from '../../../assets/CreatorPage/lyw.jpeg';
-import syj from '../../../assets/CreatorPage/syj.jpeg';
-import syj2 from '../../../assets/CreatorPage/syj.png';
-import ylh from'../../../assets/CreatorPage/ylh.svg';
+import hdh from '../../../assets/CreatorPage/hdh.webp';
+import jyj from '../../../assets/CreatorPage/jyj.webp';
+import khs from'../../../assets/CreatorPage/khs.webp';
+import kjm from '../../../assets/CreatorPage/kjm.webp';
+import kms from '../../../assets/CreatorPage/kms.webp';
+import ksc from '../../../assets/CreatorPage/ksc.webp';
+import ksj from '../../../assets/CreatorPage/ksj.webp';
+import ldw from '../../../assets/CreatorPage/ldw.webp';
+import lhj from '../../../assets/CreatorPage/lhj.webp';
+import lhjun from '../../../assets/CreatorPage/lhjun.webp';
+import ljhyeon from'../../../assets/CreatorPage/ljhyeon.webp';
+import ljw from '../../../assets/CreatorPage/ljw.webp';
+import lyw from '../../../assets/CreatorPage/lyw.webp';
+import syj from '../../../assets/CreatorPage/syjin.webp';
+import syj2 from '../../../assets/CreatorPage/syj.webp';
+import ylh from'../../../assets/CreatorPage/ylh.webp';
 
 export const sampleCreators1 = [ //총학
     {

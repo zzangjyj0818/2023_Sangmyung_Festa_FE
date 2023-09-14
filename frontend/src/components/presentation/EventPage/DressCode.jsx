@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { useQuery } from 'react-query';
-import smung from '../../../assets/EventPage/smung.svg';
-import stick from '../../../assets/EventPage/stick.svg';
-import soldoutsmung from '../../../assets/EventPage/soldoutsmung.png';
-import soldoutstick from '../../../assets/EventPage/soldoutstick.png';
+import smung from '../../../assets/EventPage/smung.webp';
+import stick from '../../../assets/EventPage/stick.webp';
+import soldoutsmung from '../../../assets/EventPage/soldoutsmung.webp';
+import soldoutstick from '../../../assets/EventPage/soldoutstick.webp';
 import '../../../styles/components/EventPage/DressCode.scss';
 import { fetchDressCode } from '../../../api/fetchDressCode';
 

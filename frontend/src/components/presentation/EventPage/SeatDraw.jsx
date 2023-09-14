@@ -1,8 +1,8 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import AirPlane from '../../../assets/EventPage/Avion.svg';
-import smallAirPlane from '../../../assets/EventPage/small_Airplane.svg';
-import barcode from '../../../assets/EventPage/bar.png';
+import AirPlane from '../../../assets/EventPage/Avion.webp';
+import smallAirPlane from '../../../assets/EventPage/small_Airplane.webp';
+import barcode from '../../../assets/EventPage/bar.webp';
 import '../../../styles/components/EventPage/SeatDraw.scss';
 import { fetchTicket } from '../../../api/fetchTicket';
 

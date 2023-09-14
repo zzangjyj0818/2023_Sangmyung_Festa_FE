@@ -1,6 +1,6 @@
-import AirplaneSeat from '../../../assets/MainPage/AirplaneSeat.png';
-import EventGift from '../../../assets/MainPage/EventGift.png';
-import DressCode from '../../../assets/MainPage/DressCode.png';
+import AirplaneSeat from '../../../assets/MainPage/AirplaneSeat.webp';
+import EventGift from '../../../assets/MainPage/EventGift.webp';
+import DressCode from '../../../assets/MainPage/DressCode.webp';
 
 export const detailInformations = [
     {

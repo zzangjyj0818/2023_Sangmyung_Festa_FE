@@ -1,7 +1,7 @@
 import React from 'react';
-import Airplane from '../../assets/common/Airplane.png';
-import Insta from '../../assets/common/Insta.png';
-import Kakao from '../../assets/common/Kakao.png';
+import Airplane from '../../assets/common/Airplane.webp';
+import Insta from '../../assets/common/Insta.webp';
+import Kakao from '../../assets/common/Kakao.webp';
 import '../../styles/components/common/Menu.scss';
 
 

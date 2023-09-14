@@ -2,8 +2,8 @@ import React from 'react';
 import Box from './Boxes/Box';
 import MediumBox from './Boxes/MediumBox';
 import '../../../styles/components/TimelinePage/DetailTable.scss';
-import Time from '../../../assets/TimelinePage/carbon_time.svg';
-import CheckIcon from '../../../assets/TimelinePage/clarity_event-line.svg';
+import Time from '../../../assets/TimelinePage/carbon_time.webp';
+import CheckIcon from '../../../assets/TimelinePage/clarity_event-line.webp';
 
 
 const DetailTable = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
