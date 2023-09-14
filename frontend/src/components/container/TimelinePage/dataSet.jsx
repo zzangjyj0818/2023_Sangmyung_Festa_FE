@@ -95,30 +95,38 @@ export const datas1 = [
     },
     {
       id : 1,
-      content1 : '동아리 공연',
-      time1 : '16:00-19:30',
-      location1 : '노천극장',
-      
-      content2 : '개막식 & 총학생회 발대식',
-      time2 : '19:30-19:37',
-      location2 : '노천극장'
+      content : 'CCC',
+      time : '17:00-17:30',
+      location : '노천극장',
     },
     {
-      id: 2,
-      content : '학생회 이벤트 (무비 인 더 캠핑)',
-      time : '19:40-20:25',
+      id : 2,
+      content : '소울로',
+      time : '17:30-18:00',
       location : '노천극장'
     },
     {
       id: 3,
-      content : '동아리 공연',
-      time : '20:25-21:00',
+      content : '크렁크브레인',
+      time : '18:15-18:45',
       location : '노천극장'
     },
     {
       id : 4,
+      content : '총학 이벤트 (무비 인 더 캠핑)',
+      time : '18:45-19:15',
+      location : '노천극장'
+    },
+    {
+      id : 5,
+      content : '다크니스',
+      time : '19:15-19:45',
+      location : '노천극장'
+    },
+    {
+      id : 6,
       content : '연예인 초청 공연',
-      time : '21:00-22:00',
+      time : '19:15-22:15',
       location : '노천극장'
     },
   ]
@@ -132,25 +140,43 @@ export const datas1 = [
     },
     {
       id : 1,
-      content1 : '단과대 연합 프로그램',
-      time1 : '16:00-19:00',
-      location1 : '노천극장',
-      
-      content2 : '동아리공연',
-      time2 : '19:00-19:30',
-      location2 : '노천극장'
+      content : '소래소래고래고래',
+      time : '16:30-18:30',
+      location : '노천극장'
     },
     {
       id: 2,
-      content : '총학생회 이벤트 (비행기 자리 추첨)',
-      time : '19:30-20:00',
+      content : '아리아',
+      time : '18:30-18:50',
       location : '노천극장'
     },
     {
       id : 3,
+      content : '총학이벤트 (Switch 비행기 자리 추첨)',
+      time : '18:30-19:20',
+      location : '노천극장'
+    },
+    {
+      id : 4,
+      content : 'FREEZE',
+      time : '19:20-19:50',
+      location : '노천극장'
+    },
+    {
+      id : 5,
+      content1 : '연예인 초청 공연',
+      time1 : '19:50-21:10',
+      location1 : '노천극장',
+      
+      content2 : '불꽃놀이',
+      time2 : '21:10-21:15',
+      location2 : '노천극장'
+    },
+    {
+      id : 6,
       content : '연예인 초청 공연',
-      time : '20:00-22:30',
+      time : '21:15-22:10',
       location : '노천극장'
     },
   ]
-  export const times = ['10:00','12:00','14:00','16:00','18:00', '20:00','22:00'];
+  

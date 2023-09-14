@@ -1,9 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import { tableDatas1, tableDatas2, times } from './dataSet';
+import { tableDatas1, tableDatas2 } from './dataSet';
 import DetailTable from '../../presentation/TimelinePage/DetailTable';
+
+export const times1 = ['10:00','13:00','15:30','17:00','18:00', '19:00', '20:00', '21:00', '22:00'];
+export const times2 = ['10:00','13:00','15:30','16:00','18:00', '19:00', '20:00', '21:00', '22:00'];
+
+
 
 const DetailTableContainer = ({selectedDate}) => {
     const [activeTimeIndex, setActiveTimeIndex] = useState(0);
+    const times = selectedDate === "9.25 (월)" ? times1 : times2;
 
     const getCurrentTimeIndex = () => {
        const now = new Date();
@@ -26,7 +32,7 @@ const DetailTableContainer = ({selectedDate}) => {
    };
 
    useEffect(() => {
-       if (new Date().getMonth() === 8 && new Date().getDate() === 12) {
+       if (new Date().getMonth() === 8 && new Date().getDate() === 14) {
            setActiveTimeIndex(getCurrentTimeIndex());
 
            const intervalId = setInterval(() => {
@@ -38,7 +44,7 @@ const DetailTableContainer = ({selectedDate}) => {
    }, []);
 
    useEffect(() => {
-    if (new Date().getMonth() === 8 && new Date().getDate() === 13) {
+    if (new Date().getMonth() === 8 && new Date().getDate() === 15) {
         setActiveTimeIndex(getCurrentTimeIndex());
 
         const intervalId = setInterval(() => {

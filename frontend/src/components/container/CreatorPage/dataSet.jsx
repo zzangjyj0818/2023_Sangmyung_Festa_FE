@@ -148,3 +148,4 @@ export const categoryDescriptions = {
     '멋사': '상명대학교 멋쟁이사자처럼 11기',
     '커디': '디자인 SMU'
 };
+//

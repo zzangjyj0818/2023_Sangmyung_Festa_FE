@@ -8,11 +8,13 @@ const TableTypeContainer = () => {
 
     const handleOnClick = (type) => {
         setSelectedType(type);
+        window.scrollTo(0, 0);
     }
 
     const handleOnSelectChange = (date) => {
         setSelectedDate(date);
         setShowDropdown(false); // When We select the date, Off the DropDown Menu.
+        window.scrollTo(0, 0);
     }
     return (
         <TableType

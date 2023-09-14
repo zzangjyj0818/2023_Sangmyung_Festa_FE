@@ -35,7 +35,7 @@ const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, h
                     )}
             </div>
             {selectedType === "festival" && <DetailTableContainer selectedDate={selectedDate}/>}
-            {selectedType === "performance" && <DetailPerformance datas={selectedDate === "9.25 (월)" ? datas1 : datas2}/>} 
+            {selectedType === "performance" && <DetailPerformance datas={selectedDate === "9.25 (월)" ? datas1 : datas2} selectedDate={selectedDate}/>} 
         </div>
     );
     
