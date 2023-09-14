@@ -3,7 +3,7 @@ import HeaderContainer from '../components/container/common/HeaderContainer';
 import Footer from '../components/common/Footer';
 import EventCategoryContainer from '../components/container/EventPage/EventCategoryContainer';
 
-const CreatorPage = () => {
+const EventPage = () => {
     return (
         <>
             <HeaderContainer name = {undefined} type = {1} opacity={false}/>
@@ -13,4 +13,4 @@ const CreatorPage = () => {
     );
 };
 
-export default CreatorPage;
+export default EventPage;

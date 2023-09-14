@@ -1,16 +1,16 @@
 .TimelineView_Container {
+    display: flex;
     width: 100%;
     height: 50vh;
-
-    display: flex;
-    margin-top : 95px;
 }
 
 .TimelineView_Wrapper {
     display: flex;
+    height: auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-right: auto;
-    height: 50vh;
 }
 
 .TimelineView_TextBox {

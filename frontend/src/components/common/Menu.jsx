@@ -37,9 +37,6 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
         
         <div className="Modal" onClick={onClick}>
             <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-                <button className="modalCloseBtn" onClick={onClick}>
-                    ✕
-                </button>
                 <div className='Modal_Text'>
                     <div className='Modal_Text1'>여러분의 탑승을</div>
                     <div className='Modal_Text2'>진심으로 환영합니다.</div>
