@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useMutation } from 'react-query';
 import { login } from '../../../api/postLogin';
+import { useNavigate } from 'react-router'
 import { useNavigate } from 'react-router'
 import '../../../styles/components/AdminPage/LoginModal.scss'
 
@@ -8,7 +9,27 @@ const LoginModal = ({isOpen, setIsOpen})  => {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+const LoginModal = ({isOpen, setIsOpen})  => {
+    const navigate = useNavigate();
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
+    const mutation = useMutation(login,{
+        onSuccess: (data) => {
+            if(data === true){
+                setIsOpen(!isOpen);
+            } else {
+                navigate('/');
+            }
+        },
+        onError: () => {
+            navigate('/');
+        }
+      });
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        mutation.mutate({ username, password });
+    };
     const mutation = useMutation(login,{
         onSuccess: (data) => {
             if(data === true){
@@ -53,11 +74,12 @@ const LoginModal = ({isOpen, setIsOpen})  => {
                         />
                     </label>
                     <button type="submit" className='LoginModal_SubmitBtn'>Log in</button>
-
+                    
                 </form>
             </div>
         </div>
 
+    );
     );
 }
 
