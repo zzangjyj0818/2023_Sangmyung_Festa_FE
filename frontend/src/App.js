@@ -6,7 +6,7 @@ const CreatorPage = lazy(() => import("./pages/CreatorPage"))
 const TimelinePage = lazy(() => import("./pages/TimelinePage"))
 const InformationPage = lazy(() => import("./pages/InformationPage"))
 const EventPage = lazy(() => import("./pages/EventPage"))
-const AdminPage = lazy(() => import("./pages/AdminPage"))
+const AdminPageContainer = lazy(() => import("./components/container/AdminPage/AdminPageContainer"))
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"))
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/event" element={<EventPage />}>
             <Route path=":category" component={<EventPage />} />
           </Route>
-          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/admin" element={<AdminPageContainer />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
