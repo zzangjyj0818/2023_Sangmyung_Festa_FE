@@ -97,7 +97,7 @@ function GateFcn() {
         <div className="gate-image5">
           <span className="building-name">분수</span>
         </div>
-
+        
         <div
           className={`gate-booth foodbooth ${
             selectedTagId_food ? "active" : ""

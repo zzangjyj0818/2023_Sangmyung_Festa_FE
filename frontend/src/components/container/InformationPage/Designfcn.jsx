@@ -6,11 +6,12 @@ import {
   tagData_food,
   infoData_food,
   tagData_Out,
+  
 } from "./data"
 import Union from "../../container/InformationPage/designicon/Union.png"
 import Smoke from "../../container/InformationPage/designicon/Smoke.png"
-import ArrowUp from "./designicon/arrowup.png"
-import ArrowDown from "./designicon/arrowdown.png"
+import ArrowUp from "./designicon/addUp.png"
+import ArrowDown from "./designicon/addDown.png"
 import DragInfo from "./drag"
 import "./drag.scss"
 import "./informationfcn.scss"
@@ -36,6 +37,7 @@ function Designfcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
   const [selectedTagId_out, setSelectedTagId_out] = useState(null)
   const [selectedTagId_food, setSelectedTagId_food] = useState(null)
+  
   const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
 
@@ -53,19 +55,23 @@ function Designfcn() {
     setSelectedTagId(tagId)
     setSelectedTagId_food(null)
     setSelectedTagId_out(null)
+    
   }
 
   const handleTagOut = (tagId) => {
     setSelectedTagId_out(tagId)
     setSelectedTagId(null)
     setSelectedTagId_food(null)
+    
   }
 
   const handleTagFood = (tagId) => {
     setSelectedTagId_food(tagId)
     setSelectedTagId(null)
     setSelectedTagId_out(null)
+    
   }
+ 
 
   const handleToggleTags = () => {
     setShowMajorTags((prevShowMajorTags) => !prevShowMajorTags)
@@ -113,20 +119,23 @@ function Designfcn() {
           <span className="building-name">흡연장</span>
         </div>
 
-        <div className="image4">
-          {"푸드트럭A".split("").map((char, index) => (
-            <span key={index} className="building-name">
-              {char}
-            </span>
-          ))}
+        <div className={`image4 ${
+            selectedTagId_food==3 ? "active" : "" || selectedTagId_food==4 ? "active" : ""
+          }` }>
+        <span className="building-name">푸드<br/>트럭 </span>
         </div>
 
         <div className="image5">
           <span className="building-name">FREE ZONE</span>
         </div>
 
-        <div className="image6">
-          {"푸드트럭B".split("").map((char, index) => (
+        <div className={`image6 ${
+            selectedTagId_food==7 ? "active" : "" 
+            || selectedTagId_food==8 ? "active" : ""
+            || selectedTagId_food==5 ? "active" : ""
+            || selectedTagId_food==6 ? "active" : ""
+          }`}>
+          {"푸드트럭".split("").map((char, index) => (
             <span key={index} className="building-name">
               {char}
             </span>
@@ -136,10 +145,37 @@ function Designfcn() {
         <div className="image7">
           <span className="building-name">운동장</span>
         </div>
+        <div className={`image8 ${
+            selectedTagId_food===2 ? "active" : ""
+            || selectedTagId_food===1 ? "active" : ""
+          }`}
+        >
+          <span className="building-name">푸드트럭</span>
+        </div>
 
-        {Array.from({ length: 25 }, (_, i) => (
-          <div key={i} className={`booth booth${i + 1}`} />
+        {Array.from({ length: 31 }, (_, i) => (
+          <div key={i} className={`booth booth${i+1}
+          ${
+            selectedTagId === i+1 ? "active" : ""
+            || i+1==31 ? selectedTagId_out === i+1 ? "active" : "" : ""
+            || i+1==27 ? selectedTagId_out === i+1 ? "active" : "" : ""
+            || i+1==28 ? selectedTagId_out === i+1 ? "active" : "" : ""
+            || i+1==29 ? selectedTagId_out === i+1 ? "active" : "" : ""
+            || i+1==26 ? selectedTagId_out === i+1 ? "active" : "" : ""
+          }`} />
         ))}
+        {Array.from({ length: 3 }, (_, i) => (
+          <div key={i} className={`foodupBooth booth${i + 33}
+          ${
+            selectedTagId_out === i+33 ? "active" : ""
+            || i+33==34 ? selectedTagId === i+33 ? "active" : "" : ""
+            || i+33==35 ? selectedTagId === i+33 ? "active" : "" : ""
+          }`} />
+        ))}
+      </div>
+
+      <div>
+
       </div>
 
       <div className="filters-layout-container">
@@ -147,6 +183,8 @@ function Designfcn() {
           className="filter-container"
           style={{ overflowX: "scroll", flexWrap: "nowrap" }}
         >
+          <br/>
+          
           <h2 className="filter-title">즐겨찾는 부스</h2>
           <div className="filter-favorite-tags">
             {favorites.length > 0 ? (
@@ -165,20 +203,28 @@ function Designfcn() {
                     const matchingFoodTag = tagData_food.find(
                       (tag) => tag.name === favorite
                     )
-
+                    /*
+                    const matchingStudioTag = studio.find(
+                      (tag) => tag.name ===favorite
+                    )*/
+                        
                     if (matchingTag) {
                       setSelectedTagId(matchingTag.id)
                       setSelectedTagId_out(null)
                       setSelectedTagId_food(null)
+                      
                     } else if (matchingOutTag) {
                       setSelectedTagId_out(matchingOutTag.id)
                       setSelectedTagId(null)
                       setSelectedTagId_food(null)
+                      
                     } else if (matchingFoodTag) {
                       setSelectedTagId_food(matchingFoodTag.id)
                       setSelectedTagId(null)
                       setSelectedTagId_out(null)
+                      
                     }
+                    
                   }}
                 >
                   {favorite}
@@ -193,19 +239,25 @@ function Designfcn() {
         <div className="filter-container">
           <div className="filter-title-container">
             <h2 className="filter-title">동아리/학과 부스</h2>
+            <div className="addUp">더보기</div>
             <img
               src={showMajorTags ? ArrowDown : ArrowUp}
               alt="이미지"
               onClick={handleToggleTags}
-              style={{ marginBottom: "12px", paddingLeft: "10px" }}
+              style={{ marginBottom: "0px",marginRight:"10px" }}
             />
           </div>
           {showMajorTags ? (
-            <TagList
+            <div>
+               <TagList
               tags={tagData}
               onTagClick={handleTagClick}
               selectedTagId={selectedTagId}
             />
+          
+            </div>
+
+           
           ) : (
             <TagList
               tags={tagData.slice(0, 8)}

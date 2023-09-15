@@ -91,7 +91,7 @@
 
     .filter-title-container {
       display: flex;
-      // justify-content: center;
+       justify-content: space-between;
       align-items: center;
     }
 
@@ -106,6 +106,7 @@
       margin-bottom: 10px;
       padding: 10px;
       padding-bottom: 0;
+      flex:1
     }
 
     .filter-tags {

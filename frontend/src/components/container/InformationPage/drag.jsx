@@ -9,6 +9,7 @@ import {
   infoData_food,
   tagData_Out,
   infoData_Out,
+  
 } from "./data"
 import Time from "./designicon/carbon_time.png"
 import EmptyHeart from "./designicon/Heart.png"

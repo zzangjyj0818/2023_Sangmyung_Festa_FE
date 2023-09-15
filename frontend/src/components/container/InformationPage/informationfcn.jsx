@@ -40,7 +40,7 @@ const Informationfcn = () => {
               }`}
               onClick={() => onClickSelButton("design")}
             >
-              디자인대학
+              학생회관
             </button>
             <div
               className={`border-bottom ${
@@ -56,7 +56,7 @@ const Informationfcn = () => {
               }`}
               onClick={() => onClickSelButton("gate")}
             >
-              정문
+              도서관
             </button>
             <div
               className={`border-bottom ${
