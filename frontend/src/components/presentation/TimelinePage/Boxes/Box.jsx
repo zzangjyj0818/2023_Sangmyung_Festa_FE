@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../../styles/components/TimelinePage/Boxes/Box.scss';
-import ColorTime from '../../../../assets/TimelinePage/color_time.svg';
-import Location from '../../../../assets/TimelinePage/carbon_location.svg';
+import ColorTime from '../../../../assets/TimelinePage/color_time.webp';
+import Location from '../../../../assets/TimelinePage/carbon_location.webp';
 
 const Box = ({tableData, boxType}) => {
     const {content, time, location} = tableData;
