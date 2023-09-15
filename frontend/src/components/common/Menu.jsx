@@ -1,7 +1,7 @@
 import React from 'react';
-import Airplane from '../../assets/common/Airplane.png';
-import Insta from '../../assets/common/Insta.png';
-import Kakao from '../../assets/common/Kakao.png';
+import Airplane from '../../assets/common/Airplane.webp';
+import Insta from '../../assets/common/Insta.webp';
+import Kakao from '../../assets/common/Kakao.webp';
 import '../../styles/components/common/Menu.scss';
 
 
@@ -9,7 +9,7 @@ const items = [
     {
         id : 1,
         text : '🎆 주요 행사',
-        url : '/event'
+        url : '/event/좌석 추첨'
     },
     {
         id : 2,
@@ -24,17 +24,19 @@ const items = [
     {
         id : 4,
         text : '🤷 누가 만들었나요?',
-        url : '/creator'
+        url : '/creator/plan'
     }
 ]
+
+const studentInsta = 'https://instagram.com/smu_switch_38th?igshid=ZDdkNTZiNTM='
+const studentKakao = 'http://pf.kakao.com/_xcWJLxj'
+const developInsta = 'https://instagram.com/likelion_smuc?igshid=MzRlODBiNWFlZA=='
+
 const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
     return (
         
         <div className="Modal" onClick={onClick}>
             <div className="modalBody" onClick={(e) => e.stopPropagation()}>
-                <button id="modalCloseBtn" onClick={onClick}>
-                    x
-                </button>
                 <div className='Modal_Text'>
                     <div className='Modal_Text1'>여러분의 탑승을</div>
                     <div className='Modal_Text2'>진심으로 환영합니다.</div>
@@ -57,36 +59,36 @@ const Menu = ({isOpen, setIsOpen ,onClick, navigate}) => {
                         </div>
                         )}
                 </div>
-                <div className='Modal_Bottom_Wrapper'>
+                <div className='Modal_Bottom_Wrapper' style={{marginTop: 'auto', marginBottom: 'auto'}}>
                     <div className='Modal_Bottom_Content'>
                         <div className='Modal_Bottom_Title '>축제 문의</div>
                         <div className='Festival'>
-                            <div className='Detail'>
+                            <a href={studentInsta} className='Detail'>
                                 <div><img src={Insta} alt='' style={{width: '24px', height: '24px'}}/></div>
                                 <div className='Modal_Bottom_Text'>
                                     <div>총학생회</div>
                                     <div>인스타그램</div>
                                 </div>
-                            </div>
-                            <div className='Detail' style={{marginLeft : '30px'}}>
+                            </a>
+                            <a  href= {studentKakao} className='Detail' style={{marginLeft : '30px'}}>
                                 <div><img src={Kakao} alt='' style={{width: '24px', height: '24px'}}/></div>
                                 <div className='Modal_Bottom_Text'>
                                     <div>총학생회</div>
                                     <div>카카오톡 오픈채팅</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
-                    <div className='Modal_Bottom_Content' style={{marginBottom: '66px'}}>
-                        <div className='Modal_Bottom_Title '>사이트 문의</div>
+                    <div className='Modal_Bottom_Content' style={{marginTop: '37px'}}>
+                        <div className='Modal_Bottom_Title'>사이트 문의</div>
                         <div className='Festival'>
-                            <div className='Detail'>
+                            <a href={developInsta} className='Detail'>
                                 <div><img src={Insta} alt='' style={{width: '24px', height: '24px'}}/></div>
                                 <div className='Modal_Bottom_Text'>
                                     <div>멋쟁이 사자처럼</div>
                                     <div>인스타그램</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

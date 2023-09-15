@@ -12,11 +12,11 @@ const MainPage = () => {
         <>
             <HeaderContainer name = {undefined} type = {2} opacity={true}/>
             <MainViewContainer/>
-            <div style={{height:'100vh'}}>
+            <div style={{height:'calc(var(--vh, 1vh) * 100)'}}>
                 <EventView/>
                 <TimelineViewContainer />
             </div>
-            <div style={{height:'100vh'}}>
+            <div style={{height:'calc(var(--vh, 1vh) * 100)'}}>
                 <BoothViewContainer />
                 <CreatorView />
             </div>

@@ -1,16 +1,15 @@
 // CreatorList.jsx
 import React from 'react'; 
-import { categories, categoryDescriptions } from './dataSet';
 import CreatorItem from './CreatorItem';
 import '../../../styles/components/CreatorPage/CreatorList.scss';
 
-const CreatorList = ({currentCategory, setCurrentCategory}) => {  
+const CreatorList = ({navigate, currentCategory, setCurrentCategory, categories, categoryDescriptions}) => {  
     return (
         <div className='Creator'>
             <div className="category-selector">
                 {categories.map((category) => (
                     <button className={`category-button ${currentCategory.name === category.name ? "selected" : ""}`}
-                        key={category.name} onClick={() => setCurrentCategory(category)}>
+                        key={category.name} onClick={() => {setCurrentCategory(category); navigate(`/creator/${category.url}`)}}>
                         {category.name}
                     </button>
                 ))}

@@ -15,6 +15,7 @@ import DragInfo from "./drag"
 import "./drag.scss"
 import "./informationfcn.scss"
 import "./Designfcn.scss"
+import { useSelectedTag } from "./SelectedTagContext"
 
 const TagList = ({ tags, onTagClick, selectedTagId }) => {
   return (
@@ -38,6 +39,7 @@ function Designfcn() {
   const [selectedTagId_food, setSelectedTagId_food] = useState(null)
   const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
+  const { updateSelectedTag } = useSelectedTag()
 
   const handleFavorite = (selectedTagContent) => {
     if (favorites.includes(selectedTagContent)) {
@@ -49,10 +51,11 @@ function Designfcn() {
     }
   }
 
-  const handleTagClick = (tagId) => {
+  const handleTagClick = (tagId, tagType) => {
     setSelectedTagId(tagId)
     setSelectedTagId_food(null)
     setSelectedTagId_out(null)
+    // updateSelectedTag(tagName, "Designfcn") // 선택된 태그 정보 및 컴포넌트 이름 업데이트
   }
 
   const handleTagOut = (tagId) => {
@@ -178,6 +181,8 @@ function Designfcn() {
                       setSelectedTagId_food(matchingFoodTag.id)
                       setSelectedTagId(null)
                       setSelectedTagId_out(null)
+                    } else {
+                      updateSelectedTag("gate")
                     }
                   }}
                 >
@@ -235,8 +240,9 @@ function Designfcn() {
       </div>
       <DragInfo
         selectedTagId={selectedTagId}
-        selectedTagId_out={selectedTagId_out}
-        selectedTagId_food={selectedTagId_food}
+        // selectedTagId_out={selectedTagId_out}
+        // selectedTagId_food={selectedTagId_food}
+
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onFavoriteChange={handleFavorite}
@@ -246,3 +252,207 @@ function Designfcn() {
 }
 
 export default Designfcn
+
+// import React, { useState, useEffect } from "react"
+// import {
+//   tagData,
+//   infoData,
+//   tagData_food,
+//   infoData_food,
+//   tagData_Out,
+// } from "./data"
+// import Union from "../../container/InformationPage/designicon/Union.png"
+// import Smoke from "../../container/InformationPage/designicon/Smoke.png"
+// import ArrowUp from "./designicon/arrowup.png"
+// import ArrowDown from "./designicon/arrowdown.png"
+// import DragInfo from "./drag"
+// import "./drag.scss"
+// import "./informationfcn.scss"
+// import "./Designfcn.scss"
+// import { useSelectedTag } from "./SelectedTagContext"
+
+// const TagList = ({ tags, onTagClick, selectedTagId }) => {
+//   return (
+//     <div className="filter-tags">
+//       {tags.map((tag) => (
+//         <button
+//           key={tag.id}
+//           className={`tag-button ${selectedTagId === tag.id ? "active" : ""}`}
+//           onClick={() => onTagClick(tag.id)}
+//         >
+//           {tag.name}
+//         </button>
+//       ))}
+//     </div>
+//   )
+// }
+
+// function Designfcn() {
+//   const [selectedTagId, setSelectedTagId] = useState(null)
+//   const [selectedTagType, setSelectedTagType] = useState(null)
+//   const [showMajorTags, setShowMajorTags] = useState(false)
+//   const [favorites, setFavorites] = useState([])
+
+//   const { updateSelectedTag } = useSelectedTag()
+
+//   const handleFavorite = (selectedTagContent) => {
+//     if (favorites.includes(selectedTagContent)) {
+//       setFavorites((prevFavorites) =>
+//         prevFavorites.filter((favorite) => favorite !== selectedTagContent)
+//       )
+//     } else {
+//       setFavorites((prevFavorites) => [...prevFavorites, selectedTagContent])
+//     }
+//   }
+
+//   const handleTagClick = (tagId, tagType) => {
+//     setSelectedTagId(tagId)
+//     setSelectedTagType(tagType)
+//   }
+
+//   const handleToggleTags = () => {
+//     setShowMajorTags((prevShowMajorTags) => !prevShowMajorTags)
+//   }
+
+//   const handleTouchStart = (e) => {
+//     e.preventDefault()
+//   }
+
+//   const handleTouchMove = (e) => {
+//     e.preventDefault()
+//   }
+//   useEffect(() => {
+//     const handleStorageChange = (e) => {
+//       if (e.key === "favorites") {
+//         setFavorites(JSON.parse(e.newValue))
+//       }
+//     }
+
+//     window.addEventListener("storage", handleStorageChange)
+
+//     return () => {
+//       window.removeEventListener("storage", handleStorageChange)
+//     }
+//   }, [])
+
+//   useEffect(() => {
+//     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
+//     setFavorites(storedFavorites)
+//   }, [])
+
+//   return (
+//     <>
+//       <div className="image-size">
+//         <div className="image1">
+//           <span className="building-name">소나무숲</span>
+//         </div>
+//         <div className="image2">
+//           <img src={Union} alt="학생회관" />
+//           <span className="building-name">학생회관</span>
+//         </div>
+//         <div className="image3">
+//           <img src={Smoke} alt="흡연장" />
+//           <span className="building-name">흡연장</span>
+//         </div>
+//       </div>
+
+//       <div className="filters-layout-container">
+//         <div
+//           className="filter-container"
+//           style={{ overflowX: "scroll", flexWrap: "nowrap" }}
+//         >
+//           <h2 className="filter-title">즐겨찾는 부스</h2>
+//           <div className="filter-favorite-tags">
+//             {favorites.length > 0 ? (
+//               favorites.map((favorite) => (
+//                 <button
+//                   className="favorite-tag-button"
+//                   key={favorite}
+//                   onClick={() => {
+//                     const matchingTag = tagData.find(
+//                       (tag) => tag.name === favorite
+//                     )
+//                     const matchingOutTag = tagData_Out.find(
+//                       (tag) => tag.name === favorite
+//                     )
+//                     const matchingFoodTag = tagData_food.find(
+//                       (tag) => tag.name === favorite
+//                     )
+
+//                     if (matchingTag) {
+//                       setSelectedTagId(matchingTag.id)
+//                     } else if (matchingOutTag) {
+//                       setSelectedTagId(matchingOutTag.id)
+//                     } else if (matchingFoodTag) {
+//                       setSelectedTagId(matchingFoodTag.id)
+//                     } else {
+//                       // 부스 타입을 여기에 맞게 설정
+//                       setSelectedTagType("your_default_type")
+//                       updateSelectedTag("gate")
+//                     }
+//                   }}
+//                 >
+//                   {favorite}
+//                 </button>
+//               ))
+//             ) : (
+//               <p className="DesignUnivFavorite">하트를 눌러 추가해주세요</p>
+//             )}
+//           </div>
+//         </div>
+
+//         <div className="filter-container">
+//           <div className="filter-title-container">
+//             <h2 className="filter-title">동아리/학과 부스</h2>
+//             <img
+//               src={showMajorTags ? ArrowDown : ArrowUp}
+//               alt="이미지"
+//               onClick={handleToggleTags}
+//               style={{ marginBottom: "12px", paddingLeft: "10px" }}
+//             />
+//           </div>
+//           {showMajorTags ? (
+//             <TagList
+//               tags={tagData}
+//               onTagClick={(tagId) => handleTagClick(tagId, "club")}
+//               selectedTagId={selectedTagId}
+//             />
+//           ) : (
+//             <TagList
+//               tags={tagData.slice(0, 8)}
+//               onTagClick={(tagId) => handleTagClick(tagId, "club")}
+//               selectedTagId={selectedTagId}
+//             />
+//           )}
+//         </div>
+
+//         <div className="filter-container">
+//           <h2 className="filter-title">외부 부스</h2>
+//           <TagList
+//             tags={tagData_Out}
+//             onTagClick={(tagId) => handleTagClick(tagId, "out")}
+//             selectedTagId={selectedTagId}
+//           />
+//         </div>
+
+//         <div className="filter-container">
+//           <h2 className="filter-title">푸드트럭</h2>
+//           <TagList
+//             tags={tagData_food}
+//             onTagClick={(tagId) => handleTagClick(tagId, "food")}
+//             selectedTagId={selectedTagId}
+//           />
+//         </div>
+//       </div>
+//       <DragInfo
+//         selectedTagId={selectedTagId}
+//         selectedTagType={selectedTagType}
+//         onTouchStart={handleTouchStart}
+//         onTouchMove={handleTouchMove}
+//         onFavoriteChange={handleFavorite}
+//       />
+//     </>
+//   )
+// }
+
+// export default Designfcn

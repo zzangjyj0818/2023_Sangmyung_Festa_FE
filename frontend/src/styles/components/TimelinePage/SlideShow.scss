@@ -28,15 +28,23 @@
         height : 280px;
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.10);
+        filter: blur(4px);
+        
 
+    }
+
+    .null_img_btn {
+        width: 26px;
+        height : 280px;
+        border: none;
     }
 
     .img_btn_img {
         width: 26px;
         height : 280px;
         border-radius: 20px;
-        filter: blur(4px);
         background: rgba(255, 255, 255, 0.10);
+        box-shadow: 5px 5px 10px -5px black;
     }
 
     .img_current {
@@ -120,8 +128,6 @@
     flex-direction: column;
     margin-left : 14px;
     width : 234px;
-
-
     .content1{
         color: var(--black, #212121);
         font-family: Spoqa Han Sans Neo;
@@ -130,6 +136,7 @@
         font-weight: 500;
         line-height: normal;
         margin-top : 8px;
+        margin-bottom: auto;
     }
     .title {
         color: var(--main, var(--main, #4F75FF));
@@ -138,7 +145,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        margin-top : 28px;
+        margin-top : 14px;
     }
     .content2 {
         color: var(--gray-2, #919094);
@@ -148,6 +155,7 @@
         font-weight: 500;
         line-height: normal;
         margin-top : 8px;
+        margin-bottom: 8px;
     }
 }
 
@@ -163,5 +171,55 @@
 
     text-align: center;
 
-    margin-top : 47px;
+    margin-top : auto;
+    margin-bottom: 17px;
+}
+
+.extra_data {
+    display: flex;
+    flex-direction: column;
+    width: 334px; 
+    align-items: center;
+}
+
+.circle_collection {
+    display: flex;
+    flex-direction: row;
+
+    margin-top : 16px;
+}
+.circle {
+    width: 6px;
+    height: 6px;
+    margin-left : 2px;
+    margin-right : 2px;
+    background-color: var(--gray-1, #C8C6CA);
+    border-radius: 50%;
+}
+
+.extra_data_big_text {
+    display: flex;
+
+    height : 20px;
+    color: var(--black, #212121);
+    font-family: Spoqa Han Sans Neo;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top : 20px;
+}
+
+.extra_data_small_text {
+    display: flex;
+    flex-direction: row;
+
+    height : 9px;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top : 7.5px;
+
 }
