@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useMutation } from 'react-query';
+import { postBoxState } from '../../../api/postBoxState';
 import '../../../styles/components/AdminPage/BoxChange.scss';
 
 const datas = [
@@ -29,11 +31,19 @@ const BoxChange = ({box1, box2, box3, box4}) => {
       state4: box4
   });
 
+  const mutation = useMutation(postBoxState,{
+    onSuccess: (data) => {
+    },
+    onError: () => {
+    }
+  });
+
   const onClick = (id) => {
       setBoxesState(prevState => ({
           ...prevState,
           [`state${id}`]: !prevState[`state${id}`]
       }));
+      mutation.mutate({id});
   }
 
   return (
