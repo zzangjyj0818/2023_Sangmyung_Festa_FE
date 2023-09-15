@@ -33,6 +33,7 @@ const BoxChange = ({box1, box2, box3, box4}) => {
 
   const mutation = useMutation(postBoxState,{
     onSuccess: (data) => {
+        console.log('success')
     },
     onError: () => {
     }
@@ -43,7 +44,7 @@ const BoxChange = ({box1, box2, box3, box4}) => {
           ...prevState,
           [`state${id}`]: !prevState[`state${id}`]
       }));
-      mutation.mutate({id});
+      mutation.mutate({idx: id});
   }
 
   return (
