@@ -1,80 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
+import React from 'react';
 import '../../../styles/components/EventPage/TreasureHunt.scss';
 import Open from '../../../assets/EventPage/opengift.webp';
 import UnOpen from '../../../assets/EventPage/unopengift.webp';
-import { fetchBoxState } from '../../../api/fetchBoxState';
+import { upOpenBoxCount } from '../../container/EventPage/TreasureHuntContainer';
 
-const textArray = [
-    { 
-        content : "학생회비를 납부한 재학생에 한하여 인당 1개의 캡슐을 뽑음",
-        width : 265,
-        height : 46,
-    }, 
-    {
-        content : "암호가 적힌 캡슐을 뽑은 경우 상자를 열어볼 기회를 제공",
-        width : 219,
-        height : 46,
-    }, 
-    {
-        content : "상자가 열린 경우 상자 내용에 맞는 상품 지급 & 명단 작성",
-        width : 256,
-        height : 46,
-    }, 
-    {
-        content : "암호가 적힌 캡슐을 뽑은 경우 상자를 열어볼 기회를 제공",
-        width : 219,
-        height : 46,
-    }
-];
+const TreasureHunt = ({datas}) => {
 
-const initialDatas = [
-    {
-        id : 1,
-        tag : 'A'
-    },
-    {
-        id : 2,
-        tag : 'B'
-    },
-    {
-        id : 3,
-        tag : 'C'
-    },
-    {
-        id : 4,
-        tag : 'D'
-    }
-];
-
-const upOpenBoxCount = (datas) => {
-    let count = 0;
-    for(let i = 0; i < datas.length; i++) {
-      if(datas[i].open) count++; 
-    }
-    
-   return count;
-}
-
-const TreasureHunt = () => {
-   const { data: box, refetch } = useQuery('boxState', fetchBoxState, {
-    staleTime: 1000 * 60 * 0.05, // 캐시된 데이터가 2분 동안 신선한 상태로 유지됩니다.
-    refetchOnWindowFocus: false,
-    retry: false,
-  });
-   const [datas, setDatas] = useState(initialDatas);
-
-   useEffect(() => {
-      if (box) {
-         const newDatas = datas.map((data, index) => ({
-            ...data,
-            open: box[`box${index + 1}`],
-         }));
-         setDatas(newDatas);
-      }
-   }, [box]);
-
-   
    return (
        <div className='TreasureHunt_Container'>
            <div className='TreasureHunt_Wrapper'>

@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderContainer from '../components/container/common/HeaderContainer';
 import LoginModal from '../components/presentation/AdminPage/LoginModal';
-import TicketChange from '../components/presentation/AdminPage/TicketChange';
-import BoxChange from '../components/presentation/AdminPage/BoxChange';
-import DressCodeChange from '../components/presentation/AdminPage/DressCodeChange';
+import BoxChangeContainer from '../components/container/AdminPage/BoxChangeContainer';
+import DressCodeChangeContainer from '../components/container/AdminPage/DressCodeChangeContainer';
 import Footer from '../components/common/Footer';
+import TicketChangeContainer from '../components/container/AdminPage/TicketChangeContainer';
+
 
 const AdminPage = ({isOpen, setIsOpen, all}) => {
     return (
@@ -13,9 +14,9 @@ const AdminPage = ({isOpen, setIsOpen, all}) => {
             {
                 isOpen === true ? <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} /> :
                 <>
-                    <TicketChange ticket = {all.ticket}/>
-                    <BoxChange box1 = {all.box1} box2 = {all.box2} box3 = {all.box3} box4 = {all.box4}/>
-                    <DressCodeChange dress1 = {all.dress1} dress2 = {all.dress2}/>
+                    <TicketChangeContainer ticket = {all.ticket}/>
+                    <BoxChangeContainer box1 = {all.box1} box2 = {all.box2} box3 = {all.box3} box4 = {all.box4}/>
+                    <DressCodeChangeContainer dress1 = {all.dress1} dress2 = {all.dress2}/>
                 </>
             }
 

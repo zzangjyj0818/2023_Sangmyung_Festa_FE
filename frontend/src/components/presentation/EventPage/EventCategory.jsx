@@ -2,8 +2,6 @@ import React from 'react';
 import '../../../styles/components/EventPage/EventCategory.scss';
 
 const CategoryButtons = ({currentCategory, handleButtonClick, parameter, categories, categoryDescriptions}) => {
-
-
   return (
     <div className="EventCategory_Container">
         <div className="EventCategory-selector">
