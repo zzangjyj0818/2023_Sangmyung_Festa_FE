@@ -53,7 +53,6 @@ const LoginModal = ({isOpen, setIsOpen})  => {
                         />
                     </label>
                     <button type="submit" className='LoginModal_SubmitBtn'>Log in</button>
-
                 </form>
             </div>
         </div>
