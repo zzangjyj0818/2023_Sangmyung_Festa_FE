@@ -11,8 +11,8 @@ import lhjun from '../../../assets/CreatorPage/lhjun.webp';
 import ljhyeon from'../../../assets/CreatorPage/ljhyeon.webp';
 import ljw from '../../../assets/CreatorPage/ljw.webp';
 import lyw from '../../../assets/CreatorPage/lyw.webp';
-import syj from '../../../assets/CreatorPage/syjin.webp';
-import syj2 from '../../../assets/CreatorPage/syj.webp';
+import syj from '../../../assets/CreatorPage/syj.webp';
+import syj2 from '../../../assets/CreatorPage/syjin.webp';
 import ylh from'../../../assets/CreatorPage/ylh.webp';
 
 export const sampleCreators1 = [ //총학
