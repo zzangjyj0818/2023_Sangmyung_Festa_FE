@@ -1,6 +1,9 @@
 import React from 'react';
+import '../../../styles/components/AdminPage/DressCodeChange.scss';
 
-const DressCodeChange = () => {
+
+const DressCodeChange = ({dress1, dress2}) => {
+    console.log(dress1, dress2);
     return (
         <div>
             DressCodeChange
