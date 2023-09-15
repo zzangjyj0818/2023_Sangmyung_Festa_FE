@@ -1,26 +1,7 @@
-import React, {useState} from 'react';
-import { useMutation } from 'react-query';
-import { postTicket } from '../../../api/postTicket';
+import React from 'react';
 import '../../../styles/components/AdminPage/TicketChange.scss';
 
-const TicketChange = ({ticket}) => {
-    const [count, setCount] = useState();
-
-    const mutation = useMutation(postTicket,{
-        onSuccess: (data) => {
-            console.log('success')
-        },
-        onError: () => {
-        }
-      });
-    
-    const onClick = () => {
-        mutation.mutate({count : count});
-    }
-
-    const handleChange = (e) => {
-      setCount(e.target.value);
-    }
+const TicketChange = ({count, ticket, handleChange, onClick}) => {
     
     return (
         <div className='TicketChange_Container'>

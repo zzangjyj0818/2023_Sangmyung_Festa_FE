@@ -1,11 +1,11 @@
-import SeatDraw from '../../presentation/EventPage/SeatDraw';
-import TreasureHunt from '../../presentation/EventPage/TreasureHunt';
-import DressCode from '../../presentation/EventPage/DressCode';
+import SeatDrawContainer from './SeatDrawContainer';
+import TreasureHuntContainer from './TreasureHuntContainer';
+import DressCodeContainer from './DressCodeContainer';
 
 export const categories = [
-    { name: '좌석 추첨', component: <SeatDraw /> },
-    { name: '보물 찾기', component: <TreasureHunt /> },
-    { name: '드레스 코드', component: <DressCode /> }
+    { name: '좌석 추첨', component: <SeatDrawContainer /> },
+    { name: '보물 찾기', component: <TreasureHuntContainer /> },
+    { name: '드레스 코드', component: <DressCodeContainer /> }
 ];
 
 export const categoryDescriptions = {
