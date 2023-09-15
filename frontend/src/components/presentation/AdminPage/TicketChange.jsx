@@ -8,13 +8,14 @@ const TicketChange = ({ticket}) => {
 
     const mutation = useMutation(postTicket,{
         onSuccess: (data) => {
+            console.log('success')
         },
         onError: () => {
         }
       });
     
     const onClick = () => {
-        mutation.mutate(count);
+        mutation.mutate({count : count});
     }
 
     const handleChange = (e) => {

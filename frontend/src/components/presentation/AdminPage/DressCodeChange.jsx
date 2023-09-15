@@ -23,7 +23,7 @@ const DressCodeChange = ({dress1, dress2}) => {
   
     const mutation = useMutation(postDressCode,{
         onSuccess: (data) => {
-            console.log(data);
+            console.log('success')
         },
         onError: () => {
         }
@@ -34,7 +34,7 @@ const DressCodeChange = ({dress1, dress2}) => {
             ...prevState,
             [`state${id}`]: !prevState[`state${id}`]
         }));
-        mutation.mutate({id});
+        mutation.mutate({idx: id});
     }
 
     return (
