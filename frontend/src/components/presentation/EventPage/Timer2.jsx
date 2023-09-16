@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function Timer2() {
-    const startDate = new Date(2023, 8, 17, 0,38); // 월은 '0'부터 시작하기 때문에 '8'은 실제로는 '9월'을 의미합니다.
+    const startDate = new Date(2023, 8, 17, 0,40); // 월은 '0'부터 시작하기 때문에 '8'은 실제로는 '9월'을 의미합니다.
     const endDate = new Date(startDate.getTime() + (6 *60 +30) *60000); // 시작 시간으로부터 약6시간30분 후
   
     // 초 단위로 남은 시간을 계산하는 함수
