@@ -89,78 +89,90 @@ export const datas1 = [
   export const tableDatas1 = [
     {
       id : 0,
-      content : '푸드트럭 & 부스운영',
-      time : '10:00-22:00',
-      location : '학생회관 앞'
+      content1 : '푸드트럭 & 부스운영',
+      time1 : '10:00-22:00',
+      location1 : '학생회관 앞',
+      height : 361
     },
     {
       id : 1,
-      content : 'CCC',
-      time : '17:00-17:30',
-      location : '노천극장',
+      content1 : 'CCC',
+      time1 : '17:00-17:30',
+      location1 : '노천극장',
+      height : 49
     },
     {
       id : 2,
-      content : '소울로',
-      time : '17:30-18:00',
-      location : '노천극장'
+      content1 : '소울로',
+      time1 : '17:30-18:00',
+      location1 : '노천극장',
+      height : 49
     },
     {
       id: 3,
-      content : '크렁크브레인',
-      time : '18:15-18:45',
-      location : '노천극장'
+      content1 : '크렁크브레인',
+      time1 : '18:15-18:45',
+      location1 : '노천극장',
+      height : 49
     },
     {
       id : 4,
-      content : '총학 이벤트 (무비 인 더 캠핑)',
-      time : '18:45-19:15',
-      location : '노천극장'
+      content1 : '총학 이벤트 (무비 인 더 캠핑)',
+      time1 : '18:45-19:15',
+      location1 : '노천극장',
+      height : 76
     },
     {
       id : 5,
-      content : '다크니스',
-      time : '19:15-19:45',
-      location : '노천극장'
+      content1 : '다크니스',
+      time1 : '19:15-19:45',
+      location1 : '노천극장',
+      height: 49
     },
     {
       id : 6,
-      content : '연예인 초청 공연',
-      time : '19:15-22:15',
-      location : '노천극장'
+      content1 : '연예인 초청 공연',
+      time1 : '19:15-22:15',
+      location1 : '노천극장',
+      height : 260.17
     },
   ]
 
   export const tableDatas2 = [
     {
       id : 0,
-      content : '푸드트럭 & 부스운영',
-      time : '10:00-22:00',
-      location : '학생회관 앞'
+      content1 : '푸드트럭 & 부스운영',
+      time1 : '10:00-22:00',
+      location1 : '학생회관 앞',
+      height : 395,
     },
     {
       id : 1,
-      content : '소래소래고래고래',
-      time : '16:30-18:30',
-      location : '노천극장'
+      content1 : '소래소래 고래고래',
+      time1 : '16:30-18:30',
+      location1 : '노천극장',
+      height : 120
     },
     {
       id: 2,
-      content : '아리아',
-      time : '18:30-18:50',
-      location : '노천극장'
+      content1 : '아리아',
+      time1 : '18:30-18:50',
+      location1 : '노천극장',
+      height : 49
     },
     {
       id : 3,
-      content : '총학이벤트 (Switch 비행기 자리 추첨)',
-      time : '18:30-19:20',
-      location : '노천극장'
+      content1 : '총학이벤트 (Switch 비행기 자리 추첨)',
+      time1 : '18:30-19:20',
+      location1 : '노천극장',
+      height :49
     },
     {
       id : 4,
-      content : 'FREEZE',
-      time : '19:20-19:50',
-      location : '노천극장'
+      content1 : 'FREEZE',
+      time1 : '19:20-19:50',
+      location1 : '노천극장',
+      height : 49
     },
     {
       id : 5,
@@ -170,13 +182,15 @@ export const datas1 = [
       
       content2 : '불꽃놀이',
       time2 : '21:10-21:15',
-      location2 : '노천극장'
+      location2 : '노천극장',
+      height : 168
     },
     {
       id : 6,
-      content : '연예인 초청 공연',
-      time : '21:15-22:10',
-      location : '노천극장'
+      content1 : '연예인 초청 공연',
+      time1 : '21:15-22:10',
+      location1 : '노천극장',
+      height : 58,
     },
   ]
   

@@ -1,29 +1,27 @@
-.MediumBox_Container {
+.Box_Container {
     width: 255px;
-    height: 168px;
-    flex-shrink: 0;
     border-radius: 12px;
-    background: var(--light-gray, #EEE);
+    background: linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%);
     box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
     margin-top : 12px;
 }
 
-.MediumBox_TextBox {
+.Box_TextBox {
     display: flex;
     flex-direction: column;
 
     padding-left : 14px;
 }
 
-.MediumBox_MainTitle {
+.Box_MainTitle {
     color: var(--black, #212121);
     font-family: Spoqa Han Sans Neo;
     font-size: 14px;
-    font-weight: 400;
-    margin-top : 14px;
+    font-weight: 500;
+    margin-top :8px;
 }
 
-.MediumBox_DisplaySet {
+.Box_DisplaySet {
     display: flex;
     flex-direction: row;
     margin-top : 6px;
