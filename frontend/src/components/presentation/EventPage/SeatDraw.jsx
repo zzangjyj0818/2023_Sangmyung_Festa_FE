@@ -3,8 +3,25 @@ import AirPlane from '../../../assets/EventPage/Avion.webp';
 import smallAirPlane from '../../../assets/EventPage/small_Airplane.webp';
 import barcode from '../../../assets/EventPage/bar.webp';
 import '../../../styles/components/EventPage/SeatDraw.scss';
+import Timer from './Timer';
+import Timer2 from './Timer2';
+
+
 
 const SeatDraw = ({month, days, ticket}) => {
+    const getComponent = () => {
+        switch (new Date().getDate()) {
+          case 16:
+            return <Timer />;
+          case 17:
+            return <Timer2 />;
+          default:
+            return null;
+        }
+      };
+
+      const Component = getComponent();
+
     return (
         <div className='SeatDraw_Container'>
             <div className='SeatDraw_Wrapper'>
@@ -13,14 +30,14 @@ const SeatDraw = ({month, days, ticket}) => {
                     <div className='DateBtn_date' 
                         style={{
                             borderRadius : '12px 0 0 12px', 
-                            backgroundColor : (month === 9 && days === 12) ? '#2757FF' : '#EEE',
-                            color : (month === 9 && days === 12) ? '#fff' : '#77767A',
+                            backgroundColor : (month === 9 && days === 17) ? '#2757FF' : '#EEE',
+                            color : (month === 9 && days === 17) ? '#fff' : '#77767A',
                         }}>9.25 (월)</div>
                     <div className='DateBtn_date' 
                         style={{
                             borderRadius : '0 12px 12px 0', 
-                            backgroundColor : (month === 9 && days === 13) ? '#2757FF' : '#EEE',
-                            color : (month === 9 && days === 13) ? '#fff' : '#77767A',
+                            backgroundColor : (month === 9 && days === 16) ? '#2757FF' : '#EEE',
+                            color : (month === 9 && days === 16) ? '#fff' : '#77767A',
                         }}>9.26 (화)</div>
                 </div>
                 <div className='SeatDraw_Wrapper_Ticket'>
@@ -48,7 +65,14 @@ const SeatDraw = ({month, days, ticket}) => {
                         </div>
                     </div>
                 </div>
-                <div></div>
+                <div className="CountWrapper">
+                    <div className="CountDown">
+                        {Component}
+                    </div>
+                    <div className="Count_Text">
+                        후 종료
+                    </div>
+                </div>
             </div>
             <div className='SeatDraw_Detail'>
                 <div className='SeatDraw_Detail_Layout'>
