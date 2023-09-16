@@ -50,6 +50,13 @@ const tagData_Out = [
   { id: 26, name: "러벌스스튜디오", heart: false },
 ]
 
+const tagData_Out2 = [
+  { id: 1, name: "밝은눈안과", heart: false },
+  { id: 2, name: "MC섭이네", heart: false },
+  { id: 3, name: "유진상회", heart: false },
+  { id: 4, name: "겟아웃", heart: false },
+]
+
 
 //동아리 학과 부스
 const infoData = [
@@ -104,32 +111,32 @@ const infoData_Out = [
   
 ]
 
-const tagData2 = [
-  { id: 1, name: "띵작스튜디오" },
-  { id: 2, name: "무대미술" },
-  { id: 3, name: "그린화학공학" },
-  { id: 4, name: "세글자" },
-  { id: 5, name: "???" },
-]
+// const tagData2 = [
+//   { id: 1, name: "띵작스튜디오" },
+//   { id: 2, name: "무대미술" },
+//   { id: 3, name: "그린화학공학" },
+//   { id: 4, name: "세글자" },
+//   { id: 5, name: "???" },
+// ]
 
-const tagData_food2 = [
-  { id: 1, name: "정문 푸드트럭1", heart: false },
-  { id: 2, name: "정문 푸드트럭2", heart: false },
-  { id: 3, name: "정문 마싯는야끼소바", heart: false },
-  { id: 4, name: "정문 탕후루", heart: false },
-  { id: 5, name: "정문 젤라또", heart: false },
-  { id: 6, name: "정문 푸드트럭3", heart: false },
-  
-]
+// const tagData_food2 = [
+//   { id: 1, name: "정문 푸드트럭1", heart: false },
+//   { id: 2, name: "정문 푸드트럭2", heart: false },
+//   { id: 3, name: "정문 마싯는야끼소바", heart: false },
+//   { id: 4, name: "정문 탕후루", heart: false },
+//   { id: 5, name: "정문 젤라또", heart: false },
+//   { id: 6, name: "정문 푸드트럭3", heart: false },
+//   { id: 7, name: "정문 푸드트럭4", heart: false },
+//   { id: 8, name: "정문 푸드트럭5", heart: false },
+// ]
 
 export {
   tagData,
-  tagData2,
   infoData,
   tagData_food,
-  tagData_food2,
   infoData_food,
   tagData_Out,
+  tagData_Out2,
   infoData_Out,
   
  

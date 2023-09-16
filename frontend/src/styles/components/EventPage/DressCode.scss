@@ -1,0 +1,92 @@
+.DressCode_Container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+.DressCode_Wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 330px;
+
+    border-radius: 0px 0px 40px 40px;
+    background: #96CDFF;
+}
+
+.DressCode_Wrapper_MainTitle {
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 26px;
+    font-weight: 700;
+
+    margin-top : 38px;
+}
+
+.Detail_Gift {
+    display: flex;
+    flex-direction: row;
+
+    width: 330px;
+    height: 206px;
+
+    margin-top : 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Detail_Gift_LayOut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+
+    width: auto;
+    height: 206px;
+
+    .Detail_Gift_Name {
+        color: var(--black, #212121);
+        text-align: center;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .Detail_Gift_Img {
+        width: 96px;
+        height: 99px;
+        margin-bottom: 14px;
+    }
+
+    .Detail_Gift_DetailName {
+        color: var(--black, #212121);
+        text-align: center;
+        font-family: Spoqa Han Sans Neo;
+        font-weight: 700;
+    }
+
+    .Detail_Gift_CountBox {
+        display: flex;
+        width: 140px;
+        height: 28px;
+
+        border-radius: 20px;
+        background: #2757FF;
+
+        color: #FFF;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 14px;
+        font-weight: 700;
+
+        justify-content: center;
+        align-items: center;
+
+        margin-top : 7.5px;
+    }
+}

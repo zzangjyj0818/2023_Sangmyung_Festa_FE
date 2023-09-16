@@ -1,5 +1,5 @@
 import React from 'react';
-import Truck from '../../../assets/MainPage/deliverytruckyellow.png'
+import Truck from '../../../assets/MainPage/deliverytruckyellow.webp'
 import '../../../styles/components/MainPage/TimelineView.scss';
 
 const url = '/information'

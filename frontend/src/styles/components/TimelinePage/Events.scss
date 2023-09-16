@@ -6,9 +6,16 @@
     height: 50vh;
 }
 
+.events_text_box {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    margin-left : 15px;
+}
 .events_text {
+    display: flex;
     width: 200px;
-    margin-left: 20px;
 
     color: var(--black, #212121);
     font-family: Spoqa Han Sans Neo;
@@ -19,9 +26,8 @@
 }
 
 .events_smalltext {
+    display: flex;
     width: 100px;
-    margin-left: 220px;
-    margin-top: -35px;
 
     color: var(--gray-4, #919094);
     font-family: Spoqa Han Sans Neo;

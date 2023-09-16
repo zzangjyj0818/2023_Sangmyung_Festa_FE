@@ -1,9 +1,9 @@
 import React from 'react';
-import NumberBox from './NumberBox';
 import '../../../styles/components/MainPage/MainView.scss';
+import NumberBoxContainer from '../../container/MainPage/NumberBoxContainer';
+import Down from '../../../assets/MainPage/keyboard_arrow_up.webp';
 
 const MainView = ({numbers, isNight}) => {
-
     return (
         <div className={isNight === true ? 'MainView_Container1' : 'MainView_Container2'}>
             <div className='MainView_TextBox'>
@@ -13,12 +13,14 @@ const MainView = ({numbers, isNight}) => {
             </div>
             <div className='MainView_Count'>
                 ✈️ 누적 방문자 수
-                {numbers.length > 0 && ( // numbers 배열에 값이 있을 때만 렌더링
-                    <div className='Count_Box'>
-                        {numbers.map((number, index) => <NumberBox key={index} value={number} index={index}/>)}
-                        <div style={{paddingTop: '70px'}}>명</div>
-                    </div>
-                )}
+                <div className='Count_Box'>
+                    {numbers.map((number, index) => <NumberBoxContainer key={index} value={number} index={index} />)}
+                    <div style={{paddingTop: '60px'}}>명</div>
+                </div>
+            </div>
+            <div className='MainView_Bottom'>
+                <div className='MainView_Bottom_Text'>밑으로 스크롤</div>
+                <img src={Down} alt=''/>
             </div>
         </div>
     );
