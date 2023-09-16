@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { useQuery } from 'react-query';
 import { fetchDressCode } from '../../../api/fetchDressCode';
 import DressCode from '../../presentation/EventPage/DressCode';
+import { textArray2 } from './dataSet';
 
 const initialDatas = [
     {
@@ -32,6 +33,7 @@ const DressCodeContainer = () => {
     return (
         <DressCode 
             datas={datas}
+            textArray2={textArray2}
         />
     );
 };
