@@ -47,7 +47,13 @@ function GateFcn() {
   // }
 
   const handleTagClick = (tagId, tagName) => {
-    setSelectedTagId(tagId)
+    if(selectedTagId===tagId){
+      setSelectedTagId(null)
+    }
+    else{
+      setSelectedTagId(tagId)
+    }
+    
     // updateSelectedTag(tagName, "design") // 선택된 태그 정보 및 컴포넌트 이름 업데이트
   }
 

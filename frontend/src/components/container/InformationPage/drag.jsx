@@ -172,11 +172,12 @@ function DragInfo({
         style={{ left: "0" }} // 수평 이동 막음
       >
         <div className="mini-window-content">
-          {selectedTagContent && (
-            <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
                 <img src={Line} alt="Line" />
               </div>
+          {selectedTagContent && (
+            <div>
+              
 
               <div
                 style={{
@@ -224,9 +225,7 @@ function DragInfo({
 
           {selectedTagFoodContent && (
             <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img src={Line} alt="Line" />
-              </div>
+              
 
               <div
                 style={{
@@ -278,9 +277,7 @@ function DragInfo({
 
           {selectedTagOutContent && (
             <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img src={Line} alt="Line" />
-              </div>
+              
 
               <div
                 style={{
@@ -328,9 +325,7 @@ function DragInfo({
 
           {selectedTagOutContent2 && (
             <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img src={Line} alt="Line" />
-              </div>
+              
 
               <div
                 style={{
