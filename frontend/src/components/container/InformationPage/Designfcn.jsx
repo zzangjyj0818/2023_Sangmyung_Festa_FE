@@ -7,8 +7,8 @@ import {
   infoData_food,
   tagData_Out,
 } from "./data"
-import Union from "../../container/InformationPage/designicon/Union.png"
-import Smoke from "../../container/InformationPage/designicon/Smoke.png"
+import Union from "./designicon/Union.png"
+import Smoke from "./designicon/Smoke.png"
 import ArrowUp from "./designicon/arrowup.png"
 import ArrowDown from "./designicon/arrowdown.png"
 import DragInfo from "./drag"
