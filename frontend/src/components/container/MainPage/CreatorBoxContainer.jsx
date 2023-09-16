@@ -28,3 +28,5 @@ const CreatorBoxContainer = ({title, description, image}) => {
 };
 
 export default CreatorBoxContainer;
+
+//...
