@@ -7,8 +7,8 @@ const CreatorItem = ({ creator }) => {
 
    return (
     <div className="CreatorItemBlock">
-        <div className="thumbnail">
-            <img src={image} alt=''/>
+        <div className="thumbnail" style={{width: '100px', height : '100px'}}>
+            <img src={image} alt='' style={{width: '100px', height : '100px'}}/>
         </div>
         <div className="info">
             <div className="name">
