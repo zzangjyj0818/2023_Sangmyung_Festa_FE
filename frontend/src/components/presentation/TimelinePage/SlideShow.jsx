@@ -5,6 +5,7 @@ import Time from '../../../assets/TimelinePage/carbon_time.webp';
 import Location from '../../../assets/TimelinePage/carbon_location.webp';
 
 const SlideShow = ({index, setIndex, datas, front, onClick}) => {
+
   return (
     <div className='SlideShow_Container'>
       <div className='SlideShow_Wrapper'>
@@ -17,10 +18,12 @@ const SlideShow = ({index, setIndex, datas, front, onClick}) => {
           <div className='img_current'>
             { front === true ?
               <div className="front" onClick={onClick}>
+                {console.log(front)}
                 <img src={datas[index].url} alt='' style={{width: '262px', height : '331px', borderRadius: '20px'}}/>
               </div>
               :
               <div className="back" onClick={onClick}>
+                {console.log(front)}
                 <div className='back_time'>
                   <img src={Time} alt =''  style={{width: '10px', height: '10px'}}/> &nbsp;
                   {datas[index].time}
