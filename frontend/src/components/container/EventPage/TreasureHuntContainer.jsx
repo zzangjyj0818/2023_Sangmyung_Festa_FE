@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { fetchBoxState } from '../../../api/fetchBoxState';
+import { textArray } from './dataSet';
 import TreasureHunt from '../../presentation/EventPage/TreasureHunt';
 
 const initialDatas = [
@@ -51,6 +52,7 @@ const TreasureHuntContainer = () => {
     return (
         <TreasureHunt 
             datas={datas}
+            textArray={textArray}
         />
     );
 };

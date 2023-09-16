@@ -4,7 +4,7 @@ import Open from '../../../assets/EventPage/opengift.webp';
 import UnOpen from '../../../assets/EventPage/unopengift.webp';
 import { upOpenBoxCount } from '../../container/EventPage/TreasureHuntContainer';
 
-const TreasureHunt = ({datas}) => {
+const TreasureHunt = ({datas, textArray}) => {
 
    return (
        <div className='TreasureHunt_Container'>
