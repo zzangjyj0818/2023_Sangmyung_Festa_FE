@@ -96,7 +96,6 @@ const SeatDraw = ({month, days, ticket}) => {
                 <div className='SeatDraw_BottomText1'>티켓 구매는 1인 1매로 제한되며</div>
                 <div className='SeatDraw_BottomText1'>수익금 100만원은 기부 예정입니다</div>
             </div>
-            <div className='SeatDraw_BottomText2'>(홀로어르신과 국가유공자어르신들  대한적십자사 대전세종지사)</div>
             <div className='SeatDraw_BottomText3'>본 이벤트는 학생회비 납부 팔찌를 착용해야 참여하실 수 있습니다.</div>
         </div>
     );

@@ -17,7 +17,6 @@
     "react-swipeable": "^7.0.1",
     "sass": "^1.66.1",
     "scss": "^0.2.4",
-    "styled-components": "^6.0.7",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

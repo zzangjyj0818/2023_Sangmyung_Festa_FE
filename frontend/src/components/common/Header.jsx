@@ -3,7 +3,8 @@ import Menu from './Menu';
 import Logo1 from '../../assets/common/Logo1.webp';
 import Logo2 from '../../assets/common/Logo2.webp';
 import '../../styles/components/common/Header.scss';
-import { AiOutlineMenu } from "react-icons/ai";
+import menu1 from '../../assets/common/menu1.webp';
+import menu2 from '../../assets/common/menu2.webp';
 
 const Header = ({name, type, opacity, isOpen, setIsOpen, onClick, navigate}) => {
     return (
@@ -14,7 +15,7 @@ const Header = ({name, type, opacity, isOpen, setIsOpen, onClick, navigate}) => 
                 </div>
                 {name !== undefined && <div className='Header_Props'>{name}</div>}
                 <div className='Header_MenuIcon' onClick={onClick}>
-                    <AiOutlineMenu size={20} color={type === 1 ? 'black' : 'white'}/>
+                    <img src={type === 1 ? menu1 : menu2} alt = '' style={type === 1 ? {width:'14px' , height: '14px'} : {width : '20px', height : '20px'}}/>
                     {isOpen && <Menu isOpen = {isOpen} setIsOpen = {setIsOpen} onClick={onClick} navigate={navigate}/>}
                 </div>
             </div>
