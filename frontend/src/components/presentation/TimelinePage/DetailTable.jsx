@@ -1,6 +1,5 @@
 import React from 'react';
-import Box from './Boxes/Box';
-import MediumBox from './Boxes/MediumBox';
+import Box from './Box';
 import '../../../styles/components/TimelinePage/DetailTable.scss';
 import Time from '../../../assets/TimelinePage/carbon_time.webp';
 import CheckIcon from '../../../assets/TimelinePage/clarity_event-line.webp';
@@ -47,26 +46,7 @@ const DetailTable = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
                         <div className="Information_text"> 이벤트</div>
                     </div>
                     <div className='Box_Collection'>
-                        { selectedDate === "9.25 (월)" ? 
-                            <>
-                                <Box tableData={tableDatas[0]} boxType='2'/>
-                                <Box tableData={tableDatas[1]} boxType='7' />
-                                <Box tableData={tableDatas[2]} boxType='7'/>
-                                <Box tableData={tableDatas[3]} boxType='7'/>
-                                <Box tableData={tableDatas[4]} boxType='5'/>
-                                <Box tableData={tableDatas[5]} boxType='7'/>
-                                <Box tableData={tableDatas[6]} boxType='3'/>
-                            </> :
-                            <>
-                                <Box tableData={tableDatas[0]} boxType='1'/>
-                                <Box tableData={tableDatas[1]} boxType='4'/>
-                                <Box tableData={tableDatas[2]} boxType='7'/>
-                                <Box tableData={tableDatas[3]} boxType='7'/>
-                                <Box tableData={tableDatas[4]} boxType='7'/>
-                                <MediumBox tableData={tableDatas[5]}/>
-                                <Box tableData={tableDatas[6]} boxType='6'/>
-                            </>
-                            } 
+                        {tableDatas.map(tabledata => <Box key={tabledata.id} tableData={tabledata}/>)}
                     </div> 
                 </div>
             </div>
