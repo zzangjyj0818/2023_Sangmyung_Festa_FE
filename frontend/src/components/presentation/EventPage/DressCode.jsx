@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import smung from '../../../assets/EventPage/smung.webp';
 import stick from '../../../assets/EventPage/stick.webp';
 import soldoutsmung from '../../../assets/EventPage/soldoutsmung.webp';
