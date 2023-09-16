@@ -21,7 +21,7 @@
 
     justify-content: center;
     align-items: center;
-    perspective: 1500px;
+
 
     .img_btn {
         width: 26px;
@@ -29,7 +29,6 @@
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.10);
         filter: blur(4px);
-        
 
     }
 
@@ -53,11 +52,8 @@
         border-radius: 20px;
         box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.20);
         position: relative;
-        transition: 1s;
-        transform-style: preserve-3d;
     }
 }
-
 
 .front, .back {
     position: absolute;
@@ -66,16 +62,7 @@
     width: 262px; 
     height: 331px; 
     border-radius: 20px;
-    backface-visibility: hidden;
     box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
-  }
-
-.back { 
-    transform: rotateY(180deg);
-}
-
-.img_current:hover  {
-    transform: rotateY(180deg);
 }
 
 .back_time {
