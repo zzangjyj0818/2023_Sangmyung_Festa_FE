@@ -3,7 +3,7 @@
     flex-direction: column;
 
     width: 100%;
-    height : 1850px;
+
 }
 
 .DressCode_Wrapper {
@@ -91,16 +91,11 @@
     }
 }
 
-
-
-
-
 .DressCode_dressWrapper {
     display: flex;
     flex-direction: column;
 
     width: 100%;
-    height: 130vh;
     align-items: center;
 }
 
@@ -287,7 +282,6 @@
     }
 }
 
-
 .DressCode_notice3 {
     display: flex;
     flex-direction: row;
@@ -296,6 +290,7 @@
     justify-content: left;
     margin-bottom: 10px;
 }
+
 .DressCode_notice3_number {
     color: #303034;
     text-align: center;
@@ -306,6 +301,7 @@
     line-height: normal;
     margin-right : 16px;
 }
+
 .DressCode_notice4 {
     color: #303034;
     font-family: Spoqa Han Sans Neo;
@@ -384,6 +380,14 @@
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
+}
+
+.DressCode_smungWrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
 }
 
 

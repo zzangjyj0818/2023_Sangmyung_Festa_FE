@@ -1,10 +1,10 @@
 import React from 'react';
+import SmungSlideShow from './SmungSlideShow';
 import smung from '../../../assets/EventPage/smung.webp';
 import stick from '../../../assets/EventPage/stick.webp';
 import soldoutsmung from '../../../assets/EventPage/soldoutsmung.webp';
 import soldoutstick from '../../../assets/EventPage/soldoutstick.webp';
 import '../../../styles/components/EventPage/DressCode.scss';
-
 
 const DressCode = ({datas, textArray2}) => {
     return (
@@ -99,7 +99,9 @@ const DressCode = ({datas, textArray2}) => {
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div className='DressCode_smungWrapper'>
+                    <SmungSlideShow />
             </div>
         </div>
     );
