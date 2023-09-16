@@ -14,11 +14,26 @@
   position: relative;
   display: flex;
   justify-content: center;
+  
   width: 100%;
-
+  //left: 20px;
   height: 220px;
   margin-top: 0.7rem;
   margin-bottom: 1rem;
+  
+  
+  @media (min-width: 400px) {
+    // margin-left: 10px;
+    // margin-right: 10px;
+    left:5%;
+    right:5%
+  }
+  @media (max-width: 360px) {
+    // margin-left: 10px;
+    // margin-right: 10px;
+    left:-2%;
+    
+  }
   .overlay-div-container {
     position: absolute;
     top: 0;

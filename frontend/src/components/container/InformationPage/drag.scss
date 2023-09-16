@@ -10,6 +10,7 @@
   transform: translateY(0);
   /* 초기 상태에서 아래에 위치 */
   max-height: 100vh;
+  //max-height: 0;
   /* 초기 높이를 최대 높이로 설정 (전체 화면 높이) */
   overflow: hidden;
   /* 넘치는 내용 숨김 */
@@ -42,19 +43,7 @@
 }
 
 /* 작은 창 열기/닫기 버튼 스타일 */
-.mini-window-toggle {
-  cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 4px;
-}
 
-.mini-window-toggle:hover {
-  background-color: #0056b3;
-}
 
 .scrollable-container {
   max-height: 400px;
