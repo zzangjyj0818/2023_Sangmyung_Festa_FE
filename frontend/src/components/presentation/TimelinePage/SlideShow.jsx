@@ -4,7 +4,7 @@ import ColorTime from '../../../assets/TimelinePage/color_time.webp';
 import Time from '../../../assets/TimelinePage/carbon_time.webp';
 import Location from '../../../assets/TimelinePage/carbon_location.webp';
 
-const SlideShow = ({index, setIndex, datas}) => {
+const SlideShow = ({index, setIndex, datas, front, onClick}) => {
   return (
     <div className='SlideShow_Container'>
       <div className='SlideShow_Wrapper'>
@@ -15,10 +15,12 @@ const SlideShow = ({index, setIndex, datas}) => {
             </div> : <div className='null_img_btn' style={{marginRight : '15px'}}></div>
             }
           <div className='img_current'>
-              <div className="front">
+            { front === true ?
+              <div className="front" onClick={onClick}>
                 <img src={datas[index].url} alt='' style={{width: '262px', height : '331px', borderRadius: '20px'}}/>
               </div>
-              <div className="back">
+              :
+              <div className="back" onClick={onClick}>
                 <div className='back_time'>
                   <img src={Time} alt =''  style={{width: '10px', height: '10px'}}/> &nbsp;
                   {datas[index].time}
@@ -37,6 +39,7 @@ const SlideShow = ({index, setIndex, datas}) => {
                   <div>Like Lion X SMCD</div>
                 </div>
               </div>
+            }
           </div>
           { index < 3 ?
             <div className='img_btn' style={{marginLeft : '15px'}} onClick={()=>{setIndex(index+1)}}>
