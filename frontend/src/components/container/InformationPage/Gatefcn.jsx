@@ -189,7 +189,7 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
         <button
           key={tag.id}
           className={`tag-button ${selectedTagId === tag.id ? "active" : ""}`}
-          onClick={() => onTagClick(tag.id)}
+          onClick={() => onTagClick(tag)}
         >
           {tag.name}
         </button>
@@ -267,12 +267,42 @@ function GateFcn() {
 
         <div
           className={`gate-booth booth1 ${
-            selectedTag === 3 && tagData_Out2[0].id === "lib1" ? "active" : ""
+            selectedTag === tagData_Out2[0] ? "active" : ""
+          }`}
+        />
+
+        <div
+          className={`gate-booth booth2 ${
+            selectedTag === tagData_Out2[1] ? "active" : ""
+          }`}
+        />
+
+        <div
+          className={`gate-booth booth3 booth3-1 ${
+            selectedTag === tagData_Out2[2] ? "active" : ""
+          }`}
+        />
+
+        <div
+          className={`gate-booth booth3 booth3-2 ${
+            selectedTag === tagData_Out2[2] ? "active" : ""
+          }`}
+        />
+
+        <div
+          className={`gate-booth booth4 ${
+            selectedTag === tagData_Out2[3] ? "active" : ""
+          }`}
+        />
+        {/* 
+        <div
+          className={`gate-booth booth1 ${
+            selectedTag === 1 && tagData_Out2[0].id === "lib1" ? "active" : ""
           }`}
         />
         <div
           className={`gate-booth booth2 ${
-            selectedTag === 3 && tagData_Out2[1].id === "lib2" ? "active" : ""
+            selectedTag === 2 && tagData_Out2[1].id === "lib2" ? "active" : ""
           }`}
         />
         <div
@@ -282,14 +312,14 @@ function GateFcn() {
         />
         <div
           className={`gate-booth booth3 booth3-2 ${
-            selectedTag === 3 && tagData_Out2[3].id === "lib4" ? "active" : ""
+            selectedTag === 3 && tagData_Out2[3].id === "lib3" ? "active" : ""
           }`}
         />
         <div
           className={`gate-booth booth4 ${
-            selectedTag === 4 && tagData_Out2[1].id === "lib2" ? "active" : ""
+            selectedTag === 4 && tagData_Out2[1].id === "lib4" ? "active" : ""
           }`}
-        />
+        /> */}
 
         {/* <div
           className={`gate-booth booth1 ${
@@ -335,9 +365,9 @@ function GateFcn() {
                     )
 
                     if (matchingTag) {
-                      setSelectedTag(matchingTag.id)
+                      setSelectedTag(matchingTag)
                     } else {
-                      setNotMatchingTag(favorite)
+                      // setNotMatchingTag(favorite)
                       updateSelectedTag("design", favorite)
                     }
                   }}
