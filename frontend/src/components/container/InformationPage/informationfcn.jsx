@@ -3,29 +3,22 @@ import React, { useState } from "react"
 import "./informationfcn.scss"
 import Designfcn from "./Designfcn"
 import Gatefcn from "./Gatefcn"
+import { useSelectedTag } from "./SelectedTagContext"
 
 const Informationfcn = () => {
-  const [activeNavButton, setActiveNavButton] = useState("design") // 페이지 접속 시 선택된 기본 버튼
+  const { selectedTag, setSelectedTag, selectedComponent, updateSelectedTag } =
+    useSelectedTag()
+
   const [menuInfo, setMenuInfo] = useState(true) //메뉴 상태관리 추가
 
-  // const onClickTag = (tag) => {
-  //   setSelectedTag((prevTags) => {
-  //     if (prevTags.includes(tag)) {
-  //       return prevTags.filter((t) => t !== tag)
-  //     } else {
-  //       return [tag]
-  //     }
-  //   })
-
-  //   setBoothInfo(tag) // 선택된 태그에 해당하는 부스 정보 설정
-  // }
-
   const onClickSelButton = (buttonName) => {
-    if (activeNavButton === buttonName) {
+    if (selectedTag === buttonName) {
       return
     }
-    setActiveNavButton((prev) => (prev === buttonName ? "design" : buttonName))
-    setMenuInfo(!menuInfo)
+    setSelectedTag((prev) => (prev === buttonName ? "design" : buttonName))
+
+    updateSelectedTag(buttonName) // 선택된 태그 업데이트
+    setMenuInfo(true) // 메뉴 상태 관리
   }
 
   return (
@@ -34,17 +27,16 @@ const Informationfcn = () => {
         <div className="navigation-cp-space">
           <div className="navigation-button">
             <button
-              to="/design"
               className={`navigation-cp ${
-                activeNavButton === "design" ? "active" : ""
+                selectedTag === "design" ? "active" : ""
               }`}
               onClick={() => onClickSelButton("design")}
             >
-              디자인대학
+              학생회관
             </button>
             <div
               className={`border-bottom ${
-                activeNavButton === "design" ? "active" : ""
+                selectedTag === "design" ? "active" : ""
               }`}
             ></div>
           </div>
@@ -52,22 +44,22 @@ const Informationfcn = () => {
           <div className="navigation-button">
             <button
               className={`navigation-cp ${
-                activeNavButton === "gate" ? "active" : ""
+                selectedTag === "gate" ? "active" : ""
               }`}
               onClick={() => onClickSelButton("gate")}
             >
-              정문
+              도서관
             </button>
             <div
               className={`border-bottom ${
-                activeNavButton === "gate" ? "active" : ""
+                selectedTag === "gate" ? "active" : ""
               }`}
             ></div>
           </div>
         </div>
       </div>
       <div className="navigation-line" />
-      {menuInfo ? <Designfcn /> : <Gatefcn />}
+      {selectedTag === "design" ? <Designfcn /> : <Gatefcn />}
     </div>
   )
 }

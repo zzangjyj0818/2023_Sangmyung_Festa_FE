@@ -1,10 +1,11 @@
 // src/components/container/InformationPage/Gatefcn.jsx
 import React, { useState, useEffect } from "react"
 import DragInfo from "./drag" // DragInfo import
-import { tagData2, tagData_food2 } from "./data"
+import { tagData_Out2 } from "./data"
 // scss 임포트
 import "./informationfcn.scss"
 import "./Gatefcn.scss"
+import { useSelectedTag } from "./SelectedTagContext"
 
 const TagList = ({ tags, onTagClick, selectedTagId }) => {
   return (
@@ -24,9 +25,9 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
 
 function GateFcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
-  const [selectedTagId_food, setSelectedTagId_food] = useState(null)
-  const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
+  const { updateSelectedTag, notMatchingTag, setNotMatchingTag } =
+    useSelectedTag()
 
   const handleFavorite = (selectedTagContent) => {
     if (favorites.includes(selectedTagContent)) {
@@ -40,12 +41,6 @@ function GateFcn() {
 
   const handleTagClick = (tagId) => {
     setSelectedTagId(tagId)
-    setSelectedTagId_food(null)
-  }
-
-  const handleTagFood = (tagId) => {
-    setSelectedTagId_food(tagId)
-    setSelectedTagId(null)
   }
 
   const handleTouchStart = (e) => {
@@ -58,7 +53,7 @@ function GateFcn() {
 
   useEffect(() => {
     const handleStorageChange = (e) => {
-      if (e.key === "favorites2") {
+      if (e.key === "favorites") {
         setFavorites(JSON.parse(e.newValue))
       }
     }
@@ -71,9 +66,16 @@ function GateFcn() {
   }, [])
 
   useEffect(() => {
-    const storedFavorites = JSON.parse(localStorage.getItem("favorites2")) || []
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
     setFavorites(storedFavorites)
   }, [])
+
+  // useEffect(() => {
+  //   const matchingTag = tagData_Out2.find((tag) => tag.id === selectedTagId)
+  //   if (!matchingTag && selectedTagId) {
+  //     setSelectedTag("design")
+  //   }
+  // }, [selectedTagId, setSelectedTag])
 
   return (
     <>
@@ -86,34 +88,33 @@ function GateFcn() {
           <span className="building-name">계단</span>
         </div>
 
-        <div className="gate-image3">
-          <span className="building-name">도서관</span>
-        </div>
-
-        <div className="gate-image4">
-          <span className="building-name">FREE ZONE</span>
-        </div>
-
-        <div className="gate-image5">
-          <span className="building-name">분수</span>
+        <div className={"gate-booth foodbooth"}>
+          <span className="building-name">
+            플리
+            <br />
+            마켓
+          </span>
         </div>
 
         <div
-          className={`gate-booth foodbooth ${
-            selectedTagId_food ? "active" : ""
+          className={`gate-booth booth1 ${selectedTagId == 1 ? "active" : ""}`}
+        />
+        <div
+          className={`gate-booth booth2 ${selectedTagId == 2 ? "active" : ""}`}
+        />
+        <div
+          className={`gate-booth booth3 booth3-1 ${
+            selectedTagId == 3 ? "active" : ""
           }`}
-        >
-          <span className="building-name">푸드트럭</span>
-        </div>
-
-        {tagData2.map((tag) => (
-          <div
-            key={tag.id}
-            className={`gate-booth booth${tag.id} ${
-              selectedTagId === tag.id ? "active" : ""
-            }`}
-          />
-        ))}
+        />
+        <div
+          className={`gate-booth booth3 booth3-2 ${
+            selectedTagId == 3 ? "active" : ""
+          }`}
+        />
+        <div
+          className={`gate-booth booth4 ${selectedTagId == 4 ? "active" : ""}`}
+        />
       </div>
 
       <div className="filters-layout-container">
@@ -130,21 +131,16 @@ function GateFcn() {
                   key={favorite}
                   onClick={() => {
                     // 일치하는 tagData 아이템 찾기
-                    const matchingTag = tagData2.find(
+                    const matchingTag = tagData_Out2.find(
                       (tag) => tag.name === favorite
                     )
+
                     if (matchingTag) {
                       setSelectedTagId(matchingTag.id)
-                      setSelectedTagId_food(null) // 다른 태그 선택 시 해당 태그 초기화
                     } else {
-                      // 일치하는 tagData_food 아이템 찾기
-                      const matchingFoodTag = tagData_food2.find(
-                        (tag) => tag.name === favorite
-                      )
-                      if (matchingFoodTag) {
-                        setSelectedTagId_food(matchingFoodTag.id)
-                        setSelectedTagId(null) // 다른 태그 선택 시 해당 태그 초기화
-                      }
+                      setNotMatchingTag(favorite)
+                      console.log(favorite) // setNotMatchingTag 이후에 console.log를 호출합니다.
+                      updateSelectedTag("design", favorite)
                     }
                   }}
                 >
@@ -158,37 +154,17 @@ function GateFcn() {
         </div>
 
         <div className="filter-container">
-          <div className="filter-title-container">
-            <h2 className="filter-title">동아리/학과 부스</h2>
-          </div>
-          {showMajorTags ? (
-            <TagList
-              tags={tagData2}
-              onTagClick={handleTagClick}
-              selectedTagId={selectedTagId}
-            />
-          ) : (
-            <TagList
-              tags={tagData2.slice(0, 8)}
-              onTagClick={handleTagClick}
-              selectedTagId={selectedTagId}
-            />
-          )}
-        </div>
-
-        <div className="filter-container">
-          <h2 className="filter-title">푸드트럭</h2>
+          <h2 className="filter-title">외부부스</h2>
           <TagList
-            tags={tagData_food2}
-            onTagClick={handleTagFood}
-            selectedTagId={selectedTagId_food}
+            tags={tagData_Out2}
+            onTagClick={handleTagClick}
+            selectedTagId={selectedTagId}
           />
         </div>
       </div>
 
       <DragInfo
-        selectedTagId2={selectedTagId}
-        selectedTagId_food2={selectedTagId_food}
+        selectedTagId_out2={selectedTagId}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onFavoriteChange={handleFavorite}

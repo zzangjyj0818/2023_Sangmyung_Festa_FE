@@ -2,12 +2,11 @@ import React, { useState, useRef, useEffect } from "react"
 import "./drag.scss"
 import {
   tagData,
-  tagData2,
   infoData,
   tagData_food,
-  tagData_food2,
   infoData_food,
   tagData_Out,
+  tagData_Out2,
   infoData_Out,
 } from "./data"
 import Time from "./designicon/carbon_time.png"
@@ -18,10 +17,9 @@ import LinkImage from "./designicon/Link_2.png"
 
 function DragInfo({
   selectedTagId,
-  selectedTagId2,
   selectedTagId_food,
-  selectedTagId_food2,
   selectedTagId_out,
+  selectedTagId_out2,
   onFavoriteChange,
 }) {
   // const [miniWindowOpen, setMiniWindowOpen] = useState(false)
@@ -29,13 +27,14 @@ function DragInfo({
   const [dragOffsetY, setDragOffsetY] = useState(0)
   const miniWindowRef = useRef(null)
   const [favorites, setFavorites] = useState([])
-  const [favorites2, setFavorites2] = useState([])
+  // const [favorites2, setFavorites2] = useState([])
 
   const handleHeart = () => {
     const selectedTagName =
       tagData.find((tag) => tag.id === selectedTagId)?.name ||
       tagData_Out.find((tag) => tag.id === selectedTagId_out)?.name ||
       tagData_food.find((tag) => tag.id === selectedTagId_food)?.name ||
+      tagData_Out2.find((tag) => tag.id === selectedTagId_out2)?.name ||
       ""
 
     if (selectedTagName) {
@@ -58,38 +57,36 @@ function DragInfo({
     }
   }
 
-  const handleHeart2 = () => {
-    const selectedTagName =
-      tagData2.find((tag) => tag.id === selectedTagId2)?.name ||
-      tagData_food2.find((tag) => tag.id === selectedTagId_food2)?.name ||
-      ""
+  // const handleHeart2 = () => {
+  //   const selectedTagName =
+  //     tagData_Out2.find((tag) => tag.id === selectedTagId_out2)?.name || ""
 
-    if (selectedTagName) {
-      let updatedFavorites
-      if (favorites2.includes(selectedTagName)) {
-        updatedFavorites = favorites2.filter(
-          (favorite) => favorite !== selectedTagName
-        )
-      } else {
-        updatedFavorites = [...favorites2, selectedTagName]
-      }
+  //   if (selectedTagName) {
+  //     let updatedFavorites
+  //     if (favorites2.includes(selectedTagName)) {
+  //       updatedFavorites = favorites2.filter(
+  //         (favorite) => favorite !== selectedTagName
+  //       )
+  //     } else {
+  //       updatedFavorites = [...favorites2, selectedTagName]
+  //     }
 
-      setFavorites2(updatedFavorites)
+  //     setFavorites2(updatedFavorites)
 
-      // 즐겨찾기를 로컬 스토리지에 저장
-      localStorage.setItem("favorites2", JSON.stringify(updatedFavorites))
+  //     // 즐겨찾기를 로컬 스토리지에 저장
+  //     localStorage.setItem("favorites2", JSON.stringify(updatedFavorites))
 
-      onFavoriteChange(selectedTagName)
-    }
-  }
+  //     onFavoriteChange(selectedTagName)
+  //   }
+  // }
 
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
-    const storedFavorites2 =
-      JSON.parse(localStorage.getItem("favorites2")) || []
+    // const storedFavorites2 =
+    //   JSON.parse(localStorage.getItem("favorites2")) || []
 
     setFavorites(storedFavorites)
-    setFavorites2(storedFavorites2)
+    // setFavorites2(storedFavorites2)
   }, [])
 
   const handleMouseDown = (e) => {
@@ -133,19 +130,9 @@ function DragInfo({
     ? tagData.find((tag) => tag.id === selectedTagId)?.name
     : ""
 
-  // 정문 부스 태그
-  const selectedTagContent2 = selectedTagId2
-    ? tagData2.find((tag) => tag.id === selectedTagId2)?.name
-    : ""
-
   // 디자인 대학 푸드트럭 태그
   const selectedTagFoodContent = selectedTagId_food
     ? tagData_food.find((tag) => tag.id === selectedTagId_food)?.name
-    : ""
-
-  // 정문 푸드트럭 태그
-  const selectedTagFoodContent2 = selectedTagId_food2
-    ? tagData_food2.find((tag) => tag.id === selectedTagId_food2)?.name
     : ""
 
   // 외부 부스 태그
@@ -153,6 +140,9 @@ function DragInfo({
     ? tagData_Out.find((tag) => tag.id === selectedTagId_out)?.name
     : ""
 
+  const selectedTagOutContent2 = selectedTagId_out2
+    ? tagData_Out2.find((tag) => tag.id === selectedTagId_out2)?.name
+    : ""
   // 학과 부스 시간
 
   // 디자인 대학
@@ -173,11 +163,6 @@ function DragInfo({
   // 외부 부스 시간
   const selectedTagOutInfo = selectedTagId_out
     ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.Game
-    : ""
-
-  // 정문 부스 시간
-  const selectedTagInfo2 = selectedTagId2
-    ? infoData.find((tag) => tag.id === selectedTagId2)?.content
     : ""
 
   return (
@@ -348,57 +333,7 @@ function DragInfo({
             </div>
           )}
 
-          {selectedTagContent2 && (
-            <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img src={Line} alt="Line" />
-              </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <div className="mini-window-Title">{selectedTagContent2}</div>
-                <img
-                  src={
-                    favorites2.includes(selectedTagContent2)
-                      ? FilledHeart
-                      : EmptyHeart
-                  }
-                  alt="emptyheart"
-                  onClick={() => handleHeart2(selectedTagContent2)}
-                />
-              </div>
-
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <img
-                  src={Time}
-                  alt="time"
-                  style={{ width: "14px", height: "14px", marginRight: "8px" }}
-                />
-                <div className="mini-window-Time"> 시간 </div>
-                <div className="mini-window-TimeInfo">{selectedTagInfo2}</div>
-              </div>
-
-              <div className="mini-window-TimeInfo">학과부스설명</div>
-              <div className="mini-window-TimeInfo">학과부스설명</div>
-              <img src={LinkImage} alt="Link" />
-
-              <hr />
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
-                <div style={{ flex: 1, textAlign: "right" }}>
-                  {selectedTagGame}
-                </div>
-              </div>
-              <hr />
-            </div>
-          )}
-
-          {selectedTagFoodContent2 && (
+          {selectedTagOutContent2 && (
             <div>
               <div style={{ textAlign: "center", marginBottom: "20px" }}>
                 <img src={Line} alt="Line" />
@@ -412,16 +347,16 @@ function DragInfo({
                 }}
               >
                 <div className="mini-window-Title">
-                  {selectedTagFoodContent2}
+                  {selectedTagOutContent2}
                 </div>
                 <img
                   src={
-                    favorites2.includes(selectedTagFoodContent2)
+                    favorites.includes(selectedTagOutContent2)
                       ? FilledHeart
                       : EmptyHeart
                   }
                   alt="emptyheart"
-                  onClick={() => handleHeart2(selectedTagFoodContent2)}
+                  onClick={() => handleHeart(selectedTagOutContent2)}
                 />
               </div>
 
