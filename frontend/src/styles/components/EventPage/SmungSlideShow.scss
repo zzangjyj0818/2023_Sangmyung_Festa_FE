@@ -73,9 +73,19 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    height : 20px;
 
     justify-content: center;
     align-items: center;
 
     margin-top : 16px;
+}
+
+.smung_circle {
+    width: 6px;
+    height: 6px;
+    margin-left : 2px;
+    margin-right : 2px;
+    background-color: var(--gray-1, #C8C6CA);
+    border-radius: 50%;
 }

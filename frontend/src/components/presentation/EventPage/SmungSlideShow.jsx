@@ -73,9 +73,9 @@ const SmungSlideShow = () => {
                 {`>`}</div> : <div className='SmungSlideShow_Collection_UnBtn' ></div>
             }
             </div>
-            <div className='smung_circle_collection '>
+            <div className='smung_circle_collection'>
             {smungDatas.map((data) => (
-              <div key={data.id} className='circle' style={{background : index  === data.id-1 ? '#92AAFF' : '#C8C6CA' }}></div>
+              <div key={data.id} className='smung_circle' style={{background : index  === data.id-1 ? '#92AAFF' : '#C8C6CA' }}></div>
           ))}
           </div>
         </div>
