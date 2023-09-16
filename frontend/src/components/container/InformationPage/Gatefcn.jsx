@@ -25,8 +25,6 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
 
 function GateFcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
-  // const [selectedTagId_food, setSelectedTagId_food] = useState(null)
-  // const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
   const { updateSelectedTag, notMatchingTag, setNotMatchingTag } =
     useSelectedTag()
@@ -41,14 +39,8 @@ function GateFcn() {
     }
   }
 
-  // const handleTagClick = (tagId) => {
-  //   setSelectedTagId(tagId)
-  //   // setSelectedTagId_food(null)
-  // }
-
-  const handleTagClick = (tagId, tagName) => {
+  const handleTagClick = (tagId) => {
     setSelectedTagId(tagId)
-    // updateSelectedTag(tagName, "design") // 선택된 태그 정보 및 컴포넌트 이름 업데이트
   }
 
   const handleTouchStart = (e) => {
@@ -96,34 +88,42 @@ function GateFcn() {
           <span className="building-name">계단</span>
         </div>
 
-        <div className="gate-image3">
-          <span className="building-name">도서관</span>
+        <div className={"gate-booth foodbooth"}>
+          <span className="building-name">
+            플리
+            <br />
+            마켓
+          </span>
         </div>
 
-        <div className="gate-image4">
-          <span className="building-name">FREE ZONE</span>
-        </div>
-
-        <div className="gate-image5">
-          <span className="building-name">분수</span>
-        </div>
-
-        {/* <div
-          className={`gate-booth foodbooth ${
-            selectedTagId_food ? "active" : ""
+        <div
+          className={`gate-booth booth1 ${selectedTagId == 1 ? "active" : ""}`}
+        />
+        <div
+          className={`gate-booth booth2 ${selectedTagId == 2 ? "active" : ""}`}
+        />
+        <div
+          className={`gate-booth booth3 booth3-1 ${
+            selectedTagId == 3 ? "active" : ""
           }`}
-        >
-          <span className="building-name">푸드트럭</span>
-        </div> */}
+        />
+        <div
+          className={`gate-booth booth3 booth3-2 ${
+            selectedTagId == 3 ? "active" : ""
+          }`}
+        />
+        <div
+          className={`gate-booth booth4 ${selectedTagId == 4 ? "active" : ""}`}
+        />
 
-        {tagData_Out2.map((tag) => (
+        {/* {tagData_Out2.map((tag) => (
           <div
             key={tag.id}
             className={`gate-booth booth${tag.id} ${
               selectedTagId === tag.id ? "active" : ""
             }`}
           />
-        ))}
+        ))}*/}
       </div>
 
       <div className="filters-layout-container">
@@ -161,25 +161,6 @@ function GateFcn() {
             )}
           </div>
         </div>
-
-        {/* <div className="filter-container">
-          <div className="filter-title-container">
-            <h2 className="filter-title">동아리/학과 부스</h2>
-          </div>
-          {showMajorTags ? (
-            <TagList
-              tags={tagData2}
-              onTagClick={handleTagClick}
-              selectedTagId={selectedTagId}
-            />
-          ) : (
-            <TagList
-              tags={tagData2.slice(0, 8)}
-              onTagClick={handleTagClick}
-              selectedTagId={selectedTagId}
-            />
-          )}
-        </div> */}
 
         <div className="filter-container">
           <h2 className="filter-title">외부부스</h2>

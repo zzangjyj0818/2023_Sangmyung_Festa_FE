@@ -1,9 +1,9 @@
 .gate-image1 {
     position: absolute;
-    left: 15px;
+    left: 64px;
     top: 10px;
-    width: 70px;
-    height: 43px;
+    width: 250px;
+    height: 45px;
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid #ccdae3;
@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center; // 세로축 중앙정렬
     align-items: center; // 가로축 중앙정렬
+
     .building-name {
         display: flex;
         color: #7e7e7e;
@@ -25,96 +26,26 @@
 
 .gate-image2 {
     position: absolute;
-    left: 110px;
-    top: 10px;
-    width: 161px;
-    height: 43px;
+    left: 64px;
+    top: 170px;
+    width: 250px;
+    height: 45px;
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid #ccdae3;
     background: #f0f4f7;
     display: flex;
-    flex-direction: column; // 세로 방향으로 배열
     justify-content: center; // 세로축 중앙정렬
     align-items: center; // 가로축 중앙정렬
+
     .building-name {
+        display: flex;
         color: #7e7e7e;
         text-align: center;
         font-family: Spoqa Han Sans Neo;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
-    }
-}
-
-.gate-image3 {
-    position: absolute;
-    left: 285px;
-    top: 10px;
-    width: 70px;
-    height: 43px;
-    flex-shrink: 0;
-    border-radius: 4px;
-    border: 1px solid #ccdae3;
-    background: #f0f4f7;
-    display: flex;
-    flex-direction: column; // 세로 방향으로 배열
-    justify-content: center; // 세로축 중앙정렬
-    align-items: center; // 가로축 중앙정렬
-    .building-name {
-        color: #7e7e7e;
-        text-align: center;
-        font-family: Spoqa Han Sans Neo;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-}
-
-.gate-image4 {
-    position: absolute;
-    left: 110px;
-    top: 100px;
-    width: 161px;
-    height: 103px;
-    flex-shrink: 0;
-    border-radius: 4px;
-    border: 1px solid #ccdae3;
-    background: rgba(204, 218, 227, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .building-name {
-        color: #7e7e7e;
-        font-family: Spoqa Han Sans Neo;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
-}
-
-.gate-image5 {
-    position: absolute;
-    left: 320px;
-    top: 100px;
-    width: 35px;
-    height: 103px;
-    flex-shrink: 0;
-    border-radius: 4px;
-    border: 1px solid #ccdae3;
-    background: rgba(204, 218, 227, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .building-name {
-        color: #7e7e7e;
-        font-family: Spoqa Han Sans Neo;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
         line-height: normal;
     }
 }
@@ -124,18 +55,19 @@
     flex-shrink: 0;
     border-radius: 4px;
     border: 1px solid #2757ff;
-    background: #f2f5ff;
+    background: #d1dbff;
 
     &.foodbooth {
         position: absolute;
-        left: 15px;
-        top: 62px;
-        width: 70px;
-        height: 30px;
+        left: 64px;
+        top: 93px;
+        width: 46px;
+        height: 47px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
+        background: #f2f5ff;
 
         text-align: center;
         font-family: Spoqa Han Sans Neo;
@@ -147,23 +79,14 @@
         .building-name {
             color: var(--main, #4f75ff);
         }
-
-        &.active {
-            border: 1px solid #2757ff;
-            background: var(--main, #4f75ff);
-
-            .building-name {
-                color: #fff; /* 폰트 색상 변경 */
-            }
-        }
     }
 
     &.booth1 {
         position: absolute;
-        left: 110px;
-        top: 62px;
-        width: 47px;
-        height: 30px;
+        left: 119px;
+        top: 93px;
+        width: 34px;
+        height: 47px;
         &.active {
             border: 1px solid #2757ff;
             background: var(--main, #4f75ff);
@@ -172,10 +95,10 @@
 
     &.booth2 {
         position: absolute;
-        left: 168px;
-        top: 62px;
-        width: 47px;
-        height: 30px;
+        left: 161px;
+        top: 93px;
+        width: 34px;
+        height: 47px;
         &.active {
             border: 1px solid #2757ff;
             background: var(--main, #4f75ff);
@@ -184,10 +107,20 @@
 
     &.booth3 {
         position: absolute;
-        left: 225px;
-        top: 62px;
-        width: 47px;
-        height: 30px;
+
+        top: 93px;
+        width: 34px;
+        height: 47px;
+
+        &.booth3-1 {
+            left: 201px;
+            border-radius: 4px 0px 0px 4px;
+        }
+        &.booth3-2 {
+            left: 236px;
+            border-radius: 0px 4px 4px 0px;
+        }
+
         &.active {
             border: 1px solid #2757ff;
             background: var(--main, #4f75ff);
@@ -196,22 +129,11 @@
 
     &.booth4 {
         position: absolute;
-        left: 285px;
-        top: 100px;
-        width: 30px;
+        left: 281px;
+        top: 93px;
+        width: 34px;
         height: 47px;
-        &.active {
-            border: 1px solid #2757ff;
-            background: var(--main, #4f75ff);
-        }
-    }
 
-    &.booth5 {
-        position: absolute;
-        left: 285px;
-        top: 155px;
-        width: 30px;
-        height: 47px;
         &.active {
             border: 1px solid #2757ff;
             background: var(--main, #4f75ff);
