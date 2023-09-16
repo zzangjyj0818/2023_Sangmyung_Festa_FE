@@ -4,10 +4,10 @@ const EventBox = ({detail, handleEventBoxClick, thumbnailUrl}) => {
     return (
         <div className="event_box" onClick={handleEventBoxClick}>
             {detail.image === undefined ?
+
                 <iframe
                     width="287" 
                     height="195" 
-                    style={{borderRadius: '12px'}}
                     src={`https://www.youtube.com/embed/Ik0dtE_Mx6A?autoplay=1&mute=1`} 
                     title="YouTube video player" 
                     frameborder="0"
