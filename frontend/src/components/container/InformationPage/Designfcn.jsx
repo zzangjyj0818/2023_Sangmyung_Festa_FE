@@ -203,10 +203,7 @@ function Designfcn() {
                     const matchingFoodTag = tagData_food.find(
                       (tag) => tag.name === favorite
                     )
-                    /*
-                    const matchingStudioTag = studio.find(
-                      (tag) => tag.name ===favorite
-                    )*/
+                    
                         
                     if (matchingTag) {
                       setSelectedTagId(matchingTag.id)
