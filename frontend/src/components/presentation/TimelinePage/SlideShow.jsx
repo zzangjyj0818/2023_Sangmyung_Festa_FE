@@ -6,7 +6,7 @@ import ColorTime from '../../../assets/TimelinePage/color_time.webp';
 import Location from '../../../assets/TimelinePage/carbon_location.webp';
 import Time from '../../../assets/TimelinePage/carbon_time.webp';
 
-const SlideShow = ({index, setIndex, datas, params}) => {
+const SlideShow = ({index, setIndex, datas, params, front, onClick}) => {
 
   return (
     <div className='SlideShow_Wrapper'>

@@ -4,8 +4,12 @@ import SwiperCore from 'swiper';
 
 const SlideShowContainer = ({datas, selectedDate}) => {
     const [index, setIndex] = useState(0);
+    const [front, setFront] = useState(true);
     const swiperRef = useRef(null); // Ref to access Swiper instance
 
+    const onClick = () => {
+        setFront(!front);
+    }
    const params = {
       on: { 
           init: (swiper) => {
@@ -34,6 +38,8 @@ const SlideShowContainer = ({datas, selectedDate}) => {
          index={index} 
          datas={datas}
          params={params}
+         front={front}
+         onClick={onClick}
          />
      );
 };
