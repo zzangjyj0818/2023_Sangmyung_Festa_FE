@@ -1,5 +1,5 @@
 // src/components/container/InformationPage/Gatefcn.jsx
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, Suspense, lazy } from "react"
 import DragInfo from "./drag" // DragInfo import
 import { tagData_Out2 } from "./data"
 // scss 임포트
@@ -22,6 +22,7 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
     </div>
   )
 }
+const LazyDragInfo = lazy(() => import("./drag"));
 
 function GateFcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
@@ -41,19 +42,15 @@ function GateFcn() {
     }
   }
 
-  // const handleTagClick = (tagId) => {
-  //   setSelectedTagId(tagId)
-  //   // setSelectedTagId_food(null)
-  // }
 
   const handleTagClick = (tagId, tagName) => {
-    if(selectedTagId===tagId){
+    if (selectedTagId === tagId) {
       setSelectedTagId(null)
     }
-    else{
+    else {
       setSelectedTagId(tagId)
     }
-    
+
     // updateSelectedTag(tagName, "design") // 선택된 태그 정보 및 컴포넌트 이름 업데이트
   }
 
@@ -84,12 +81,7 @@ function GateFcn() {
     setFavorites(storedFavorites)
   }, [])
 
-  // useEffect(() => {
-  //   const matchingTag = tagData_Out2.find((tag) => tag.id === selectedTagId)
-  //   if (!matchingTag && selectedTagId) {
-  //     setSelectedTag("design")
-  //   }
-  // }, [selectedTagId, setSelectedTag])
+
 
   return (
     <>
@@ -114,20 +106,13 @@ function GateFcn() {
           <span className="building-name">분수</span>
         </div>
 
-        {/* <div
-          className={`gate-booth foodbooth ${
-            selectedTagId_food ? "active" : ""
-          }`}
-        >
-          <span className="building-name">푸드트럭</span>
-        </div> */}
+
 
         {tagData_Out2.map((tag) => (
           <div
             key={tag.id}
-            className={`gate-booth booth${tag.id} ${
-              selectedTagId === tag.id ? "active" : ""
-            }`}
+            className={`gate-booth booth${tag.id} ${selectedTagId === tag.id ? "active" : ""
+              }`}
           />
         ))}
       </div>
@@ -168,24 +153,7 @@ function GateFcn() {
           </div>
         </div>
 
-        {/* <div className="filter-container">
-          <div className="filter-title-container">
-            <h2 className="filter-title">동아리/학과 부스</h2>
-          </div>
-          {showMajorTags ? (
-            <TagList
-              tags={tagData2}
-              onTagClick={handleTagClick}
-              selectedTagId={selectedTagId}
-            />
-          ) : (
-            <TagList
-              tags={tagData2.slice(0, 8)}
-              onTagClick={handleTagClick}
-              selectedTagId={selectedTagId}
-            />
-          )}
-        </div> */}
+
 
         <div className="filter-container">
           <h2 className="filter-title">외부부스</h2>
@@ -196,13 +164,21 @@ function GateFcn() {
           />
         </div>
       </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyDragInfo
+          selectedTagId_out2={selectedTagId}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onFavoriteChange={handleFavorite}
+        />
+      </Suspense>
 
-      <DragInfo
+      {/* <DragInfo
         selectedTagId_out2={selectedTagId}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onFavoriteChange={handleFavorite}
-      />
+      /> */}
     </>
   )
 }

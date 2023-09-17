@@ -1,9 +1,12 @@
 // src/components/container/InformationPage/informationfcn.jsx
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, lazy, Suspense } from "react"
 import "./informationfcn.scss"
 import Designfcn from "./Designfcn"
 import Gatefcn from "./Gatefcn"
 import { useSelectedTag } from "./SelectedTagContext"
+
+const LazyDesignfcn = lazy(() => import("./Designfcn"));
+const LazyGatefcn = lazy(() => import("./Gatefcn"));
 
 const Informationfcn = () => {
   // const [activeNavButton, setActiveNavButton] = useState("design") // 페이지 접속 시 선택된 기본 버튼
@@ -53,44 +56,43 @@ const Informationfcn = () => {
         <div className="navigation-cp-space">
           <div className="navigation-button">
             <button
-              className={`navigation-cp ${
-                selectedTag === "design" ? "active" : ""
+              className={`navigation-cp ${selectedTag === "design" ? "active" : ""
                 // selectedTagInfo.selectedTagId === "design" ? "active" : ""
-              }`}
+                }`}
               onClick={() => onClickSelButton("design")}
             >
               학생회관
             </button>
             <div
-              className={`border-bottom ${
-                selectedTag === "design" ? "active" : ""
+              className={`border-bottom ${selectedTag === "design" ? "active" : ""
                 // selectedTagInfo.selectedTagId === "design" ? "active" : ""
-              }`}
+                }`}
             ></div>
           </div>
 
           <div className="navigation-button">
             <button
-              className={`navigation-cp ${
-                selectedTag === "gate" ? "active" : ""
+              className={`navigation-cp ${selectedTag === "gate" ? "active" : ""
                 // selectedTagInfo.selectedTagId === "gate" ? "active" : ""
-              }`}
+                }`}
               onClick={() => onClickSelButton("gate")}
             >
               도서관
             </button>
             <div
-              className={`border-bottom ${
-                selectedTag === "gate" ? "active" : ""
+              className={`border-bottom ${selectedTag === "gate" ? "active" : ""
                 // selectedTagInfo.selectedTagId === "gate" ? "active" : ""
-              }`}
+                }`}
             ></div>
           </div>
         </div>
       </div>
       <div className="navigation-line" />
-      {selectedTag === "design" ? <Designfcn /> : <Gatefcn />}
-      {/* {selectedComponent === "design" ? <Designfcn /> : <Gatefcn />} */}
+      <Suspense fallback={<div>Loading...</div>}>
+        {selectedTag === "design" ? <LazyDesignfcn /> : <LazyGatefcn />}
+      </Suspense>
+
+
     </div>
   )
 }

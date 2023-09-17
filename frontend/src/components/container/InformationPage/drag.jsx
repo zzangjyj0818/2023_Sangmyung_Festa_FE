@@ -29,7 +29,7 @@ function DragInfo({
   const miniWindowRef = useRef(null)
   const [favorites, setFavorites] = useState([])
   const minDragHeight = 100; // 최소 높이
-  const maxDragHeight = window.innerHeight-100; // 최대 높이
+  const maxDragHeight = window.innerHeight-50; // 최대 높이
   
   
   const handleHeart = () => {
@@ -375,9 +375,7 @@ function DragInfo({
             </div>
           )}
         </div>
-        {/* <div className="mini-window-toggle" onClick={toggleMiniWindow}>
-          {miniWindowOpen ? '닫기' : '열기'}
-        </div> */}
+        
       </div>
     </div>
   )

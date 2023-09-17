@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, lazy, Suspense } from "react"
 import {
   tagData,
   infoData,
@@ -34,6 +34,7 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
   )
 }
 
+const LazyDragInfo = lazy(() => import("./drag"));
 function Designfcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
   const [selectedTagId_out, setSelectedTagId_out] = useState(null)
@@ -52,6 +53,13 @@ function Designfcn() {
       setFavorites((prevFavorites) => [...prevFavorites, selectedTagContent])
     }
   }
+
+  //code spiting
+  // const handleDrag = () => {
+  //   import('./drag').then(({default: DragInfo}) => {
+  //     DragInfo();
+  //   })
+  // }
 
   const handleTagClick = (tagId) => {
     if (selectedTagId === tagId) {
@@ -74,6 +82,7 @@ function Designfcn() {
       setSelectedTagId_out(tagId)
       setSelectedTagId(null)
       setSelectedTagId_food(null)
+
     }
 
 
@@ -87,6 +96,7 @@ function Designfcn() {
       setSelectedTagId_food(tagId)
       setSelectedTagId(null)
       setSelectedTagId_out(null)
+
     }
 
 
@@ -338,14 +348,20 @@ function Designfcn() {
           />
         </div>
       </div>
-      <DragInfo
-        selectedTagId={selectedTagId}
-        selectedTagId_out={selectedTagId_out}
-        selectedTagId_food={selectedTagId_food}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onFavoriteChange={handleFavorite}
-      />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyDragInfo
+          selectedTagId={selectedTagId}
+          selectedTagId_out={selectedTagId_out}
+          selectedTagId_food={selectedTagId_food}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onFavoriteChange={handleFavorite}
+        />
+      </Suspense>
+
+
+
     </>
   )
 }
