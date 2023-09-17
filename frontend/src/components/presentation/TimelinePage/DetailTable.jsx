@@ -46,7 +46,7 @@ const DetailTable = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
                         <div className="Information_text"> 이벤트</div>
                     </div>
                     <div className='Box_Collection'>
-                        {tableDatas.map(tabledata => <Box key={tabledata.id} tableData={tabledata}/>)}
+                        {tableDatas.map(tabledata => <Box key={tabledata.id} tableData={tabledata} layout = {tabledata.layout}/>)}
                     </div> 
                 </div>
             </div>

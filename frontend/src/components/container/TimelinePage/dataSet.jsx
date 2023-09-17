@@ -92,7 +92,8 @@ export const datas1 = [
       content1 : '푸드트럭 & 부스운영',
       time1 : '10:00-22:00',
       location1 : '학생회관 앞',
-      height : 361
+      height : 361,
+      layout : 'linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%)'
     },
     {
       id : 1,
@@ -145,6 +146,7 @@ export const datas1 = [
       time1 : '10:00-22:00',
       location1 : '학생회관 앞',
       height : 395,
+      layout : 'linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%)'
     },
     {
       id : 1,
