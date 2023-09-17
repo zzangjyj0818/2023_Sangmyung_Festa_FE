@@ -64,11 +64,9 @@ function DragInfo({
 
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
-    // const storedFavorites2 =
-    //   JSON.parse(localStorage.getItem("favorites2")) || []
-
+   
     setFavorites(storedFavorites)
-    // setFavorites2(storedFavorites2)
+    
   }, [])
 
 
@@ -223,7 +221,7 @@ function DragInfo({
             </div>
           )}
 
-          {selectedTagFoodContent && (
+           {selectedTagFoodContent && (
             <div>
               
 
@@ -373,7 +371,7 @@ function DragInfo({
               </div>
               <hr />
             </div>
-          )}
+          )} 
         </div>
         
       </div>

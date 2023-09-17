@@ -173,12 +173,7 @@ function GateFcn() {
         />
       </Suspense>
 
-      {/* <DragInfo
-        selectedTagId_out2={selectedTagId}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onFavoriteChange={handleFavorite}
-      /> */}
+      
     </>
   )
 }

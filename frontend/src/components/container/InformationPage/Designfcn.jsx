@@ -54,12 +54,7 @@ function Designfcn() {
     }
   }
 
-  //code spiting
-  // const handleDrag = () => {
-  //   import('./drag').then(({default: DragInfo}) => {
-  //     DragInfo();
-  //   })
-  // }
+  
 
   const handleTagClick = (tagId) => {
     if (selectedTagId === tagId) {
