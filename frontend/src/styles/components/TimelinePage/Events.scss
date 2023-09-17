@@ -11,11 +11,12 @@
     flex-direction: row;
 
     align-items: center;
+    width: 100%;
     margin-left : 15px;
 }
 .events_text {
     display: flex;
-    width: 200px;
+    width: 210px;
 
     color: var(--black, #212121);
     font-family: Spoqa Han Sans Neo;
