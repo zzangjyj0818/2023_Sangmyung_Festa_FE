@@ -1,56 +1,50 @@
 import React from 'react';
+import Swiper from 'react-id-swiper';
+import '../../../../node_modules/swiper/swiper.scss';
 import '../../../styles/components/TimelinePage/SlideShow.scss';
 import ColorTime from '../../../assets/TimelinePage/color_time.webp';
-import Time from '../../../assets/TimelinePage/carbon_time.webp';
 import Location from '../../../assets/TimelinePage/carbon_location.webp';
+import Time from '../../../assets/TimelinePage/carbon_time.webp';
 
-const SlideShow = ({index, setIndex, datas, front, onClick}) => {
+const SlideShow = ({index, setIndex, datas, params}) => {
 
   return (
-    <div className='SlideShow_Container'>
-      <div className='SlideShow_Wrapper'>
-        <div className='SlideShow_Box'>
-          { index > 0 ? 
-            <div className='img_btn' style={{marginRight : '15px'}} onClick={()=>{setIndex(index-1)}}>
-              <img src={datas[index-1].url} alt='' className='img_btn_img'/>
-            </div> : <div className='null_img_btn' style={{marginRight : '15px'}}></div>
-            }
-          <div className='img_current'>
-            { front === true ?
-              <div className="front" onClick={onClick}>
-                {console.log(front)}
-                <img src={datas[index].url} alt='' style={{width: '262px', height : '331px', borderRadius: '20px'}}/>
+    <div className='SlideShow_Wrapper'>
+      <Swiper {...params}>
+        {datas.map(data => (
+          <div className='SlideShow_Wrapper_LayOut' key={data.id}>
+            <div className='SlideShow_Wrapper_Img_Box'>
+              <div className='card-inner'>
+                <div className="card-front">
+                  <img src={data.url} alt='' className='SlideShow_Wrapper_Img'/>
+                </div>
+                <div className='card-back'>
+                  <div className="Img_Detail" >
+                  <div className='back_time'>
+                    <img src={Time} alt =''  style={{width: '10px', height: '10px'}}/> &nbsp;
+                    {datas[index].time}
+                  </div>
+                  <div className='back_name'>
+                    <div className='kor'>{datas[index].kor}</div>
+                    <div className='eng'>{datas[index].eng}</div>
+                  </div>
+                  <div className='back_contents'>
+                    <div className='content1'>{datas[index].content1}</div>
+                    <div className='title'>✏️ 알고 있나요?</div>
+                    <div className='content2'>{datas[index].content2}</div>
+                  </div>
+                  <div className='back_logo'>
+                    <div>상명대학교 천안캠퍼스</div>
+                    <div>Like Lion X SMCD</div>
+                  </div>
               </div>
-              :
-              <div className="back" onClick={onClick}>
-                {console.log(front)}
-                <div className='back_time'>
-                  <img src={Time} alt =''  style={{width: '10px', height: '10px'}}/> &nbsp;
-                  {datas[index].time}
-                </div>
-                <div className='back_name'>
-                  <div className='kor'>{datas[index].kor}</div>
-                  <div className='eng'>{datas[index].eng}</div>
-                </div>
-                <div className='back_contents'>
-                  <div className='content1'>{datas[index].content1}</div>
-                  <div className='title'>✏️ 알고 있나요?</div>
-                  <div className='content2'>{datas[index].content2}</div>
-                </div>
-                <div className='back_logo'>
-                  <div>상명대학교 천안캠퍼스</div>
-                  <div>Like Lion X SMCD</div>
                 </div>
               </div>
-            }
+            </div> 
           </div>
-          { index < 3 ?
-            <div className='img_btn' style={{marginLeft : '15px'}} onClick={()=>{setIndex(index+1)}}>
-              <img src={datas[index+1].url} alt='' className='img_btn_img'/>
-            </div> : <div className='null_img_btn' style={{marginRight : '15px'}}></div>
-          }
-        </div>
-        <div className='extra_data'>
+        ))}
+      </Swiper>
+      <div className='extra_data'>
           <div className='circle_collection'>
             {datas.map((data) => (
               <div key={data.id} className='circle' style={{background : index  === data.id ? '#92AAFF' : '#C8C6CA' }}></div>
@@ -66,9 +60,8 @@ const SlideShow = ({index, setIndex, datas, front, onClick}) => {
               <div style={{color: 'black'}}>노천극장</div>
           </div>
         </div>
-      </div>
     </div>
-  );
-};
+  )
+}
 
 export default SlideShow;

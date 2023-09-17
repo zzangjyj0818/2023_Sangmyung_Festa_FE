@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 export const fetchTicket = async () => {
-    const url = 'https://b5a7d179-1cf6-49ed-80be-9342575e6646.mock.pstmn.io';
     try {
-      const response = await axios.get(`${url}/ticket`);
+      const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/ticket`);
       console.log(response.data);
       return response.data.ticket; // 데이터는 response.data 안에 들어있습니다.
     } catch (e) {

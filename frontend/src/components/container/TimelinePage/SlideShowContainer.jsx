@@ -3,25 +3,25 @@ import SlideShow from '../../presentation/TimelinePage/SlideShow';
 
 const SlideShowContainer = ({datas, selectedDate}) => {
     const [index, setIndex] = useState(0);
-    const [front, setFront] = useState(true);
 
-    useEffect(() => {
-        setIndex(0);
-    }, [selectedDate]);
+   const params = {
+      on: { slideChange: index => { 
+          setIndex(index.snapIndex);
+       }},
+      spaceBetween: 170,
+      slidesPerView: 2,
+      centeredSlides: true,
+      roundLengths: true,
+      loop: false,
+   }
 
-    const onClick = () => {
-        setFront(!front);
-    }
-    
-    return (
-        <SlideShow 
-            index={index} 
-            setIndex={setIndex} 
-            datas={datas}
-            front={front}
-            onClick={onClick} 
-        />
-    );
+   return (
+     <SlideShow 
+         index={index} 
+         datas={datas}
+         params={params}
+         />
+     );
 };
 
 export default SlideShowContainer;

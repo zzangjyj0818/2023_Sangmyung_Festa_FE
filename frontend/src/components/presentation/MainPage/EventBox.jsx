@@ -1,4 +1,5 @@
 import React from 'react';
+import YouTube from 'react-youtube';
 
 const EventBox = ({detail, handleEventBoxClick, thumbnailUrl}) => {
     return (
@@ -8,11 +9,16 @@ const EventBox = ({detail, handleEventBoxClick, thumbnailUrl}) => {
                     width="287" 
                     height="195" 
                     style={{borderRadius: '12px'}}
-                    src={`https://www.youtube.com/embed/Ik0dtE_Mx6A?autoplay=1&mute=1`} 
-                    title="YouTube video player" 
+                    src={`https://www.youtube.com/embed/Ik0dtE_Mx6A?si=zn7SCco0Z5Lgf2xm?mute=1`} 
+                    title="Festival Video" 
                     frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
-                    allowfullscreen /> :
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
+                    allowfullscreen 
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    />
+                
+                    :
                 <div>
                     <img src={detail.image} alt=''/>
                 </div>
