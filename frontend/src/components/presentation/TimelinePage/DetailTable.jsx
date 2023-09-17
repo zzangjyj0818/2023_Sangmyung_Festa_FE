@@ -24,12 +24,12 @@ const DetailTable = ({selectedDate, tableDatas, times, activeTimeIndex}) => {
                                     className='item_circle' 
                                     style={selectedDate === "9.25 (월)" ? {
                                         backgroundColor:
-                                            new Date().getMonth() === 8 && new Date().getDate() === 14 ?
+                                            new Date().getMonth() === 8 && new Date().getDate() === 18 ?
                                             (activeTimeIndex === index ? '#4F75FF' :
                                             activeTimeIndex >= index ? '#C7E7FF' : 'lightgray') : 'lightgray'
                                     } : {
                                         backgroundColor:
-                                            new Date().getMonth() === 8 && new Date().getDate() === 15 ?
+                                            new Date().getMonth() === 8 && new Date().getDate() === 19 ?
                                             (activeTimeIndex === index ? '#4F75FF' :
                                             activeTimeIndex >= index ? '#C7E7FF' : 'lightgray') : 'lightgray'
                                     } }
