@@ -53,7 +53,7 @@ const SlideShow = ({index, setIndex, datas, params}) => {
           <div className='extra_data_big_text'>{datas[index].kor}</div>
           <div className='extra_data_small_text'>
               <div className=""><img src={ColorTime} alt='' style={{width: '12px', height:'12px'}}/></div>
-              <div style={{color: '#AB85A2'}}>21:00-22:00</div>
+              <div style={{color: '#AB85A2'}}>{datas[index].time}</div>
           </div>
           <div className='extra_data_small_text'>
               <div className=""><img src={Location} alt='' style={{width: '12px', height:'12px'}}/></div>
