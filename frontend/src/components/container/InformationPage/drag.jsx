@@ -8,12 +8,13 @@ import {
   tagData_Out,
   tagData_Out2,
   infoData_Out,
+  
 } from "./data"
-import Time from "./designicon/carbon_time.png"
-import EmptyHeart from "./designicon/Heart.png"
-import FilledHeart from "./designicon/Heart2.png"
-import Line from "./designicon/Line 5.png"
-import LinkImage from "./designicon/Link_2.png"
+import Time from "./designicon/carbon_time.webp"
+import EmptyHeart from "./designicon/Heart.webp"
+import FilledHeart from "./designicon/Heart2.webp"
+import Line from "./designicon/Line 5.webp"
+import LinkImage from "./designicon/Link_2.webp"
 
 function DragInfo({
   selectedTagId,
@@ -27,8 +28,10 @@ function DragInfo({
   const [dragOffsetY, setDragOffsetY] = useState(0)
   const miniWindowRef = useRef(null)
   const [favorites, setFavorites] = useState([])
-  // const [favorites2, setFavorites2] = useState([])
-
+  const minDragHeight = 100; // 최소 높이
+  const maxDragHeight = window.innerHeight-50; // 최대 높이
+  
+  
   const handleHeart = () => {
     const selectedTagName =
       tagData.find((tag) => tag.id === selectedTagId)?.name ||
@@ -57,37 +60,16 @@ function DragInfo({
     }
   }
 
-  // const handleHeart2 = () => {
-  //   const selectedTagName =
-  //     tagData_Out2.find((tag) => tag.id === selectedTagId_out2)?.name || ""
-
-  //   if (selectedTagName) {
-  //     let updatedFavorites
-  //     if (favorites2.includes(selectedTagName)) {
-  //       updatedFavorites = favorites2.filter(
-  //         (favorite) => favorite !== selectedTagName
-  //       )
-  //     } else {
-  //       updatedFavorites = [...favorites2, selectedTagName]
-  //     }
-
-  //     setFavorites2(updatedFavorites)
-
-  //     // 즐겨찾기를 로컬 스토리지에 저장
-  //     localStorage.setItem("favorites2", JSON.stringify(updatedFavorites))
-
-  //     onFavoriteChange(selectedTagName)
-  //   }
-  // }
+  
 
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
-    // const storedFavorites2 =
-    //   JSON.parse(localStorage.getItem("favorites2")) || []
-
+   
     setFavorites(storedFavorites)
-    // setFavorites2(storedFavorites2)
+    
   }, [])
+
+
 
   const handleMouseDown = (e) => {
     setIsDragging(true)
@@ -102,20 +84,29 @@ function DragInfo({
     setDragOffsetY(touch.clientY - rect.top)
   }
 
+  
   const handleMouseMove = (e) => {
     if (isDragging) {
-      const newY = e.clientY - dragOffsetY
-      miniWindowRef.current.style.top = `${newY}px`
+      const newY = e.clientY - dragOffsetY;
+      // 최소 높이와 최대 높이 사이에 높이를 제한
+      miniWindowRef.current.style.top = `${Math.max(
+        minDragHeight,
+        Math.min(maxDragHeight, newY)
+      )}px`;
     }
-  }
-
+  };
+  
   const handleTouchMove = (e) => {
     if (isDragging) {
-      const touch = e.touches[0]
-      const newY = touch.clientY - dragOffsetY
-      miniWindowRef.current.style.top = `${newY}px`
+      const touch = e.touches[0];
+      const newY = touch.clientY - dragOffsetY;
+      // 최소 높이와 최대 높이 사이에 높이를 제한
+      miniWindowRef.current.style.top = `${Math.max(
+        minDragHeight,
+        Math.min(maxDragHeight, newY)
+      )}px`;
     }
-  }
+  };
 
   const handleMouseUp = () => {
     setIsDragging(false)
@@ -179,11 +170,12 @@ function DragInfo({
         style={{ left: "0" }} // 수평 이동 막음
       >
         <div className="mini-window-content">
-          {selectedTagContent && (
-            <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
                 <img src={Line} alt="Line" />
               </div>
+          {selectedTagContent && (
+            <div>
+              
 
               <div
                 style={{
@@ -229,11 +221,9 @@ function DragInfo({
             </div>
           )}
 
-          {selectedTagFoodContent && (
+           {selectedTagFoodContent && (
             <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img src={Line} alt="Line" />
-              </div>
+              
 
               <div
                 style={{
@@ -285,9 +275,7 @@ function DragInfo({
 
           {selectedTagOutContent && (
             <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img src={Line} alt="Line" />
-              </div>
+              
 
               <div
                 style={{
@@ -335,9 +323,7 @@ function DragInfo({
 
           {selectedTagOutContent2 && (
             <div>
-              <div style={{ textAlign: "center", marginBottom: "20px" }}>
-                <img src={Line} alt="Line" />
-              </div>
+              
 
               <div
                 style={{
@@ -385,11 +371,9 @@ function DragInfo({
               </div>
               <hr />
             </div>
-          )}
+          )} 
         </div>
-        {/* <div className="mini-window-toggle" onClick={toggleMiniWindow}>
-          {miniWindowOpen ? '닫기' : '열기'}
-        </div> */}
+        
       </div>
     </div>
   )

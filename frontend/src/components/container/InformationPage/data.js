@@ -82,6 +82,12 @@ const infoData = [
   { id: 19, tagId: 19, content: "10:00 ~ 22:00" },
   { id: 20, tagId: 20, content: "10:00 ~ 24:00" },
   { id: 21, tagId: 21, content: "10:00 ~ 20:00" },
+  { id: 22, tagId: 20, content: "10:00 ~ 24:00" },
+  { id: 23, tagId: 21, content: "10:00 ~ 20:00" },
+  { id: 24, tagId: 20, content: "10:00 ~ 24:00" },
+  { id: 25, tagId: 21, content: "10:00 ~ 20:00" },
+  { id: 34, tagId: 20, content: "10:00 ~ 24:00" },
+  { id: 35, tagId: 21, content: "10:00 ~ 20:00" },
 ]
 
 // 학생회관 푸드트럭 정보
@@ -97,12 +103,13 @@ const infoData_food = [
 ]
 // 학생회관 외부 부스 정보
 const infoData_Out = [
-  { id: 1, tagId: 1, content: "10:00 ~ 20:00" },
-  { id: 2, tagId: 2, content: "10:00 ~ 21:00" },
-  { id: 3, tagId: 3, content: "10:00 ~ 22:00" },
-  { id: 4, tagId: 4, content: "10:00 ~ 24:00" },
-  { id: 5, tagId: 5, content: "10:00 ~ 20:00" },
-  { id: 6, tagId: 6, content: "10:00 ~ 21:00" },
+  { id: 33, tagId: 33, content: "10:00 ~ 20:00" },
+  { id: 31, tagId: 31, content: "10:00 ~ 21:00" },
+  { id: 27, tagId: 27, content: "10:00 ~ 22:00" },
+  { id: 28, tagId: 28, content: "10:00 ~ 24:00" },
+  { id: 29, tagId: 29, content: "10:00 ~ 20:00" },
+  { id: 26, tagId: 26, content: "10:00 ~ 21:00" },
+  
 ]
 
 // 도서관 외부 부스 정보

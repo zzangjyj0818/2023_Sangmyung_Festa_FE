@@ -1,5 +1,5 @@
 // src/components/container/InformationPage/Gatefcn.jsx
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, Suspense, lazy } from "react"
 import DragInfo from "./drag" // DragInfo import
 import { tagData_Out2 } from "./data"
 // scss 임포트
@@ -22,6 +22,7 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
     </div>
   )
 }
+const LazyDragInfo = lazy(() => import("./drag"));
 
 function GateFcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
@@ -39,8 +40,16 @@ function GateFcn() {
     }
   }
 
-  const handleTagClick = (tagId) => {
-    setSelectedTagId(tagId)
+
+  const handleTagClick = (tagId, tagName) => {
+    if (selectedTagId === tagId) {
+      setSelectedTagId(null)
+    }
+    else {
+      setSelectedTagId(tagId)
+    }
+
+    // updateSelectedTag(tagName, "design") // 선택된 태그 정보 및 컴포넌트 이름 업데이트
   }
 
   const handleTouchStart = (e) => {
@@ -70,12 +79,7 @@ function GateFcn() {
     setFavorites(storedFavorites)
   }, [])
 
-  // useEffect(() => {
-  //   const matchingTag = tagData_Out2.find((tag) => tag.id === selectedTagId)
-  //   if (!matchingTag && selectedTagId) {
-  //     setSelectedTag("design")
-  //   }
-  // }, [selectedTagId, setSelectedTag])
+
 
   return (
     <>
@@ -162,13 +166,16 @@ function GateFcn() {
           />
         </div>
       </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyDragInfo
+          selectedTagId_out2={selectedTagId}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onFavoriteChange={handleFavorite}
+        />
+      </Suspense>
 
-      <DragInfo
-        selectedTagId_out2={selectedTagId}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onFavoriteChange={handleFavorite}
-      />
+      
     </>
   )
 }

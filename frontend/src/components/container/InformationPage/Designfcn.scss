@@ -1,3 +1,5 @@
+
+
 //소나무숲
 .image1 {
     position: absolute;
@@ -24,6 +26,7 @@
         font-size: 11.592px;
         font-weight: 500;
         line-height: normal;
+        
     }
 }
 //학생회관
@@ -561,7 +564,6 @@
     &.booth14 {
         left: 135px;
         top: 64px;
-
         background: #f2f5ff;
         &.active {
             border: 1px solid #2757ff;
@@ -571,7 +573,6 @@
     &.booth13 {
         left: 100px;
         top: 64px;
-
         background: #f2f5ff;
         &.active {
             border: 1px solid #2757ff;

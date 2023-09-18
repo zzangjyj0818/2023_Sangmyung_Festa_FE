@@ -1,16 +1,17 @@
-// src/components/container/InformationPage/Designfcn.jsx
-import React, { useState, useEffect } from "react"
+
+import React, { useState, useEffect, lazy, Suspense } from "react"
 import {
   tagData,
   infoData,
   tagData_food,
   infoData_food,
   tagData_Out,
+
 } from "./data"
-import Union from "../../container/InformationPage/designicon/Union.png"
-import Smoke from "../../container/InformationPage/designicon/Smoke.png"
-import ArrowUp from "./designicon/addUp.png"
-import ArrowDown from "./designicon/addDown.png"
+import Union from "../../container/InformationPage/designicon/Union.webp"
+import Smoke from "../../container/InformationPage/designicon/Smoke.webp"
+import ArrowUp from "./designicon/addUp.webp"
+import ArrowDown from "./designicon/addDown.webp"
 import DragInfo from "./drag"
 import "./drag.scss"
 import "./informationfcn.scss"
@@ -33,6 +34,7 @@ const TagList = ({ tags, onTagClick, selectedTagId }) => {
   )
 }
 
+const LazyDragInfo = lazy(() => import("./drag"));
 function Designfcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
   const [selectedTagId_out, setSelectedTagId_out] = useState(null)
@@ -52,23 +54,49 @@ function Designfcn() {
     }
   }
 
+  
+
   const handleTagClick = (tagId) => {
-    setSelectedTagId(tagId)
-    setSelectedTagId_food(null)
-    setSelectedTagId_out(null)
+    if (selectedTagId === tagId) {
+      setSelectedTagId(null);
+    }
+    else {
+      setSelectedTagId(tagId)
+      setSelectedTagId_food(null)
+      setSelectedTagId_out(null)
+    }
+
+
   }
 
   const handleTagOut = (tagId) => {
-    setSelectedTagId_out(tagId)
-    setSelectedTagId(null)
-    setSelectedTagId_food(null)
+    if (selectedTagId_out === tagId) {
+      setSelectedTagId_out(null);
+    }
+    else {
+      setSelectedTagId_out(tagId)
+      setSelectedTagId(null)
+      setSelectedTagId_food(null)
+
+    }
+
+
   }
 
   const handleTagFood = (tagId) => {
-    setSelectedTagId_food(tagId)
-    setSelectedTagId(null)
-    setSelectedTagId_out(null)
+    if (selectedTagId_food === tagId) {
+      setSelectedTagId_food(null);
+    }
+    else {
+      setSelectedTagId_food(tagId)
+      setSelectedTagId(null)
+      setSelectedTagId_out(null)
+
+    }
+
+
   }
+
 
   const handleToggleTags = () => {
     setShowMajorTags((prevShowMajorTags) => !prevShowMajorTags)
@@ -116,20 +144,9 @@ function Designfcn() {
           <span className="building-name">흡연장</span>
         </div>
 
-        <div
-          className={`image4 ${
-            selectedTagId_food == 3
-              ? "active"
-              : "" || selectedTagId_food == 4
-              ? "active"
-              : ""
-          }`}
-        >
-          <span className="building-name">
-            푸드
-            <br />
-            트럭{" "}
-          </span>
+        <div className={`image4 ${selectedTagId_food == 3 ? "active" : "" || selectedTagId_food == 4 ? "active" : ""
+          }`}>
+          <span className="building-name">푸드<br />트럭 </span>
         </div>
 
         <div className="image5">
@@ -137,17 +154,16 @@ function Designfcn() {
         </div>
 
         <div
-          className={`image6 ${
-            selectedTagId_food == 7
-              ? "active"
-              : "" || selectedTagId_food == 8
+          className={`image6 ${selectedTagId_food == 7
+            ? "active"
+            : "" || selectedTagId_food == 8
               ? "active"
               : "" || selectedTagId_food == 5
-              ? "active"
-              : "" || selectedTagId_food == 6
-              ? "active"
-              : ""
-          }`}
+                ? "active"
+                : "" || selectedTagId_food == 6
+                  ? "active"
+                  : ""
+            }`}
         >
           {"푸드트럭".split("").map((char, index) => (
             <span key={index} className="building-name">
@@ -159,13 +175,8 @@ function Designfcn() {
         <div className="image7">
           <span className="building-name">운동장</span>
         </div>
-        <div
-          className={`image8 ${
-            selectedTagId_food === 2
-              ? "active"
-              : "" || selectedTagId_food === 1
-              ? "active"
-              : ""
+        <div className={`image8 ${selectedTagId_food === 2 ? "active" : ""
+          || selectedTagId_food === 1 ? "active" : ""
           }`}
         >
           <span className="building-name">푸드트럭</span>
@@ -175,55 +186,58 @@ function Designfcn() {
           <div
             key={i}
             className={`booth booth${i + 1}
-          ${
-            selectedTagId === i + 1
-              ? "active"
-              : "" || i + 1 == 31
-              ? selectedTagId_out === i + 1
+          ${selectedTagId === i + 1
                 ? "active"
-                : ""
-              : "" || i + 1 == 27
-              ? selectedTagId_out === i + 1
-                ? "active"
-                : ""
-              : "" || i + 1 == 28
-              ? selectedTagId_out === i + 1
-                ? "active"
-                : ""
-              : "" || i + 1 == 29
-              ? selectedTagId_out === i + 1
-                ? "active"
-                : ""
-              : "" || i + 1 == 26
-              ? selectedTagId_out === i + 1
-                ? "active"
-                : ""
-              : ""
-          }`}
+                : "" || i + 1 == 31
+                  ? selectedTagId_out === i + 1
+                    ? "active"
+                    : ""
+                  : "" || i + 1 == 27
+                    ? selectedTagId_out === i + 1
+                      ? "active"
+                      : ""
+                    : "" || i + 1 == 28
+                      ? selectedTagId_out === i + 1
+                        ? "active"
+                        : ""
+                      : "" || i + 1 == 29
+                        ? selectedTagId_out === i + 1
+                          ? "active"
+                          : ""
+                        : "" || i + 1 == 26
+                          ? selectedTagId_out === i + 1
+                            ? "active"
+                            : ""
+                          : ""
+              }`}
           />
         ))}
         {Array.from({ length: 3 }, (_, i) => (
           <div
             key={i}
             className={`foodupBooth booth${i + 33}
-          ${
-            selectedTagId_out === i + 33
-              ? "active"
-              : "" || i + 33 == 34
-              ? selectedTagId === i + 33
+          ${selectedTagId_out === i + 33
                 ? "active"
-                : ""
-              : "" || i + 33 == 35
-              ? selectedTagId === i + 33
-                ? "active"
-                : ""
-              : ""
-          }`}
+                : "" || i + 33 == 34
+                  ? selectedTagId === i + 33
+                    ? "active"
+                    : ""
+                  : "" || i + 33 == 35
+                    ? selectedTagId === i + 33
+                      ? "active"
+                      : ""
+                    : ""
+              }`}
           />
         ))}
+        {Array.from({ length: 3 }, (_, i) => (
+          <div key={i} className={`foodupBooth booth${i + 33}
+          ${selectedTagId_out === i + 33 ? "active" : ""
+              || i + 33 == 34 ? selectedTagId === i + 33 ? "active" : "" : ""
+                || i + 33 == 35 ? selectedTagId === i + 33 ? "active" : "" : ""
+            }`} />
+        ))}
       </div>
-
-      <div></div>
 
       <div className="filters-layout-container">
         <div
@@ -250,19 +264,18 @@ function Designfcn() {
                     const matchingFoodTag = tagData_food.find(
                       (tag) => tag.name === favorite
                     )
-                    /*
-                    const matchingStudioTag = studio.find(
-                      (tag) => tag.name ===favorite
-                    )*/
+
 
                     if (matchingTag) {
                       setSelectedTagId(matchingTag.id)
                       setSelectedTagId_out(null)
                       setSelectedTagId_food(null)
+
                     } else if (matchingOutTag) {
                       setSelectedTagId_out(matchingOutTag.id)
                       setSelectedTagId(null)
                       setSelectedTagId_food(null)
+
                     } else if (matchingFoodTag) {
                       setSelectedTagId_food(matchingFoodTag.id)
                       setSelectedTagId(null)
@@ -270,6 +283,7 @@ function Designfcn() {
                     } else {
                       updateSelectedTag("gate")
                     }
+
                   }}
                 >
                   {favorite}
@@ -329,14 +343,20 @@ function Designfcn() {
           />
         </div>
       </div>
-      <DragInfo
-        selectedTagId={selectedTagId}
-        selectedTagId_out={selectedTagId_out}
-        selectedTagId_food={selectedTagId_food}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onFavoriteChange={handleFavorite}
-      />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyDragInfo
+          selectedTagId={selectedTagId}
+          selectedTagId_out={selectedTagId_out}
+          selectedTagId_food={selectedTagId_food}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onFavoriteChange={handleFavorite}
+        />
+      </Suspense>
+
+
+
     </>
   )
 }

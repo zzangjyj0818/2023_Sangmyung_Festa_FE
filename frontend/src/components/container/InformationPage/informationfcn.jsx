@@ -1,9 +1,12 @@
 // src/components/container/InformationPage/informationfcn.jsx
-import React, { useState } from "react"
+import React, { useState, useEffect, lazy, Suspense } from "react"
 import "./informationfcn.scss"
 import Designfcn from "./Designfcn"
 import Gatefcn from "./Gatefcn"
 import { useSelectedTag } from "./SelectedTagContext"
+
+const LazyDesignfcn = lazy(() => import("./Designfcn"));
+const LazyGatefcn = lazy(() => import("./Gatefcn"));
 
 const Informationfcn = () => {
   const { selectedTag, setSelectedTag, selectedComponent, updateSelectedTag } =
@@ -59,7 +62,11 @@ const Informationfcn = () => {
         </div>
       </div>
       <div className="navigation-line" />
-      {selectedTag === "design" ? <Designfcn /> : <Gatefcn />}
+      <Suspense fallback={<div>Loading...</div>}>
+        {selectedTag === "design" ? <LazyDesignfcn /> : <LazyGatefcn />}
+      </Suspense>
+
+
     </div>
   )
 }
