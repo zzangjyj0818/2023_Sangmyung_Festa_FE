@@ -41,11 +41,11 @@ export const textArray = [
 export const textArray2 = [
     { 
         content : "파란색 아이템을 착용하고 드레스코드 룩을 찍어 11시 -18시 사이에 Switch 총학생회 인스타그램 계정을 태그하여 업로드(@smu_switch_38th)",
-        width : 267,
+        width : 280,
         height : 96,
     }, 
     {
-        content : "당일 18시에 총학생회 측에서 인스타그램 스토리를 언급 순서대로 리그램(하루 동안 하이라이트에 게시)",
+        content : `당일 18시에 총학생회 측에서 인스타그램 스토리를 언급 순서대로 리그램(하루 동안 하이라이트에 게시)`,
         width : 263,
         height : 72,
     }, 

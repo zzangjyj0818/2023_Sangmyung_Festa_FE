@@ -4,6 +4,7 @@
 
     width: 100%;
 
+
 }
 
 .DressCode_Wrapper {
@@ -132,7 +133,7 @@
 .DressCode_bestjoin {
     display: flex;
     flex-direction: column;
-    width: 270px;
+    width: auto;
     height : 39px;
     color: var(--black, #212121);
     text-align: center;
@@ -309,6 +310,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    // letter-spacing: -0.5px;
 }
 
 .DressCode_BottomText {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Swiper from 'react-id-swiper';
 import '../../../../node_modules/swiper/swiper.scss';
 import '../../../styles/components/TimelinePage/SlideShow.scss';
@@ -6,14 +6,17 @@ import ColorTime from '../../../assets/TimelinePage/color_time.webp';
 import Location from '../../../assets/TimelinePage/carbon_location.webp';
 import Time from '../../../assets/TimelinePage/carbon_time.webp';
 
-const SlideShow = ({index, setIndex, datas, params, front, onClick}) => {
+const SlideShow = ({index, setIndex, datas, params, front, setFront}) => {
 
   return (
     <div className='SlideShow_Wrapper'>
       <Swiper {...params}>
         {datas.map(data => (
           <div className='SlideShow_Wrapper_LayOut' key={data.id}>
-            <div className='SlideShow_Wrapper_Img_Box'>
+            <div 
+              className={`SlideShow_Wrapper_Img_Box ${index === data.id && front ? 'flipped' : ''}`}
+              onClick={() => { if (index === data.id) setFront(!front); }}
+            >
               <div className='card-inner'>
                 <div className="card-front">
                   <img src={data.url} alt='' className='SlideShow_Wrapper_Img'/>

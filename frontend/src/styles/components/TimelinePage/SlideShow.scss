@@ -89,9 +89,10 @@
     transform: rotateY(180deg);
 }
 
-.SlideShow_Wrapper_Img_Box:hover .card-inner {
+.SlideShow_Wrapper_Img_Box.flipped .card-inner {
     transform: rotateY(180deg);
-  }
+}
+
   
 
 .SlideShow_Wrapper_Img {
