@@ -4,6 +4,7 @@
     width : 100%;
     height : 90px;
     overflow: hidden;
+    justify-content: center;
 }
 .Header_Container1{
     color : white;
@@ -21,6 +22,7 @@
     display: flex;
     width: 100%;
     height: 100%;
+    max-width: 450px;
     flex-direction: row;
     justify-content: space-between; /* 요소들 사이에 균등한 공간 배분 */
     padding: 0 30px; /* 좌우 여백 추가 */
