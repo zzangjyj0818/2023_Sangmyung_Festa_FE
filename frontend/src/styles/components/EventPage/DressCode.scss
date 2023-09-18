@@ -66,6 +66,7 @@
     }
 
     .Detail_Gift_DetailName {
+        width: auto;
         color: var(--black, #212121);
         text-align: center;
         font-family: Spoqa Han Sans Neo;
@@ -97,6 +98,7 @@
     flex-direction: column;
 
     width: 100%;
+    height: auto;
     align-items: center;
 }
 
@@ -170,7 +172,7 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 224px;
+    height: auto;
 
     margin-top : 40px;
     margin-left : auto;
@@ -181,7 +183,7 @@
     display: flex;
     flex-direction: row;
     width: 300px;
-    height: 224px;
+    height: auto;
 
     margin-bottom: 18px;
 
@@ -207,7 +209,8 @@
         //justify-content: center;
     }
     .DressCode_Detail_Layout_Title2{
-        width:91px;
+        display: flex;
+        width:auto;
         height:17px;
         display: flex;
         color: var(--black, #212121);
@@ -387,8 +390,14 @@
 .DressCode_smungWrapper {
     display: flex;
     flex-direction: column;
-
     width: 100%;
+    height: auto;
+
+    margin-top : 55px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
 
 }
 

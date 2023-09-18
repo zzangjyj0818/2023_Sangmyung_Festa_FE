@@ -24,7 +24,7 @@ const DressCode = ({datas, textArray2}) => {
                         <div className='Detail_Gift_LayOut'>
                             <div className='Detail_Gift_Name' style={{marginBottom: '4px'}}>상품2</div>
                             <div className='Detail_Gift_Img'>{datas[1].dress === 1 ? <img src={smung} alt=''/> : <img src={soldoutsmung} alt=''/>}</div>
-                            <div className='Detail_Gift_DetailName' style={{fontSize: '16px', marginTop: '7px'}}>수뭉이 타투 스티커(10종)</div>
+                            <div className='Detail_Gift_DetailName' style={{fontSize: '15px', marginTop: '7px'}}>수뭉이 타투 스티커(10종)</div>
                             <div className='Detail_Gift_CountBox'>{datas[1].dress === 1 ? '남은수량 1000개' : '남은수량 0개'}</div>
                         </div>
                     </div>
@@ -65,11 +65,21 @@ const DressCode = ({datas, textArray2}) => {
                 <div className='DressCode_Detail'>
                     <div className='DressCode_Detail_Layout'>
                         <div className='DressCode_Detail_Layout_Title3'>시간</div>
-                        <div className='DressCode_Detail_Layout_Text' style={{width : '130px'}}>2023.09.25 (월) <br/>~2023.09.26 (화)<br/>11:00~18:00</div>
+                        <div className='DressCode_Detail_Layout_Text' style={{width : 'auto'}}>2023.09.25 (월) <br/>~2023.09.26 (화)<br/>11:00~18:00</div>
                     </div>
                     <div className='DressCode_Detail_Layout'>
                         <div className='DressCode_Detail_Layout_Title2'>상품</div>
-                        <div className='DressCode_Detail_Layout_Text4' style={{width : '220px',textAlign: 'right'}}>1등(3명) - 신세계 백화점 상품권 (100,000원)<br/>2등(1명) - 신세계 백화점 상품권(50,000원)<br/>3등(1명) - 신세계 백화점 상품권(30,000원)</div>
+                        <div style={{
+                            display : 'flex',
+                            flexDirection : 'column',
+                            width : 'auto',
+                            height : 'auto',
+                            alignItems : 'flex-end'
+                        }}>
+                            <div className='DressCode_Detail_Layout_Text4' style={{width : '209px',textAlign: 'right', marginBottom:'14px'}}>1등(3명) - 신세계 백화점 상품권 (100,000원)</div>
+                            <div className='DressCode_Detail_Layout_Text4' style={{width : '220px',textAlign: 'right', marginBottom:'14px'}}>2등(1명) - 신세계 백화점 상품권(50,000원)</div>
+                            <div className='DressCode_Detail_Layout_Text4' style={{width : '220px',textAlign: 'right', marginBottom:'14px'}}>3등(1명) - 신세계 백화점 상품권(30,000원)</div>
+                        </div>
                     </div>
                     <div className='DressCode_Detail_Layout'>
                         <div className='DressCode_Detail_Layout_Title2'>지급장소</div>
