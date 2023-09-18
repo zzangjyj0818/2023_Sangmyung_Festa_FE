@@ -116,7 +116,7 @@
 .DressCode_best {
     display: flex;
     flex-direction: column;
-    width: 160px;
+    width: auto;
     height : 39px;
     color: var(--black, #212121);
     text-align: center;
@@ -148,7 +148,7 @@
 .DressCode_Point {
 
     position: absolute;
-    margin-top : 14px;
+    margin-top : 18px;
     width: 160px;
     height: 24px;
     background: rgba(150, 204, 255, 0.50);
@@ -157,7 +157,7 @@
 .DressCode_Point2 {
 
     position: absolute;
-    margin-top : 14px;
+    margin-top : 18px;
     width: 270px;
     height: 24px;
     background: rgba(150, 204, 255, 0.50);
