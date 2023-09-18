@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Swiper from 'react-id-swiper';
 import '../../../../node_modules/swiper/swiper.scss';
 import '../../../styles/components/TimelinePage/SlideShow.scss';

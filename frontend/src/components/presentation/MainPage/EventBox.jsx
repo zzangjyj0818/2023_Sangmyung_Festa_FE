@@ -1,5 +1,4 @@
 import React from 'react';
-import YouTube from 'react-youtube';
 
 const EventBox = ({detail, handleEventBoxClick, thumbnailUrl}) => {
     return (

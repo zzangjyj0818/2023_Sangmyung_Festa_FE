@@ -13,7 +13,7 @@ function formatNumber(num) {
 }
 
 const MainViewContainer = () => {
-    const { data: count, refetch} = useQuery('count', fetchCount, {
+    const { data: count } = useQuery('count', fetchCount, {
         staleTime: 1000 * 60 * 1,
     });
     const stringNumbers =  count ? formatNumber(count) : []; // count 값이 있을 때만 toLocaleString() 호출
