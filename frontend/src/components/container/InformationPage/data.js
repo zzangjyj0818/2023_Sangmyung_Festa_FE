@@ -1,3 +1,4 @@
+// 학생회관 학과부스
 const tagData = [
   { id: 1, name: "무대미술", heart: false },
   { id: 2, name: "메이커즈", heart: false },
@@ -28,7 +29,7 @@ const tagData = [
   { id: 35, name: "학생상담센터", heart: false },
 ]
 
-// 푸드트럭
+// 힉생회관 푸드트럭
 const tagData_food = [
   { id: 1, name: "부엉이푸드", heart: false },
   { id: 2, name: "타임푸드", heart: false },
@@ -40,7 +41,7 @@ const tagData_food = [
   { id: 8, name: "고깃집", heart: false },
 ]
 
-// 외부부스
+// 학생회관 외부부스
 const tagData_Out = [
   { id: 33, name: "왕가탕후루", heart: false },
   { id: 31, name: "어더아사", heart: false },
@@ -50,6 +51,7 @@ const tagData_Out = [
   { id: 26, name: "러벌스스튜디오", heart: false },
 ]
 
+// 도서관 외부 부스 정보
 const tagData_Out2 = [
   { id: 1, name: "밝은눈안과", heart: false },
   { id: 2, name: "MC섭이네", heart: false },
@@ -57,8 +59,7 @@ const tagData_Out2 = [
   { id: 4, name: "겟아웃", heart: false },
 ]
 
-
-//동아리 학과 부스
+// 학생회관 동아리 학과 부스
 const infoData = [
   { id: 1, tagId: 1, content: "10:00 ~ 20:00", Game: "2000원 10발" },
   { id: 2, tagId: 2, content: "10:00 ~ 21:00" },
@@ -89,7 +90,7 @@ const infoData = [
   { id: 35, tagId: 21, content: "10:00 ~ 20:00" },
 ]
 
-//푸드트럭
+// 학생회관 푸드트럭 정보
 const infoData_food = [
   { id: 1, tagId: 1, content: "10:00 ~ 20:00" },
   { id: 2, tagId: 2, content: "10:00 ~ 21:00" },
@@ -100,7 +101,7 @@ const infoData_food = [
   { id: 7, tagId: 7, content: "10:00 ~ 22:00" },
   { id: 8, tagId: 8, content: "10:00 ~ 24:00" },
 ]
-//외부 부스
+// 학생회관 외부 부스 정보
 const infoData_Out = [
   { id: 33, tagId: 33, content: "10:00 ~ 20:00" },
   { id: 31, tagId: 31, content: "10:00 ~ 21:00" },
@@ -111,33 +112,23 @@ const infoData_Out = [
   
 ]
 
-// const tagData2 = [
-//   { id: 1, name: "띵작스튜디오" },
-//   { id: 2, name: "무대미술" },
-//   { id: 3, name: "그린화학공학" },
-//   { id: 4, name: "세글자" },
-//   { id: 5, name: "???" },
-// ]
-
-// const tagData_food2 = [
-//   { id: 1, name: "정문 푸드트럭1", heart: false },
-//   { id: 2, name: "정문 푸드트럭2", heart: false },
-//   { id: 3, name: "정문 마싯는야끼소바", heart: false },
-//   { id: 4, name: "정문 탕후루", heart: false },
-//   { id: 5, name: "정문 젤라또", heart: false },
-//   { id: 6, name: "정문 푸드트럭3", heart: false },
-//   { id: 7, name: "정문 푸드트럭4", heart: false },
-//   { id: 8, name: "정문 푸드트럭5", heart: false },
-// ]
+// 도서관 외부 부스 정보
+const infoData_Out2 = [
+  { id: 1, tagId: 1, content: "10:00 ~ 20:00" },
+  { id: 2, tagId: 2, content: "10:00 ~ 21:00" },
+  { id: 3, tagId: 3, content: "10:00 ~ 22:00" },
+  { id: 4, tagId: 4, content: "10:00 ~ 24:00" },
+  { id: 5, tagId: 5, content: "10:00 ~ 20:00" },
+  { id: 6, tagId: 6, content: "10:00 ~ 21:00" },
+]
 
 export {
   tagData,
-  infoData,
   tagData_food,
-  infoData_food,
   tagData_Out,
   tagData_Out2,
+  infoData,
+  infoData_food,
   infoData_Out,
-  
- 
+  infoData_Out2,
 }

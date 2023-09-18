@@ -8,10 +8,10 @@ import {
   tagData_Out,
 
 } from "./data"
-import Union from "../../container/InformationPage/designicon/Union.png"
-import Smoke from "../../container/InformationPage/designicon/Smoke.png"
-import ArrowUp from "./designicon/addUp.png"
-import ArrowDown from "./designicon/addDown.png"
+import Union from "../../container/InformationPage/designicon/Union.webp"
+import Smoke from "../../container/InformationPage/designicon/Smoke.webp"
+import ArrowUp from "./designicon/addUp.webp"
+import ArrowDown from "./designicon/addDown.webp"
 import DragInfo from "./drag"
 import "./drag.scss"
 import "./informationfcn.scss"

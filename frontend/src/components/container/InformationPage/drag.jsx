@@ -10,11 +10,11 @@ import {
   infoData_Out,
   
 } from "./data"
-import Time from "./designicon/carbon_time.png"
-import EmptyHeart from "./designicon/Heart.png"
-import FilledHeart from "./designicon/Heart2.png"
-import Line from "./designicon/Line 5.png"
-import LinkImage from "./designicon/Link_2.png"
+import Time from "./designicon/carbon_time.webp"
+import EmptyHeart from "./designicon/Heart.webp"
+import FilledHeart from "./designicon/Heart2.webp"
+import Line from "./designicon/Line 5.webp"
+import LinkImage from "./designicon/Link_2.webp"
 
 function DragInfo({
   selectedTagId,

@@ -26,8 +26,6 @@ const LazyDragInfo = lazy(() => import("./drag"));
 
 function GateFcn() {
   const [selectedTagId, setSelectedTagId] = useState(null)
-  // const [selectedTagId_food, setSelectedTagId_food] = useState(null)
-  // const [showMajorTags, setShowMajorTags] = useState(false)
   const [favorites, setFavorites] = useState([]) // favorites state 추가
   const { updateSelectedTag, notMatchingTag, setNotMatchingTag } =
     useSelectedTag()
@@ -94,27 +92,33 @@ function GateFcn() {
           <span className="building-name">계단</span>
         </div>
 
-        <div className="gate-image3">
-          <span className="building-name">도서관</span>
+        <div className={"gate-booth foodbooth"}>
+          <span className="building-name">
+            플리
+            <br />
+            마켓
+          </span>
         </div>
 
-        <div className="gate-image4">
-          <span className="building-name">FREE ZONE</span>
-        </div>
-
-        <div className="gate-image5">
-          <span className="building-name">분수</span>
-        </div>
-
-
-
-        {tagData_Out2.map((tag) => (
-          <div
-            key={tag.id}
-            className={`gate-booth booth${tag.id} ${selectedTagId === tag.id ? "active" : ""
-              }`}
-          />
-        ))}
+        <div
+          className={`gate-booth booth1 ${selectedTagId == 1 ? "active" : ""}`}
+        />
+        <div
+          className={`gate-booth booth2 ${selectedTagId == 2 ? "active" : ""}`}
+        />
+        <div
+          className={`gate-booth booth3 booth3-1 ${
+            selectedTagId == 3 ? "active" : ""
+          }`}
+        />
+        <div
+          className={`gate-booth booth3 booth3-2 ${
+            selectedTagId == 3 ? "active" : ""
+          }`}
+        />
+        <div
+          className={`gate-booth booth4 ${selectedTagId == 4 ? "active" : ""}`}
+        />
       </div>
 
       <div className="filters-layout-container">
@@ -152,8 +156,6 @@ function GateFcn() {
             )}
           </div>
         </div>
-
-
 
         <div className="filter-container">
           <h2 className="filter-title">외부부스</h2>
