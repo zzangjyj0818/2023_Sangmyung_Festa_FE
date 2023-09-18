@@ -29,8 +29,8 @@ const TableType = ({selectedType, selectedDate, showDropdown, setShowDropdown, h
 
                     {showDropdown && (
                         <div className="dropdown-content">
-                            <div style={{backgroundColor: selectedDate==="9.25 (월)" ? 'rgba(79, 117, 255, 0.70)' : 'rgba(255, 255, 255, 0.5)', color: selectedDate === "9.25 (월)" ? '#FFF' : 'black'}} onClick={() => handleOnSelectChange("9.25 (월)")}>9.25 (월)</div>
-                            <div style={{backgroundColor: selectedDate==="9.26 (화)" ? 'rgba(79, 117, 255, 0.70)' : 'rgba(255, 255, 255, 0.5)', color: selectedDate === "9.26 (화)" ? '#FFF' : 'black'}} onClick={() => handleOnSelectChange("9.26 (화)")}>9.26 (화)</div>
+                            <div style={{backgroundColor: selectedDate==="9.25 (월)" ? 'rgba(79, 117, 255, 0.70)' : '#fff', color: selectedDate === "9.25 (월)" ? '#FFF' : 'black'}} onClick={() => handleOnSelectChange("9.25 (월)")}>9.25 (월)</div>
+                            <div style={{backgroundColor: selectedDate==="9.26 (화)" ? 'rgba(79, 117, 255, 0.70)' : '#fff', color: selectedDate === "9.26 (화)" ? '#FFF' : 'black'}} onClick={() => handleOnSelectChange("9.26 (화)")}>9.26 (화)</div>
                         </div>   
                     )}
             </div>
