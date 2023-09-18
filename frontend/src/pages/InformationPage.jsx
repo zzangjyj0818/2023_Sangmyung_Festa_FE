@@ -1,5 +1,5 @@
 import React from "react"
-import Informationfcn from "../components/container/InformationPage/informationfcn"
+import InformationfcnContainer from "../components/container/InformationPage/InformationfcnContainer"
 import HeaderContainer from "../components/container/common/HeaderContainer"
 import Footer from "../components/common/Footer"
 import { SelectedTagProvider } from "./../components/container/InformationPage/SelectedTagContext"
@@ -9,7 +9,7 @@ const InformationPage = () => {
     <>
       <SelectedTagProvider>
         <HeaderContainer name={undefined} type={1} opacity={false} />
-        <Informationfcn />
+        <InformationfcnContainer />
         <Footer />
       </SelectedTagProvider>
     </>
