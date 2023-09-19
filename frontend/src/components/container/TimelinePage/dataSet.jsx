@@ -6,10 +6,23 @@ import ADYA from '../../../assets/TimelinePage/ADYA.webp';
 import Kassy from '../../../assets/TimelinePage/Kassy.webp';
 import cheeze from '../../../assets/TimelinePage/cheeze.webp';
 import BewhY from '../../../assets/TimelinePage/BewhY.webp';
+import seob from '../../../assets/TimelinePage/seob.webp';
+
+let space = '\u00A0' + '\u00A0' + '\u00A0';
+let space2 = '\u00A0' + '\u00A0' + '\u00A0' + '\u00A0';
 
 export const datas1 = [
+  {
+    id : 0,
+    url : seob,
+    time : '19:45-22:15',
+    kor : '섭이네',
+    eng : '@seop2',
+    content1 : `축제 전문 MC겸 유튜버로 각종 축제에서 MC를 맡으며 축제 영상을 채널에 업로드 ${space} 하고있다.`,
+    content2 : `2023년 9월 20일 기준 섭이네 유튜브 ${space2} 채널의 구독자 수는 25.7만명이며 676개의 동영상이 채널에 올라와있다.`
+  },
     {
-      id : 0,
+      id : 1,
       url : sosoobin,
       time : '19:45-22:15',
       kor : '소수빈',
@@ -18,7 +31,7 @@ export const datas1 = [
       content2 : '어릴 때 사고로 손가락을 다쳐 기타를 못 칠 뻔 했는데 피나는 연습을 통해 자기만의 방법을 터득했다. 라이브 영상을 보면 검지를 접은 채로 치는 것을 볼 수 있다.'
     },
     {
-      id : 1,
+      id : 2,
       url : kimSuYoung,
       time : '19:45-22:15',
       kor : '김수영',
@@ -27,7 +40,7 @@ export const datas1 = [
       content2 : '18살 때부터 기타를 배운 영향인지 기타 수집을 한다고 하는데 어느 정도 많아진다 싶으면 당근마켓을 통해 판매한 적도 있다고 한다.'
     },
     {
-      id : 2,
+      id : 3,
       url : leeSeungYoon,
       time : '19:45-22:15',
       kor : '이승윤',
@@ -36,7 +49,7 @@ export const datas1 = [
       content2 : '중학생 때부터 언어유희를 좋아해 친구들을 웃기고 다녔다고 한다. 아재개그라는 말을 들으면 상당히 자존심이 상하며, 조기축구회 아저씨와 이동국을 비교하는 것과 똑같다고 생각한다고...'
     },
     {
-      id : 3,
+      id : 4,
       url : CM10,
       time : '19:45-22:15',
       kor : '10cm',
@@ -49,6 +62,15 @@ export const datas1 = [
   export const datas2 = [
     {
       id : 0,
+      url : seob,
+      time : '21:15-22:10',
+      kor : '섭이네',
+      eng : '@seop2',
+      content1 : `축제 전문 MC겸 유튜버로 각종 축제에서 MC를 맡으며 축제 영상을 채널에 업로드 ${space} 하고있다.`,
+      content2 : `2023년 9월 20일 기준 섭이네 유튜브 ${space2} 채널의 구독자 수는 25.7만명이며 676개의 동영상이 채널에 올라와있다.`
+    },
+    {
+      id : 1,
       url : ADYA,
       time : '21:15-22:10',
       kor : '에이디야',
@@ -57,7 +79,7 @@ export const datas1 = [
       content2 : `팀명은 모험을 의미하는 Adventure의 약자인 'AD'와 스페인어로 출발을 의미하는 'YA'가 합쳐진 팀명이다.`
     },
     {
-      id : 1,
+      id : 2,
       url : Kassy,
       time : '21:15-22:10',
       kor : '케이시',
@@ -66,7 +88,7 @@ export const datas1 = [
       content2 : `'파도 같은 음악을 하겠다' 가 음악 모토라고 한다. 작은 파도로도 사람들을 적실 수 있는 음악을 하고 싶다는 뜻이 담겨 있다!`
     },
     {
-      id : 2,
+      id : 3,
       url : cheeze,
       time : '21:15-22:10',
       kor : '치즈',
@@ -75,7 +97,7 @@ export const datas1 = [
       content2 : `제작자는 치즈의 [Madeleine Love] 라는 노래를 상당히 좋아한다고 한다. 한 번 들어보세요👍`
     },
     {
-      id : 3,
+      id : 4,
       url : BewhY,
       time : '21:15-22:10',
       kor : '비와이',

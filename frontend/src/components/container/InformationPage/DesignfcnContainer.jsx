@@ -91,25 +91,25 @@ function DesignfcnContainer() {
 
   return (
     <Designfcn 
-    selectedTagId={selectedTagId}
-    selectedTagId_food={selectedTagId_food}
-    selectedTagId_out={selectedTagId_out}
-    favorites={favorites}
-    tagData={tagData}
-    tagData_Out={tagData_Out}
-    tagData_food={tagData_food}
-    setSelectedTagId={setSelectedTagId}
-    setSelectedTagId_out={setSelectedTagId_out}
-    setSelectedTagId_food={setSelectedTagId_food}
-    updateSelectedTag={updateSelectedTag}
-    showMajorTags={showMajorTags}
-    handleToggleTags={handleToggleTags}
-    handleTagClick={handleTagClick}
-    handleTagOut={handleTagOut}
-    handleTagFood={handleTagFood}
-    handleTouchStart={handleTouchStart}
-    handleTouchMove={handleTouchMove}
-    handleFavorite={handleFavorite}
+      selectedTagId={selectedTagId}
+      selectedTagId_food={selectedTagId_food}
+      selectedTagId_out={selectedTagId_out}
+      favorites={favorites}
+      tagData={tagData}
+      tagData_Out={tagData_Out}
+      tagData_food={tagData_food}
+      setSelectedTagId={setSelectedTagId}
+      setSelectedTagId_out={setSelectedTagId_out}
+      setSelectedTagId_food={setSelectedTagId_food}
+      updateSelectedTag={updateSelectedTag}
+      showMajorTags={showMajorTags}
+      handleToggleTags={handleToggleTags}
+      handleTagClick={handleTagClick}
+      handleTagOut={handleTagOut}
+      handleTagFood={handleTagFood}
+      handleTouchStart={handleTouchStart}
+      handleTouchMove={handleTouchMove}
+      handleFavorite={handleFavorite}
     />
   )
 }
