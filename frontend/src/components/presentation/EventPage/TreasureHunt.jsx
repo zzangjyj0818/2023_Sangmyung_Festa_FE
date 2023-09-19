@@ -56,10 +56,10 @@ const TreasureHunt = ({datas, textArray}) => {
                         <div className='TreasureHunt_Detail_Layout_Text2' style={{width : 'auto'}}>학생식당 자유이용권 20장<br/>학생회관 안경점 1만원 이용권 30장<br/>학생회관 서점(문구점) 5천원 이용권 20장<br/>학생회관 미용실 커트 50% 할인권 20장<br/>한누리관 ing카페 아이스티 50장<br/>디자인대 화방 5천원 이용권 30장<br/>하리보 미니 1,200개</div>
                     </div>
                     <div className='TreasureHunt_Detail_Layout'>
-                        <div className='TreasureHunt_Detail_Layout_Title'>지급장소</div>
-                        <div className='TreasureHunt_Detail_Layout_Text' style={{width : 'auto', fontSize:'18px'}}>총학생회 운영본부</div>
+                        <div className='TreasureHunt_Detail_Layout_Title'>상품지급</div>
+                        <div className='TreasureHunt_Detail_Layout_Text' style={{width : 'auto', fontSize:'18px', paddingTop: '4px'}}>총학생회 운영본부</div>
                     </div>
-                    <div className='TreasureHunt_BottomText'>본 이벤트는 학생회비 납부 팔찌를 착용해야 참여하실 수 있습니다.</div>
+                    <div className='TreasureHunt_BottomText'>본 이벤트는 학생회비 납부 학생만 참여 가능하며 팔찌를 착용해야 참여하실 수 있습니다.</div>
                 </div>
             </div>
        </div>
@@ -67,4 +67,3 @@ const TreasureHunt = ({datas, textArray}) => {
 };
 
 export default TreasureHunt;
-//..

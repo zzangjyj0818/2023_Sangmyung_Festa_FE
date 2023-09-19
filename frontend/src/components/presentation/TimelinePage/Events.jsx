@@ -20,7 +20,7 @@ const Events = () => {
                     <p className="box1_date"> 9.25 (월)</p>
 
                     <p className="box1_icon2"><img src={ColorTime} alt='' style={{width: '12px', height:'12px'}}/></p>
-                    <p className="box1_time">19:40-20:25</p>
+                    <p className="box1_time">18:45-19:15</p>
 
                     <p className="box1_icon3"><img src={Location} alt='' style={{width: '12px', height:'12px'}}/></p>
                     <p className="box1_location">노천극장</p>
@@ -33,7 +33,7 @@ const Events = () => {
                     <p className="box1_date"> 9.26 (화)</p>
 
                     <p className="box1_icon2"><img src={ColorTime} alt='' style={{width: '12px', height:'12px'}}/></p>
-                    <p className="box1_time">19:40-20:25</p>
+                    <p className="box1_time">18:50-19:20</p>
                     
                     <p className="box1_icon3"><img src={Location} alt='' style={{width: '12px', height:'12px'}}/></p>
                     <p className="box1_location">노천극장</p>

@@ -50,7 +50,7 @@ export const datas1 = [
     {
       id : 0,
       url : ADYA,
-      time : '19:50-22:10',
+      time : '21:15-22:10',
       kor : '에이디야',
       eng : 'ADYA',
       content1 : '왜 불러라는 동명의 곡을 재해석해 유명해졌고, 멤버 전원이 안무 창작이 가능할 정도로 춤을 잘춰 많은 사랑을 받고 있다.',
@@ -59,7 +59,7 @@ export const datas1 = [
     {
       id : 1,
       url : Kassy,
-      time : '19:50-22:10',
+      time : '21:15-22:10',
       kor : '케이시',
       eng : 'Kassy',
       content1 : '태양의후예, 도깨비, 운빨로맨스 OST와 윤미래의 [Always], 소유의 [I Miss You]등 히트곡의 가이드 보컬에 참여하였다.',
@@ -68,7 +68,7 @@ export const datas1 = [
     {
       id : 2,
       url : cheeze,
-      time : '19:50-22:10',
+      time : '21:15-22:10',
       kor : '치즈',
       eng : 'Cheeze',
       content1 : `1인 인디밴드이며 최근 [기상청 사람들], [갯마을 차차차], [스타트업] 등 수많은 드라마의 OST에 참여했다.`,
@@ -77,7 +77,7 @@ export const datas1 = [
     {
       id : 3,
       url : BewhY,
-      time : '19:50-22:10',
+      time : '21:15-22:10',
       kor : '비와이',
       eng : 'BewhY',
       content1 : '쇼미더머니, 무한도전등 여러 매체에서 유명해진 비와이는 독보적인 랩 스타일로 힙합 팬들에게 사랑을 받고있다.',
@@ -133,7 +133,7 @@ export const datas1 = [
     {
       id : 6,
       content1 : '연예인 초청 공연',
-      time1 : '19:15-22:15',
+      time1 : '19:45-22:15',
       location1 : '노천극장',
       height : 260.17
     },
@@ -165,7 +165,7 @@ export const datas1 = [
     {
       id : 3,
       content1 : '총학이벤트 (Switch 비행기 자리 추첨)',
-      time1 : '18:30-19:20',
+      time1 : '18:50-19:20',
       location1 : '노천극장',
       height :49
     },

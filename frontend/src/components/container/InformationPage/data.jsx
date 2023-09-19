@@ -43,7 +43,7 @@ const tagData_food = [
 
 // 학생회관 외부부스
 const tagData_Out = [
-  { id: 33, name: "왕가탕후루", heart: false },
+  { id: 33, name: "탕후루", heart: false },
   { id: 31, name: "어더아사", heart: false },
   { id: 27, name: "하이트진로", heart: false },
   { id: 28, name: "질레트", heart: false },

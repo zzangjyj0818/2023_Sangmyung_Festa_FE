@@ -36,8 +36,12 @@ const DressCode = ({datas, textArray2}) => {
                     <div className='DressCode_Point'></div>
                 </div>
                 <div className='DressCode_Detail'>
+                <div className='DressCode_Detail_Layout'>
+                        <div className='DressCode_Detail_Layout_Title'>대상</div>
+                        <div className='DressCode_Detail_Layout_Text' style={{width : '130px'}}>상명대학교 재학생</div>
+                    </div>
                     <div className='DressCode_Detail_Layout'>
-                        <div className='DressCode_Detail_Layout_Title3'>시간</div>
+                        <div className='DressCode_Detail_Layout_Title3'>일시</div>
                         <div className='DressCode_Detail_Layout_Text' style={{width : '200px' ,textAlign: 'right'}}>2023.09.25 (월) 11:00~20:00</div>
                     </div>
                     <div className='DressCode_Detail_Layout'>
@@ -45,12 +49,8 @@ const DressCode = ({datas, textArray2}) => {
                         <div className='DressCode_Detail_Layout_Text3' style={{width : '200px' ,textAlign: 'right'}}>2023.09.26 (화) <br/>11:00~선착순 소진 시</div>
                     </div>
                     <div className='DressCode_Detail_Layout'>
-                        <div className='DressCode_Detail_Layout_Title'>대상</div>
-                        <div className='DressCode_Detail_Layout_Text' style={{width : '130px'}}>학생회비를 납부한 상명대학교 재학생</div>
-                    </div>
-                    <div className='DressCode_Detail_Layout'>
                         <div className='DressCode_Detail_Layout_Title'>색상</div>
-                        <div className='DressCode_Detail_Layout_Text1' style={{width : '200px'}}>파란색</div>
+                        <div className='DressCode_Detail_Layout_Text1' style={{width : '200px', paddingTop: '4px'}}>파란색</div>
                     </div>
                     <div className='DressCode_Detail_Layout'>
                         <div className='DressCode_Detail_Layout_Title2'>지급장소</div>
@@ -82,7 +82,7 @@ const DressCode = ({datas, textArray2}) => {
                         </div>
                     </div>
                     <div className='DressCode_Detail_Layout'>
-                        <div className='DressCode_Detail_Layout_Title2'>지급장소</div>
+                        <div className='DressCode_Detail_Layout_Title2'>상품지급</div>
                         <div className='DressCode_Detail_Layout_Text2' style={{width : '200px'}}>상명대학교 총학생회실</div>
                     </div>
                 </div>
@@ -100,10 +100,9 @@ const DressCode = ({datas, textArray2}) => {
                             </div>  
                         ))}
                     </div>
-                    <div className='DressCode_notice'>(월, 화요일 게시자 전체를 한 번에 집계합니다.)</div>
+                    <div className='DressCode_notice'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(월, 화요일 게시자 전체를 한 번에 집계합니다.)</div>
                     <div className='DressCode_BottomText_Collection'>
-                        <div className='DressCode_BottomText1'>인스타그램은 공개 계정으로 업로드 부탁드립니다.</div>
-                        <div className='DressCode_BottomText1'>(계정당 1회 참여 가능)</div>
+                        <div className='DressCode_BottomText1'>인스타그램은 공개 계정으로 업로드 부탁드립니다.(계정당 1회 참여 가능)</div>
                         <div className='DressCode_BottomText2Wrapper'>
                             <div className='DressCode_BottomText2'>상품은 학생회비를 납부한 재학생에 한하여 지급됩니다.<br/>심사의 기준은 심사자 재량입니다.</div>
                         </div>

@@ -21,21 +21,15 @@
     height: 101px;
     
     color: #FFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     margin-left : 20px;
     margin-top : calc(24vh);
 }
-.MainView_Text1,
-.MainView_Text2,
-.MainView_Text3 {
-    font-style: bold;
-}
-
 .MainView_Text2,
 .MainView_Text3 {
     font-family: 'Black Han Sans', 'Noto Sans', 'Pretendard';
-    font-weight: 900;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .MainView_Text1 {
@@ -72,7 +66,7 @@
     height : 85px;
     display: flex;
     flex-direction: row;
-    margin-top : 20px;
+    margin-top : 15px;
 }
 
 @keyframes shake {

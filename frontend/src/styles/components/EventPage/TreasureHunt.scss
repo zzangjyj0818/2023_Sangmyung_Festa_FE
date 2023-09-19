@@ -176,7 +176,7 @@
 .TreasureHunt_Detail {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: auto;
     height: auto;
 
     margin-top : 40px;
@@ -227,6 +227,7 @@
         //justify-content: center;
     }
     .TreasureHunt_Detail_Layout_Text{
+        
         color: #303034;
         text-align: right;
         font-family: Pretendard;
@@ -256,17 +257,17 @@
 }
 
 .TreasureHunt_BottomText {
-    margin-left: auto;
-    margin-right : auto;
+    display: flex;
 
+    justify-content: center;
+    align-items: center;
     margin-top : 52px;
     margin-bottom : 85px;
-    width: 301px;
+    width: 316px;
+    letter-spacing: -1px;
     color: #303034;
     text-align: center;
     font-family: Spoqa Han Sans Neo;
     font-size: 17px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 }
