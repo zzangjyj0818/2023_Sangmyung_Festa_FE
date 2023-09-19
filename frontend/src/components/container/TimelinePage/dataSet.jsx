@@ -92,7 +92,7 @@ export const datas1 = [
       content1 : '푸드트럭 & 부스운영',
       time1 : '10:00-22:00',
       location1 : '학생회관 앞',
-      height : 361,
+      height : 351,
       layout : 'linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%)'
     },
     {
@@ -117,11 +117,18 @@ export const datas1 = [
       height : 49
     },
     {
+      id : 7,
+      content1 : '개막식 및 발대식',
+      time1 : '18:30-18:45',
+      location1 : '노천극장',
+      height : 47
+    },
+    {
       id : 4,
       content1 : '총학 이벤트 (무비 인 더 캠핑)',
       time1 : '18:45-19:15',
       location1 : '노천극장',
-      height : 76
+      height : 49
     },
     {
       id : 5,
@@ -135,7 +142,7 @@ export const datas1 = [
       content1 : '연예인 초청 공연',
       time1 : '19:45-22:15',
       location1 : '노천극장',
-      height : 260.17
+      height : 230.17
     },
   ]
 
