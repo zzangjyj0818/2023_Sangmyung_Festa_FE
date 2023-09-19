@@ -5,11 +5,8 @@ const NumberBox = ({value, index, isVisible, delay}) => {
     return (
         <div className='NumberBox_Container'>
             <div className='NumberBox_Wrapper' style={{ visibility: isVisible ? 'visible' : 'hidden' , animationDelay: delay}}>
-                <div style={{ animationDelay: delay}}>{value}</div>
+                <div style={{ animationDelay: delay, fontFamily: 'Noto Sans KR' }}>{value}</div>
             </div>
-            <div className='Number_Box_Box'></div>
-            <div className='Number_Box_Box'></div>
-            <div className='Number_Box_Box'></div>
         </div>
     );
 };
