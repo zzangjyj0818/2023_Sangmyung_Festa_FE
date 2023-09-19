@@ -1,30 +1,7 @@
-import React, {useState} from 'react';
-import { useMutation } from 'react-query';
-import { login } from '../../../api/postLogin';
-import { useNavigate } from 'react-router';
+import React from 'react';
 import '../../../styles/components/AdminPage/LoginModal.scss'
 
-const LoginModal = ({isOpen, setIsOpen})  => {
-    const navigate = useNavigate();
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    const mutation = useMutation(login,{
-        onSuccess: (data) => {
-            if(data === true){
-                setIsOpen(!isOpen);
-            } else {
-                navigate('/');
-            }
-        },
-        onError: () => {
-            navigate('/');
-        }
-      });
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        mutation.mutate({ username, password });
-    };
+const LoginModal = ({handleSubmit, username, setUsername, password, setPassword})  => {
 
     return (
         <div className='LoginModal_Container'>

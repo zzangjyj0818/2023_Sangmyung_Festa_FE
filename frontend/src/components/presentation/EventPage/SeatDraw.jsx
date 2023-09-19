@@ -3,18 +3,17 @@ import AirPlane from '../../../assets/EventPage/Avion.webp';
 import smallAirPlane from '../../../assets/EventPage/small_Airplane.webp';
 import barcode from '../../../assets/EventPage/bar.webp';
 import '../../../styles/components/EventPage/SeatDraw.scss';
-import Timer from './Timer';
-import Timer2 from './Timer2';
+import TimerContainer from '../../container/EventPage/TimerContainer';
 
 
 
 const SeatDraw = ({month, days, ticket}) => {
     const getComponent = () => {
         switch (new Date().getDate()) {
-          case 18:
-            return <Timer />;
           case 19:
-            return <Timer2 />;
+            return <TimerContainer day={19} hour={18} duration={360}/>;
+          case 20:
+            return <TimerContainer day={20} hour={0} duration={360}/>;
           default:
             return null;
         }

@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../components/container/common/HeaderContainer';
-import LoginModal from '../components/presentation/AdminPage/LoginModal';
+import LoginModalContainer from '../components/container/AdminPage/LoginModalContainer';
 import BoxChangeContainer from '../components/container/AdminPage/BoxChangeContainer';
 import DressCodeChangeContainer from '../components/container/AdminPage/DressCodeChangeContainer';
 import Footer from '../components/common/Footer';
@@ -12,7 +12,7 @@ const AdminPage = ({isOpen, setIsOpen, all}) => {
         <>
             <HeaderContainer name = {undefined} type = {1} opacity={false}/>
             {
-                isOpen === true ? <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} /> :
+                isOpen === true ? <LoginModalContainer isOpen={isOpen} setIsOpen={setIsOpen} /> :
                 <>
                     <TicketChangeContainer ticket = {all.ticket}/>
                     <BoxChangeContainer box1 = {all.box1} box2 = {all.box2} box3 = {all.box3} box4 = {all.box4}/>
