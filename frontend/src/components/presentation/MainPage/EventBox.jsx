@@ -8,7 +8,7 @@ const EventBox = ({detail, handleEventBoxClick, thumbnailUrl}) => {
                     width="287" 
                     height="195" 
                     style={{borderRadius: '12px'}}
-                    src={`https://www.youtube.com/embed/s4Ow55AbdCg?si=RcUKFIQlJ_9wOsxr`} 
+                    src={`https://www.youtube.com/embed/Ik0dtE_Mx6A?si=lP3f0vmLZdzSsyVo`} 
                     title="Festival Video" 
                     frameBorder="0"
                     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
@@ -30,3 +30,4 @@ const EventBox = ({detail, handleEventBoxClick, thumbnailUrl}) => {
 };
 
 export default EventBox;
+
