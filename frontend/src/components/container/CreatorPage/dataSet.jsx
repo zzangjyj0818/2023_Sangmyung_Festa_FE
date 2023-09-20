@@ -50,14 +50,14 @@ export const sampleCreators2 = [ //개발
     {
         image: ksj, 
         name: '곽상진', 
-        department: '개발 총괄', 
+        department: '개발 총괄 / 인프라', 
         major: '소프트웨어학과', 
         studentId: '20학번'
     },
     {
         image: jyj, 
         name: '정연재', 
-        department: 'FE 팀장', 
+        department: '개발 총괄 / FE', 
         major: '소프트웨어학과', 
         studentId: '20학번'
     },
