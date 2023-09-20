@@ -15,7 +15,7 @@ function DragContainer({
   const miniWindowRef = useRef(null)
   const [favorites, setFavorites] = useState([])
   const minDragHeight = 100; // 최소 높이
-  const maxDragHeight = window.innerHeight-50; // 최대 높이
+  const maxDragHeight = window.innerHeight-100; // 최대 높이
   
   
   const handleHeart = () => {
@@ -128,17 +128,35 @@ function DragContainer({
   const selectedTagGame = selectedTagId
     ? infoData.find((tag) => tag.id === selectedTagId)?.Game
     : ""
-
+    // 디자인 대학 게임 내용
+  const selectedTagExplain = selectedTagId
+    ? infoData.find((tag) => tag.id === selectedTagId)?.explain
+    : ""
   // 푸드트럭 시간
   const selectedTagFoodInfo = selectedTagId_food
     ? infoData_food.find((tag) => tag.id === selectedTagId_food)?.content
     : ""
+  //푸드트럭 내용
+  const selectedTagFoodExplain = selectedTagId_food
+    ? infoData_food.find((tag) => tag.id === selectedTagId_food)?.explain
+    : ""
+  //푸드트럭 가격
+  const selectedTagFoodGame = selectedTagId_food
+    ? infoData_food.find((tag) => tag.id === selectedTagId_food)?.Game
+    : ""
 
   // 외부 부스 시간
   const selectedTagOutInfo = selectedTagId_out
+    ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.content
+    : ""
+  // 외부 부스 내용
+  const selectedTagOutExplain = selectedTagId_out
+    ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.explain
+    : ""
+  // 외부 부스 가격
+  const selectedTagOutGame = selectedTagId_out
     ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.Game
     : ""
-
   return (
     <Drag 
       miniWindowRef={miniWindowRef}
@@ -153,10 +171,15 @@ function DragContainer({
       handleHeart={handleHeart}
       selectedTagInfo={selectedTagInfo}
       selectedTagGame={selectedTagGame}
+      selectedTagExplain={selectedTagExplain}
       selectedTagFoodContent={selectedTagFoodContent}
+      selectedTagFoodExplain={selectedTagFoodExplain}
       selectedTagFoodInfo={selectedTagFoodInfo}
       selectedTagOutContent={selectedTagOutContent}
+      selectedTagOutExplain={selectedTagOutExplain}
       selectedTagOutInfo={selectedTagOutInfo}
+      selectedTagOutGame={selectedTagOutGame}
+      selectedTagFoodGame={selectedTagFoodGame}
       selectedTagOutContent2={selectedTagOutContent2}
     />
   )

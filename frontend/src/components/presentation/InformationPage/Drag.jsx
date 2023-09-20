@@ -19,10 +19,15 @@ const Drag = ({
     handleHeart,
     selectedTagInfo,
     selectedTagGame,
+    selectedTagExplain,
+    selectedTagOutExplain,
+    selectedTagFoodExplain,
     selectedTagFoodContent,
     selectedTagFoodInfo,
     selectedTagOutContent,
     selectedTagOutInfo,
+    selectedTagFoodGame,
+    selectedTagOutGame,
     selectedTagOutContent2
 }) => {
     return (
@@ -73,8 +78,8 @@ const Drag = ({
                   <div className="mini-window-TimeInfo">{selectedTagInfo}</div>
                 </div>
   
-                <div className="mini-window-TimeInfo">학과부스설명</div>
-                <div className="mini-window-TimeInfo">학과부스설명</div>
+                <div className="mini-window-TimeInfo">{selectedTagExplain}</div>
+               
                 <img src={LinkImage} alt="Link" />
   
                 <hr />
@@ -125,15 +130,15 @@ const Drag = ({
                   </div>
                 </div>
   
-                <div className="mini-window-TimeInfo">학과부스설명</div>
-                <div className="mini-window-TimeInfo">학과부스설명</div>
+                <div className="mini-window-TimeInfo">{selectedTagFoodExplain}</div>
+               
                 <img src={LinkImage} alt="Link" />
   
                 <hr />
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
                   <div style={{ flex: 1, textAlign: "right" }}>
-                    {selectedTagGame}{" "}
+                    {selectedTagFoodGame}{" "}
                   </div>
                 </div>
                 <hr />
@@ -173,15 +178,15 @@ const Drag = ({
                   <div className="mini-window-TimeInfo">{selectedTagOutInfo}</div>
                 </div>
   
-                <div className="mini-window-TimeInfo">학과부스설명</div>
-                <div className="mini-window-TimeInfo">학과부스설명</div>
+                <div className="mini-window-TimeInfo">{selectedTagOutExplain}</div>
+                
                 <img src={LinkImage} alt="Link" />
   
                 <hr />
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
                   <div style={{ flex: 1, textAlign: "right" }}>
-                    {selectedTagGame}{" "}
+                    {selectedTagOutGame}{" "}
                   </div>
                 </div>
                 <hr />
