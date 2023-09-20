@@ -24,7 +24,7 @@ function DragContainer({
   const miniWindowRef = useRef(null)
   const [favorites, setFavorites] = useState([])
   const minDragHeight = 100 // 최소 높이
-  const maxDragHeight = window.innerHeight - 50 // 최대 높이
+  const maxDragHeight = window.innerHeight - 100 // 최대 높이
 
   const handleHeart = () => {
     const selectedTagName =
@@ -172,6 +172,7 @@ function DragContainer({
       handleHeart={handleHeart}
       selectedTagInfo={selectedTagInfo}
       selectedTagGame={selectedTagGame}
+      
       selectedTagOutGame2={selectedTagOutGame2}
       selectedTagFoodContent={selectedTagFoodContent}
       selectedTagFoodInfo={selectedTagFoodInfo}
