@@ -3,7 +3,7 @@ import SlideShow from '../../presentation/TimelinePage/SlideShow';
 
 const SlideShowContainer = ({datas, selectedDate}) => {
     const [index, setIndex] = useState(0);
-    const [front, setFront] = useState(false);
+    const [front, setFront] = useState(true);
     const swiperRef = useRef(null); // Ref to access Swiper instance
 
    const params = {
@@ -13,6 +13,7 @@ const SlideShowContainer = ({datas, selectedDate}) => {
           },
           slideChange: (swiper) => { 
               setIndex(swiper.activeIndex);
+              setFront(true);
           }
       },
       spaceBetween: 170,
