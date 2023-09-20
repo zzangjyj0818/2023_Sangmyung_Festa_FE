@@ -14,7 +14,7 @@ const SlideShow = ({index, datas, params, front, setFront}) => {
         {datas.map(data => (
           <div className='SlideShow_Wrapper_LayOut' key={data.id}>
             <div 
-              className={`SlideShow_Wrapper_Img_Box ${index === data.id && front ? 'flipped' : ''}`}
+              className={`SlideShow_Wrapper_Img_Box ${index === data.id && !front ? 'flipped' : ''}`}
               onClick={() => { if (index === data.id) setFront(!front); }}
             >
               <div className='card-inner'>
