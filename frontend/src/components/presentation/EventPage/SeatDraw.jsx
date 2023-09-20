@@ -10,10 +10,10 @@ import TimerContainer from '../../container/EventPage/TimerContainer';
 const SeatDraw = ({month, days, ticket}) => {
     const getComponent = () => {
         switch (new Date().getDate()) {
-          case 19:
-            return <TimerContainer day={19} hour={18} duration={360}/>;
-          case 20:
-            return <TimerContainer day={20} hour={0} duration={360}/>;
+          case 25:
+            return <TimerContainer day={25} hour={10} duration={600}/>;
+          case 26:
+            return <TimerContainer day={26} hour={10} duration={480}/>;
           default:
             return null;
         }
@@ -29,14 +29,14 @@ const SeatDraw = ({month, days, ticket}) => {
                     <div className='DateBtn_date' 
                         style={{
                             borderRadius : '12px 0 0 12px', 
-                            backgroundColor : (month === 9 && days === 18) ? '#2757FF' : '#EEE',
-                            color : (month === 9 && days === 18) ? '#fff' : '#77767A',
+                            backgroundColor : (month === 9 && days === 25) ? '#2757FF' : '#EEE',
+                            color : (month === 9 && days === 25) ? '#fff' : '#77767A',
                         }}>9.25 (월)</div>
                     <div className='DateBtn_date' 
                         style={{
                             borderRadius : '0 12px 12px 0', 
-                            backgroundColor : (month === 9 && days === 19) ? '#2757FF' : '#EEE',
-                            color : (month === 9 && days === 19) ? '#fff' : '#77767A',
+                            backgroundColor : (month === 9 && days === 26) ? '#2757FF' : '#EEE',
+                            color : (month === 9 && days === 26) ? '#fff' : '#77767A',
                         }}>9.26 (화)</div>
                 </div>
                 <div className='SeatDraw_Wrapper_Ticket'>

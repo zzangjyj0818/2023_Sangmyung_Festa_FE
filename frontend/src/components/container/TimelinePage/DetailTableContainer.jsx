@@ -32,7 +32,7 @@ const DetailTableContainer = ({selectedDate}) => {
    };
 
    useEffect(() => {
-       if (new Date().getMonth() === 8 && new Date().getDate() === 18) {
+       if (new Date().getMonth() === 8 && new Date().getDate() === 25) {
            setActiveTimeIndex(getCurrentTimeIndex());
 
            const intervalId = setInterval(() => {
@@ -44,7 +44,7 @@ const DetailTableContainer = ({selectedDate}) => {
    }, []);
 
    useEffect(() => {
-    if (new Date().getMonth() === 8 && new Date().getDate() === 19) {
+    if (new Date().getMonth() === 8 && new Date().getDate() === 26) {
         setActiveTimeIndex(getCurrentTimeIndex());
 
         const intervalId = setInterval(() => {
