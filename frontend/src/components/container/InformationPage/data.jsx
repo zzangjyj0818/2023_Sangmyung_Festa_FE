@@ -55,8 +55,9 @@ const tagData_Out = [
 const tagData_Out2 = [
   { id: 1, name: "밝은눈안과", heart: false },
   { id: 2, name: "MC섭이네", heart: false },
-  { id: 3, name: "유진상회", heart: false },
-  { id: 4, name: "겟아웃", heart: false },
+  { id: 3, name: "유진상회(1)", heart: false },
+  { id: 4, name: "유진상회(2)", heart: false },
+  { id: 5, name: "겟아웃", heart: false },
 ]
 
 // 학생회관 동아리 학과 부스
@@ -118,15 +119,22 @@ const infoData_Out2 = [
   {
     id: 3,
     tagId: 3,
-    content: "10:00 ~ 24:00",
-    Game: "타로, 사주(1) / 슬러쉬, 콜팝, 계란빵(2)",
-    cost: "5,000원 ~ 10,000원(1) 2,000원 ~ 5,000원(2)",
+    content: "10:00 ~ 21:30",
+    Game: "타로, 사주(1)",
+    cost: "5,000원 ~ 10,000원(1)",
   },
   {
     id: 4,
     tagId: 4,
+    content: "10:00 ~ 21:30",
+    Game: "슬러쉬, 콜팝, 계란빵(2)",
+    cost: "2,000원 ~ 5,000원(2)",
+  },
+  {
+    id: 5,
+    tagId: 5,
     content: "13:00 ~ 19:00",
-    Game: "방탈출 기출 문제(동아리)",
+    Game: "방탈출 기출 문제",
     cost: "3,000원",
   },
 ]
