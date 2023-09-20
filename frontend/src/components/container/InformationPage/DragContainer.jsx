@@ -1,5 +1,14 @@
 import React, { useState, useRef, useEffect } from "react"
-import { tagData, infoData, tagData_food, infoData_food, tagData_Out, tagData_Out2, infoData_Out } from "./data"
+import {
+  tagData,
+  infoData,
+  tagData_food,
+  infoData_food,
+  tagData_Out,
+  tagData_Out2,
+  infoData_Out,
+  infoData_Out2,
+} from "./data"
 import Drag from "../../presentation/InformationPage/Drag"
 
 function DragContainer({
@@ -14,10 +23,9 @@ function DragContainer({
   const [dragOffsetY, setDragOffsetY] = useState(0)
   const miniWindowRef = useRef(null)
   const [favorites, setFavorites] = useState([])
-  const minDragHeight = 100; // 최소 높이
-  const maxDragHeight = window.innerHeight-50; // 최대 높이
-  
-  
+  const minDragHeight = 100 // 최소 높이
+  const maxDragHeight = window.innerHeight - 50 // 최대 높이
+
   const handleHeart = () => {
     const selectedTagName =
       tagData.find((tag) => tag.id === selectedTagId)?.name ||
@@ -46,13 +54,10 @@ function DragContainer({
     }
   }
 
-  
-
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || []
-   
+
     setFavorites(storedFavorites)
-    
   }, [])
 
   const handleMouseDown = (e) => {
@@ -70,26 +75,26 @@ function DragContainer({
 
   const handleMouseMove = (e) => {
     if (isDragging) {
-      const newY = e.clientY - dragOffsetY;
+      const newY = e.clientY - dragOffsetY
       // 최소 높이와 최대 높이 사이에 높이를 제한
       miniWindowRef.current.style.top = `${Math.max(
         minDragHeight,
         Math.min(maxDragHeight, newY)
-      )}px`;
+      )}px`
     }
-  };
-  
+  }
+
   const handleTouchMove = (e) => {
     if (isDragging) {
-      const touch = e.touches[0];
-      const newY = touch.clientY - dragOffsetY;
+      const touch = e.touches[0]
+      const newY = touch.clientY - dragOffsetY
       // 최소 높이와 최대 높이 사이에 높이를 제한
       miniWindowRef.current.style.top = `${Math.max(
         minDragHeight,
         Math.min(maxDragHeight, newY)
-      )}px`;
+      )}px`
     }
-  };
+  }
 
   const handleMouseUp = () => {
     setIsDragging(false)
@@ -139,8 +144,22 @@ function DragContainer({
     ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.Game
     : ""
 
+  // 도서관 외부 부스 시간
+  const selectedTagOutInfo2 = selectedTagId_out2
+    ? infoData_Out2.find((tag) => tag.id === selectedTagId_out2)?.content
+    : ""
+
+  // 도서관 외부 부스 게임
+  const selectedTagOutGame2 = selectedTagId_out2
+    ? infoData_Out2.find((tag) => tag.id === selectedTagId_out2)?.Game
+    : ""
+
+  const selectedTagOutGameCost2 = selectedTagId_out2
+    ? infoData_Out2.find((tag) => tag.id === selectedTagId_out2)?.cost
+    : ""
+
   return (
-    <Drag 
+    <Drag
       miniWindowRef={miniWindowRef}
       handleMouseDown={handleMouseDown}
       handleTouchStart={handleTouchStart}
@@ -153,13 +172,16 @@ function DragContainer({
       handleHeart={handleHeart}
       selectedTagInfo={selectedTagInfo}
       selectedTagGame={selectedTagGame}
+      selectedTagOutGame2={selectedTagOutGame2}
       selectedTagFoodContent={selectedTagFoodContent}
       selectedTagFoodInfo={selectedTagFoodInfo}
       selectedTagOutContent={selectedTagOutContent}
       selectedTagOutInfo={selectedTagOutInfo}
+      selectedTagOutInfo2={selectedTagOutInfo2}
       selectedTagOutContent2={selectedTagOutContent2}
+      selectedTagOutGameCost2={selectedTagOutGameCost2}
     />
   )
 }
 
-export default DragContainer;
+export default DragContainer

@@ -44,7 +44,6 @@
 
 /* 작은 창 열기/닫기 버튼 스타일 */
 
-
 .scrollable-container {
   max-height: 400px;
   overflow-y: auto;
@@ -86,6 +85,8 @@
 }
 
 .mini-window-GameImage {
+  display: flex;
+  flex-direction: column;
   color: #797979;
   font-family: Roboto;
   font-size: 16px;

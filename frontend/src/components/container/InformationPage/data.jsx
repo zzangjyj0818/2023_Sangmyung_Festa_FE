@@ -109,17 +109,26 @@ const infoData_Out = [
   { id: 28, tagId: 28, content: "10:00 ~ 24:00" },
   { id: 29, tagId: 29, content: "10:00 ~ 20:00" },
   { id: 26, tagId: 26, content: "10:00 ~ 21:00" },
-  
 ]
 
 // 도서관 외부 부스 정보
 const infoData_Out2 = [
-  { id: 1, tagId: 1, content: "10:00 ~ 20:00" },
-  { id: 2, tagId: 2, content: "10:00 ~ 21:00" },
-  { id: 3, tagId: 3, content: "10:00 ~ 22:00" },
-  { id: 4, tagId: 4, content: "10:00 ~ 24:00" },
-  { id: 5, tagId: 5, content: "10:00 ~ 20:00" },
-  { id: 6, tagId: 6, content: "10:00 ~ 21:00" },
+  { id: 1, tagId: 1, content: "10:00 ~ 21:30", Game: "상담", cost: "" },
+  { id: 2, tagId: 2, content: "12:00 ~ 17:00", Game: "상담", cost: "" },
+  {
+    id: 3,
+    tagId: 3,
+    content: "10:00 ~ 24:00",
+    Game: "타로, 사주(1) / 슬러쉬, 콜팝, 계란빵(2)",
+    cost: "5,000원 ~ 10,000원(1) 2,000원 ~ 5,000원(2)",
+  },
+  {
+    id: 4,
+    tagId: 4,
+    content: "13:00 ~ 19:00",
+    Game: "방탈출 기출 문제(동아리)",
+    cost: "3,000원",
+  },
 ]
 
 export {
