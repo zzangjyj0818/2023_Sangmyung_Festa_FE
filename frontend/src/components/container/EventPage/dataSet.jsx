@@ -3,9 +3,9 @@ import TreasureHuntContainer from './TreasureHuntContainer';
 import DressCodeContainer from './DressCodeContainer';
 
 export const categories = [
-    { name: '좌석 추첨', component: <SeatDrawContainer /> },
-    { name: '보물 찾기', component: <TreasureHuntContainer /> },
-    { name: '드레스 코드', component: <DressCodeContainer /> }
+    { name: '좌석 추첨', component: <SeatDrawContainer />, url : 'seatdraw' },
+    { name: '보물 찾기', component: <TreasureHuntContainer />, url : 'treasurehunt' },
+    { name: '드레스 코드', component: <DressCodeContainer /> , url : 'dresscode'},
 ];
 
 export const categoryDescriptions = {

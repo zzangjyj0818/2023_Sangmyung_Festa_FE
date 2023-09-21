@@ -25,6 +25,7 @@ const App = () => {
           </Route>
           <Route path="/admin" element={<AdminPageContainer />} />
           <Route path="/*" element={<NotFoundPage />} />
+         
         </Routes>
       </Suspense>
     </HashRouter>
