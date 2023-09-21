@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EventBox = ({detail, handleEventBoxClick, thumbnailUrl}) => {
+const EventBox = ({detail, handleEventBoxClick}) => {
     return (
         <div className="event_box" onClick={handleEventBoxClick}>
             {detail.image === undefined ?

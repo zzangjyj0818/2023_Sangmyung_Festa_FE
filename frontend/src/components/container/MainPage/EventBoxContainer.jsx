@@ -13,11 +13,11 @@ const EventBoxContainer = ({detail}) => {
     const handleEventBoxClick = () => {
         window.scrollTo(0, 0);
         if (detail.title === "🛩️ 스위치 비행기 좌석 추첨") {
-            navigate('/event/좌석 추첨');
+            navigate('/event/seatdraw');
         } else if (detail.title === "🎁 Switch의 선물을 unlock!") {
-            navigate('/event/보물 찾기');
+            navigate('/event/treasurehunt');
         } else if (detail.title === "👕 드레스코드") {
-            navigate('/event/드레스 코드');
+            navigate('/event/dresscode');
         }
     };
     return (
