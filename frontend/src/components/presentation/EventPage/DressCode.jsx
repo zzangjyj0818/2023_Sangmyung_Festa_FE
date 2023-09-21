@@ -16,7 +16,7 @@ const DressCode = ({datas, textArray2}) => {
                 <div className='Detail_Gift'>
                     <div className='Detail_Gift_LayOut' style={{marginRight : '23px'}}>
                         <div className='Detail_Gift_Name' style={{marginBottom: '9px'}}>상품1</div>
-                        <div className='Detail_Gift_Img'>{datas[0].dress === 1 ? <img src={stick} alt=''/> : <img src={soldoutstick} alt=''/>}</div>
+                        <div className='Detail_Gift_Img'>{datas[0].dress === 1 ? <img src={stick} alt='' style={{width:'101px', height: '112px'}}/> : <img src={soldoutstick} alt='' style={{width:'101px', height: '112px'}}/>}</div>
                         <div className='Detail_Gift_DetailName' style={{fontSize: '18px'}}>야광봉</div>
                         <div className='Detail_Gift_CountBox'>{datas[0].dress === 1 ? '남은수량 500개' : '남은수량 0개'}</div>
                     </div>
