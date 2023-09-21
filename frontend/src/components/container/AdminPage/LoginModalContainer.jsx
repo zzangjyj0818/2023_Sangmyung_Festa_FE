@@ -6,8 +6,8 @@ import LoginModal from '../../presentation/AdminPage/LoginModal';
 
 const LoginModalContainer = ({isOpen, setIsOpen}) => {
     const navigate = useNavigate();
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    const [userid, setUserId] = useState('');
+    const [userpw, setUserPw] = useState('');
 
     const mutation = useMutation(login ,{
         onSuccess: (data) => {
@@ -24,18 +24,20 @@ const LoginModalContainer = ({isOpen, setIsOpen}) => {
             navigate('/');
         }
       });
+      
     const handleSubmit = (event) => {
         event.preventDefault();
-        mutation.mutate({ username, password });
+        console.log('Username:', userid);
+        console.log('Password:', userpw);
+        mutation.mutate({ userid, userpw });
     };
-
     return (
         <LoginModal 
             handleSubmit={handleSubmit}
-            username={username}
-            setUsername={setUsername}
-            password={password}
-            setPassword={setPassword}
+            username={userid}
+            setUsername={setUserId}
+            password={userpw}
+            setPassword={setUserPw}
         />
     );
 };

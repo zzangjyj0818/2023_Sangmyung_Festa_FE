@@ -13,14 +13,11 @@ function formatNumber(num) {
 }
 
 const MainViewContainer = () => {
-
-    
     const { data: count } = useQuery('count', fetchCount, {
         staleTime: Infinity,
     });
 
     const stringNumbers =  count ? formatNumber(count) : [' ', ' ', ' ', ' ', ' ', '0']; // count 값이 있을 때만 toLocaleString() 호출
-    console.log(stringNumbers)
     let numbers = Array.from(stringNumbers);
 
     const hour = new Date().getHours(); // 현재 시간(시) 가져오기

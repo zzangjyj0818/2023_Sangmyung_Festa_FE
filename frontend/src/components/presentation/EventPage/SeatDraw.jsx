@@ -19,7 +19,7 @@ const SeatDraw = ({month, days, ticket}) => {
         }
       };
 
-      const Component = getComponent();
+    const Component = getComponent();
 
     return (
         <div className='SeatDraw_Container'>

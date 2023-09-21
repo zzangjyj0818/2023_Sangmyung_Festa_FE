@@ -29,6 +29,8 @@ const BoxChangeContainer = ({box1, box2, box3, box4}) => {
         state3: box3,
         state4: box4
     });
+
+    console.log(boxesState);
   
     const mutation = useMutation(postBoxState,{
       onSuccess: (data) => {
@@ -41,7 +43,7 @@ const BoxChangeContainer = ({box1, box2, box3, box4}) => {
     const onClick = (id) => {
         setBoxesState(prevState => ({
             ...prevState,
-            [`state${id}`]: !prevState[`state${id}`]
+            [`state${id}`]: prevState[`state${id}`] === 1 ? 0 : 1
         }));
         mutation.mutate({idx: id});
     }

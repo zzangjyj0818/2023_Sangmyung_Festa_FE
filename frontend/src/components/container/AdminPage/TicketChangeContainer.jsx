@@ -4,7 +4,7 @@ import { postTicket } from '../../../api/postTicket';
 import TicketChange from '../../presentation/AdminPage/TicketChange';
 
 const TicketChangeContainer = ({ticket}) => {
-    const [count, setCount] = useState();
+    const [count, setCount] = useState(ticket.ticket);
 
     const mutation = useMutation(postTicket,{
         onSuccess: (data) => {

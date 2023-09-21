@@ -14,7 +14,7 @@ const LoginModal = ({handleSubmit, username, setUsername, password, setPassword}
                     <label>
                         <input 
                             type="text" 
-                            value={username} 
+                            value={username}
                             onChange={(e) => setUsername(e.target.value)} 
                             placeholder='ID'
                             className='LoginModal_Login'

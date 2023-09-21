@@ -9,6 +9,7 @@ const AdminPageContainer = () => {
         staleTime: 1000 * 60 * 0.5,
     });
 
+    console.log(all);
     return (
         <AdminPage 
             isOpen={isOpen} 

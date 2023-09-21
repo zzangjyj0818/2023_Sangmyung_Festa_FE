@@ -32,7 +32,7 @@ const DressCodeChangeContainer = ({dress1, dress2}) => {
     const onClick = (id) => {
         setBoxesState(prevState => ({
             ...prevState,
-            [`state${id}`]: !prevState[`state${id}`]
+            [`state${id}`]: prevState[`state${id}`] === 1 ? 0 : 1
         }));
         mutation.mutate({idx: id});
     }

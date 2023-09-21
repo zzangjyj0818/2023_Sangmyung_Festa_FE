@@ -19,7 +19,6 @@ const AdminPage = ({isOpen, setIsOpen, all}) => {
                     <DressCodeChangeContainer dress1 = {all.dress1} dress2 = {all.dress2}/>
                 </>
             }
-
             <Footer />
         </>
     );
