@@ -361,8 +361,8 @@ const infoData_Out = [
 
 // 도서관 외부 부스 정보
 const infoData_Out2 = [
-  { id: 1, tagId: 1, content: "10:00 ~ 21:30", Game: "상담", cost: "" },
-  { id: 2, tagId: 2, content: "12:00 ~ 17:00", Game: "상담", cost: "" },
+  { id: 1, tagId: 1, content: "10:00 ~ 21:30", Game: "상담", cost: "-" },
+  { id: 2, tagId: 2, content: "12:00 ~ 17:00", Game: "상담", cost: "-" },
   {
     id: 3,
     tagId: 3,
