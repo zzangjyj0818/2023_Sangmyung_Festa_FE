@@ -27,6 +27,11 @@ const Drag = ({
   selectedTagOutInfo2,
   selectedTagOutContent2,
   selectedTagOutGameCost2,
+  selectedTagExplain,
+  selectedTagFoodExplain,
+  selectedTagFoodGame,
+  selectedTagOutExplain,
+  selectedTagOutGame,
 }) => {
   return (
     <div>
@@ -77,12 +82,13 @@ const Drag = ({
               </div>
 
               <div className="mini-window-TimeInfo">학과부스설명</div>
-              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">{selectedTagExplain}</div>
+
               <img src={LinkImage} alt="Link" />
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>
-                <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
+                {/* <div className="mini-window-GameImage"> 게임사진 및 촬영 </div> */}
                 <div style={{ flex: 1, textAlign: "right" }}>
                   {selectedTagGame}{" "}
                 </div>
@@ -127,14 +133,16 @@ const Drag = ({
               </div>
 
               <div className="mini-window-TimeInfo">학과부스설명</div>
-              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">
+                {selectedTagFoodExplain}
+              </div>
               <img src={LinkImage} alt="Link" />
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>
-                <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
+                {/* <div className="mini-window-GameImage"> 게임사진 및 촬영 </div> */}
                 <div style={{ flex: 1, textAlign: "right" }}>
-                  {selectedTagGame}
+                  {selectedTagFoodGame}
                 </div>
               </div>
               <hr />
@@ -173,14 +181,17 @@ const Drag = ({
               </div>
 
               <div className="mini-window-TimeInfo">학과부스설명</div>
-              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">
+                {selectedTagOutExplain}
+              </div>
+
               <img src={LinkImage} alt="Link" />
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>
-                <div className="mini-window-GameImage"> 게임사진 및 촬영 </div>
+                {/* <div className="mini-window-GameImage"> 게임사진 및 촬영 </div> */}
                 <div style={{ flex: 1, textAlign: "right" }}>
-                  {selectedTagGame}{" "}
+                  {selectedTagOutGame}
                 </div>
               </div>
               <hr />
@@ -223,14 +234,14 @@ const Drag = ({
               </div>
 
               <div className="mini-window-TimeInfo">학과부스설명</div>
-              {/* <div className="mini-window-TimeInfo">학과부스설명</div> */}
+              <div className="mini-window-TimeInfo">{selectedTagOutGame2}</div>
               <img src={LinkImage} alt="Link" />
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>
-                <div className="mini-window-GameImage">
+                {/* <div className="mini-window-GameImage">
                   {selectedTagOutGame2}
-                </div>
+                </div> */}
                 <div style={{ flex: 1, textAlign: "right" }}>
                   {selectedTagOutGameCost2}
                 </div>

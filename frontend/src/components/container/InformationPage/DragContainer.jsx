@@ -134,13 +134,37 @@ function DragContainer({
     ? infoData.find((tag) => tag.id === selectedTagId)?.Game
     : ""
 
+  // 디자인 대학 게임 내용
+  const selectedTagExplain = selectedTagId
+    ? infoData.find((tag) => tag.id === selectedTagId)?.explain
+    : ""
+
   // 푸드트럭 시간
   const selectedTagFoodInfo = selectedTagId_food
     ? infoData_food.find((tag) => tag.id === selectedTagId_food)?.content
     : ""
 
+  //푸드트럭 내용
+  const selectedTagFoodExplain = selectedTagId_food
+    ? infoData_food.find((tag) => tag.id === selectedTagId_food)?.explain
+    : ""
+
+  //푸드트럭 가격
+  const selectedTagFoodGame = selectedTagId_food
+    ? infoData_food.find((tag) => tag.id === selectedTagId_food)?.Game
+    : ""
+
   // 외부 부스 시간
   const selectedTagOutInfo = selectedTagId_out
+    ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.content
+    : ""
+
+  // 외부 부스 내용
+  const selectedTagOutExplain = selectedTagId_out
+    ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.explain
+    : ""
+  // 외부 부스 가격
+  const selectedTagOutGame = selectedTagId_out
     ? infoData_Out.find((tag) => tag.id === selectedTagId_out)?.Game
     : ""
 
@@ -154,6 +178,7 @@ function DragContainer({
     ? infoData_Out2.find((tag) => tag.id === selectedTagId_out2)?.Game
     : ""
 
+  // 도서관 외부 부스 가격
   const selectedTagOutGameCost2 = selectedTagId_out2
     ? infoData_Out2.find((tag) => tag.id === selectedTagId_out2)?.cost
     : ""
@@ -172,7 +197,6 @@ function DragContainer({
       handleHeart={handleHeart}
       selectedTagInfo={selectedTagInfo}
       selectedTagGame={selectedTagGame}
-      
       selectedTagOutGame2={selectedTagOutGame2}
       selectedTagFoodContent={selectedTagFoodContent}
       selectedTagFoodInfo={selectedTagFoodInfo}
@@ -181,6 +205,11 @@ function DragContainer({
       selectedTagOutInfo2={selectedTagOutInfo2}
       selectedTagOutContent2={selectedTagOutContent2}
       selectedTagOutGameCost2={selectedTagOutGameCost2}
+      selectedTagExplain={selectedTagExplain}
+      selectedTagFoodExplain={selectedTagFoodExplain}
+      selectedTagFoodGame={selectedTagFoodGame}
+      selectedTagOutExplain={selectedTagOutExplain}
+      selectedTagOutGame={selectedTagOutGame}
     />
   )
 }
