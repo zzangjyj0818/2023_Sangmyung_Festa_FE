@@ -8,7 +8,7 @@ const MainView = ({numbers, isNight}) => {
         <div className={isNight === true ? 'MainView_Container1' : 'MainView_Container2'}>
             <div className='MainView_TextBox'>
                 <div className='MainView_Text1'>2023.9/25-26</div>
-                <div className='MainView_Text2'>DEAR FOR U</div>
+                <div className='MainView_Text2'>DEER FOR U</div>
                 <div className='MainView_Text3'>: 비상</div>
             </div>
             <div className='MainView_Count'>

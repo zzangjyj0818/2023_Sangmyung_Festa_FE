@@ -42,7 +42,7 @@ const Designfcn = ({
           </div>
           <div className="image3">
             <img src={Smoke} alt="흡연장" />
-            <span className="building-name">흡연장</span>
+            <span className="building-name"></span>
           </div>
   
           <div className={`image4 ${selectedTagId_food === 3 ? "active" : "" || selectedTagId_food === 4 ? "active" : ""
@@ -199,7 +199,7 @@ const Designfcn = ({
           <div className="filter-container">
             <div className="filter-title-container">
               <h2 className="filter-title">동아리/학과 부스</h2>
-              <div className="addUp">
+              <div className="addUp" onClick={handleToggleTags}>
                 더보기
                 <img
                   src={showMajorTags ? ArrowDown : ArrowUp}

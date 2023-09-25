@@ -29,11 +29,6 @@ export const textArray = [
         content : "상자가 열린 경우 상자 내용에 맞는 상품 지급 & 명단 작성",
         width : 256,
         height : 46,
-    }, 
-    {
-        content : "암호가 적힌 캡슐을 뽑은 경우 상자를 열어볼 기회를 제공",
-        width : 219,
-        height : 46,
     }
 ];
 

@@ -130,7 +130,7 @@ export const sampleCreators3 = [ //커디
     {
         image: syj2, 
         name: '서유진', 
-        department: '디자인 팀', 
+        department: '디자인 팀원', 
         major: '커뮤니케이션디자인학부', 
         studentId: '21학번'
     }

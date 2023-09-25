@@ -4,7 +4,6 @@ import Time from "../../../assets/InformationPage/carbon_time.webp"
 import EmptyHeart from "../../../assets/InformationPage/Heart.webp"
 import FilledHeart from "../../../assets/InformationPage/Heart2.webp"
 import Line from "../../../assets/InformationPage/Line 5.webp"
-import LinkImage from "../../../assets/InformationPage/Link_2.webp"
 
 const Drag = ({
   miniWindowRef,
@@ -81,10 +80,10 @@ const Drag = ({
                 <div className="mini-window-TimeInfo">{selectedTagInfo}</div>
               </div>
 
-              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">부스설명</div>
               <div className="mini-window-TimeInfo">{selectedTagExplain}</div>
 
-              <img src={LinkImage} alt="Link" />
+              
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -132,11 +131,11 @@ const Drag = ({
                 </div>
               </div>
 
-              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">부스설명</div>
               <div className="mini-window-TimeInfo">
                 {selectedTagFoodExplain}
               </div>
-              <img src={LinkImage} alt="Link" />
+              
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -180,12 +179,12 @@ const Drag = ({
                 <div className="mini-window-TimeInfo">{selectedTagOutInfo}</div>
               </div>
 
-              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">부스설명</div>
               <div className="mini-window-TimeInfo">
                 {selectedTagOutExplain}
               </div>
 
-              <img src={LinkImage} alt="Link" />
+              
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -233,9 +232,9 @@ const Drag = ({
                 </div>
               </div>
 
-              <div className="mini-window-TimeInfo">학과부스설명</div>
+              <div className="mini-window-TimeInfo">부스설명</div>
               <div className="mini-window-TimeInfo">{selectedTagOutGame2}</div>
-              <img src={LinkImage} alt="Link" />
+              
 
               <hr />
               <div style={{ display: "flex", alignItems: "center" }}>

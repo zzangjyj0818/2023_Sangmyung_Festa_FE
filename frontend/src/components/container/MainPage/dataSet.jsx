@@ -11,7 +11,7 @@ export const detailInformations = [
     {
         title : '🛩️ 스위치 비행기 좌석 추첨',
         first : '탑승권을 구매하고 다양한 경품을',
-        second : '받아가보세요! 이곳은 최대 두 줄입니다',
+        second : '받아가보세요!',
         boolDirection : true,
         image: AirplaneSeat
     },

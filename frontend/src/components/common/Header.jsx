@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
-import Logo1 from '../../assets/common/Logo1.webp';
+import Logo1 from '../../assets/common/Logo1.png';
 import Logo2 from '../../assets/common/Logo2.webp';
 import '../../styles/components/common/Header.scss';
 import menu1 from '../../assets/common/menu1.webp';
@@ -15,7 +15,7 @@ const Header = ({name, type, opacity, isOpen, setIsOpen, onClick, navigate}) => 
                 </div>
                 {name !== undefined && <div className='Header_Props'>{name}</div>}
                 <div className='Header_MenuIcon' onClick={onClick}>
-                    <img src={type === 1 ? menu1 : menu2} alt = '' style={type === 1 ? {width:'14px' , height: '14px'} : {width : '20px', height : '20px'}}/>
+                    <img src={type === 1 ? menu1 : menu2} alt = '' style={type === 1 ? {width:'14px' , height: '14px'} : {width : '25px', height : '25px'}}/>
                     {isOpen && <Menu isOpen = {isOpen} setIsOpen = {setIsOpen} onClick={onClick} navigate={navigate}/>}
                 </div>
             </div>

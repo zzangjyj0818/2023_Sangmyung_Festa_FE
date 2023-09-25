@@ -70,6 +70,10 @@
       padding: 5px 5px;
       font-size: 16px; // 폰트 크기 고정
       width: 85px; // 기본 너비 지정
+      font-family: Spoqa Han Sans Neo;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
 
       &.active {
         color: var(--main, #4f75ff);

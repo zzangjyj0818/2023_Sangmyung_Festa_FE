@@ -319,7 +319,7 @@ const infoData_Out = [
     id: 33,
     tagId: 33,
     content: "9.25 ~ 9.26 / 10:00 ~ 소진시",
-    explain: "탕후루 제공(3000개 * 2)",
+    explain: "탕후루 제공 (3000개씩 2일간 무료나눔)",
     Game: "-",
   },
   {

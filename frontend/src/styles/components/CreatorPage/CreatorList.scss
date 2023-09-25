@@ -12,7 +12,6 @@
     width: 90%;
     height: 30px;
     margin: 10px auto;
-
 }
 
 .category-button {
@@ -41,9 +40,10 @@
 
 @media (max-width: 480px) {
     .category-button {
-        margin-left: 12%; 
+        margin-left: 8%; 
     }
 }
+
 
 .category-button.selected {
     font-family: 'Spoqa Han Sans Neo';
