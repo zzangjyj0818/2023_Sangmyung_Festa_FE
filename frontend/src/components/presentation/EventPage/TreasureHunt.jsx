@@ -41,7 +41,7 @@ const TreasureHunt = ({datas, textArray}) => {
                 <div className='TreasureHunt_Detail'>
                     <div className='TreasureHunt_Detail_Layout'>
                         <div className='TreasureHunt_Detail_Layout_Title'>시간</div>
-                        <div className='TreasureHunt_Detail_Layout_Text' style={{width : '209px' ,textAlign: 'right'}}>&nbsp;&nbsp;&nbsp;2023.09.25.(월) 오전 11시 ~선착순 소진 시까지(17:30)</div>
+                        <div className='TreasureHunt_Detail_Layout_Text' style={{width : '209px' ,textAlign: 'right'}}>&nbsp;&nbsp;&nbsp;2023.09.25.(월) 오전 11시 ~선착순 소진 시까지(20:00)</div>
                     </div>
                     <div className='TreasureHunt_Detail_Layout'>
                         <div className='TreasureHunt_Detail_Layout_Title'>대상</div>

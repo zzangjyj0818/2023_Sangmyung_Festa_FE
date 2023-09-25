@@ -17,7 +17,7 @@ const Events = () => {
                 <div className="event-box1" >
                     <p className="box1_name">총학생회 이벤트 (비행기자리추첨)</p>
                     <p className="box1_icon1"><img src={Calendar} alt='' style={{width: '12px', height:'12px'}}/></p>
-                    <p className="box1_date"> 9.25 (월)</p>
+                    <p className="box1_date"> 9.26 (화)</p>
 
                     <p className="box1_icon2"><img src={ColorTime} alt='' style={{width: '12px', height:'12px'}}/></p>
                     <p className="box1_time">18:50-19:20</p>
@@ -33,7 +33,7 @@ const Events = () => {
                     <p className="box1_date"> 9.26 (화)</p>
 
                     <p className="box1_icon2"><img src={ColorTime} alt='' style={{width: '12px', height:'12px'}}/></p>
-                    <p className="box1_time">18:45-19:15</p>
+                    <p className="box1_time">18:20-18:50</p>
                     
                     <p className="box1_icon3"><img src={Location} alt='' style={{width: '12px', height:'12px'}}/></p>
                     <p className="box1_location">노천극장</p>

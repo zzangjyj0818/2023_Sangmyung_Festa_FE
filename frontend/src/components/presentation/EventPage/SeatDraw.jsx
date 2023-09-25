@@ -88,7 +88,7 @@ const SeatDraw = ({month, days, ticket}) => {
                 </div>
                 <div className='SeatDraw_Detail_Layout'>
                     <div className='SeatDraw_Detail_Layout_Title'>추첨</div>
-                    <div className='SeatDraw_Detail_Layout_Text' style={{width : '175px'}}>2023.09.25 (월) 18:50~19:20 노천극장</div>
+                    <div className='SeatDraw_Detail_Layout_Text' style={{width : '175px'}}>2023.09.26 (화) 18:50-19:20 노천극장</div>
                 </div>
             </div>
             <div className='SeatDraw_BottomText_Collection'>

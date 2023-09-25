@@ -114,44 +114,44 @@ export const datas1 = [
       content1 : '푸드트럭 & 부스운영',
       time1 : '10:00-22:00',
       location1 : '학생회관 앞',
-      height : 351,
+      height : 400,
       layout : 'linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%)'
     },
     {
       id : 1,
       content1 : 'CCC',
-      time1 : '17:00-17:30',
+      time1 : '17:30-18:00',
       location1 : '노천극장',
       height : 49
     },
     {
       id : 2,
       content1 : '소울로',
-      time1 : '17:30-18:00',
+      time1 : '18:00-18:30',
       location1 : '노천극장',
       height : 49
     },
     {
       id: 3,
       content1 : '크렁크브레인',
-      time1 : '18:00-18:30',
+      time1 : '18:30-19:00',
       location1 : '노천극장',
       height : 49
     },
     {
       id : 7,
       content1 : '개막식 및 발대식',
-      time1 : '18:30-18:45',
+      time1 : '19:00-19:15',
       location1 : '노천극장',
       height : 47
     },
-    {
-      id : 4,
-      content1 : '총학이벤트 (Switch 비행기 자리 추첨)',
-      time1 : '18:50-19:20',
-      location1 : '노천극장',
-      height : 49
-    },
+    // {
+    //   id : 4,
+    //   content1 : '총학이벤트 (Switch 비행기 자리 추첨)',
+    //   time1 : '18:50-19:20',
+    //   location1 : '노천극장',
+    //   height : 49
+    // },
     {
       id : 5,
       content1 : '다크니스',
@@ -174,27 +174,34 @@ export const datas1 = [
       content1 : '푸드트럭 & 부스운영',
       time1 : '10:00-22:00',
       location1 : '학생회관 앞',
-      height : 395,
+      height : 345,
       layout : 'linear-gradient(180deg, #EEE 74.48%, rgba(238, 238, 238, 0.00) 100%)'
     },
     {
       id : 1,
       content1 : '소래소래 고래고래',
-      time1 : '16:30-18:30',
+      time1 : '16:00-18:00',
       location1 : '노천극장',
-      height : 120
+      height : 100
     },
     {
       id: 2,
       content1 : '아리아',
-      time1 : '18:30-18:50',
+      time1 : '18:00-18:20',
       location1 : '노천극장',
       height : 49
     },
     {
       id : 3,
       content1 : '총학 이벤트 (무비 인 더 캠핑)',
-      time1 : '18:45-19:15',
+      time1 : '18:20-18:50',
+      location1 : '노천극장',
+      height :49
+    },
+    {
+      id : 7,
+      content1 : '총학 이벤트 (Switch 비행기 자리 추첨)',
+      time1 : '18:50-19:20',
       location1 : '노천극장',
       height :49
     },
