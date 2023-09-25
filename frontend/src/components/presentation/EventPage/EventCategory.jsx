@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../styles/components/EventPage/EventCategory.scss';
 
-const EventCategory = ({currentCategory, handleButtonClick, parameter, categories, categoryDescriptions}) => {
+const EventCategory = ({currentCategory, handleButtonClick, parameter, categories}) => {
   return (
     <div className="EventCategory_Container">
         <div className="EventCategory-selector">
