@@ -275,7 +275,7 @@
 ## 👑 만들이들
 |이름|사진|학과|담당역할|직책|
 |:---:|:---:|:---:|:---:|:---:|
-|정연재|<img src="/frontend/src/assets/CreatorPage/jyj.webp" width="50" height="50"/>|소프트웨어학과 2학년|부스 제외 모든 페이지 제작 / 최적화 및 유지보수|개발 총괄|
-|김승찬|<img src="/frontend/src/assets/CreatorPage/ksc.webp" width="50" height="50"/>|소프트웨어학과 3학년|부스 페이지 제작|FE 팀원|
-|임형준|<img src="/frontend/src/assets/CreatorPage/lhjun.webp" width="50" height="50"/>|소프트웨어학과 3학년|부스 페이지 제작|FE 팀원|
-|김지민|<img src="/frontend/src/assets/CreatorPage/kjm.webp" width="50" height="50"/>|휴먼지능로봇공확과 4학년|메인/타임테이블/이벤트 페이지 제작|FE 팀원|
+|정연재|<img src="/frontend/src/assets/CreatorPage/jyj.webp" width="120" height="120"/>|소프트웨어학과 2학년|부스 제외 모든 페이지 제작 / 최적화 및 유지보수|개발 총괄|
+|김승찬|<img src="/frontend/src/assets/CreatorPage/ksc.webp" width="120" height="120"/>|소프트웨어학과 3학년|부스 페이지 제작|FE 팀원|
+|임형준|<img src="/frontend/src/assets/CreatorPage/lhjun.webp" width="120" height="120"/>|소프트웨어학과 3학년|부스 페이지 제작|FE 팀원|
+|김지민|<img src="/frontend/src/assets/CreatorPage/kjm.webp" width="120" height="120"/>|휴먼지능로봇공확과 4학년|메인/타임테이블/이벤트 페이지 제작|FE 팀원|
