@@ -273,9 +273,9 @@
   내년에도 다른 사람들과 협업하며 축제 홈페이지를 만들고 싶다는 생각이 들었다...
    
 ## 👑 만들이들
-|이름|사진|학과|직책|담당역할|
+|이름|사진|학과|담당역할|직책|
 |:---:|:---:|:---:|:---:|:---:|
-|정연재|<img src="/frontend/src/assets/common/Logo1.png"/>|중앙정렬|중앙정렬|중앙정렬|
-|김승찬|오른쪽정렬|중앙정렬|중앙정렬|중앙정렬|
-|임형준|오른쪽정렬|중앙정렬|중앙정렬|중앙정렬|
-|김지민|오른쪽정렬|중앙정렬|중앙정렬|중앙정렬|
+|정연재|<img src="/frontend/src/assets/CreatorPage/jyj.webp"/>|소프트웨어학과 2학년|부스 제외 모든 페이지 제작 / 최적화 및 유지보수|개발 총괄|
+|김승찬|<img src="/frontend/src/assets/CreatorPage/ksj.webp"/>|소프트웨어학과 3학년|부스 페이지 제작|FE 팀원|
+|임형준|<img src="/frontend/src/assets/CreatorPage/lhjun.webp"/>|소프트웨어학과 3학년|부스 페이지 제작|FE 팀원|
+|김지민|<img src="/frontend/src/assets/CreatorPage/kjm.webp"/>|휴먼지능로봇공확과 4학년|메인/타임테이블/이벤트 페이지 제작|FE 팀원|
