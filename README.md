@@ -1,5 +1,5 @@
 ## 2023년 상명대학교 축제 홈페이지
-<img src="/assets/common/Logo1.png">
+<img src="./frontend/src/assets/common/Logo1.png">
 
 
 ## ❓ EASYME.md가 뭐예요?   
