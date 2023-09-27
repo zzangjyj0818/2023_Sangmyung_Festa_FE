@@ -13,7 +13,12 @@
 
 
 ## 🙋‍♀️ 설치  
-
+  **1.**  ```
+  $ git clone https://github.com/zzangjyj0818/2023_Sangmyung_Festa_FE.git
+    ``` <br/>
+  **2.** ```$ cd frontend``` <br/>
+  **3.** ```$ npm install``` <br/>
+  **4.** ```$ npm start```
 
 ## 🛠 프로젝트 설명
 
