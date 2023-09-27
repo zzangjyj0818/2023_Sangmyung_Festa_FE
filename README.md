@@ -1,5 +1,6 @@
 ## 2023년 상명대학교 축제 홈페이지
-![Logo1](/assets/common/Logo1.png)
+<img src="/assets/common/Logo1.png">
+
 
 ## ❓ EASYME.md가 뭐예요?   
 - **EASYME.md**는 **<u>개발자가 README.md를 좀 더 쉽게 작성할 수 있도록</u>** 하기 위해 만들었어요.   
