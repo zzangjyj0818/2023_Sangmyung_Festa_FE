@@ -6,6 +6,7 @@
   - [개요](#-개요)
   - [설치 및 구동](#-설치-및-구동)
   - [프로젝트 설명](#-프로젝트-설명)
+  - [화면 정의서](#-화면-정의서)
   - [만든이들](#-만들이들)
   - [느낀점](#-느낀점)
 
@@ -17,21 +18,21 @@
 인터넷은 정보의 접근성을 극대화시켜주며 **실시간 업데이트가 가능**하게 해준다. 이러한 장점을 살려 학생들이 언제 어디서든 최신 축제 정보를 확인할 수 있도록 하기 위해 홈페이지 구축 작업에 착수하였다.
 
 ## 🙋‍♀️ 설치 및 구동
-  **1.**  
+  **1. Clone the Repository**  
   ```bash
   $ git clone https://github.com/zzangjyj0818/2023_Sangmyung_Festa_FE.git
   ``` 
 
-  **2.** 
+  **2. Move the Directory(frontend)** 
   ```bash 
   $ cd frontend
   ``` 
 
-  **3.** 
+  **3. Install the npm** 
   ``` 
   bash $ npm install
   ```
-  **4.** 
+  **4. Start the npm & project** 
   ```bash 
   $ npm start
   ```
@@ -211,7 +212,7 @@
     ``` 
     <hr/>
 
-    ### 2. 아키텍쳐
+    ### 2. 프로젝트 설명
     위 Directory Tree를 참고하면, 크게 **assets, api, component, pages, styles**으로 구분지어서 폴더가 많아도, 페이지 별로 들어가는 파일들을 별도로 관리하였다.
 
     **assets** - 홈페이지에 들어가는 모든 이미지 파일들이 저장되어 있다.
@@ -242,6 +243,26 @@
     **CSS : SASS/SCSS**
 
     <hr/>
+
+## 🎆 화면 정의서
+### PC & Mobile Page
+
+**MainPage1**|**MainPage2**|**MainPage3**|**MainPage4**
+-----|-----|-----|-----
+<img src="/frontend/src/assets/readmeAssets/Mainpage/mainEven.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/Mainpage/mainAfter.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/Mainpage/Main1.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/Mainpage/Main1.png" width="100%">
+메인 화면(오전)|메인 화면(오후)|2번째 메인 화면|3번째 메인 화면
+
+**Styling start**|**Shoot sock**|**Choose gender**|**Styling complete**
+-----|-----|-----|-----
+<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/addca5b4-5735-483f-ab38-66ea720d0911" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/93f78b5f-b4ba-439b-afeb-35ed7b7a5f07" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/32a7fbe6-fa0a-4af7-ba92-de40dd5b32fd" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/49692eb3-b7c3-4efd-9176-54f8e313b3c9" width="100%">
+양말 코디 메인 페이지 입니다.|양말 촬영 완료 페이지 입니다.|본인의 성별을 선택합니다.|양말과 성별에 어울리는 코디를 추천해줍니다.
+
+**Coordination guide**|**Coordination list**|**Delete Coordination**|**None Coordination**
+-----|-----|-----|-----
+<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/8520bde4-b840-4e86-bbbb-a1458a7a6e45" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/1e9bd995-5d5a-4dd5-95f3-444447c2b496" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/eaaafabb-3539-46c7-871a-cefab7e63df1" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/459ca5d3-d6f7-4488-8171-02a943f81f7a" width="100%">
+저장된 코디를 안내합니다.|저장된 코디 목록 페이지 입니다.|저장된 코디를 삭제합니다.|저장된 코디가 없음을 알립니다.
+
+<br>
 
   
 ## 👍 느낀점
