@@ -29,8 +29,8 @@
   ``` 
 
   **3. Install the npm** 
-  ``` 
-  bash $ npm install
+  ```bash 
+  $ npm install
   ```
   **4. Start the npm & project** 
   ```bash 
@@ -262,9 +262,9 @@
 <img src="/frontend/src/assets/readmeAssets/TimelinePage/TableMon.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/TimelinePage/TableTue.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/TimelinePage/Performance1.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/TimelinePage/Performance2.png" width="100%">
 월요일 타임테이블|화요일 타임테이블|공연 정보 슬라이드쇼(전면)|공연 정보 슬라이드쇼(후면)
 
-**EventPage1**|**EventPage2**|**EventPage1**|**AdminPage**
+**EventPage1**|**EventPage2**|**EventPage3**|**AdminPage**
 :-----:|:-----:|:-----:|:-----:
-<img src="/frontend/src/assets/readmeAssets/EventPage/Seat.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/EventPage/Box.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/EventPage/Dress.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/AdminPage/Main.png" width="100%">
+<img src="/frontend/src/assets/readmeAssets/EventPage/Seat.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/EventPage/Box.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/EventPage/Dresscode.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/AdminPage/Main.png" width="100%">
 이벤트(좌석 추첨)|이벤트(보물 찾기)|이벤트(드레스코드)|관리자 페이지(정보 수정)
 
 
