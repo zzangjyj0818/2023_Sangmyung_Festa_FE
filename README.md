@@ -213,7 +213,7 @@
     <hr/>
 
     ### 2. 프로젝트 설명
-    위 Directory Tree를 참고하면, 크게 **assets, api, component, pages, styles**으로 구분지어서 폴더가 많아도, 페이지 별로 들어가는 파일들을 별도로 관리하였다.
+    위 Directory Tree를 참고하면, 크게 **assets, api, component, pages, styles**으로 구분짓고, 페이지 별로 들어가는 파일들을 별도로 관리하였다.
 
     **assets** - 홈페이지에 들어가는 모든 이미지 파일들이 저장되어 있다.
 
@@ -234,13 +234,15 @@
      <hr/>
 
     ### 4. 상세 기술 사용 방법
-    **API : Axios**
+    **API** : axios로 get, patch, post method를 사용하여 서버와 통신하였다.
 
-    **서버 데이터 관리 : React-Query**
+    **서버 데이터 상태 관리** : React-Query 중 useQuery()를 사용하여 get method로 요청하여, 서버로 부터 받아온 데이터를 처리하였고, useMutation()을 사용하여 patch, post method로 요청하여, response body로 받아온 데이터를 처리하였다.
+ 
+    **라우터 설정** : react-router-dom를 사용하여, 각 페이별로 라우터를 설정해주었고, 페이지 별로 연결시켜주었다.
 
-    **라우터 설정 : react-router-dom**
+    **CSS** : CSS 전처리기인 SASS/SCSS를 활용하여, 빠른 UI 구현을 진행하였다.
 
-    **CSS : SASS/SCSS**
+    **Code Spliting** : React의 기능인 lazy, suspense를 활용하여, Code Spliting을 진행하여 최적화를 진행하였다.
 
     <hr/>
 
@@ -273,6 +275,15 @@
   
 ## 👍 느낀점
   개발하면서 느낀점을 총 3가지로 나누어 생각해봤다.
+
+- ### 1. 개발
+
+- ### 2. 협업
+
+- ### 3. 정리
+
+
+
    
 ## 👑 만들이들
 |이름|사진|담당역할|직책|
