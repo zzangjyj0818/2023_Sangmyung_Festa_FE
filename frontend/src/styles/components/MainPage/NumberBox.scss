@@ -1,0 +1,56 @@
+.NumberBox_Container {
+    display: flex;
+    flex-direction: column;
+    width: 41.818px;
+    height : 85px;
+
+    border-radius: 3.217px 3.217px 0px 0px;
+    background: #FFF;
+    box-shadow: 0px 1.20629px 3.21678px 0px rgba(0, 0, 0, 0.24);
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color : black;
+
+    margin-right : 4px; 
+    color: #09F;
+    font-family: 'Noto Sans KR';
+    font-size: 48.252px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 8.877px; /* 18.396% */
+    overflow: hidden;
+}
+
+.NumberBox_Wrapper {
+    height : inherit;
+    padding-top : 33px;
+    animation: rotate 2s;
+}
+
+.Number_Box_Box {
+    width: 41.818px;
+    height: 2.41px;
+    margin-top : 2.41px;
+    background: #e1f3ff00;
+    box-shadow: 0px 1.20629px 3.21678px 0px rgba(0, 0, 0, 0.24);
+}
+
+@keyframes rotate {
+    
+    100%{
+        transform: translateY(0);
+        opacity: 1; // Fully visible
+    }
+
+    50%{
+        transform: translateY(-50%);
+        opacity: 0; // Fully visible
+    }
+
+    0%{
+        transform: translateY(-100%);
+        opacity: 0; // Completely transparent
+    }
+}

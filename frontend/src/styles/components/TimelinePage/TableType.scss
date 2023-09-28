@@ -1,0 +1,90 @@
+.TableType_Container {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    margin-top : 28px;
+
+    .type_buttons {
+        margin-left: 20px;
+        margin-top: 38px;
+
+        button {
+            border: none;
+            background: none;
+            color: #B0B0B0;
+            margin-right: 20px;
+
+            font-family: Spoqa Han Sans Neo;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height:normal;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        color: #000000;
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top:-35px;
+        z-index: 2;
+
+      button {
+        height: 40px;
+        color:black;
+        border-radius: 20px;
+        border: 1px solid var(--main, #4F75FF);
+        background: #ffffff;
+        padding:10px 12px;
+
+        font-family: Spoqa Han Sans Neo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height:normal;
+      }
+      
+      div {
+        display:flex;
+      }
+      
+      svg {
+        margin-left:5px;
+      }
+      
+        .dropdown-content {
+            position:absolute;
+            display:flex; 
+            flex-direction: column; 
+            margin-top:8px;
+            margin-left:-20px;
+            
+            width:125px;
+            border:1px solid var(--main, #4F75FF);
+            border-radius: 8px 8px 8px 8px;
+
+            font-family: Spoqa Han Sans Neo;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height:normal;
+            text-align: center;
+
+            overflow: hidden;
+
+
+            div{
+                padding: 8px 12px;
+                display:block ;
+
+                &:hover {background-color:rgba(79, 117, 255, 0.70)}
+            }
+        }     
+        
+
+        &:hover .dropdown-content {display:block;}
+    }
+    
+}
+

@@ -1,0 +1,117 @@
+.EventView_Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+
+    justify-content: center;
+}
+
+.EventView_Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.EventView_Slide {
+    width: 100%;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+
+.Event_Text {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    margin-left : 16px;
+    color: #000000;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    align-items: center;
+    margin-left : 17px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 50px;
+    scroll-padding-right: 50px;
+
+}
+
+.event_box {
+    width: 287px; 
+    height: 195px; 
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    margin-right : 17px;
+    scroll-snap-align: start;
+}
+
+.event_box img {
+    width : 287px;
+    height : 195px;
+}
+
+.text_detail {
+    margin-top: -186px;
+    margin-left:20px;
+}
+
+.title_detail {
+    /* title */
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+.first_detail {
+    /* first */
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #000000;
+
+    margin-top:-15px;
+}
+
+.second_detail {
+    /* second */
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #000000;
+
+    margin-top:-13px;
+}
+
+.arrow_detail {
+    /* 화살표 */
+    margin-left: 230px;
+    margin-top: 15px;
+
+    color: #000;
+    font-family: Noto Sans KR;
+    font-size: 70px;
+    font-style: normal;
+    font-weight:100;
+    line-height: normal;
+}

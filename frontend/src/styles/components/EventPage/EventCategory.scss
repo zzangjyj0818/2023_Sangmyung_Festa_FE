@@ -1,0 +1,65 @@
+.EventCategory_Container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.EventCategory-selector {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #D8DCE0;
+    height: 30px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.EventCategory-button {
+    border: none; 
+    background: transparent; 
+    outline: none; 
+
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #D8DCE0;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+@media (max-width: 480px) {
+    .EventCategory-button {
+        margin-left: auto; 
+    }
+}
+
+.EventCategory-button.selected {
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color: #4F75FF;
+    margin-bottom: -2px;
+    
+    border-bottom: 2px solid var(--main, #4F75FF);;
+  }
+  
+  
+
+.EventDescriptions {
+    margin: 30px 20px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #454545;
+}
+
+.SelectedCategoryComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

@@ -1,0 +1,16 @@
+.DetailPerformance_Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+
+    //background: var(--main, #4F75FF);
+}
+
+.DetailPerformance_Wrapper {
+    width: 100%;
+    margin-top : 10px;
+    background-color: #fff;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+}

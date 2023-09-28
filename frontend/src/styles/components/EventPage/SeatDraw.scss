@@ -1,0 +1,270 @@
+.SeatDraw_Container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.SeatDraw_Wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 330px;
+
+    border-radius: 0px 0px 40px 40px;
+    background: #96CDFF;
+}
+
+.SeatDraw_Wrapper_MainTitle {
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 26px;
+    font-weight: 700;
+
+    margin-top : 38px;
+}
+
+.SeatDraw_DateBtn {
+    display: flex;
+    flex-direction: row;
+
+    width: 136px;
+    height: 34px;
+
+    border-radius: 12px;
+
+    margin-top : 22px;
+    margin-left : auto;
+    margin-right : auto;
+
+    color: #77767A;
+    font-family: Noto Sans KR;
+    font-size: 12px;
+    font-weight: 400;
+
+    .DateBtn_date {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 34px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.SeatDraw_Wrapper_Ticket {
+    display: flex;
+    flex-direction: row;
+
+    width: 295px;
+    height: 116px;
+
+    margin-top : 13px;
+    margin-left : auto;
+    margin-right : auto;
+
+    align-items: center;
+    justify-content: center;
+
+    .LeftBox {
+        display: flex;
+        flex-direction: column;
+        width: 193px;
+        height: 115px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        border-right: 1px dashed #96CDFF;
+        
+        .LeftBox_Text {
+            text-align: center;
+            color: black;
+            font-family: Spoqa Han Sans Neo;
+            font-size: 28px;
+            font-weight: 700;
+            
+            margin-top : 24px;
+        }
+    }
+
+    .RightBox {
+        display: flex;
+        flex-direction: column;
+        width: 102px;
+        height: 115px;
+        background: #fff;
+        border-radius: 11.374px 11.374px 10px 10px;
+
+        .RightBox_Text {
+            text-align: center;
+            color: black;
+            font-family: Spoqa Han Sans Neo;
+            font-size: 28px;
+            font-weight: 700;
+            
+            margin-top : 24px;
+        }
+    }
+}
+
+.Box_Header{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 15px;
+    border-radius: 10px 10px 0px 0px;
+    background: #2757FF;
+
+    color: #FFF;
+    font-family: Spoqa Han Sans Neo;
+    font-weight: 400;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4px;
+    
+}
+
+.detail_box {
+    display: flex;
+    flex-direction: row;
+    color: #96CDFF;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12.127px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25.986px; /* 214.286% */
+
+    align-items: center;
+    justify-content: center;
+}
+
+.SeatDraw_Detail {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 224px;
+
+    margin-top : 40px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.SeatDraw_Detail_Layout {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 224px;
+
+    margin-bottom: 16px;
+
+    .SeatDraw_Detail_Layout_Title{
+        display: flex;
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 24px;
+        font-weight: 700;
+        margin-right : auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .SeatDraw_Detail_Layout_Text{
+        display: flex;
+        color: #303034;
+        text-align: right;
+        font-family: Pretendard;
+        font-size: 18px;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.SeatDraw_BottomText_Collection {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top : 60px;
+    margin-left : auto;
+    margin-right : auto;
+}
+.SeatDraw_BottomText1 {
+    display: flex;
+
+    text-align: center;
+
+    color: #303034;
+
+    font-family: Spoqa Han Sans Neo;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.SeatDraw_BottomText2 {
+    margin-left : auto;
+    margin-right : auto;
+    margin-top : 8px;
+    color: var(--gray-2, #919094);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.SeatDraw_BottomText3 {
+    margin-left: auto;
+    margin-right : auto;
+
+    margin-top : 23px;
+    margin-bottom : 85px;
+    width: 301px;
+    color: #303034;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.CountWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right : auto;
+    margin-top:10px;
+
+}
+
+.CountDown {
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.Count_Text {
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-left:19.02px;
+
+
+}

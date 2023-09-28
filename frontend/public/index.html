@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, 
+      viewport-fit=cover, 
+      maximum-scale=1.0, 
+      minimum-scale=1.0, 
+      user-scalable=0" 
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>비상</title>
+    <style>
+      @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+      @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+      @import url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css);
+      @import url(https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap);
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+      body {
+        padding : 0;
+        margin : 0 auto;
+        max-width: 450px;
+        height : 100vh;
+        touch-action: pan-y pan-x;
+        -webkit-tap-highlight-color:transparent;
+        background: #fff;
+        
+      }
+      img {
+        touch-action: pan-y pan-x;
+      }
+      div {
+        touch-action: pan-y pan-x;
+      }
+    </style>
+    <script>
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+        window.addEventListener("resize", () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      });
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

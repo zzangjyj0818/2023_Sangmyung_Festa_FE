@@ -1,0 +1,87 @@
+.CreatorList_Container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height : 100vh;
+    margin: 0 0 auto 0;
+}
+
+.category-selector {
+    display: flex;
+    border-bottom: 2px solid #D8DCE0;
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+}
+
+.category-button {
+    border: none; 
+    background: transparent; 
+    outline: none;
+    
+    margin-left : auto;
+    margin-right : auto;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #D8DCE0;
+
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px; 
+}
+
+@media (max-width: 480px) {
+    .category-button {
+        margin-left: auto; 
+    }
+}
+
+
+.category-button.selected {
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    
+    color: #4F75FF;
+    margin-bottom: -2px;
+    
+    border-bottom: 2px solid var(--main, #4F75FF);;
+    padding-bottom: 12px; 
+  }
+  
+  
+
+.Descriptions {
+    margin: 30px 20px;
+    font-family: 'Spoqa Han Sans Neo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #454545;
+}
+
+.CreatorListBlock {
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+    width: 375px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 10%;
+}
+
+

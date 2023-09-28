@@ -1,0 +1,96 @@
+.MainView_Container1,
+.MainView_Container2 {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+
+    background-size: cover;
+    background-position: center; /* 추가 */
+}
+.MainView_Container1 {
+    background-image: url('../../../assets/MainPage/MainBackground1.webp');
+}
+.MainView_Container2 {
+    background-image: url('../../../assets/MainPage/MainBackground2.webp');
+}
+
+.MainView_TextBox {
+    width: auto;
+    height: 101px;
+    
+    color: #FFF;
+
+    margin-left : 20px;
+    margin-top : calc(24vh);
+}
+.MainView_Text2,
+.MainView_Text3 {
+    font-family: 'Black Han Sans', 'Noto Sans', 'Pretendard';
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.MainView_Text1 {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.MainView_Text2 {
+    font-size: 44px;
+    letter-spacing: -2px;
+    margin-top : 12px;
+}
+
+.MainView_Text3 {
+    font-size: 36px;
+}
+
+.MainView_Count {
+    display: flex;
+    flex-direction: column;
+    
+    height: 120px;
+    color: #FFF;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top : calc(27vh);
+    margin-left : 38px;
+}
+
+.Count_Box {
+    width: 100%;
+    height : 85px;
+    display: flex;
+    flex-direction: row;
+    margin-top : 15px;
+}
+
+@keyframes shake {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+.MainView_Bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: center;
+
+    margin-top : calc(8vh);
+    animation: shake 1s infinite;
+
+    .MainView_Bottom_Text {
+        color: #FFF;
+        font-family: Pretendard;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+}

@@ -1,0 +1,632 @@
+
+
+//소나무숲
+.image1 {
+    position: absolute;
+    left: 55px;
+    top: 8px;
+    width: 29px;
+    height: 69px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #ccdae3;
+    background: #f0f4f7;
+
+    display: flex;
+    justify-content: center; // 가로축 중앙정렬
+    align-items: center; // 세로축 중앙정렬
+
+    .building-name {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        transform: rotate(0deg);
+        color: #7e7e7e;
+        text-align: center;
+        font-family: "Spoqa Han Sans Neo";
+        font-size: 11.592px;
+        font-weight: 500;
+        line-height: normal;
+        
+    }
+}
+//학생회관
+.image2 {
+    position: absolute;
+    top: 15px;
+    left: 180px;
+    width: 85.565px;
+    height: 53.682px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .building-name {
+        position: absolute;
+        left: 22px;
+        display: flex;
+        width: 51px;
+        height: 17px;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #7e7e7e;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+//흡연장
+.image3 {
+    position: absolute;
+    top: 15px;
+    left: 290px;
+    width: 85.565px;
+    height: 53.682px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .building-name {
+        position: absolute;
+        display: flex;
+        left: 27px;
+        width: 39px;
+        height: 17px;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #7e7e7e;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+//푸드트럭A
+.image4 {
+    position: absolute;
+    left: 10px;
+    top: 89px;
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+
+    border-radius: 4px;
+    border: 1px solid #2757ff;
+    background: #f2f5ff;
+
+    .building-name {
+        position: absolute;
+        top: 5px;
+        left: 2px;
+        display: flex;
+        width: 51px;
+        height: 17px;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #2757ff;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &.active {
+        border: 1px solid #2757ff;
+        background: var(--main, #4f75ff);
+
+        .building-name {
+            color: #fff; /* 폰트 색상 변경 */
+        }
+    }
+}
+//freezone
+.image5 {
+    position: absolute;
+    left: 85px;
+    top: 125px;
+    width: 235px;
+    height: 23px;
+    flex-shrink: 0;
+    border: 1px solid #ccdae3;
+    background: rgba(204, 218, 227, 0.3);
+    border-radius: 4px 4px 4px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .building-name {
+        color: #7e7e7e;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 11.592px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+//푸드트럭 B
+.image6 {
+    position: absolute;
+    left: 300px;
+    top: 125px;
+    width: 94px;
+    height: 24px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #2757ff;
+    background: #f2f5ff;
+
+    display: flex;
+    justify-content: center; // 가로축 중앙정렬
+    align-items: center; // 세로축 중앙정렬
+
+    .building-name {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        transform: rotate(270deg);
+        color: #4f75ff;
+        text-align: center;
+        font-family: "Spoqa Han Sans Neo";
+        font-size: 11.592px;
+        font-weight: 500;
+    }
+    &.active {
+        border: 1px solid #2757ff;
+        background: var(--main, #4f75ff);
+
+        .building-name {
+            color: #fff; /* 폰트 색상 변경 */
+        }
+    }
+}
+
+//운동장
+.image7 {
+    position: absolute;
+    width: 350px;
+    height: 33px;
+    left: 10px;
+    top: 200px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #ccdae3;
+    background: #f0f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .building-name {
+        color: #7e7e7e;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+//소나무숲 옆 푸드트럭
+.image8 {
+    position: absolute;
+    left: 100px;
+    top: 25px;
+    width: 53px;
+    height: 27px;
+    flex-shrink: 0;
+
+    border-radius: 4px;
+    border: 1px solid #2757ff;
+    background: #f2f5ff;
+
+    .building-name {
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        display: flex;
+        width: 51px;
+        height: 17px;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #2757ff;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &.active {
+        border: 1px solid #2757ff;
+        background: var(--main, #4f75ff);
+
+        .building-name {
+            color: #fff; /* 폰트 색상 변경 */
+        }
+    }
+}
+
+.booth {
+    position: absolute;
+    width: 17px;
+    height: 25px;
+    flex-shrink: 0;
+    border: 1px solid #2757ff;
+    //무미포토존
+    &.booth30 {
+        left: 50px;
+        top: 90px;
+        border-radius: 4px 0px 0px 4px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+
+            .building-name {
+                color: #fff; /* 폰트 색상 변경 */
+            }
+        }
+    }
+    //무대미술
+    &.booth1 {
+        left: 67px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+
+            .building-name {
+                color: #fff; /* 폰트 색상 변경 */
+            }
+        }
+    }
+    //메이커즈
+    &.booth2 {
+        left: 85px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //단과대연합
+    &.booth3 {
+        left: 100px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //
+    &.booth31 {
+        left: 135px;
+        top: 90px;
+        background: #d1dbff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //인더스트리얼 디자인
+    &.booth4 {
+        left: 153px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //마음건강연구회
+    &.booth5 {
+        left: 169px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //지니어스
+    &.booth6 {
+        left: 186px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //품에안고
+    &.booth7 {
+        left: 203px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //스정통
+    &.booth8 {
+        left: 220px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //상명유람단
+    &.booth9 {
+        left: 236px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //소울로
+    &.booth10 {
+        left: 253px;
+        top: 90px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //디만영
+    &.booth11 {
+        left: 270px;
+        top: 90px;
+        border-radius: 0px 0px 0px 0px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //다크니스
+    &.booth12 {
+        left: 287px;
+        top: 90px;
+        border-radius: 0px 4px 4px 0px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //freezone 밑 부스
+    &.booth27 {
+        left: 50px;
+        top: 158px;
+        border-radius: 4px 0px 0px 4px;
+        background: #d1dbff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    &.booth28 {
+        left: 67px;
+        top: 158px;
+        background: #d1dbff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    &.booth29 {
+        left: 100px;
+        top: 158px;
+        background: #d1dbff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //소프트웨어
+    &.booth15 {
+        left: 117px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //그린화공
+    &.booth26 {
+        left: 134px;
+        top: 158px;
+        background: #d1dbff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //그린화공
+    &.booth16 {
+        left: 151px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //건설시스템
+    &.booth17 {
+        left: 168px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //요쿡
+    &.booth18 {
+        left: 185px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //Questioners
+    &.booth19 {
+        left: 202px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //그린스마트시티
+    &.booth20 {
+        left: 219px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //시스템반도체공학
+    &.booth21 {
+        left: 236px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //실오라기
+    &.booth22 {
+        left: 253px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //스페이스디자인
+    &.booth23 {
+        left: 270px;
+        top: 158px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //세라믹디자인
+    &.booth24 {
+        left: 286px;
+        top: 158px;
+        border-radius: 0px 4px 4px 0px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //띵작스튜디오
+    &.booth25 {
+        left: 303px;
+        top: 158px;
+        border-radius: 0px 4px 4px 0px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    &.booth14 {
+        left: 135px;
+        top: 64px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    &.booth13 {
+        left: 100px;
+        top: 64px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+}
+
+.foodupBooth {
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    flex-shrink: 0;
+    border: 1px solid #2757ff;
+    //푸드트럭 위쪽 부스
+
+    &.booth34 {
+        left: 10px;
+        top: 26px;
+        border-radius: 0px 0px 0px 0px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    &.booth35 {
+        left: 10px;
+        top: 44px;
+        border-radius: 0px 0px 0px 0px;
+        background: #f2f5ff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    &.booth33 {
+        left: 10px;
+        top: 60px;
+        border-radius: 0px 0px 4px 4px;
+        background: #d1dbff;
+        &.active {
+            border: 1px solid #2757ff;
+            background: var(--main, #4f75ff);
+        }
+    }
+    //소나무숲 옆 부스
+}
+
+.addUp {
+    color: var(--main, #4f75ff);
+    font-family: Spoqa Han Sans Neo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

@@ -1,0 +1,409 @@
+.DressCode_Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.DressCode_Wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 330px;
+
+    border-radius: 0px 0px 40px 40px;
+    background: #96CDFF;
+}
+
+.DressCode_Wrapper_MainTitle {
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 26px;
+    font-weight: 700;
+
+    margin-top : 38px;
+}
+
+.Detail_Gift {
+    display: flex;
+    flex-direction: row;
+
+    width: 330px;
+    height: 206px;
+
+    margin-top : 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Detail_Gift_LayOut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+
+    width: auto;
+    height: 206px;
+
+    .Detail_Gift_Name {
+        color: var(--black, #212121);
+        text-align: center;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .Detail_Gift_Img {
+        width: 96px;
+        height: 99px;
+        margin-bottom: 14px;
+    }
+
+    .Detail_Gift_DetailName {
+        width: auto;
+        color: var(--black, #212121);
+        text-align: center;
+        font-family: Spoqa Han Sans Neo;
+        font-weight: 700;
+    }
+
+    .Detail_Gift_CountBox {
+        display: flex;
+        width: 140px;
+        height: 28px;
+
+        border-radius: 20px;
+        background: #2757FF;
+
+        color: #FFF;
+        font-family: Spoqa Han Sans Neo;
+        font-size: 14px;
+        font-weight: 700;
+
+        justify-content: center;
+        align-items: center;
+
+        margin-top : 7.5px;
+    }
+}
+
+.DressCode_dressWrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.DressCode_dress {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height : 39px;
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top:50.66px;
+}
+
+.DressCode_best {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height : 39px;
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top:80.08px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.DressCode_bestjoin {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height : 39px;
+    color: var(--black, #212121);
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top:120.08px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.DressCode_Point {
+
+    position: absolute;
+    margin-top : 18px;
+    width: 160px;
+    height: 24px;
+    background: rgba(150, 204, 255, 0.50);
+}
+
+.DressCode_Point2 {
+
+    position: absolute;
+    margin-top : 18px;
+    width: 270px;
+    height: 24px;
+    background: rgba(150, 204, 255, 0.50);
+}
+
+
+
+.DressCode_Detail {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+
+    margin-top : 40px;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+.DressCode_Detail_Layout {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: auto;
+
+    margin-bottom: 18px;
+
+    .DressCode_Detail_Layout_Title{
+        display: flex;
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 24px;
+        font-weight: 700;
+        margin-right : auto;
+        align-items: center;
+        //justify-content: center;
+    }
+    .DressCode_Detail_Layout_Title1{
+        display: flex;
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 24px;
+        font-weight: 700;
+        margin-right : auto;
+        align-items: center;
+        margin-bottom:80px;
+        //justify-content: center;
+    }
+    .DressCode_Detail_Layout_Title2{
+        display: flex;
+        width:auto;
+        height:17px;
+        display: flex;
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 24px;
+        font-weight: 700;
+        margin-right : auto;
+        align-items: center;
+        margin-top:16px;
+        //justify-content: center;
+    }
+    .DressCode_Detail_Layout_Title3{
+        width:91px;
+        height:17px;
+        display: flex;
+        color: var(--black, #212121);
+        font-family: Spoqa Han Sans Neo;
+        font-size: 24px;
+        font-weight: 700;
+        margin-right : auto;
+        align-items: center;
+        margin-top:5px;
+        //justify-content: center;
+    }
+    .DressCode_Detail_Layout_Text{
+        color: #303034;
+        text-align: right;
+        font-family: Pretendard;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 129.412% */
+    }
+    .DressCode_Detail_Layout_Text1{
+        color: #303034;
+        text-align: right;
+        font-family: Pretendard;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 137.5% */
+        padding-top:0.5px;
+    }
+    .DressCode_Detail_Layout_Text2 {
+        color: #303034;
+        text-align: right;
+        font-family: Pretendard;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 157.143% */
+        margin-top:12px;
+    }
+    .DressCode_Detail_Layout_Text3 {
+        color: #303034;
+        text-align: right;
+        font-family: Pretendard;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 157.143% */
+        margin-top:-10px;
+    }
+    .DressCode_Detail_Layout_Text4 {
+        color: #303034;
+        text-align: right;
+        font-family: Pretendard;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 157.143% */
+        margin-top:10px;
+    }
+}
+
+.DressCode_notice3 {
+    display: flex;
+    flex-direction: row;
+
+    width : 310px;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.DressCode_notice3_number {
+    color: #303034;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right : 16px;
+}
+
+.DressCode_notice4 {
+    color: #303034;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+.DressCode_BottomText {
+    margin-left: auto;
+    margin-right : auto;
+
+    margin-top : 52px;
+    margin-bottom : 85px;
+    width: 301px;
+    color: #303034;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.DressCode_notice {
+    color: #303034;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    margin-top:-10px;
+    margin-left:11px;
+}
+
+
+.DressCode_BottomText_Collection {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    margin-top : 60px;
+    margin-left : auto;
+    margin-right : auto;
+}
+.DressCode_BottomText1 {
+    display: flex;
+
+    width: 328px;
+    color: #303034;
+    text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right : 9px;
+}
+
+.DressCode_BottomText2Wrapper {
+    margin-top:9.39px;
+    text-align: center;
+}
+
+.DressCode_BottomText2 {
+    display: flex;
+
+    color: #303034;
+    //text-align: center;
+    font-family: Spoqa Han Sans Neo;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.DressCode_smungWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+
+    margin-top : 55px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+
