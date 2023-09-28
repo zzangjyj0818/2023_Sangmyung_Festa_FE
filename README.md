@@ -257,10 +257,16 @@
 <img src="/frontend/src/assets/readmeAssets/Mainpage/Menu.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/CreatorPage/Creator1.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/CreatorPage/Creator2.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/CreatorPage/Creator3.png" width="100%">
 메뉴|만든이들(총학생회)|만들이들(개발자)|만든이들(디자인)
 
-**Coordination guide**|**Coordination list**|**Delete Coordination**|**None Coordination**
+**TimeTable(Mon)**|**TimeTable(Tue)**|**Performance(Before)**|**Performance(After)**
 :-----:|:-----:|:-----:|:-----:
-<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/8520bde4-b840-4e86-bbbb-a1458a7a6e45" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/1e9bd995-5d5a-4dd5-95f3-444447c2b496" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/eaaafabb-3539-46c7-871a-cefab7e63df1" width="100%">|<img src="https://github.com/2023-Hackathon-TeamSMUD/.github/assets/56509933/459ca5d3-d6f7-4488-8171-02a943f81f7a" width="100%">
-저장된 코디를 안내합니다.|저장된 코디 목록 페이지 입니다.|저장된 코디를 삭제합니다.|저장된 코디가 없음을 알립니다.
+<img src="/frontend/src/assets/readmeAssets/TimelinePage/TableMon.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/TimelinePage/TableTue.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/TimelinePage/Performance1.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/TimelinePage/Performance2.png" width="100%">
+월요일 타임테이블|화요일 타임테이블|공연 정보 슬라이드쇼(전면)|공연 정보 슬라이드쇼(후면)
+
+**EventPage1**|**EventPage2**|**EventPage1**|**AdminPage**
+:-----:|:-----:|:-----:|:-----:
+<img src="/frontend/src/assets/readmeAssets/EventPage/Seat.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/EventPage/Box.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/EventPage/Dress.png" width="100%">|<img src="/frontend/src/assets/readmeAssets/AdminPage/Main.png" width="100%">
+이벤트(좌석 추첨)|이벤트(보물 찾기)|이벤트(드레스코드)|관리자 페이지(정보 수정)
+
 
 <br>
 
