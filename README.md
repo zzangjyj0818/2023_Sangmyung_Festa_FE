@@ -249,7 +249,7 @@
    
 ## 👑 만들이들
 |이름|사진|담당역할|직책|
-|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|
 |[정연재](https://github.com/zzangjyj0818)|<img src="/frontend/src/assets/CreatorPage/jyj.webp" width="200" height="200"/>|부스 제외 모든 페이지 제작 / 최적화 및 유지보수|개발 총괄|
 |[김지민](https://github.com/jm7033)|<img src="/frontend/src/assets/CreatorPage/kjm.webp" width="200" height="200"/>|메인/타임테이블/이벤트 페이지 제작|FE 팀원|
 |[김승찬](https://github.com/kscold)|<img src="/frontend/src/assets/CreatorPage/ksc.webp" width="200" height="200"/>|부스 페이지 제작|FE 팀원|
