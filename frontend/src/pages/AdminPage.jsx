@@ -24,4 +24,5 @@ const AdminPage = ({isOpen, setIsOpen, all}) => {
     );
 };
 
+
 export default AdminPage;
